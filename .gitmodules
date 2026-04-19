@@ -1,0 +1,3 @@
+[submodule "src/backend/mod_replayguard"]
+	path = src/backend/mod_replayguard
+	url = git@github.com:folklore212/mod_replayguard.git
