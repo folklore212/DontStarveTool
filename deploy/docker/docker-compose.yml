@@ -7,17 +7,22 @@ services:
     container_name: auth-mysql-container
     restart: unless-stopped
     ports:
-      - "${MYSQL_PORT}:3306"
+      - "127.0.0.1:${MYSQL_PORT}:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     security_opt:
       - seccomp:unconfined  # MySQL 8.0 在旧内核(4.19)需要，现代内核可移除
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+          cpus: '2.0'
     volumes:
       - mysql-data:/var/lib/mysql
       - mysql-log:/var/log/mysql
     healthcheck:
-      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      test: ["CMD-SHELL", "mysql -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD -e 'SELECT 1 FROM information_schema.TABLES WHERE TABLE_SCHEMA=\"auth_system\" LIMIT 1' --silent"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -33,9 +38,14 @@ services:
     container_name: auth-redis-container
     restart: unless-stopped
     ports:
-      - "${REDIS_PORT}:6379"
+      - "127.0.0.1:${REDIS_PORT}:6379"
     environment:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+          cpus: '1.0'
     volumes:
       - redis-data:/data
     healthcheck:

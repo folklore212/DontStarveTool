@@ -72,7 +72,7 @@ def mysql_exec(sql, params=None):
 # 1. 表数量
 def t_tables_count():
     rows = mysql_query("SHOW TABLES")
-    assert_eq(len(rows), 14, f"tables: {[list(r.values())[0] for r in rows]}")
+    assert_eq(len(rows), 17, f"tables: {[list(r.values())[0] for r in rows]}")
 
 # 2. 预期表名
 def t_expected_tables():
@@ -80,7 +80,8 @@ def t_expected_tables():
         "users", "user_profiles", "user_auths", "user_credentials_history",
         "user_mfa", "roles", "permissions", "scopes",
         "user_roles", "role_permissions", "oauth_clients", "api_keys",
-        "login_logs", "audit_logs"
+        "login_logs", "audit_logs", "client_grant_types",
+        "password_reset_tokens", "refresh_tokens"
     }
     actual = {list(r.values())[0] for r in mysql_query("SHOW TABLES")}
     assert_eq(actual, expected, f"missing={expected-actual}, extra={actual-expected}")
@@ -131,7 +132,7 @@ def t_foreign_keys():
         SELECT COUNT(*) AS cnt FROM information_schema.TABLE_CONSTRAINTS
         WHERE TABLE_SCHEMA=%s AND CONSTRAINT_TYPE='FOREIGN KEY'
     """, (MYSQL_DB,))
-    assert_eq(rows[0]["cnt"], 13)
+    assert_eq(rows[0]["cnt"], 17)
 
 # 9. 软删除字段
 def t_soft_delete():
@@ -268,6 +269,20 @@ def t_insert_ignore_idempotent():
     rows = mysql_query("SELECT COUNT(*) AS cnt FROM roles WHERE role_name='super_admin'")
     assert_eq(rows[0]["cnt"], 1)
 
+# 22. 软删除级联触发器
+def t_soft_delete_triggers():
+    triggers = mysql_query("""
+        SELECT TRIGGER_NAME FROM information_schema.TRIGGERS
+        WHERE TRIGGER_SCHEMA=%s AND TRIGGER_NAME IN ('trg_users_soft_delete','trg_roles_soft_delete')
+    """, (MYSQL_DB,))
+    assert_eq(len(triggers), 2, f"expected 2 triggers: {[t['TRIGGER_NAME'] for t in triggers]}")
+
+# 23. 新增表存在
+def t_new_tables():
+    for tbl in ["client_grant_types", "password_reset_tokens", "refresh_tokens"]:
+        rows = mysql_query(f"SHOW TABLES LIKE '{tbl}'")
+        assert_eq(len(rows), 1, f"{tbl} missing")
+
 # ---- Redis ----
 print("\n" + "=" * 60)
 print("Redis 功能测试")
@@ -328,14 +343,14 @@ print("开始测试")
 print("=" * 60)
 
 # MySQL tests
-test("14张表全部存在",    t_tables_count)
+test("17张表全部存在",    t_tables_count)
 test("所有表名正确",      t_expected_tables)
 test("login_logs 4个分区", t_login_logs_partitions)
 test("audit_logs 4个分区", t_audit_logs_partitions)
 test("3个种子角色",        t_seed_roles)
 test("20个种子权限",       t_seed_permissions)
 test("super_admin拥有全部20权限", t_superadmin_has_all_perms)
-test("13条外键约束",       t_foreign_keys)
+test("17条外键约束",       t_foreign_keys)
 test("6表含软删除字段",    t_soft_delete)
 test("角色继承字段",       t_role_hierarchy)
 test("用户CRUD操作",       t_user_crud)
@@ -349,6 +364,8 @@ test("user_roles唯一约束", t_user_roles_uk)
 test("三表新增索引",      t_new_indexes)
 test("audit_logs三列索引", t_audit_logs_idx_resource)
 test("INSERT IGNORE幂等", t_insert_ignore_idempotent)
+test("软删除触发器",     t_soft_delete_triggers)
+test("新表(client_grant/reset/refresh)", t_new_tables)
 
 # Redis tests
 test("Redis PING",         t_redis_ping)

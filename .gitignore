@@ -1,0 +1,27 @@
+# Environment files with secrets
+.env
+*.env
+!*.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+deploy/docker/volumes/
+
+# Java
+target/
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar

@@ -10,7 +10,7 @@ USE auth_system;
 CREATE TABLE users (
     user_id    BIGINT       NOT NULL COMMENT 'Snowflake分布式ID',
     username   VARCHAR(64)  NOT NULL COMMENT '唯一用户名',
-    email      VARCHAR(128) NULL     COMMENT '主邮箱，未填时存 NULL（勿用空字符串）',
+    email      VARCHAR(254) NULL     COMMENT '主邮箱(RFC5321)，未填时存 NULL',
     phone      VARCHAR(20)  NULL     COMMENT '主手机号，未填时存 NULL（勿用空字符串，避免 UNIQUE KEY 冲突）',
     nickname   VARCHAR(64)  NULL     COMMENT '显示昵称',
     avatar     VARCHAR(255) NULL     COMMENT '头像URL',
@@ -29,7 +29,8 @@ CREATE TABLE users (
     UNIQUE KEY uk_phone    (phone, deleted_at),
     INDEX idx_status (status),
     INDEX idx_created (created_at),
-    INDEX idx_status_created (status, deleted_at, created_at)    -- 分页查询过滤+排序
+    INDEX idx_status_created (status, deleted_at, created_at),   -- 分页查询过滤+排序
+    INDEX idx_locked (status, locked_until)                      -- 自动解锁查询
 ) ENGINE=InnoDB;
 
 -- ============================================================
@@ -37,7 +38,7 @@ CREATE TABLE users (
 -- ============================================================
 CREATE TABLE user_profiles (
     user_id   BIGINT       NOT NULL,
-    real_name VARCHAR(64)  NULL     COMMENT '真实姓名',
+    real_name VARCHAR(128) NULL     COMMENT '真实姓名',
     locale    VARCHAR(10)  NOT NULL DEFAULT 'zh-CN',
     timezone  VARCHAR(32)  NOT NULL DEFAULT 'Asia/Shanghai',
     metadata  JSON         NULL     COMMENT '扩展属性（避免频繁改表）',
@@ -203,7 +204,6 @@ CREATE TABLE oauth_clients (
     client_secret VARCHAR(256) NOT NULL COMMENT 'bcrypt哈希',
     client_name   VARCHAR(128) NOT NULL,
     client_type   ENUM('confidential','public') NOT NULL DEFAULT 'confidential',
-    grant_types   SET('authorization_code','client_credentials','refresh_token') NOT NULL DEFAULT 'authorization_code',
     redirect_uris JSON         NULL,
     allowed_scopes JSON       NULL,
     is_trusted    TINYINT      NOT NULL DEFAULT 0 COMMENT '跳过用户确认',
@@ -220,7 +220,57 @@ CREATE TABLE oauth_clients (
 ) ENGINE=InnoDB;
 
 -- ============================================================
--- 12. API Key 表
+-- 12. OAuth2 客户端授权类型关联表
+-- ============================================================
+CREATE TABLE client_grant_types (
+    client_id   BIGINT      NOT NULL,
+    grant_type  VARCHAR(32) NOT NULL COMMENT 'authorization_code/client_credentials/refresh_token',
+    PRIMARY KEY (client_id, grant_type),
+    CONSTRAINT fk_cgt_client FOREIGN KEY (client_id) REFERENCES oauth_clients(id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- ============================================================
+-- 13. 密码重置令牌
+-- ============================================================
+CREATE TABLE password_reset_tokens (
+    id          BIGINT       NOT NULL AUTO_INCREMENT,
+    user_id     BIGINT       NOT NULL,
+    auth_id     BIGINT       NOT NULL COMMENT '关联 user_auths.id',
+    token_hash  VARCHAR(128) NOT NULL COMMENT 'SHA-256(token)',
+    expires_at  TIMESTAMP    NOT NULL,
+    used_at     TIMESTAMP    NULL,
+    created_at  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_token_hash (token_hash),
+    INDEX idx_user (user_id),
+    INDEX idx_auth (auth_id),
+    CONSTRAINT fk_prt_user FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_prt_auth FOREIGN KEY (auth_id) REFERENCES user_auths(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- ============================================================
+-- 14. Refresh Token 表（服务端会话追踪）
+-- ============================================================
+CREATE TABLE refresh_tokens (
+    id          BIGINT       NOT NULL AUTO_INCREMENT,
+    user_id     BIGINT       NOT NULL,
+    token_hash  VARCHAR(128) NOT NULL COMMENT 'SHA-256(refresh_token)',
+    device_info VARCHAR(256) NULL,
+    ip_address  VARCHAR(45)  NULL,
+    expires_at  TIMESTAMP    NOT NULL,
+    revoked     TINYINT      NOT NULL DEFAULT 0,
+    revoked_at  TIMESTAMP    NULL,
+    created_at  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_token_hash (token_hash),
+    INDEX idx_user (user_id),
+    INDEX idx_expires (expires_at),
+    CONSTRAINT fk_rt_user FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- ============================================================
+-- 15. API Key 表
 -- ============================================================
 CREATE TABLE api_keys (
     id              BIGINT       NOT NULL AUTO_INCREMENT,
@@ -263,6 +313,7 @@ CREATE TABLE login_logs (
     INDEX idx_user_time (user_id, created_date),
     INDEX idx_result_time (result, created_date),
     INDEX idx_identifier_hash (identifier_hash, created_date)
+    -- MySQL 分区表不支持外键，login_logs.user_id 由应用层保证引用完整性
 ) ENGINE=InnoDB
 -- 初始分区基于 2026-05 部署。若部署月份晚于此，首次运行维护任务时会自动拆分 p_future
 PARTITION BY RANGE COLUMNS(created_date) (
@@ -292,6 +343,7 @@ CREATE TABLE audit_logs (
     INDEX idx_user_time (user_id, created_date),
     INDEX idx_action_time (action, created_date),
     INDEX idx_resource (resource_type, resource_id, created_date)
+    -- MySQL 分区表不支持外键，user_id/resource_owner_id 由应用层保证引用完整性
 ) ENGINE=InnoDB
 -- 初始分区基于 2026-05 部署。若部署月份晚于此，首次运行维护任务时会自动拆分 p_future
 PARTITION BY RANGE COLUMNS(created_date) (
@@ -368,6 +420,31 @@ WHERE r.role_name = 'user'
   AND p.code IN ('user:read', 'role:read', 'perm:read', 'user:update');
 
 -- ============================================================
+-- 软删除级联触发器：UPDATE deleted_at 时传播到子表
+-- ============================================================
+DELIMITER $$
+
+CREATE TRIGGER trg_users_soft_delete AFTER UPDATE ON users
+FOR EACH ROW
+BEGIN
+    IF NEW.deleted_at > 0 AND OLD.deleted_at = 0 THEN
+        UPDATE user_roles SET deleted_at = NEW.deleted_at WHERE user_id = NEW.user_id AND deleted_at = 0;
+        UPDATE user_auths SET deleted_at = NEW.deleted_at WHERE user_id = NEW.user_id AND deleted_at = 0;
+        UPDATE api_keys   SET deleted_at = NEW.deleted_at WHERE user_id = NEW.user_id AND deleted_at = 0;
+    END IF;
+END$$
+
+CREATE TRIGGER trg_roles_soft_delete AFTER UPDATE ON roles
+FOR EACH ROW
+BEGIN
+    IF NEW.deleted_at > 0 AND OLD.deleted_at = 0 THEN
+        UPDATE user_roles SET deleted_at = NEW.deleted_at WHERE role_id = NEW.id AND deleted_at = 0;
+    END IF;
+END$$
+
+DELIMITER ;
+
+-- ============================================================
 -- 分区自动维护：每月自动创建下月分区
 -- ============================================================
 DELIMITER $$
@@ -394,8 +471,8 @@ BEGIN
 
     SET v_p1_boundary = DATE_ADD(v_last_boundary, INTERVAL 1 MONTH);
     SET v_p2_boundary = DATE_ADD(v_last_boundary, INTERVAL 2 MONTH);
-    SET v_p1_name = CONCAT('p', DATE_FORMAT(v_p1_boundary, '%Y%m'));
-    SET v_p2_name = CONCAT('p', DATE_FORMAT(v_p2_boundary, '%Y%m'));
+    SET v_p1_name = CONCAT('p', DATE_FORMAT(DATE_SUB(v_p1_boundary, INTERVAL 1 MONTH), '%Y%m'));
+    SET v_p2_name = CONCAT('p', DATE_FORMAT(DATE_SUB(v_p2_boundary, INTERVAL 1 MONTH), '%Y%m'));
 
     SET @sql = CONCAT(
         'ALTER TABLE login_logs REORGANIZE PARTITION p_future INTO (',

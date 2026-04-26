@@ -1,7 +1,5 @@
 FROM redis:7-alpine
 
-ENV REDIS_PASSWORD=your_strong_redis_password
-
 COPY redis.conf /usr/local/etc/redis/redis.conf
 
 RUN mkdir -p /data && chown redis:redis /data
