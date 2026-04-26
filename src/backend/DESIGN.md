@@ -2,7 +2,7 @@
 
 ## 1. 概述
 
-- **项目**: `src/backend/general-web-backend`（Spring Boot 4.1.0-SNAPSHOT, Java 21, Maven）
+- **项目**: `src/backend/general-web-backend`（Spring Boot 3.4.x GA, Java 21, Maven；⚠ 若使用 4.x 需待 GA 发布，SNAPSHOT 不可上生产）
 - **数据库**: MySQL 8.0 14 表（`deploy/docker/mysql/init.sql`）+ Redis 7.x
 - **代码层级**: Controller → Service(Interface+Impl) → Mapper → DB，严格分层
 - **API 前缀**: `/api/v1`
@@ -25,11 +25,13 @@
 | com.mysql : mysql-connector-j | MySQL 8.x JDBC |
 | org.redisson : redisson-spring-boot-starter 3.40.2 | Redis ops, distributed locks |
 | cn.hutool : hutool-all 5.8.34 | Snowflake, crypto, TOTP (Hutool 替代 de.taimos), code gen |
-| org.bitbucket.b_c : jose4j 0.9.6 | JWT RS256 (no Jackson conflicts) |
+| org.bitbucket.b_c : jose4j 0.9.8 | JWT RS256 (≥0.9.7 修复 CVE-2023-51701, CVE-2024-21635) |
 | com.github.xiaoymin : knife4j-openapi3-jakarta-spring-boot-starter 4.5.0 | Swagger UI |
 | org.mapstruct : mapstruct 1.6.3 (+ processor) | DTO/entity 编译期映射 |
 | org.projectlombok : lombok | Boilerplate reduction |
 | com.google.zxing : core + javase 3.5.3 | TOTP QR codes |
+| com.github.ben-manes.caffeine : caffeine | Caffeine L1 本地权限缓存 |
+| io.micrometer : micrometer-registry-prometheus | Prometheus 指标暴露 |
 | org.testcontainers : testcontainers/mysql/junit-jupiter (test) | Integration tests |
 | com.h2database : h2 (test) | In-memory test DB |
 
@@ -38,16 +40,23 @@
 ## 3. 配置文件 (application.yml)
 
 ```yaml
+server:
+  forward-headers-strategy: NATIVE          # 信任 X-Forwarded-For/Proto 等代理头
+  shutdown: graceful
 spring:
   application.name: general-web-backend
   datasource:
-    url: jdbc:mysql://localhost:3306/auth_system?useSSL=true&requireSSL=true&serverTimezone=Asia/Shanghai
-    # 本地开发若 MySQL 未配置 SSL 证书，可临时改为 useSSL=false
-    username: root
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/auth_system?useSSL=true&requireSSL=true&serverTimezone=Asia/Shanghai&sslMode=VERIFY_CA&trustCertificateKeyStoreUrl=file:${DB_TRUSTSTORE_PATH}&trustCertificateKeyStorePassword=${DB_TRUSTSTORE_PASSWORD}
+    # 本地开发可临时改为 useSSL=false&requireSSL=false&sslMode=PREFERRED
+    # 云数据库（RDS/PolarDB）通过 sslMode=VERIFY_CA 验证 CA 证书，可不指定 truststore 使用 JVM 默认 cacerts
+    username: ${DB_USERNAME:app_user}
     password: ${DB_PASSWORD}
+    # 生产环境使用低权限应用账号，禁用 root
   data.redis:
-    host: localhost
-    port: 6379
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+    # 生产环境必须设置 REDIS_PASSWORD，配合 Redis protected-mode yes
   mail:
     host: smtp.example.com
     port: 465
@@ -67,8 +76,9 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
 
 jwt:
-  private-key: classpath:jwt-private.pem
-  public-key: classpath:jwt-public.pem
+  private-key: ${JWT_PRIVATE_KEY_PATH:/etc/secrets/jwt-private.pem}   # 生产环境外部挂载，勿放 classpath
+  public-key: ${JWT_PUBLIC_KEY_PATH:/etc/secrets/jwt-public.pem}
+  # 开发环境可临时覆盖为 classpath:jwt-private.pem
   access-token-ttl: 900            # 15 min
   refresh-token-ttl: 604800        # 7 days
 
@@ -118,7 +128,7 @@ com.iccuu.general_web_backend
 │   │   ├── LoginResult.java               — success, failed_credential, failed_mfa, failed_locked, failed_disabled
 │   │   ├── ScopeType.java                 — self, dept, org, all
 │   │   ├── ClientType.java                — confidential, public
-│   │   ├── GrantType.java                 — authorization_code, client_credentials, refresh_token, implicit
+│   │   ├── GrantType.java                 — authorization_code, client_credentials, refresh_token (implicit 已废弃)
 │   │   └── ApiKeyStatus.java              — DISABLED(0), NORMAL(1)
 │   ├── exception/
 │   │   ├── BusinessException.java         — extends RuntimeException(code, message)
@@ -143,7 +153,7 @@ com.iccuu.general_web_backend
 │   │   ├── JwtUtil.java                   — createAccessToken, createRefreshToken, parseToken, getJti
 │   │   ├── CryptoUtil.java                — AES-256-GCM encrypt/decrypt
 │   │   ├── HashUtil.java                  — SHA-256, BCrypt convenience
-│   │   ├── IpUtil.java                    — Extract client IP from request
+│   │   ├── IpUtil.java                    — Extract client IP from request (解析 X-Forwarded-For 代理链)
 │   │   ├── RedisUtil.java                 — Convenience over RedisTemplate
 │   │   └── SecurityUtil.java              — getUserId(), getPermissions() from SecurityContext
 │   └── filter/
@@ -266,8 +276,8 @@ com.iccuu.general_web_backend
 |--------|------|------|------|
 | POST | /register | — | 用户注册 (GeeTest在 sendCode 环节) |
 | POST | /login | — | 登录 (GeeTest → password → MFA → JWT) |
-| POST | /refresh | — (body传refresh_token) | 刷新 access token |
-| POST | /logout | Bearer token | 黑名单当前 access token JTI, 吊销 refresh token family |
+| POST | /refresh | — (HttpOnly Cookie 或 body) | 刷新 access token (refresh token 优先从 Cookie 读取) |
+| POST | /logout | Bearer token | 黑名单 access token JTI, 吊销 refresh token family, 清除 refresh cookie |
 | POST | /password/change | Bearer token | 修改密码 (验旧+查历史+更新password_changed_at) |
 | POST | /password/reset | — | 验证码重置密码 |
 | POST | /code/send | — | GeeTest → 发邮箱验证码 (5min TTL, rate-limited) |
@@ -278,8 +288,11 @@ com.iccuu.general_web_backend
 ```
 前端: 填表(username/email/phone/password) → 点"发送验证码" → GeeTest滑块 → POST /code/send {identifier, identity_type, purpose} → 收到邮件
 前端: 输入验证码 → POST /register {..., identity_type, verification_code}
-后端: 根据 identity_type + identifier 查找 Redis vc:purpose:{identifier} 校验验证码 → 通过后 Snowflake user_id → bcrypt密码 → 事务写入 users + user_auths + user_profiles → 分配默认user角色
+后端: 校验验证码 → Snowflake user_id → bcrypt密码 → 事务写入 users(status=PENDING) + user_auths(is_verified=0) + user_profiles
+      → 发激活邮件 → 用户点击链接或输入验证码 → POST /code/verify {identifier, code, purpose=activate}
+      → 校验通过 → users.status=NORMAL, user_auths.is_verified=1, 分配默认user角色
 ```
+PENDING 状态的用户无法登录，确保邮箱所有权验证完成后再激活账户。
 
 **登录流程**:
 ```
@@ -398,11 +411,11 @@ TOTP secret 和 backup codes 以 AES-256-GCM 加密后分别存入 `user_mfa.sec
 
 ### 6.6 分区表
 
-`login_logs` 和 `audit_logs` 使用 `RANGE COLUMNS(created_date)` + 复合主键 `(id, created_date)`。MySQL 事件 `evt_add_partitions` 每月自动创建新分区。Java 侧 `PartitionMaintenanceScheduler` 作为安全网。
+`login_logs` 和 `audit_logs` 使用 `RANGE COLUMNS(created_date)` + 复合主键 `(id, created_date)`。Java 侧 `PartitionMaintenanceScheduler` 作为主维护方案（云数据库普遍不支持 MySQL Event Scheduler）。MySQL Event `evt_add_partitions` 为可选增强（仅自建 MySQL 支持，开启需 `SUPER` 权限）。
 
 ### 6.7 OAuth2 — 完整 Provider
 
-支持 `authorization_code` / `client_credentials` / `refresh_token` / `implicit` 四种 grant type。授权码 Redis 存储 (10min TTL)，PKCE 支持 (`oauth:code:{code}:pkce`)。用户同意记录按 user+client 存储。可信客户端 (`is_trusted=1`) 跳过同意页。
+支持 `authorization_code` (强制 PKCE S256 + state CSRF 防护) / `client_credentials` / `refresh_token` 三种 grant type。`implicit` flow 按 OAuth 2.1 规范已废弃且不启用。授权码 Redis 存储 (10min TTL)，PKCE 支持 (`oauth:code:{code}:pkce`)。`state` 参数存 Redis (`oauth:state:{state}`, TTL: 600s) 防登录 CSRF。用户同意记录按 user+client 存储。可信客户端 (`is_trusted=1`) 跳过同意页。
 
 ### 6.8 API Key — 作用域限制
 
@@ -417,9 +430,17 @@ TOTP secret 和 backup codes 以 AES-256-GCM 加密后分别存入 `user_mfa.sec
 
 ### 6.10 Refresh Token 轮换 + 盗用检测
 
-每次登录创建 "token family" (UUID)。refresh token 存入 `refresh:family:{familyId}` Redis Hash。轮换时新旧交替——如果检测到已被撤销的旧 refresh token 被重放 → 整个 family 撤销 (`refresh:family:{familyId}:revoked`)，用户必须重新登录。
+每次登录创建 "token family" (UUID)。refresh token 默认通过 **HttpOnly + Secure + SameSite=Strict Cookie** 下发（浏览器端）或 POST body（移动端），前端 JavaScript 不可访问，消除 XSS 窃取风险。
 
-### 6.11 GeeTest 极验 v4
+```
+Set-Cookie: refresh_token=<encrypted>; HttpOnly; Secure; SameSite=Strict; Path=/api/v1/auth; Max-Age=604800
+```
+
+refresh token 存入 `refresh:family:{familyId}` Redis Hash。旋转操作使用 Redis Lua 脚本保证原子性（防并发竞态误触发整族撤销），详见 [9.43](#943-refresh-token-原子旋转--lua-脚本)。登出时除黑名单 access token JTI 外，同时清除 refresh cookie 和吊销 family。
+
+### 6.11 GeeTest 极验 v4 + 断路器降级
+
+GeeTest 服务不可达时通过 Resilience4j 断路器降级为严格限流模式，不阻塞登录。详见 [9.44](#944-geetest-断路器与降级)。
 
 | 模块 | captcha-id | 保护接口 | 防护目标 |
 |------|-----------|----------|----------|
@@ -442,6 +463,7 @@ refresh:family:{familyId}:revoked    — 家族吊销标记 (TTL: 604800s)
 session:{userId}:{sessionId}         — 会话元数据 (TTL: 604800s)
 oauth:code:{code}                    — 授权码上下文 (TTL: 600s)
 oauth:code:{code}:pkce              — PKCE code_challenge (TTL: 600s)
+oauth:state:{state}                  — OAuth state 防 CSRF (TTL: 600s)
 oauth:consent:{userId}:{clientId}    — OAuth 同意记录 (TTL: 2592000s, 30天)
 lockout:failed:{userId}              — 登录失败计数器 (TTL: 1800s)
 ratelimit:{purpose}:{identifier}     — API 频率限制 (TTL: 窗口时间 + 1s)
@@ -490,8 +512,8 @@ partition:maintenance:lock          — 分区维护锁 (TTL: 120s)
 ### Phase 2: 核心认证
 10. `GeeTestVerifier` — 极验 v4 服务端校验 (RestTemplate, HMAC-MD5 签名, Redis 缓存)
 11. `JwtTokenProvider` (jose4j RS256) + `JwtAuthenticationFilter`
-12. `AuthController.register()` → 校验验证码 → 事务写入 users + user_auths + user_profiles → 分配默认 user 角色
-13. `AuthController.login()` → GeeTest 校验 → .identifier lookup → 状态检查 → bcrypt → MFA → 签发 token → 记录 login_log
+12. `AuthController.register()` → 校验验证码 → 事务写入 users(status=PENDING) + user_auths(is_verified=0) + user_profiles
+13. `AuthController.login()` → GeeTest 校验 → identifier lookup → 状态检查(拒绝PENDING/LOCKED/DISABLED) → bcrypt → MFA → 签发 token → 记录 login_log
 14. `AuthController.sendCode()` → GeeTest 校验 → 频率限制 → 生成 6 位验证码 → 发送邮件 → Redis (5min)
 15. `TokenService` — access (15min) + refresh (7day), 轮换 + 盗用检测, Redis 黑名单
 16. `AuthController.logout()` — blacklist access jti, invalidate refresh family
@@ -588,6 +610,8 @@ partition:maintenance:lock          — 分区维护锁 (TTL: 120s)
 
 Redis 缓存失效在生产代码中通过 `@TransactionalEventListener(phase=AFTER_COMMIT)` 延迟到事务成功后执行，避免事务回滚时缓存已清除。该方案存在一个已知失败模式：事务提交成功但 Redis 不可达时，缓存失效静默丢失，用户可能保有已撤销的权限最多 TTL 时长（600s）。高安全场景可将 `perm:effective` TTL 降至 60-120s 以缩小影响窗口。
 
+性能注意：`SecurityConfig` 中 `BCryptPasswordEncoder(12)` 为全局 Bean，OAuth client_secret 验证同样使用 BCrypt(12)（约 250ms/次）。高并发 OAuth token 交换场景下，可通过 `OAuthClientService` 使用独立的 `BCryptPasswordEncoder(10)` 实例（约 62ms/次）降低开销，安全度仍可接受。
+
 ### 9.3 错误响应格式
 
 `R<T>` 统一响应，`code` 字段全部使用 ErrorCode 枚举值，HTTP 状态码由 Response 行单独承载：
@@ -624,11 +648,12 @@ ErrorCode 枚举按模块分段：`0` 成功，`1xxxx` 认证/授权错误，`4x
    - 若 `now <= locked_until` → 返回 `failed_locked`
 2. `status = LOCKED` 且 `locked_until = NULL` → 永久锁定，需管理员手动解封
 
-### 9.6 OAuth2 PKCE — 强制 S256
+### 9.6 OAuth2 PKCE + state — 强制 S256 + 防 CSRF
 
 - 仅接受 `code_challenge_method=S256`，拒绝 `plain`
 - 验证逻辑：`BASE64URL-ENCODE(SHA-256(code_verifier)) == code_challenge`
 - code_challenge 存储在 Redis `oauth:code:{code}:pkce`，与授权码同时过期 (600s)
+- `state` 参数：`/authorize` 时前端生成 `crypto.randomUUID()` → 后端存入 `oauth:state:{state}` (TTL 600s) → 回调时校验是否存在并立即删除，防重放
 
 ### 9.7 MFA 密钥版本化
 
@@ -672,8 +697,9 @@ app.cors.allowed-origins: ${CORS_ALLOWED_ORIGINS}
 | POST /code/send | identifier (邮箱/手机号) | 1/5min |
 | POST /register | IP | 3/hour |
 | POST /login (MFA code) | identifier | 5/min |
+| GET /audit-logs, /login-logs | user | 10/min |
 
-双重维度：IP 维度防分布式攻击，identifier 维度防定向攻击。MFA code 校验阶段单独限流，防止 TOTP 6 位数字的暴力尝试（30s 窗口内约 1M 组合，限流将有效尝试次数降到可忽略级别）。
+双重维度：IP 维度防分布式攻击，identifier 维度防定向攻击。MFA code 校验阶段单独限流，防止 TOTP 6 位数字的暴力尝试（30s 窗口内约 1M 组合，限流将有效尝试次数降到可忽略级别）。审计日志查询增加 user 维度限流，防止大数据量分页拖垮 DB 连接池。
 
 ### 9.11 数据保留与物理清理
 
@@ -691,17 +717,19 @@ app.cors.allowed-origins: ${CORS_ALLOWED_ORIGINS}
 
 ### 9.13 健康检查
 
-Phase 1 即配置 Actuator：
+Phase 1 即配置 Actuator + Prometheus：
 ```yaml
 management:
-  endpoints.web.exposure.include: health,info
+  endpoints.web.exposure.include: health,info,prometheus
   endpoint.health:
     probes.enabled: true
     show-details: when-authorized
+  metrics.tags.application: ${spring.application.name}
 ```
 
-- `/actuator/health/liveness` — 容器存活探针 (仅检查应用是否存活)
-- `/actuator/health/readiness` — 就绪探针 (检查 MySQL + Redis 连通性)
+- `/actuator/health/liveness` — 容器存活探针
+- `/actuator/health/readiness` — 就绪探针 (MySQL + Redis)
+- `/actuator/prometheus` — Prometheus 抓取端点，指标定义见 [9.39](#939-prometheus-指标暴露)
 
 ### 9.14 数据库迁移
 
@@ -751,15 +779,15 @@ WITH RECURSIVE role_chain AS (
 )
 SELECT rp.permission_id,
        COALESCE(
-           -- 将作用域转为数字排名：self=1 dept=2 org=3 all=4，rank 越小越严格
            CASE ur.scope_type WHEN 'self' THEN 1 WHEN 'dept' THEN 2
                               WHEN 'org' THEN 3 WHEN 'all' THEN 4 END,
-           4  -- 祖先角色无 user_roles 行，默认为 all(4)
+           4
        ) AS ur_rank,
        CASE COALESCE(s.scope_key, 'all')
            WHEN 'self' THEN 1 WHEN 'dept' THEN 2
            WHEN 'org' THEN 3 WHEN 'all' THEN 4
-       END AS rp_rank
+       END AS rp_rank,
+       ur.scope_value                    -- 直联角色限定具体部门/组织 ID
 FROM role_chain rc
 JOIN role_permissions rp ON rc.id = rp.role_id
 LEFT JOIN scopes s ON rp.scope_id = s.id
@@ -767,11 +795,12 @@ LEFT JOIN user_roles ur ON rc.id = ur.role_id AND ur.user_id = <userId> AND ur.d
 WHERE rc.is_direct = 0 OR ur.deleted_at = 0;
 -- effective_scope_rank = MAX(rp_rank, ur_rank) → 取较严格的那个
 -- 最终合并: 对每个 permission_id 取 MIN(effective_scope_rank) → 跨所有角色取最宽松的
+-- 下游数据访问层: WHERE department_id IN (resolved scope_values) 对 dept/org 作用域实例化过滤
 ```
-
-作用域合并分两步：
-1. **角色内收窄**：每个角色分配的作用域 = `MOST_RESTRICTIVE(role_permissions_scope, user_roles_scope)`。祖先角色无 `user_roles` 行，视为 `scope_type='all'`（不做额外限制）。`LEFT JOIN user_roles` 确保祖先角色的权限不会被丢弃。
-2. **角色间合并**：对同一 `permission_id`，取 `MOST_PERMISSIVE(effective_scope_across_all_roles)`。
+作用域合并分两步，第三步为数据过滤：
+1. **角色内收窄**：每个角色分配的作用域 = `MOST_RESTRICTIVE(role_permissions_scope, user_roles_scope)`
+2. **角色间合并**：对同一 `permission_id`，取 `MOST_PERMISSIVE(effective_scope_across_all_roles)`
+3. **数据层过滤**：下游 Service/Mapper 根据 `scope_value` 对 `dept`/`org` 作用域进行实例化过滤（`WHERE department_id IN (scope_values)`）。`scope_value=''`（默认值）表示该作用域类型内无实例限制（如 `scope_type='all'` 时 `scope_value` 恒为空）。祖先角色 `scope_value` 为 NULL，视为无过滤。`LEFT JOIN` 确保祖先角色的权限不会被丢弃。
 作用域宽松度排名：`self(1) < dept(2) < org(3) < all(4)`，通过 CASE 表达式显式映射（不可依赖 `LEAST()` 的 ASCII 字典序）。例如：角色权限为 `user:read@all`，但用户角色分配为 `scope_type='dept'`，则有效权限为 `user:read@dept`。
 
 ### 9.19 分区维护安全
@@ -798,6 +827,7 @@ WHERE rc.is_direct = 0 OR ur.deleted_at = 0;
 | `X-Frame-Options` | `DENY` | 禁止 iframe 嵌套 |
 | `Referrer-Policy` | `strict-origin-when-cross-origin` | 跨域时不泄露完整 URL |
 | `X-XSS-Protection` | `0` | 禁用已废弃的浏览器 XSS 过滤 |
+| `Content-Security-Policy` | `default-src 'self'; frame-ancestors 'none'` | CSP 基线，前后端分离时前端自行扩展 |
 
 ### 9.22 请求体大小限制
 
@@ -875,3 +905,426 @@ Docker 场景可通过挂载 `.sql` 文件到 `/docker-entrypoint-initdb.d/` 保
 ### 9.33 `login_logs.identity_type` 宽松型设计
 
 `login_logs.identity_type` 使用 `VARCHAR(20)`（无 ENUM 约束），而 `user_auths.identity_type` 使用严格 `ENUM`。这是有意为之：日志表应能记录超出当前系统已知类型的身份标识（例如将来新增的 OAuth provider），避免因严格 ENUM 导致日志写入失败。
+
+### 9.34 Refresh Token — HttpOnly Cookie 模式
+
+浏览器端 refresh token 通过 **HttpOnly + Secure + SameSite=Strict** Cookie 下发，前端 JavaScript 完全不可访问，消除 XSS 窃取攻击面：
+
+```
+Set-Cookie: refresh_token=<token>; HttpOnly; Secure; SameSite=Strict; Path=/api/v1/auth; Max-Age=604800
+```
+
+`/refresh` 端点优先从 Cookie 读取 refresh token（`@CookieValue`），若无则从请求体读取（兼容移动端 / 非浏览器客户端）。`/logout` 时清除该 Cookie（`Max-Age=0`）。
+
+### 9.35 设备指纹绑定（可选安全增强，AAL3 合规）
+
+NIST 800-63B AAL3 要求设备绑定。启用后在 JWT 中增加 `fph` (fingerprint hash) claim：
+
+```java
+String ipPrefix = clientIp.substring(0, clientIp.lastIndexOf('.') + 1); // /24 subnet
+String fingerprint = DigestUtils.sha256Hex(userAgent + ipPrefix);
+// 存入 JWT claim: { "fph": "a1b2c3..." }
+```
+
+`JwtAuthenticationFilter` 校验时比对请求指纹与 token 中 `fph`，不匹配 → 拒绝。最多增加 ~50μs 延迟，无额外 Redis/DB 调用。`/refresh` 时更新 `fph`（允许 IP/UA 渐变）。
+
+### 9.36 HIBP 密码泄露检测
+
+注册/改密时调用 Have I Been Pwned k-anonymity API 检查密码是否已知泄露：
+
+```
+SHA-1(password) → "A1B2C3D4E5F6G7H8I9J0..." 40 hex
+  → 前 5 位 "A1B2C" → GET https://api.pwnedpasswords.com/range/A1B2C
+  → 返回含 D4E5F6G7... 后半部分的哈希后缀列表
+  → 本地比对: 命中次数 ≥ 100 → 拒绝 (密码已公开泄露)
+```
+
+特点：k-anonymity 模型不泄露完整密码哈希，~300ms 延迟可通过 `@Async` 执行，非阻塞注册流程。仅在密码复杂度校验通过后才调用。
+
+### 9.37 Caffeine 本地权限缓存 — L1 层
+
+RBAC 权限解析增加两级缓存：Caffeine (进程内 L1) + Redis (分布式 L2)：
+
+```
+请求 → Caffeine L1 (100ns, TTL 60s, max 10000)
+   → Miss → Redis L2 (1ms, TTL 600s) → Miss → MySQL CTE (5ms)
+
+cache:invalidate:permissions pub/sub → 多实例广播 → L1 + L2 双向失效
+```
+
+依赖：`com.github.ben-manes.caffeine:caffeine`（Spring Cache 原生支持）。预期将 Redis 权限查询流量降低 80-90%。
+
+### 9.38 HikariCP 连接池调优
+
+```yaml
+spring.datasource.hikari:
+  maximum-pool-size: 20          # 生产建议值，默认 10 偏保守
+  minimum-idle: 5                # 预热避免冷启动延迟
+  connection-timeout: 3000       # 3s，快速失败（默认 30s）
+  idle-timeout: 600000           # 10min 闲置回收
+  max-lifetime: 1800000          # 30min，低于 MySQL wait_timeout (8h)
+  leak-detection-threshold: 10000  # 10s 泄露检测，仅开发/测试开启
+```
+
+### 9.39 Prometheus 指标暴露
+
+Micrometer + Prometheus 提供全栈可观测性：
+
+```yaml
+management:
+  endpoints.web.exposure.include: health,info,prometheus
+  metrics.tags.application: ${spring.application.name}
+```
+
+```xml
+<!-- 依赖 -->
+<dependency>
+  <groupId>io.micrometer</groupId>
+  <artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
+```
+
+**业务指标清单**：
+
+| 指标名称 | 类型 | 维度标签 |
+|----------|------|----------|
+| `auth_login_attempts_total` | Counter | result, identity_type |
+| `auth_token_verification_seconds` | Timer | source (jwt/apikey) |
+| `auth_rbac_resolution_seconds` | Timer | cache_hit (true/false) |
+| `auth_ratelimit_rejected_total` | Counter | endpoint, dimension (ip/id) |
+| `auth_mfa_verification_total` | Counter | mfa_type, result |
+| `auth_registration_total` | Counter | identity_type |
+| `partition_maintenance_total` | Counter | table_name, result |
+| `redis_cache_hit_ratio` | Gauge | cache_name |
+
+指标暴露在 `/actuator/prometheus`，Prometheus 定期拉取，配合 Grafana 告警。
+
+### 9.40 性能基线
+
+| 操作 | 目标延迟 | 关键路径 |
+|------|----------|----------|
+| JWT 验证 (RS256) | < 1ms | OncePerRequestFilter |
+| 权限解析 (L1 命中) | < 1μs | Caffeine 本地 |
+| 权限解析 (L2 命中) | < 2ms | Redis 往返 |
+| 登录 (bcrypt) | < 500ms | BCrypt(12) |
+| 注册 (含邮件) | < 1000ms | 邮件发送异步 |
+| API Key 验证 (缓存命中) | < 1ms | Redis `apikey:{hash}` |
+| OAuth token 交换 | < 500ms | bcrypt(10) + Redis |
+
+### 9.41 登录时序侧信道防护
+
+登录流程中若 `user_auths` 查找不到用户即返回，攻击者可通过响应延迟区分"用户不存在"(~10ms) 与"密码错误"(~260ms)。ASVS V2.1.9 要求认证失败响应不可区分：
+
+```java
+// AuthServiceImpl.login()
+UserAuth auth = userAuthMapper.selectByIdentifier(identifier);
+if (auth == null) {
+    // 对抗时序侧信道：对不存在用户也执行 bcrypt(12) 验算
+    BCrypt.checkpw(credential, DUMMY_HASH);  // DUMMY_HASH = "$2a$12$..." 预计算
+    throw new AuthenticationException(ErrorCode.INVALID_CREDENTIALS);
+}
+if (!BCrypt.checkpw(credential, auth.getCredential())) {
+    throw new AuthenticationException(ErrorCode.INVALID_CREDENTIALS);
+}
+```
+
+返回统一的 `INVALID_CREDENTIALS` 错误，不区分"用户不存在"与"密码错误"。
+
+### 9.42 HikariCP 扩容与容量规划
+
+9.38 的 `maximum-pool-size: 20` 仅适用于 ~3,000 req/s 以下场景。生产建议按实例规格调整：
+
+```yaml
+spring.datasource.hikari:
+  maximum-pool-size: ${DB_POOL_SIZE:50}     # 按 CPU 核算: max = (CPU * 2) + 1，上限 100
+  minimum-idle: ${DB_POOL_MIN:10}           # 预热减少冷启动
+  connection-timeout: 3000
+  max-lifetime: 1800000
+  leak-detection-threshold: 10000
+```
+
+| 并发用户 | 推荐 pool-size | 实例数 | 估算 |
+|----------|---------------|--------|------|
+| 1K | 20 | 2 | 开发/测试 |
+| 10K | 50 | 3-4 | 中等规模 |
+| 100K | 80 | 8-12 | 大规模 |
+
+每个实例的 bcrypt(12) 登录容量约 100 次/秒（~25 核），需要按实例数水平扩展。
+
+### 9.43 Refresh Token 原子旋转 — Lua 脚本
+
+防止并发 /refresh 误触发家族撤销，旋转操作使用 Redis Lua 脚本保证原子性：
+
+```lua
+-- KEYS[1] = refresh:family:{familyId}
+-- ARGV[1] = old_token_hash, ARGV[2] = new_token_hash
+local current = redis.call('HGET', KEYS[1], 'current')
+if current == false then
+    -- 家族已撤销，拒绝
+    return {0, 'revoked'}
+end
+if current == ARGV[1] then
+    -- 正常旋转: 旧→新
+    redis.call('HSET', KEYS[1], 'current', ARGV[2], 'previous', ARGV[1])
+    return {1, 'ok'}
+end
+if current ~= ARGV[1] and redis.call('HEXISTS', KEYS[1], 'previous') == 1
+   and redis.call('HGET', KEYS[1], 'previous') == ARGV[1] then
+    -- 重放检测: ARGV[1] 是已被替换的旧值 → 整族撤销
+    redis.call('DEL', KEYS[1])
+    redis.call('SET', KEYS[1] .. ':revoked', '1', 'EX', 604800)
+    return {2, 'replay_detected'}
+end
+return {3, 'unknown'}
+```
+
+Java 侧调用 `RedissonClient.getScript().evalSha(...)` 执行，返回码 `2` 时清除客户端所有 token 并强制重登录。
+
+### 9.44 GeeTest 断路器与降级
+
+GeeTest 不可用时不应阻塞全部登录。使用 Resilience4j 断路器：
+
+```java
+@CircuitBreaker(name = "geetest", fallbackMethod = "geetestFallback")
+public GeeTestResult verify(String captchaOutput, String lotNumber, ...) { ... }
+
+public GeeTestResult geetestFallback(..., Exception e) {
+    log.error("GeeTest unavailable, circuit open", e);
+    // 降级策略: fail-open + 最严格限流兜底
+    // 仅允许 login: 1/min/IP + code/send: 1/10min/IP
+    return GeeTestResult.BYPASS_WITH_STRICT_RATE_LIMIT;
+}
+```
+
+```yaml
+resilience4j.circuitbreaker:
+  instances:
+    geetest:
+      failure-rate-threshold: 50
+      wait-duration-in-open-state: 30s
+      sliding-window-size: 10
+```
+
+断路器开启时触发 CRITICAL 告警，前端提示"人机验证服务暂时不可用，已启用严格限流保护"。
+
+### 9.45 Access Token 客户端安全存储
+
+浏览器端 access token 不使用 localStorage（易受 XSS 窃取）。推荐方案：
+
+| 方案 | XSS 免疫 | 实施难度 | 适用场景 |
+|------|----------|----------|----------|
+| BFF (Backend-For-Frontend) | ✅ token 存服务端 session，前端仅持 session cookie | 中 | SPA + 同源/同站 API |
+| 双 HttpOnly Cookie | ✅ access + refresh 均为 HttpOnly | 中 | 需要 CSRF token 配合 |
+| Service Worker + Token 代理 | ✅ SW 拦截请求注入 token | 高 | 复杂 SPA |
+| localStorage + strict CSP | ⚠️ CSP `script-src 'self'` 降风险 | 低 | 快速启动（非推荐） |
+
+推荐 BFF 模式：`POST /login` 返回 `Set-Cookie: session_id=<uuid>; HttpOnly; Secure; SameSite=Strict`，access token 存 Redis `session:{sessionId}`。前端所有 `/api/` 请求携带 Cookie，后端 `JwtAuthenticationFilter` 从 Cookie 取 session_id → Redis 取 access token → 注入 SecurityContext。
+
+### 9.46 GDPR 合规
+
+**数据导出** (`GET /api/v1/me/export`，Permission: 无需认证，限流 1/day/user):
+
+```json
+{ "user": {...}, "profiles": {...}, "auths": [...], "roles": [...],
+  "login_logs": [...], "audit_logs": [...], "mfa": {"totp_enabled": true}, "exported_at": "..." }
+```
+
+**删除权** (Art. 17): 用户请求删除时：
+1. 立即设置 `users.status=DISABLED`，拒绝登录
+2. 审计日志中 `user_id` 和 `identifier_hash` 设为 NULL（保留操作记录结构）
+3. `login_logs` 中 `identifier_hash` 和 `ip_address` 设为 NULL
+4. 软删除 30 天内完成物理删除（从 90 天缩短）
+5. `GET /api/v1/users/{id}/forget-me` 端点即时触发上述流程
+
+**IP/UA 伪匿名化**: `login_logs.ip_address` 仅存储 `/24` 前缀 (如 `192.168.1.0`)，`user_agent` 仅保留主版本号 (如 `Chrome/126`)。
+
+**SOC2 访问审查**: `user_roles` 增加 `last_reviewed_at TIMESTAMP NULL` + `last_reviewed_by BIGINT NULL`。`@Scheduled` 任务标记 90 天未审查的分配为待审查，`GET /api/v1/admin/access-review` 生成审查矩阵。
+
+### 9.47 冷启动缓存预热
+
+新部署/重启时避免所有请求穿透到 CTE 查询：
+
+```java
+@Component
+public class CacheWarmer implements ApplicationListener<ApplicationReadyEvent> {
+    // 启动时异步预热热点用户权限（如最近 100 个活跃用户的 perm:effective）
+    // 通过 consumer group 从访问日志中分析热点用户
+    // 启动后 30s 内完成预热，覆盖 90% 的登录请求
+}
+```
+
+```yaml
+# 配置项
+app.cache.warmup:
+  enabled: true
+  recent-user-count: 100          # 预热最近活跃用户数
+  preload-super-admin: true       # 预热超管
+```
+
+### 9.48 @Async 队列约束
+
+```yaml
+spring.task.execution:
+  pool.core-size: 4
+  pool.max-size: 8
+  pool.queue-capacity: 1000       # 有界队列
+  pool.keep-alive: 60s
+  rejection-policy: CALLER_RUNS   # 队列满时降级为同步执行
+```
+
+### 9.49 Redis 降级策略
+
+| 组件 | Redis 不可达行为 | 理由 |
+|------|-----------------|------|
+| JWT 黑名单 (`blacklist:jti`) | **fail-open** — 允许 token 通过 | 15min TTL 限制窗口，不可阻塞合法请求 |
+| 速率限制 (`ratelimit:`) | **fail-open** — 不限流 | 不可因限流故障导致 500 |
+| 权限缓存 (`perm:`) | **fail-open** — 回退到 MySQL CTE | 性能降级但功能正常 |
+| Refresh token family | **fail-closed** — 拒绝 /refresh | 安全优先，不可在无 Redis 时暴露 token |
+| GeeTest 结果缓存 | **fail-open** — 重新调 GeeTest | 已有断路器保护 |
+| 验证码 (`vc:`) | **fail-closed** — 拒绝 sendCode | 防滥用 |
+
+### 9.50 OAuth Token 交换幂等性
+
+授权码消费后不立即删除，标记为 `exchanged` 并保留 60s 宽限期。客户端重试相同时 code 时返回相同 token：
+
+```
+oauth:code:{code} → { status: "exchanged", access_token: "xxx", refresh_token: "xxx", exchanged_at: ts }
+```
+
+Redisson 分布式锁 `oauth:lock:{code}` 序列化并发交换请求执行。
+
+### 9.51 Snowflake Worker-ID 租约回收
+
+Redis 分配方案增加租约机制：
+
+```
+snowflake:worker:{id} → { instance: "pod-3", lease_until: 1716915000 }
+snowflake:worker:lease:pod-3 → {id}  # 反向索引，启动时自动续约
+```
+
+`@Scheduled(fixedRate=10000)` 续约心跳。`PartitionMaintenanceScheduler` 同时清理过期租约（`lease_until < now` → DEL worker 键 → SET 回可用池）。worker-id 范围 0-31 用 `SET snowflake:available:ids {0,1,...,31}` 管理，分配时 `SPOP`，释放时 `SADD`。
+
+### 9.52 Prometheus 告警规则
+
+```yaml
+groups:
+- name: auth-system
+  rules:
+  - alert: LoginFailureSpike
+    expr: rate(auth_login_attempts_total{result!="success"}[5m]) > 50
+    for: 2m
+    labels: { severity: warning }
+  - alert: RedisCacheHitDrop
+    expr: redis_cache_hit_ratio < 0.5
+    for: 5m
+    labels: { severity: warning }
+  - alert: DBConnectionPoolHigh
+    expr: hikaricp_connections_active / hikaricp_connections_max > 0.8
+    for: 1m
+    labels: { severity: critical }
+  - alert: RedisMemoryHigh
+    expr: redis_memory_used_bytes / redis_memory_max_bytes > 0.8
+    for: 5m
+    labels: { severity: critical }
+  - alert: PartitionMaintenanceFailed
+    expr: rate(partition_maintenance_total{result="failure"}[1h]) > 0
+    labels: { severity: critical }
+  - alert: GeeTestCircuitOpen
+    expr: resilience4j_circuitbreaker_state{name="geetest",state="open"} == 1
+    for: 10s
+    labels: { severity: critical }
+```
+
+### 9.53 MySQL 高可用
+
+生产使用托管数据库的 HA 方案（RDS Multi-AZ / PolarDB 集群版）。应用层配置读/写分离：
+
+```yaml
+spring.datasource:
+  primary:
+    url: jdbc:mysql://${DB_WRITE_HOST}:3306/auth_system?...  # 写库
+  readonly:
+    url: jdbc:mysql://${DB_READ_HOST}:3306/auth_system?...   # 只读副本
+```
+
+权限解析 CTE（只读）、审计日志查询路由到只读副本，降低写库负载。
+
+### 9.54 JWT 密钥轮换 (JWKS)
+
+支持多密钥共存避免轮换时全员踢下线：
+
+```yaml
+jwt:
+  keys:
+    - kid: key-2026-04           # 当前签名密钥
+      private-key: ${JWT_PRIVATE_KEY_PATH}
+      public-key: ${JWT_PUBLIC_KEY_PATH}
+      active: true
+    - kid: key-2026-01           # 旧密钥，仅用于验签
+      public-key: ${JWT_PUBLIC_KEY_PREV_PATH}
+      active: false
+```
+
+新 token 以 `kid: key-2026-04` 签名。验签时按 `kid` 选择公钥，旧 token 在 TTL 内仍有效。对称切换窗口为 2× access-token-ttl (30 min)。
+
+### 9.55 备份与灾备
+
+| 组件 | 备份方法 | RPO | RTO |
+|------|----------|-----|-----|
+| MySQL | 云快照每小时 + binlog 持续备份 | 1 小时 | 30 分钟 |
+| Redis | RDB 快照每小时 + AOF `everysec` | 1 秒 | 5 分钟 |
+| JWT 密钥 | 离线安全存储 + KMS HSM | 0 | 即日 |
+
+灾备演练每季度执行一次，RTO 验证为 30 分钟内完整服务恢复。
+
+### 9.56 jose4j 版本安全
+
+```xml
+<dependency>
+    <groupId>org.bitbucket.b_c</groupId>
+    <artifactId>jose4j</artifactId>
+    <version>0.9.8</version>  <!-- 修复 CVE-2023-51701, CVE-2024-21635，最低 0.9.7+ -->
+</dependency>
+```
+
+### 9.57 安全随机数规范
+
+所有加密操作必须使用 `SecureRandom` 实例：
+
+```java
+// common/util/SecureRandomHolder.java
+public final class SecureRandomHolder {
+    public static final SecureRandom INSTANCE = new SecureRandom();
+    // 禁止: java.util.Random, Math.random(), ThreadLocalRandom
+}
+// ArchUnit 规则: @ArchTest 禁止 java.util.Random 出现在 *.security.* / *.auth.* 包
+```
+
+适用于：API Key 生成 (32 bytes)、PKCE `code_verifier` (43-128 chars Base64url)、OAuth `state` (UUID)、JWT `jti` (UUID)、TOTP backup codes (10×8 digits)。
+
+### 9.58 SOC2 访问审查表
+
+`user_roles` 增加审查字段：
+
+```sql
+ALTER TABLE user_roles ADD COLUMN last_reviewed_at TIMESTAMP NULL;
+ALTER TABLE user_roles ADD COLUMN last_reviewed_by BIGINT NULL;
+```
+
+`audit_logs` 增加 OAuth 资源所有者追踪：
+
+```sql
+ALTER TABLE audit_logs ADD COLUMN resource_owner_id BIGINT NULL COMMENT 'OAuth授权用户';
+```
+
+### 9.59 投产前检查清单
+
+1. [ ] JWT 密钥从 classpath 迁移到外部挂载 (`/etc/secrets/`)
+2. [ ] MySQL Event Scheduler 确认可用（云 DB 不可用时已配置 Java 调度器为主）
+3. [ ] 初始分区按实际部署月份调整（`p_future` 首次运行前手动拆分）
+4. [ ] Prometheus 告警规则接入 Alertmanager
+5. [ ] HIBP API 超时设为 2s，配置 fail-open
+6. [ ] `scope_value NOT NULL DEFAULT ''` 验证直接角色作用域过滤正常工作
+7. [ ] bcrypt dummy hash 预计算值在各实例一致
+8. [ ] Redis `protected-mode yes` + `requirepass` 确认
+9. [ ] 蓝绿部署时 Snowflake worker-id 使用独立计数器 namespace

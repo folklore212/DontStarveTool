@@ -28,7 +28,8 @@ CREATE TABLE users (
     UNIQUE KEY uk_email    (email, deleted_at),
     UNIQUE KEY uk_phone    (phone, deleted_at),
     INDEX idx_status (status),
-    INDEX idx_created (created_at)
+    INDEX idx_created (created_at),
+    INDEX idx_status_created (status, deleted_at, created_at)    -- 分页查询过滤+排序
 ) ENGINE=InnoDB;
 
 -- ============================================================
@@ -56,7 +57,7 @@ CREATE TABLE user_auths (
     identity_type ENUM('phone','email','wechat','github','google','apple','username') NOT NULL,
     identifier    VARCHAR(128) NOT NULL COMMENT '手机号/邮箱/OpenID',
     credential    VARCHAR(256) NOT NULL COMMENT 'bcrypt哈希后的密码',
-    verified      TINYINT      NOT NULL DEFAULT 0,
+    is_verified   TINYINT      NOT NULL DEFAULT 0,
     is_primary    TINYINT      NOT NULL DEFAULT 0 COMMENT '是否主认证方式',
     created_at    TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at    TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -158,6 +159,8 @@ CREATE TABLE user_roles (
     scope_value VARCHAR(64) NOT NULL DEFAULT '' COMMENT '作用域值（如部门ID），无具体值时为空字符串',
     granted_by  BIGINT      NULL     COMMENT '授权人',
     expires_at  TIMESTAMP   NULL     COMMENT '临时授权过期时间',
+    last_reviewed_at TIMESTAMP NULL  COMMENT 'SOC2 CC6.3 最近审查时间',
+    last_reviewed_by BIGINT   NULL   COMMENT 'SOC2 CC6.3 审查人 user_id',
     created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deleted_at  BIGINT      NOT NULL DEFAULT 0 COMMENT '软删除毫秒时间戳',
@@ -200,7 +203,7 @@ CREATE TABLE oauth_clients (
     client_secret VARCHAR(256) NOT NULL COMMENT 'bcrypt哈希',
     client_name   VARCHAR(128) NOT NULL,
     client_type   ENUM('confidential','public') NOT NULL DEFAULT 'confidential',
-    grant_types   SET('authorization_code','client_credentials','refresh_token','implicit') NOT NULL DEFAULT 'authorization_code',
+    grant_types   SET('authorization_code','client_credentials','refresh_token') NOT NULL DEFAULT 'authorization_code',
     redirect_uris JSON         NULL,
     allowed_scopes JSON       NULL,
     is_trusted    TINYINT      NOT NULL DEFAULT 0 COMMENT '跳过用户确认',
@@ -250,8 +253,8 @@ CREATE TABLE login_logs (
     identifier_hash VARCHAR(128) NOT NULL COMMENT 'SHA-256(identifier)，隐私保护',
     identity_type   VARCHAR(20)  NOT NULL,
     auth_method     ENUM('password','totp','sms','oauth','api_key','sso') NOT NULL DEFAULT 'password',
-    ip_address      VARCHAR(45)  NULL,
-    user_agent      VARCHAR(512) NULL,
+    ip_address      VARCHAR(45)  NULL COMMENT '仅存 /24 前缀 (GDPR 伪匿名化)',
+    user_agent      VARCHAR(512) NULL COMMENT '仅存主版本号 e.g. Chrome/126',
     result          ENUM('success','failed_credential','failed_mfa','failed_locked','failed_disabled') NOT NULL,
     failure_reason  VARCHAR(200) NULL,
     created_at      TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -280,6 +283,7 @@ CREATE TABLE audit_logs (
     resource_type VARCHAR(50)   NOT NULL,
     resource_id   VARCHAR(128)  NULL,
     detail        JSON          NULL,
+    resource_owner_id BIGINT     NULL     COMMENT 'OAuth授权用户，SOC2 CC6.1 资源所有者追踪',
     ip_address    VARCHAR(45)   NULL,
     user_agent    VARCHAR(512)  NULL,
     created_at    TIMESTAMP     NOT NULL DEFAULT CURRENT_TIMESTAMP,

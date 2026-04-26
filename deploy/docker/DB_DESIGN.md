@@ -50,7 +50,7 @@ oauth_clients ──N:1── users(created_by)
 | identity_type | ENUM | phone/email/wechat/github/google/apple/username |
 | identifier | VARCHAR(128) | 手机号/邮箱/OpenID |
 | credential | VARCHAR(256) | bcrypt 哈希 |
-| verified | TINYINT | 是否已验证 |
+| is_verified | TINYINT | 是否已验证 |
 | is_primary | TINYINT | 是否主认证方式 |
 | deleted_at | BIGINT DEFAULT 0 | 软删除，解绑后重建不冲突 |
 | UK | (identity_type, identifier, deleted_at) | 含 deleted_at 支持软删除后可重新绑定 |
