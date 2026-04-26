@@ -1,0 +1,9 @@
+FROM mysql:8.0
+
+ENV MYSQL_ROOT_PASSWORD=your_strong_password
+ENV MYSQL_DATABASE=auth_system
+
+COPY my.cnf /etc/mysql/conf.d/my.cnf
+COPY init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306

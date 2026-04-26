@@ -1,0 +1,79 @@
+services:
+  mysql:
+    build:
+      context: ./mysql
+      dockerfile: dockerfile
+    image: dst-mysql:v1
+    container_name: auth-mysql-container
+    restart: unless-stopped
+    ports:
+      - "${MYSQL_PORT}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    security_opt:
+      - seccomp:unconfined  # MySQL 8.0 在旧内核(4.19)需要，现代内核可移除
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - mysql-log:/var/log/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - auth-net
+
+  redis:
+    build:
+      context: ./redis
+      dockerfile: dockerfile
+    image: dst-redis:v1
+    container_name: auth-redis-container
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT}:6379"
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a $$REDIS_PASSWORD --no-auth-warning PING"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - auth-net
+
+  test:
+    build:
+      context: ./test
+      dockerfile: dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY:-http://proxyhk.zte.com.cn:80}"
+        HTTPS_PROXY: "${HTTPS_PROXY:-http://proxyhk.zte.com.cn:80}"
+        NO_PROXY: "${NO_PROXY:-localhost,127.0.0.1,*.zte.com.cn,*.zte.intra,10.0.0.0/8}"
+    image: dst-test:v1
+    container_name: auth-test-container
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      MYSQL_HOST: auth-mysql-container
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: auth-redis-container
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    networks:
+      - auth-net
+
+volumes:
+  mysql-data:
+  mysql-log:
+  redis-data:
+
+networks:
+  auth-net:
+    driver: bridge
