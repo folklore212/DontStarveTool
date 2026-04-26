@@ -10,14 +10,14 @@
 ```
 users ──1:1── user_profiles
   │
-  ├──1:N── user_auths           (多身份: 手机/邮箱/微信/GitHub/...)
+  ├──1:N── user_auths               (多身份: 手机/邮箱/微信/GitHub/...)
   ├──1:N── user_credentials_history (密码历史, 防重用)
-  ├──1:N── user_mfa              (多因素认证, TOTP/SMS/WebAuthn)
+  ├──1:N── user_mfa                 (多因素认证, 含 key_version)
   ├──M:N── roles ──M:N── permissions ──M:1── scopes
-  │         (user_roles)          (role_permissions)
-  ├──1:N── api_keys              (API Key 管理)
-  ├──1:N── login_logs            (登录审计, 按月分区)
-  └──1:N── audit_logs            (操作审计, 按月分区)
+  │         (user_roles)              (role_permissions)
+  ├──1:N── api_keys                 (API Key, 含 expires_at 索引)
+  ├──1:N── login_logs               (登录审计, 按月分区)
+  └──1:N── audit_logs               (操作审计, 按月分区)
 
 oauth_clients ──N:1── users(created_by)
 ```
@@ -37,6 +37,7 @@ oauth_clients ──N:1── users(created_by)
 | failed_attempts | INT | 连续失败次数 |
 | last_login_at | TIMESTAMP | 最后登录时间 |
 | last_login_ip | VARCHAR(45) | 最后登录 IP |
+| password_changed_at | TIMESTAMP | 最后修改密码时间（JWT 签发需晚于此） |
 | created_at / updated_at | TIMESTAMP | 时间戳 |
 | deleted_at | BIGINT DEFAULT 0 | 软删除（0=正常） |
 
@@ -51,6 +52,7 @@ oauth_clients ──N:1── users(created_by)
 | credential | VARCHAR(256) | bcrypt 哈希 |
 | verified | TINYINT | 是否已验证 |
 | is_primary | TINYINT | 是否主认证方式 |
+| deleted_at | BIGINT DEFAULT 0 | 软删除，解绑后重建不冲突 |
 | UK | (identity_type, identifier, deleted_at) | 含 deleted_at 支持软删除后可重新绑定 |
 
 ### 3. roles — 角色表（层级继承）
@@ -66,7 +68,40 @@ oauth_clients ──N:1── users(created_by)
 
 种子角色: `super_admin` → `admin` → `user`
 
-### 4. permissions — 权限表
+### 4. user_mfa — 多因素认证
+
+| 列 | 类型 | 说明 |
+|----|------|------|
+| id | BIGINT PK | 自增 |
+| user_id | BIGINT FK→users | 关联用户 |
+| mfa_type | ENUM | totp/sms/email/webauthn |
+| secret | VARCHAR(256) | AES 加密存储 |
+| key_version | TINYINT DEFAULT 1 | AES 密钥版本号（轮换用） |
+| is_enabled | TINYINT | 是否启用 |
+| backup_codes | JSON | AES 加密的备用恢复码（AES 加密） |
+| UK | (user_id, mfa_type) | 每用户每种 MFA 仅一份 |
+
+### 5. user_credentials_history — 密码历史
+
+| 列 | 类型 | 说明 |
+|----|------|------|
+| id | BIGINT PK | 自增 |
+| user_id | BIGINT FK→users | 用户 |
+| credential | VARCHAR(256) | 历史 bcrypt 哈希 |
+| created_at | TIMESTAMP | 创建时间 |
+| INDEX | (user_id, created_at DESC) | 查询最近 N 次密码 |
+
+### 6. user_profiles — 用户扩展资料
+
+| 列 | 类型 | 说明 |
+|----|------|------|
+| user_id | BIGINT PK FK→users | 1:1 关联用户 |
+| real_name | VARCHAR(64) | 真实姓名 |
+| locale | VARCHAR(10) DEFAULT 'zh-CN' | 语言区域 |
+| timezone | VARCHAR(32) DEFAULT 'Asia/Shanghai' | 时区 |
+| metadata | JSON | 扩展属性（避免频繁改表） |
+
+### 7. permissions — 权限表
 
 | 列 | 类型 | 说明 |
 |----|------|------|
@@ -87,7 +122,7 @@ apikey:create/revoke
 audit:read
 ```
 
-### 5. scopes — 权限作用域
+### 8. scopes — 权限作用域
 
 | id | scope_key | 说明 |
 |----|-----------|------|
@@ -96,18 +131,22 @@ audit:read
 | 3 | org | 组织范围 |
 | 4 | all | 全局无限制 |
 
-### 6. user_roles — 用户角色映射
+### 9. user_roles — 用户角色映射
 
 | 列 | 类型 | 说明 |
 |----|------|------|
+| id | BIGINT PK AUTO_INCREMENT | 自增主键 |
 | user_id | BIGINT FK→users | 用户 |
 | role_id | INT FK→roles | 角色 |
-| scope_type | VARCHAR(20) | 作用域类型 |
+| scope_type | VARCHAR(20) DEFAULT 'all' | 作用域类型 |
 | scope_value | VARCHAR(64) | 作用域值（如部门 ID） |
 | granted_by | BIGINT FK→users | 授权人 |
-| expires_at | TIMESTAMP | 临时授权过期时间 |
+| expires_at | TIMESTAMP | 临时授权过期时间 (idx_expires) |
+| created_at / updated_at | TIMESTAMP | 时间戳 |
+| deleted_at | BIGINT DEFAULT 0 | 软删除 |
+| UK | (user_id, role_id, scope_type, deleted_at) | 防止重复授权 |
 
-### 7. role_permissions — 角色权限映射
+### 10. role_permissions — 角色权限映射
 
 | 列 | 类型 | 说明 |
 |----|------|------|
@@ -115,28 +154,41 @@ audit:read
 | permission_id | INT FK→permissions | 权限 |
 | scope_id | INT FK→scopes | 默认作用域 |
 
+种子数据使用 `INSERT IGNORE`，可安全重复执行，不会重复插入。
 种子映射: super_admin 拥有所有权限(all 作用域)
 
-### 8. oauth_clients — OAuth2 客户端
+### 11. oauth_clients — OAuth2 客户端
 
 client_type: confidential / public
 grant_types: authorization_code / client_credentials / refresh_token / implicit
 
-### 9. api_keys — API Key
+### 12. api_keys — API Key
 
-key_hash: SHA-256 哈希存储
-key_prefix: 展示用前缀（dsk-xxxxxxxx）
-支持过期时间、作用域限制
+| 列 | 类型 | 说明 |
+|----|------|------|
+| id | BIGINT PK | 自增 |
+| user_id | BIGINT FK→users | 所属用户 |
+| key_name | VARCHAR(128) | Key 用途标识 |
+| key_hash | VARCHAR(256) | SHA-256 哈希 |
+| key_prefix | VARCHAR(12) | 展示用前缀（dsk-xxxxxxxx） |
+| allowed_scopes | JSON | 作用域限制 |
+| expires_at | TIMESTAMP | 过期时间 (idx_expires) |
+| last_used_at | TIMESTAMP | 最后使用时间 |
+| status | TINYINT | 0:禁用 1:正常 |
+| created_at / updated_at | TIMESTAMP | 时间戳 |
+| deleted_at | BIGINT DEFAULT 0 | 软删除 |
 
-### 10. login_logs — 登录审计日志
+### 13. login_logs — 登录审计日志
 
-按月 RANGE COLUMNS 分区（created_date）, 预建 p202604/p202605/p202606/p_future。
-identifier_hash: SHA-256 保护隐私。
+按月 RANGE COLUMNS 分区（created_date），预建 p202604/p202605/p202606/p_future，事件每月自动追加。
+identifier_hash: SHA-256 保护隐私，索引 `idx_identifier_hash` 支持按哈希检索。
 result: success / failed_credential / failed_mfa / failed_locked / failed_disabled
 
-### 11. audit_logs — 操作审计日志
+### 14. audit_logs — 操作审计日志
 
-按月分区，记录所有管理操作（user.create / role.assign 等）。
+按月 RANGE COLUMNS 分区（created_date），预建 p202604/p202605/p202606/p_future，事件每月自动追加。
+记录所有管理操作（user.create / role.assign 等）。
+`idx_resource (resource_type, resource_id, created_date)` 三列复合索引支持按资源+时间范围查询。
 
 ---
 

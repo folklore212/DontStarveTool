@@ -10,11 +10,11 @@ USE auth_system;
 CREATE TABLE users (
     user_id    BIGINT       NOT NULL COMMENT 'Snowflake分布式ID',
     username   VARCHAR(64)  NOT NULL COMMENT '唯一用户名',
-    email      VARCHAR(128) NULL     COMMENT '主邮箱',
-    phone      VARCHAR(20)  NULL     COMMENT '主手机号',
+    email      VARCHAR(128) NULL     COMMENT '主邮箱，未填时存 NULL（勿用空字符串）',
+    phone      VARCHAR(20)  NULL     COMMENT '主手机号，未填时存 NULL（勿用空字符串，避免 UNIQUE KEY 冲突）',
     nickname   VARCHAR(64)  NULL     COMMENT '显示昵称',
     avatar     VARCHAR(255) NULL     COMMENT '头像URL',
-    status     TINYINT      NOT NULL DEFAULT 0 COMMENT '0:正常 1:禁用 2:待激活 3:永久锁定',
+    status     TINYINT      NOT NULL DEFAULT 0 COMMENT '0:正常 1:禁用 2:待激活 3:锁定(locked_until 过期后自动解锁)',
     locked_until BIGINT     NULL     COMMENT '锁定截止毫秒时间戳',
     failed_attempts INT     NOT NULL DEFAULT 0 COMMENT '连续登录失败次数',
     last_login_at       TIMESTAMP NULL,
@@ -90,6 +90,7 @@ CREATE TABLE user_mfa (
     user_id      BIGINT      NOT NULL,
     mfa_type     ENUM('totp','sms','email','webauthn') NOT NULL,
     secret       VARCHAR(256) NOT NULL COMMENT 'AES加密存储',
+    key_version  TINYINT     NOT NULL DEFAULT 1 COMMENT 'AES密钥版本号',
     is_enabled   TINYINT     NOT NULL DEFAULT 0,
     backup_codes JSON        NULL     COMMENT 'AES加密的备用恢复码',
     created_at   TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -150,21 +151,27 @@ CREATE TABLE scopes (
 -- 9. 用户-角色映射（含临时授权）
 -- ============================================================
 CREATE TABLE user_roles (
+    id          BIGINT      NOT NULL AUTO_INCREMENT,
     user_id     BIGINT      NOT NULL,
     role_id     INT         NOT NULL,
-    scope_type  VARCHAR(20) NOT NULL DEFAULT 'all' COMMENT '作用域类型',
-    scope_value VARCHAR(64) NULL     COMMENT '作用域值（如部门ID）',
+    scope_type  VARCHAR(20) NOT NULL DEFAULT 'self' COMMENT '作用域类型 (self/dept/org/all)',
+    scope_value VARCHAR(64) NOT NULL DEFAULT '' COMMENT '作用域值（如部门ID），无具体值时为空字符串',
     granted_by  BIGINT      NULL     COMMENT '授权人',
     expires_at  TIMESTAMP   NULL     COMMENT '临时授权过期时间',
     created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (user_id, role_id, scope_type),
+    updated_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at  BIGINT      NOT NULL DEFAULT 0 COMMENT '软删除毫秒时间戳',
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_user_role_scope (user_id, role_id, scope_type, scope_value, deleted_at),
     INDEX idx_role_user (role_id),
+    INDEX idx_expires (expires_at),
     CONSTRAINT fk_ur_user FOREIGN KEY (user_id) REFERENCES users(user_id)
         ON DELETE CASCADE,
     CONSTRAINT fk_ur_role FOREIGN KEY (role_id) REFERENCES roles(id)
         ON DELETE CASCADE,
     CONSTRAINT fk_ur_grantor FOREIGN KEY (granted_by) REFERENCES users(user_id)
-        ON DELETE SET NULL
+        ON DELETE SET NULL,
+    CONSTRAINT chk_scope_type CHECK (scope_type IN ('self','dept','org','all'))
 ) ENGINE=InnoDB;
 
 -- ============================================================
@@ -223,10 +230,12 @@ CREATE TABLE api_keys (
     last_used_at    TIMESTAMP    NULL,
     status          TINYINT      NOT NULL DEFAULT 1 COMMENT '0:禁用 1:正常',
     created_at      TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at      TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deleted_at      BIGINT       NOT NULL DEFAULT 0,
     PRIMARY KEY (id),
     UNIQUE KEY uk_key_hash (key_hash, deleted_at),
     INDEX idx_user_key (user_id),
+    INDEX idx_expires (expires_at),
     CONSTRAINT fk_apikey_user FOREIGN KEY (user_id) REFERENCES users(user_id)
         ON DELETE CASCADE
 ) ENGINE=InnoDB;
@@ -249,8 +258,10 @@ CREATE TABLE login_logs (
     created_date    DATE         NOT NULL DEFAULT (CURRENT_DATE) COMMENT '分区键',
     PRIMARY KEY (id, created_date),
     INDEX idx_user_time (user_id, created_date),
-    INDEX idx_result_time (result, created_date)
+    INDEX idx_result_time (result, created_date),
+    INDEX idx_identifier_hash (identifier_hash, created_date)
 ) ENGINE=InnoDB
+-- 初始分区基于 2026-05 部署。若部署月份晚于此，首次运行维护任务时会自动拆分 p_future
 PARTITION BY RANGE COLUMNS(created_date) (
     PARTITION p202604 VALUES LESS THAN ('2026-05-01'),
     PARTITION p202605 VALUES LESS THAN ('2026-06-01'),
@@ -276,8 +287,9 @@ CREATE TABLE audit_logs (
     PRIMARY KEY (id, created_date),
     INDEX idx_user_time (user_id, created_date),
     INDEX idx_action_time (action, created_date),
-    INDEX idx_resource (resource_type, resource_id)
+    INDEX idx_resource (resource_type, resource_id, created_date)
 ) ENGINE=InnoDB
+-- 初始分区基于 2026-05 部署。若部署月份晚于此，首次运行维护任务时会自动拆分 p_future
 PARTITION BY RANGE COLUMNS(created_date) (
     PARTITION p202604 VALUES LESS THAN ('2026-05-01'),
     PARTITION p202605 VALUES LESS THAN ('2026-06-01'),
@@ -286,17 +298,17 @@ PARTITION BY RANGE COLUMNS(created_date) (
 );
 
 -- ============================================================
--- 种子数据
+-- 种子数据 (幂等，可重复执行)
 -- ============================================================
 
 -- 角色
-INSERT INTO roles (role_name, description, is_system) VALUES
+INSERT IGNORE INTO roles (role_name, description, is_system) VALUES
 ('super_admin', '超级管理员（拥有所有权限）', 1),
 ('admin',       '管理员',                       1),
 ('user',        '普通注册用户',                  1);
 
 -- 权限
-INSERT INTO permissions (code, name, resource_type, action) VALUES
+INSERT IGNORE INTO permissions (code, name, resource_type, action) VALUES
 ('user:create', '创建用户',     'user',  'create'),
 ('user:read',   '查看用户',     'user',  'read'),
 ('user:update', '编辑用户',     'user',  'update'),
@@ -315,17 +327,18 @@ INSERT INTO permissions (code, name, resource_type, action) VALUES
 ('client:delete', '删除OAuth客户端', 'client', 'delete'),
 ('apikey:create', '创建API Key',    'apikey', 'create'),
 ('apikey:revoke', '吊销API Key',    'apikey', 'revoke'),
+('apikey:rotate', '轮换API Key',    'apikey', 'rotate'),
 ('audit:read',    '查看审计日志',     'audit',  'read');
 
 -- 作用域
-INSERT INTO scopes (scope_key, description) VALUES
+INSERT IGNORE INTO scopes (scope_key, description) VALUES
 ('self', '仅限自己的资源'),
 ('dept', '部门范围内'),
 ('org',  '组织范围内'),
 ('all',  '全局无限制');
 
 -- super_admin 拥有所有权限(all作用域)
-INSERT INTO role_permissions (role_id, permission_id, scope_id)
+INSERT IGNORE INTO role_permissions (role_id, permission_id, scope_id)
 SELECT r.id, p.id, s.id
 FROM roles r
 CROSS JOIN permissions p
@@ -333,7 +346,7 @@ JOIN scopes s ON s.scope_key = 'all'
 WHERE r.role_name = 'super_admin';
 
 -- admin 拥有除 audit:read 和 client:delete 外的所有权限
-INSERT INTO role_permissions (role_id, permission_id, scope_id)
+INSERT IGNORE INTO role_permissions (role_id, permission_id, scope_id)
 SELECT r.id, p.id, s.id
 FROM roles r
 CROSS JOIN permissions p
@@ -342,7 +355,7 @@ WHERE r.role_name = 'admin'
   AND p.code NOT IN ('audit:read', 'client:delete');
 
 -- user 仅有 self 作用域的基本查看权限
-INSERT INTO role_permissions (role_id, permission_id, scope_id)
+INSERT IGNORE INTO role_permissions (role_id, permission_id, scope_id)
 SELECT r.id, p.id, s.id
 FROM roles r
 CROSS JOIN permissions p

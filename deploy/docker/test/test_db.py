@@ -114,7 +114,7 @@ def t_seed_roles():
 # 6. 种子权限数量
 def t_seed_permissions():
     rows = mysql_query("SELECT COUNT(*) AS cnt FROM permissions")
-    assert_eq(rows[0]["cnt"], 19)
+    assert_eq(rows[0]["cnt"], 20)
 
 # 7. super_admin 拥有所有权限
 def t_superadmin_has_all_perms():
@@ -123,7 +123,7 @@ def t_superadmin_has_all_perms():
         JOIN roles r ON r.id = rp.role_id
         WHERE r.role_name = 'super_admin'
     """)
-    assert_eq(rows[0]["cnt"], 19)
+    assert_eq(rows[0]["cnt"], 20)
 
 # 8. 外键约束数量
 def t_foreign_keys():
@@ -141,7 +141,7 @@ def t_soft_delete():
         ORDER BY TABLE_NAME
     """, (MYSQL_DB,))
     tables = [r["TABLE_NAME"] for r in rows]
-    assert_eq(tables, ["api_keys", "oauth_clients", "roles", "user_auths", "users"])
+    assert_eq(tables, ["api_keys", "oauth_clients", "roles", "user_auths", "user_roles", "users"])
 
 # 10. 角色继承
 def t_role_hierarchy():
@@ -209,6 +209,65 @@ def t_partition_event():
     assert_eq(len(rows), 1)
     assert_eq(rows[0]["Status"], "ENABLED")
 
+# 16. user_mfa.key_version
+def t_mfa_key_version():
+    rows = mysql_query("""
+        SELECT COLUMN_NAME, COLUMN_DEFAULT FROM information_schema.COLUMNS
+        WHERE TABLE_SCHEMA=%s AND TABLE_NAME='user_mfa' AND COLUMN_NAME='key_version'
+    """, (MYSQL_DB,))
+    assert_eq(len(rows), 1)
+    assert_eq(rows[0]["COLUMN_DEFAULT"], "1")
+
+# 17. user_roles 含 id PK + updated_at + deleted_at
+def t_user_roles_restructured():
+    rows = mysql_query("""
+        SELECT COLUMN_NAME FROM information_schema.COLUMNS
+        WHERE TABLE_SCHEMA=%s AND TABLE_NAME='user_roles'
+        AND COLUMN_NAME IN ('id','updated_at','deleted_at')
+        ORDER BY COLUMN_NAME
+    """, (MYSQL_DB,))
+    assert_eq([r["COLUMN_NAME"] for r in rows], ["deleted_at","id","updated_at"])
+
+# 18. user_roles uk_user_role_scope
+def t_user_roles_uk():
+    rows = mysql_query("""
+        SELECT INDEX_NAME FROM information_schema.STATISTICS
+        WHERE TABLE_SCHEMA=%s AND TABLE_NAME='user_roles' AND INDEX_NAME='uk_user_role_scope'
+        GROUP BY INDEX_NAME
+    """, (MYSQL_DB,))
+    assert_eq(len(rows), 1)
+
+# 19. login_logs/audit_logs/api_keys 新增索引
+def t_new_indexes():
+    checks = {
+        "api_keys": "idx_expires",
+        "login_logs": "idx_identifier_hash",
+        "user_roles": "idx_expires",
+    }
+    for tbl, idx in checks.items():
+        rows = mysql_query("""
+            SELECT INDEX_NAME FROM information_schema.STATISTICS
+            WHERE TABLE_SCHEMA=%s AND TABLE_NAME=%s AND INDEX_NAME=%s
+            GROUP BY INDEX_NAME
+        """, (MYSQL_DB, tbl, idx))
+        assert_eq(len(rows), 1, f"{tbl}.{idx} missing")
+
+# 20. audit_logs.idx_resource 含 created_date(3列)
+def t_audit_logs_idx_resource():
+    cols = mysql_query("""
+        SELECT COLUMN_NAME FROM information_schema.STATISTICS
+        WHERE TABLE_SCHEMA=%s AND TABLE_NAME='audit_logs' AND INDEX_NAME='idx_resource'
+        ORDER BY SEQ_IN_INDEX
+    """, (MYSQL_DB,))
+    assert_eq([c["COLUMN_NAME"] for c in cols],
+              ["resource_type", "resource_id", "created_date"])
+
+# 21. INSERT IGNORE 幂等
+def t_insert_ignore_idempotent():
+    mysql_exec("INSERT IGNORE INTO roles (role_name, description, is_system) VALUES ('super_admin', 'dup', 1)")
+    rows = mysql_query("SELECT COUNT(*) AS cnt FROM roles WHERE role_name='super_admin'")
+    assert_eq(rows[0]["cnt"], 1)
+
 # ---- Redis ----
 print("\n" + "=" * 60)
 print("Redis 功能测试")
@@ -274,16 +333,22 @@ test("所有表名正确",      t_expected_tables)
 test("login_logs 4个分区", t_login_logs_partitions)
 test("audit_logs 4个分区", t_audit_logs_partitions)
 test("3个种子角色",        t_seed_roles)
-test("19个种子权限",       t_seed_permissions)
-test("super_admin拥有全部19权限", t_superadmin_has_all_perms)
+test("20个种子权限",       t_seed_permissions)
+test("super_admin拥有全部20权限", t_superadmin_has_all_perms)
 test("13条外键约束",       t_foreign_keys)
-test("5表含软删除字段",    t_soft_delete)
+test("6表含软删除字段",    t_soft_delete)
 test("角色继承字段",       t_role_hierarchy)
 test("用户CRUD操作",       t_user_crud)
 test("分区写入和裁剪",     t_partition_insert_and_prune)
 test("password_changed_at字段", t_password_changed_at)
 test("事件调度器已开启",  t_event_scheduler_on)
 test("分区维护事件存在",  t_partition_event)
+test("MFA密钥版本号",     t_mfa_key_version)
+test("user_roles重构(id+updated+deleted)", t_user_roles_restructured)
+test("user_roles唯一约束", t_user_roles_uk)
+test("三表新增索引",      t_new_indexes)
+test("audit_logs三列索引", t_audit_logs_idx_resource)
+test("INSERT IGNORE幂等", t_insert_ignore_idempotent)
 
 # Redis tests
 test("Redis PING",         t_redis_ping)
