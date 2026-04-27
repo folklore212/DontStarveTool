@@ -363,6 +363,10 @@ INSERT IGNORE INTO roles (role_name, description, is_system) VALUES
 ('admin',       '管理员',                       1),
 ('user',        '普通注册用户',                  1);
 
+-- Set up role hierarchy: super_admin → admin → user
+UPDATE roles SET parent_role_id = (SELECT id FROM (SELECT id FROM roles WHERE role_name = 'super_admin') AS t) WHERE role_name = 'admin';
+UPDATE roles SET parent_role_id = (SELECT id FROM (SELECT id FROM roles WHERE role_name = 'admin') AS t) WHERE role_name = 'user';
+
 -- 权限
 INSERT IGNORE INTO permissions (code, name, resource_type, action) VALUES
 ('user:create', '创建用户',     'user',  'create'),
