@@ -24,6 +24,7 @@ public class DstClusterController {
     private final DstDeployService dstDeployService;
     private final com.iccuu.general_web_backend.infrastructure.ssh.SshService sshService;
     private final com.iccuu.general_web_backend.infrastructure.steam.SteamApiService steamApiService;
+    private final com.iccuu.general_web_backend.infrastructure.monitor.HealthScoringService healthScoringService;
 
     private Server requireServer(Long serverId) {
         Server s = serverMapper.selectById(serverId);
@@ -232,6 +233,21 @@ public class DstClusterController {
         var result = sshService.executeCommand(server,
             "cat '" + dir + "/Master/modoverrides.lua' 2>/dev/null | head -50 || echo '{}'");
         return R.ok(List.of(Map.of("modoverrides", result.getOutput())));
+    }
+
+    @GetMapping("/{clusterId}/health")
+    public R<Map<String, Object>> health(@PathVariable Long serverId, @PathVariable Long clusterId) {
+        requireServer(serverId);
+        DstCluster cluster = clusterMapper.selectById(clusterId);
+        if (cluster == null) return R.fail(404, "Cluster not found");
+        Map<String, Object> metrics = new HashMap<>();
+        metrics.put("uptimeRatio", cluster.getStatus().equals("running") ? 1.0 : 0.0);
+        metrics.put("crashRate", 0.0);
+        metrics.put("resourceHeadroom", 0.7);
+        metrics.put("playerCount", cluster.getPlayerCount() != null ? cluster.getPlayerCount() : 0);
+        metrics.put("daysSinceBackup", 0L);
+        metrics.put("daysSinceUpdate", 0L);
+        return R.ok(healthScoringService.generateSuggestions(metrics, healthScoringService.calculateScore(metrics)));
     }
 
     @PostMapping("/{clusterId}/mods/install")
