@@ -5,6 +5,8 @@ import {
   DashboardOutlined,
   CloudServerOutlined,
   ShopOutlined,
+  BarChartOutlined,
+  BulbOutlined,
   UserOutlined,
   SafetyOutlined,
   LogoutOutlined,
@@ -12,8 +14,11 @@ import {
   MenuUnfoldOutlined,
 } from '@ant-design/icons'
 import { useAuth } from '../context/AuthContext'
+import { useTheme } from '../context/ThemeContext'
 import { useTranslation } from '../i18n'
 import LanguageSwitcher from './LanguageSwitcher'
+import NotificationCenter from './NotificationCenter'
+import CommandPalette from './CommandPalette'
 
 const { Header, Sider, Content } = Layout
 
@@ -22,6 +27,7 @@ export default function UserLayout() {
   const navigate = useNavigate()
   const location = useLocation()
   const { state, logout } = useAuth()
+  const { toggleDarkMode } = useTheme()
   const { t } = useTranslation()
   const { token } = theme.useToken()
 
@@ -42,6 +48,11 @@ export default function UserLayout() {
       key: '/marketplace',
       icon: <ShopOutlined />,
       label: 'Marketplace',
+    },
+    {
+      key: '/analytics',
+      icon: <BarChartOutlined />,
+      label: 'Analytics',
     },
   ], [t])
 
@@ -133,8 +144,10 @@ export default function UserLayout() {
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={toggleCollapsed}
           />
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <LanguageSwitcher />
+            <Button type="text" icon={<BulbOutlined />} onClick={toggleDarkMode} />
+            <NotificationCenter />
             <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
               <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}>
                 <Avatar
@@ -162,6 +175,7 @@ export default function UserLayout() {
           <Outlet />
         </Content>
       </Layout>
+      <CommandPalette />
     </Layout>
   )
 }
