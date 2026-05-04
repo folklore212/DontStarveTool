@@ -1,0 +1,22 @@
+package com.iccuu.general_web_backend.module.user.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@TableName("user_credentials_history")
+public class UserCredentialsHistory {
+    @TableId(type = IdType.AUTO)
+    private Long id;
+    private Long userId;
+    private String credential;
+    private LocalDateTime createdAt;
+}

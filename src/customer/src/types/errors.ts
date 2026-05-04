@@ -1,0 +1,80 @@
+// Mirrors backend ErrorCode.java enum
+// Grouped by category: 10xxx Auth, 11xxx Validation, 40xxx Business, 50xxx System
+
+export const ErrorCode = {
+  // Success
+  SUCCESS: 0,
+
+  // 10xxx: Auth / Token
+  UNAUTHORIZED: 10001,
+  INVALID_CREDENTIALS: 10002,
+  TOKEN_EXPIRED: 10003,
+  TOKEN_BLACKLISTED: 10004,
+  MFA_REQUIRED: 10005,
+  MFA_INVALID: 10006,
+  ACCOUNT_LOCKED: 10007,
+  ACCOUNT_DISABLED: 10008,
+  ACCOUNT_PENDING: 10009,
+  GEE_TEST_FAILED: 10010,
+  REFRESH_TOKEN_REPLAY: 10011,
+  TOKEN_INVALID: 10012,
+  CAPTCHA_REQUIRED: 10013,
+
+  // 11xxx: Validation
+  VALIDATION_ERROR: 11001,
+
+  // 40xxx: Business
+  USER_NOT_FOUND: 40001,
+  USERNAME_EXISTS: 40002,
+  EMAIL_EXISTS: 40003,
+  PHONE_EXISTS: 40004,
+  IDENTITY_TAKEN: 40005,
+  LAST_IDENTITY: 40006,
+  USER_ALREADY_ACTIVATED: 40007,
+  ROLE_NOT_FOUND: 40010,
+  ROLE_SYSTEM_PROTECTED: 40011,
+  ROLE_NAME_EXISTS: 40012,
+  ROLE_IN_USE: 40013,
+  PERMISSION_NOT_FOUND: 40020,
+  CLIENT_NOT_FOUND: 40030,
+  CLIENT_ID_EXISTS: 40031,
+  OAUTH_CLIENT_DISABLED: 40032,
+  OAUTH_CODE_INVALID: 40033,
+  API_KEY_NOT_FOUND: 40040,
+  VERIFICATION_CODE_INVALID: 40050,
+  VERIFICATION_CODE_EXPIRED: 40051,
+  PASSWORD_REUSED: 40060,
+  PASSWORD_SAME: 40061,
+  MFA_ALREADY_ENABLED: 40070,
+  MFA_NOT_ENABLED: 40071,
+  AUDIT_LOG_NOT_FOUND: 40080,
+
+  // 50xxx: System
+  INTERNAL_ERROR: 50001,
+  SERVICE_UNAVAILABLE: 50002,
+  RATE_LIMITED: 50003,
+} as const
+
+export type ErrorCodeValue = (typeof ErrorCode)[keyof typeof ErrorCode]
+
+export interface ApiError {
+  code: ErrorCodeValue
+  message: string
+  timestamp: number
+  errors?: FieldError[] // for validation errors
+}
+
+import type { FieldError } from './api'
+
+// HTTP status constants
+export const HttpStatus = {
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  TOO_MANY_REQUESTS: 429,
+  UNPROCESSABLE_ENTITY: 422,
+  INTERNAL_SERVER_ERROR: 500,
+} as const
+
+export type HttpStatusValue = (typeof HttpStatus)[keyof typeof HttpStatus]

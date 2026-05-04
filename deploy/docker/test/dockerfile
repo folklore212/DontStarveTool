@@ -1,0 +1,25 @@
+FROM python:3.12-alpine
+
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
+ARG NO_PROXY
+ENV HTTP_PROXY=${HTTP_PROXY}
+ENV HTTPS_PROXY=${HTTPS_PROXY}
+ENV NO_PROXY=${NO_PROXY}
+
+ENV MYSQL_HOST=mysql
+ENV MYSQL_PORT=3306
+ENV MYSQL_USER=root
+ENV MYSQL_DATABASE=auth_system
+
+ENV REDIS_HOST=redis
+ENV REDIS_PORT=6379
+
+RUN pip install --no-cache-dir mysql-connector-python redis
+
+COPY test_db.py /test_db.py
+
+RUN adduser -D -g '' testuser
+USER testuser
+
+CMD ["python", "-u", "/test_db.py"]

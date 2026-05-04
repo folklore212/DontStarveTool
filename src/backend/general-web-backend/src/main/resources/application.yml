@@ -1,0 +1,112 @@
+server:
+  forward-headers-strategy: NATIVE
+  shutdown: graceful
+
+spring:
+  application.name: general-web-backend
+  profiles.active: ${SPRING_PROFILES_ACTIVE:dev}
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/auth_system?useSSL=true&requireSSL=true&allowPublicKeyRetrieval=false&serverTimezone=Asia/Shanghai
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:your_strong_password}
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:20}
+      minimum-idle: ${DB_POOL_MIN:5}
+      connection-timeout: 3000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  data.redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:your_strong_redis_password}
+  mail:
+    host: ${MAIL_HOST:smtp.example.com}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:noreply@example.com}
+    password: ${MAIL_PASSWORD:dev}
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.ssl.enable: true
+    properties.mail.smtp.ssl.protocols: TLSv1.2
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 1
+    placeholder-prefix: '#{'
+    placeholder-suffix: '}'
+    locations: classpath:db/migration
+  servlet.multipart:
+    max-file-size: 5MB
+    max-request-size: 5MB
+  task.execution:
+    pool.core-size: 4
+    pool.max-size: 8
+    pool.queue-capacity: 1000
+    pool.keep-alive: 60s
+    rejection-policy: CALLER_RUNS
+  lifecycle.timeout-per-shutdown-phase: 30s
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  global-config.db-config:
+    logic-delete-field: deletedAt
+    logic-not-delete-value: "0"
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: ${MYBATIS_LOG_IMPL:org.apache.ibatis.logging.slf4j.Slf4jImpl}
+
+jwt:
+  private-key: classpath:jwt-private.pem
+  public-key: classpath:jwt-public.pem
+  access-token-ttl: 900
+  refresh-token-ttl: 604800
+
+snowflake:
+  datacenter-id: ${SNOWFLAKE_DC_ID:1}
+  worker-id: ${SNOWFLAKE_WORKER_ID:1}
+
+geetest:
+  skip-verification: ${GEETEST_SKIP_VERIFICATION:false}
+  login:
+    captcha-id: ${GEETEST_LOGIN_CAPTCHA_ID:dummy}
+    captcha-key: ${GEETEST_LOGIN_CAPTCHA_KEY:dummy}
+  register:
+    captcha-id: ${GEETEST_REGISTER_CAPTCHA_ID:dummy}
+    captcha-key: ${GEETEST_REGISTER_CAPTCHA_KEY:dummy}
+
+crypto:
+  aes-keys:
+    1: ${AES_KEY_V1}
+    0: ${AES_KEY_V0}
+
+app:
+  cors.allowed-origins: ${CORS_ALLOWED_ORIGINS:}
+  cache.warmup:
+    enabled: true
+    recent-user-count: 100
+    preload-super-admin: true
+
+  thymeleaf:
+    cache: true
+    check-template-location: false
+  messages:
+    basename: i18n/mail/messages
+    encoding: UTF-8
+
+springdoc:
+  swagger-ui.path: /swagger-ui.html
+  api-docs.path: /v3/api-docs
+  packages-to-scan: com.iccuu.general_web_backend
+
+management:
+  endpoints.web.exposure.include: health,info,prometheus
+  endpoint.health:
+    probes.enabled: true
+    show-details: when-authorized
+  metrics.tags.application: ${spring.application.name}
+
+resilience4j.circuitbreaker.instances.geetest:
+  failure-rate-threshold: 50
+  wait-duration-in-open-state: 60s
+  sliding-window-size: 10
+  minimum-number-of-calls: 20
+  permitted-number-of-calls-in-half-open-state: 5

@@ -1,0 +1,32 @@
+# Environment files — intentionally tracked since this is a private repo.
+# Uncomment the lines below if the repo ever goes public:
+# .env
+# *.env
+# !*.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+deploy/docker/volumes/
+
+# Java
+target/
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Node
+node_modules/
+dist/

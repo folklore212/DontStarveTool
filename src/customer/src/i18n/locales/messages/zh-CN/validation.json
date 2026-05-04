@@ -1,0 +1,18 @@
+{
+  "required": "此项为必填项",
+  "email_invalid": "请输入有效的邮箱地址",
+  "username_format": "用户名只能包含字母、数字、下划线和连字符",
+  "username_min_length": "用户名长度不能少于3个字符",
+  "username_max_length": "用户名长度不能超过64个字符",
+  "password_min_length": "密码长度不能少于8个字符",
+  "password_max_length": "密码长度不能超过128个字符",
+  "password_complexity": "密码必须包含大写字母、小写字母、数字、特殊字符(@$!%*#?&)中的至少三类",
+  "password_username": "密码不能包含连续3个及以上与用户名相同的字符",
+  "password_email": "密码不能包含连续3个及以上与邮箱前缀相同的字符",
+  "password_mismatch": "两次输入的密码不一致",
+  "code_length": "验证码为6位数字",
+  "accept_terms": "请阅读并同意服务条款",
+  "captcha_required": "请完成安全验证",
+  "phone_invalid": "请输入有效的手机号",
+  "phone_required": "手机号注册时请输入手机号"
+}

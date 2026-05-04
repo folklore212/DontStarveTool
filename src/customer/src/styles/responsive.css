@@ -1,0 +1,59 @@
+/* ---- Mobile-first responsive breakpoints ---- */
+
+/* 320-479px: Default mobile (no media query — base styles apply) */
+
+/* 480px+ — Small tablet */
+@media (min-width: 480px) {
+  .auth-card .ant-card-body {
+    padding: 40px;
+  }
+}
+
+/* 768px+ — Tablet */
+@media (min-width: 768px) {
+  .auth-container {
+    padding: 24px;
+  }
+
+  .auth-card {
+    max-width: 420px;
+  }
+
+  .auth-logo {
+    font-size: 28px;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+}
+
+/* 1024px+ — Desktop */
+@media (min-width: 1024px) {
+  .auth-card {
+    max-width: 440px;
+  }
+}
+
+/* 1440px+ — Large desktop */
+@media (min-width: 1440px) {
+  .auth-card {
+    max-width: 460px;
+  }
+}
+
+/* Touch target minimum — ensure all interactive elements are >= 44px */
+@media (pointer: coarse) {
+  .ant-btn {
+    min-height: 44px;
+  }
+
+  .ant-input {
+    min-height: 44px;
+  }
+
+  .verification-code-segment input {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
