@@ -46,7 +46,14 @@
       "Bash(ssh -i __TRACKED_VAR__/.ssh/id_ed25519_github -o StrictHostKeyChecking=no root@106.15.53.246 ' *)",
       "Bash(git init *)",
       "Bash(git remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(ssh -i __TRACKED_VAR__/.ssh/id_ed25519_github -o StrictHostKeyChecking=no root@106.15.53.246 'docker logs auth-backend-container 2>&1 | grep -i '\\\\''Flyway\\\\|V8\\\\|servers\\\\|migration'\\\\'' | tail -10')",
+      "Bash(ssh -i __TRACKED_VAR__/.ssh/id_ed25519_github -o StrictHostKeyChecking=no root@106.15.53.246 'docker exec auth-backend-container cat /app/application.yml 2>/dev/null | head -20 || docker exec auth-backend-container find /app -name '\\\\''*.yml'\\\\'' -o -name '\\\\''*.properties'\\\\'' 2>/dev/null | head -10')",
+      "Bash(ssh -i __TRACKED_VAR__/.ssh/id_ed25519_github -o StrictHostKeyChecking=no root@106.15.53.246 'MYSQL_PW=$\\(grep MYSQL_ROOT_PASSWORD /opt/auth-system/docker/.env | cut -d= -f2\\) && docker exec auth-mysql-container mysql -uroot -p\"$MYSQL_PW\" auth_system -e \" *)",
+      "Bash(git reset *)",
+      "Bash(git commit -m 'feat: Phase 1 SSH server management + DST deploy platform *)"
     ]
   }
 }
