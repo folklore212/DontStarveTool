@@ -23,6 +23,7 @@ public class DstClusterController {
     private final DstClusterMapper clusterMapper;
     private final DstDeployService dstDeployService;
     private final com.iccuu.general_web_backend.infrastructure.ssh.SshService sshService;
+    private final com.iccuu.general_web_backend.infrastructure.steam.SteamApiService steamApiService;
 
     private Server requireServer(Long serverId) {
         Server s = serverMapper.selectById(serverId);
@@ -219,9 +220,8 @@ public class DstClusterController {
     public R<Map<String, Object>> searchMods(@PathVariable Long serverId, @PathVariable Long clusterId,
                                               @RequestBody Map<String, String> body) {
         String keyword = body.getOrDefault("keyword", "");
-        // Steam Web API: ISteamRemoteStorage/GetPublishedFileDetails/v1
-        // This requires a Steam Web API key. For MVP, return stub.
-        return R.ok(Map.of("keyword", keyword, "results", List.of(), "note", "Steam Web API integration pending"));
+        var results = steamApiService.searchMods(keyword, 1, 20);
+        return R.ok(Map.of("keyword", keyword, "results", results));
     }
 
     @GetMapping("/{clusterId}/mods")
