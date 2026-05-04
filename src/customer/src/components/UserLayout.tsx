@@ -3,6 +3,7 @@ import { Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { Layout, Menu, Button, Dropdown, Avatar, theme } from 'antd'
 import {
   DashboardOutlined,
+  CloudServerOutlined,
   UserOutlined,
   SafetyOutlined,
   LogoutOutlined,
@@ -30,6 +31,11 @@ export default function UserLayout() {
       key: '/dashboard',
       icon: <DashboardOutlined />,
       label: t('common.nav_dashboard'),
+    },
+    {
+      key: '/servers',
+      icon: <CloudServerOutlined />,
+      label: 'Servers',
     },
   ], [t])
 

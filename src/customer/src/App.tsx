@@ -20,6 +20,9 @@ const Security = lazy(() => import('./pages/Security'))
 // Lazy-loaded legal pages
 const TermsPage = lazy(() => import('./pages/TermsPage'))
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
+const ServersPage = lazy(() => import('./pages/ServersPage'))
+const ServerDetailPage = lazy(() => import('./pages/ServerDetailPage'))
+const DeployWizardPage = lazy(() => import('./pages/DeployWizardPage'))
 
 function RequireNavigationState({ requiredKeys, children }: { requiredKeys: string[]; children: React.ReactNode }) {
   const location = useLocation()
@@ -51,6 +54,9 @@ function AppRoutes() {
         <Route path="/dashboard" element={<Suspense fallback={<SuspenseFallback />}><Dashboard /></Suspense>} />
         <Route path="/profile" element={<Suspense fallback={<SuspenseFallback />}><Profile /></Suspense>} />
         <Route path="/security" element={<Suspense fallback={<SuspenseFallback />}><Security /></Suspense>} />
+        <Route path="/servers" element={<Suspense fallback={<SuspenseFallback />}><ServersPage /></Suspense>} />
+        <Route path="/servers/deploy" element={<Suspense fallback={<SuspenseFallback />}><DeployWizardPage /></Suspense>} />
+        <Route path="/servers/:id" element={<Suspense fallback={<SuspenseFallback />}><ServerDetailPage /></Suspense>} />
         <Route index element={<Navigate to="/dashboard" replace />} />
       </Route>
 
