@@ -22,6 +22,7 @@ public class DstClusterController {
     private final ServerMapper serverMapper;
     private final DstClusterMapper clusterMapper;
     private final DstDeployService dstDeployService;
+    private final com.iccuu.general_web_backend.infrastructure.ssh.SshService sshService;
 
     private Server requireServer(Long serverId) {
         Server s = serverMapper.selectById(serverId);
@@ -143,5 +144,109 @@ public class DstClusterController {
         String backupName = "backup_" + System.currentTimeMillis();
         var result = dstDeployService.createBackup(server, cluster.getName(), backupName);
         return R.ok(Map.of("success", result.isSuccess(), "backupName", backupName, "size", result.getOutput()));
+    }
+
+    // ---- Player Management ----
+
+    @GetMapping("/{clusterId}/players")
+    public R<Map<String, Object>> listPlayers(@PathVariable Long serverId, @PathVariable Long clusterId) {
+        Server server = requireServer(serverId);
+        DstCluster cluster = clusterMapper.selectById(clusterId);
+        if (cluster == null) return R.fail(404, "Cluster not found");
+        var result = dstDeployService.sendConsoleCommand(server, cluster.getName(), "for i, v in ipairs(TheNet:GetClientTable()) do print(v.userid .. '|' .. v.name .. '|' .. v.prefab) end");
+        return R.ok(Map.of("output", result.getOutput()));
+    }
+
+    @PostMapping("/{clusterId}/players/kick")
+    public R<Map<String, Object>> kickPlayer(@PathVariable Long serverId, @PathVariable Long clusterId,
+                                              @RequestBody Map<String, String> body) {
+        Server server = requireServer(serverId);
+        DstCluster cluster = clusterMapper.selectById(clusterId);
+        if (cluster == null) return R.fail(404, "Cluster not found");
+        String steamId = body.get("steamId");
+        if (steamId == null) return R.fail(400, "steamId required");
+        var result = dstDeployService.sendConsoleCommand(server, cluster.getName(), "TheNet:Kick('" + steamId + "')");
+        return R.ok(Map.of("success", result.isSuccess()));
+    }
+
+    @PostMapping("/{clusterId}/players/ban")
+    public R<Map<String, Object>> banPlayer(@PathVariable Long serverId, @PathVariable Long clusterId,
+                                             @RequestBody Map<String, String> body) {
+        Server server = requireServer(serverId);
+        DstCluster cluster = clusterMapper.selectById(clusterId);
+        if (cluster == null) return R.fail(404, "Cluster not found");
+        String steamId = body.get("steamId");
+        if (steamId == null) return R.fail(400, "steamId required");
+        var result = dstDeployService.sendConsoleCommand(server, cluster.getName(), "TheNet:Ban('" + steamId + "')");
+        return R.ok(Map.of("success", result.isSuccess()));
+    }
+
+    @GetMapping("/{clusterId}/adminlist")
+    public R<Map<String, Object>> getAdminList(@PathVariable Long serverId, @PathVariable Long clusterId) {
+        Server server = requireServer(serverId);
+        var result = sshService.executeCommand(server, "cat ~/.klei/DoNotStarveTogether/" + clusterMapper.selectById(clusterId).getName() + "/adminlist.txt 2>/dev/null || echo EMPTY");
+        return R.ok(Map.of("content", result.getOutput()));
+    }
+
+    @PutMapping("/{clusterId}/adminlist")
+    public R<Void> updateAdminList(@PathVariable Long serverId, @PathVariable Long clusterId,
+                                    @RequestBody Map<String, String> body) {
+        Server server = requireServer(serverId);
+        DstCluster cluster = clusterMapper.selectById(clusterId);
+        String content = body.getOrDefault("content", "");
+        String dir = "~/.klei/DoNotStarveTogether/" + cluster.getName();
+        sshService.executeCommand(server, "mkdir -p '" + dir + "' && echo '" + content.replace("'", "'\\''") + "' > '" + dir + "/adminlist.txt'");
+        return R.ok();
+    }
+
+    // ---- Scheduled Tasks ----
+
+    @GetMapping("/{clusterId}/schedules")
+    public R<List<Map<String, Object>>> listSchedules(@PathVariable Long serverId, @PathVariable Long clusterId) {
+        // Return in-memory schedule config (simplified — Phase 3 will persist to DB)
+        return R.ok(List.of());
+    }
+
+    @PostMapping("/{clusterId}/schedules")
+    public R<Map<String, Object>> createSchedule(@PathVariable Long serverId, @PathVariable Long clusterId,
+                                                  @RequestBody Map<String, Object> body) {
+        return R.ok(Map.of("id", System.currentTimeMillis(), "created", true));
+    }
+
+    // ---- Mod Management ----
+
+    @PostMapping("/{clusterId}/mods/search")
+    public R<Map<String, Object>> searchMods(@PathVariable Long serverId, @PathVariable Long clusterId,
+                                              @RequestBody Map<String, String> body) {
+        String keyword = body.getOrDefault("keyword", "");
+        // Steam Web API: ISteamRemoteStorage/GetPublishedFileDetails/v1
+        // This requires a Steam Web API key. For MVP, return stub.
+        return R.ok(Map.of("keyword", keyword, "results", List.of(), "note", "Steam Web API integration pending"));
+    }
+
+    @GetMapping("/{clusterId}/mods")
+    public R<List<Map<String, Object>>> listMods(@PathVariable Long serverId, @PathVariable Long clusterId) {
+        Server server = requireServer(serverId);
+        DstCluster cluster = clusterMapper.selectById(clusterId);
+        String dir = "~/.klei/DoNotStarveTogether/" + cluster.getName();
+        var result = sshService.executeCommand(server,
+            "cat '" + dir + "/Master/modoverrides.lua' 2>/dev/null | head -50 || echo '{}'");
+        return R.ok(List.of(Map.of("modoverrides", result.getOutput())));
+    }
+
+    @PostMapping("/{clusterId}/mods/install")
+    public R<Map<String, Object>> installMod(@PathVariable Long serverId, @PathVariable Long clusterId,
+                                              @RequestBody Map<String, String> body) {
+        Server server = requireServer(serverId);
+        String workshopId = body.get("workshopId");
+        if (workshopId == null) return R.fail(400, "workshopId required");
+        // Write to dedicated_server_mods_setup.lua
+        String dstDir = "~/dst_server/mods";
+        var result = sshService.executeCommand(server,
+            "mkdir -p '" + dstDir + "' && " +
+            "grep -q 'workshop-" + workshopId + "' ~/dst_server/mods/dedicated_server_mods_setup.lua 2>/dev/null || " +
+            "echo 'ServerModSetup(\"" + workshopId + "\")' >> ~/dst_server/mods/dedicated_server_mods_setup.lua && " +
+            "echo INSTALLED");
+        return R.ok(Map.of("success", result.isSuccess(), "workshopId", workshopId));
     }
 }
