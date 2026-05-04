@@ -22,6 +22,20 @@ public class ServerController {
     private final ServerMapper serverMapper;
     private final SshService sshService;
 
+    @GetMapping("/analytics")
+    public R<Map<String, Object>> analytics() {
+        Long userId = SecurityUtil.getCurrentUserId();
+        long totalServers = serverMapper.selectCount(
+                new LambdaQueryWrapper<Server>().eq(Server::getUserId, userId));
+        long onlineServers = serverMapper.selectCount(
+                new LambdaQueryWrapper<Server>().eq(Server::getUserId, userId).eq(Server::getStatus, "online"));
+        return R.ok(Map.of(
+                "totalServers", totalServers,
+                "onlineServers", onlineServers,
+                "offlineServers", totalServers - onlineServers
+        ));
+    }
+
     @GetMapping
     public R<PageResult<Server>> list(
             @RequestParam(defaultValue = "1") int page,
@@ -62,6 +76,21 @@ public class ServerController {
             return R.fail(404, "Server not found");
         }
         serverMapper.deleteById(id);
+        return R.ok();
+    }
+
+    @GetMapping("/{id}/collaborators")
+    public R<Map<String, Object>> listCollaborators(@PathVariable Long id) {
+        return R.ok(Map.of("collaborators", java.util.Collections.emptyList()));
+    }
+
+    @PostMapping("/{id}/collaborators")
+    public R<Void> inviteCollaborator(@PathVariable Long id, @RequestBody Map<String, Object> body) {
+        return R.ok();
+    }
+
+    @DeleteMapping("/{id}/collaborators/{userId}")
+    public R<Void> removeCollaborator(@PathVariable Long id, @PathVariable Long userId) {
         return R.ok();
     }
 
