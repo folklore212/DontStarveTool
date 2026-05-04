@@ -23,6 +23,7 @@ const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
 const ServersPage = lazy(() => import('./pages/ServersPage'))
 const ServerDetailPage = lazy(() => import('./pages/ServerDetailPage'))
 const DeployWizardPage = lazy(() => import('./pages/DeployWizardPage'))
+const MarketplacePage = lazy(() => import('./pages/MarketplacePage'))
 
 function RequireNavigationState({ requiredKeys, children }: { requiredKeys: string[]; children: React.ReactNode }) {
   const location = useLocation()
@@ -55,6 +56,7 @@ function AppRoutes() {
         <Route path="/profile" element={<Suspense fallback={<SuspenseFallback />}><Profile /></Suspense>} />
         <Route path="/security" element={<Suspense fallback={<SuspenseFallback />}><Security /></Suspense>} />
         <Route path="/servers" element={<Suspense fallback={<SuspenseFallback />}><ServersPage /></Suspense>} />
+        <Route path="/marketplace" element={<Suspense fallback={<SuspenseFallback />}><MarketplacePage /></Suspense>} />
         <Route path="/servers/deploy" element={<Suspense fallback={<SuspenseFallback />}><DeployWizardPage /></Suspense>} />
         <Route path="/servers/:id" element={<Suspense fallback={<SuspenseFallback />}><ServerDetailPage /></Suspense>} />
         <Route index element={<Navigate to="/dashboard" replace />} />

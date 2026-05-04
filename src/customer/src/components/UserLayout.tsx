@@ -4,6 +4,7 @@ import { Layout, Menu, Button, Dropdown, Avatar, theme } from 'antd'
 import {
   DashboardOutlined,
   CloudServerOutlined,
+  ShopOutlined,
   UserOutlined,
   SafetyOutlined,
   LogoutOutlined,
@@ -36,6 +37,11 @@ export default function UserLayout() {
       key: '/servers',
       icon: <CloudServerOutlined />,
       label: 'Servers',
+    },
+    {
+      key: '/marketplace',
+      icon: <ShopOutlined />,
+      label: 'Marketplace',
     },
   ], [t])
 
