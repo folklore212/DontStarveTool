@@ -5,6 +5,7 @@ import {
   DashboardOutlined,
   CloudServerOutlined,
   ShopOutlined,
+  AppstoreOutlined,
   BarChartOutlined,
   BulbOutlined,
   UserOutlined,
@@ -48,6 +49,11 @@ export default function UserLayout() {
       key: '/marketplace',
       icon: <ShopOutlined />,
       label: 'Marketplace',
+    },
+    {
+      key: '/templates',
+      icon: <AppstoreOutlined />,
+      label: 'Templates',
     },
     {
       key: '/analytics',

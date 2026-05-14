@@ -41,7 +41,4 @@ public class R<T> {
         return r;
     }
 
-    public static <T> PageResult<T> page(PageResult<T> page) {
-        return page;
-    }
 }

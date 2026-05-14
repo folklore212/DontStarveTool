@@ -27,6 +27,7 @@ public final class RedisKeyPrefix {
     public static final String SNOWFLAKE_AVAILABLE_IDS = "snowflake:available:ids";
     public static final String CACHE_INVALIDATE_PERMISSIONS = "cache:invalidate:permissions";
     public static final String PARTITION_MAINT_LOCK = "partition:maintenance:lock";
+    public static final String STEAM_WORKSHOP_HOT = "steam:workshop:hot";
 
     public static String fmt(String pattern, Object... args) {
         return String.format(pattern, args);

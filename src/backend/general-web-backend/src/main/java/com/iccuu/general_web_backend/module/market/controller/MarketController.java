@@ -44,13 +44,7 @@ public class MarketController {
 
     @PostMapping
     public R<MarketConfig> publish(@RequestBody MarketConfig config) {
-        config.setAuthorId(SecurityUtil.getCurrentUserId());
-        config.setStatus("published");
-        config.setDownloadCount(0);
-        config.setRatingCount(0);
-        config.setVersion(1);
-        config.setCreatedAt(LocalDateTime.now());
-        config.setUpdatedAt(LocalDateTime.now());
+        prepareForPublish(config);
         mapper.insert(config);
         return R.ok(config);
     }
@@ -82,7 +76,6 @@ public class MarketController {
         MarketConfig original = mapper.selectById(id);
         if (original == null) return R.fail(404, "Not found");
         MarketConfig fork = new MarketConfig();
-        fork.setAuthorId(SecurityUtil.getCurrentUserId());
         fork.setTitle(original.getTitle() + " (Fork)");
         fork.setDescription(original.getDescription());
         fork.setTags(original.getTags());
@@ -90,16 +83,21 @@ public class MarketController {
         fork.setModList(original.getModList());
         fork.setCategory(original.getCategory());
         fork.setGameMode(original.getGameMode());
-        fork.setDownloadCount(0);
-        fork.setRatingCount(0);
-        fork.setVersion(1);
-        fork.setStatus("published");
-        fork.setCreatedAt(LocalDateTime.now());
-        fork.setUpdatedAt(LocalDateTime.now());
+        prepareForPublish(fork);
         mapper.insert(fork);
         original.setDownloadCount((original.getDownloadCount() != null ? original.getDownloadCount() : 0) + 1);
         mapper.updateById(original);
         return R.ok(fork);
+    }
+
+    private void prepareForPublish(MarketConfig config) {
+        config.setAuthorId(SecurityUtil.getCurrentUserId());
+        config.setStatus("published");
+        config.setDownloadCount(0);
+        config.setRatingCount(0);
+        config.setVersion(1);
+        config.setCreatedAt(LocalDateTime.now());
+        config.setUpdatedAt(LocalDateTime.now());
     }
 
     @PostMapping("/{id}/review")

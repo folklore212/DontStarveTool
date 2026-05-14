@@ -102,7 +102,7 @@ services:
       # JAVA_TOOL_OPTIONS: "-Dhttp.proxyHost=proxyhk.zte.com.cn -Dhttp.proxyPort=80 -Dhttps.proxyHost=proxyhk.zte.com.cn -Dhttps.proxyPort=80 -Dhttp.nonProxyHosts=localhost|127.0.0.1|mysql|redis|*.zte.com.cn|*.zte.intra|10.0.0.0/8"
       JAVA_TOOL_OPTIONS: "${JAVA_TOOL_OPTIONS-}"
     healthcheck:
-      test: ["CMD-SHELL", "curl -sf http://localhost:8080/actuator/health/liveness"]
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health/liveness"]
       interval: 15s
       timeout: 5s
       retries: 10

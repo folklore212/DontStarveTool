@@ -2,30 +2,26 @@ package com.iccuu.general_web_backend.common.result;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PageResult<T> extends R<List<T>> {
+public class PageResult<T> {
 
+    private List<T> records;
     private long total;
     private int page;
     private int size;
-    private List<T> list;
+    private int pages;
 
-    public static <T> PageResult<T> of(long total, int page, int size, List<T> list) {
+    public static <T> PageResult<T> of(long total, int page, int size, List<T> records) {
         PageResult<T> result = new PageResult<>();
-        result.setCode(0);
-        result.setMessage("ok");
-        result.setTimestamp(System.currentTimeMillis());
-        result.setData(list);
+        result.setRecords(records);
         result.setTotal(total);
         result.setPage(page);
         result.setSize(size);
-        result.setList(list);
+        result.setPages((int) Math.ceil(total / (double) size));
         return result;
     }
 }

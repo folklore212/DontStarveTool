@@ -24,6 +24,7 @@ public class DstClusterController {
     private final DstDeployService dstDeployService;
     private final com.iccuu.general_web_backend.infrastructure.ssh.SshService sshService;
     private final com.iccuu.general_web_backend.infrastructure.steam.SteamApiService steamApiService;
+    private final com.iccuu.general_web_backend.module.template.service.SteamWorkshopCacheService steamWorkshopCacheService;
     private final com.iccuu.general_web_backend.infrastructure.monitor.HealthScoringService healthScoringService;
 
     private Server requireServer(Long serverId) {
@@ -221,8 +222,13 @@ public class DstClusterController {
     public R<Map<String, Object>> searchMods(@PathVariable Long serverId, @PathVariable Long clusterId,
                                               @RequestBody Map<String, String> body) {
         String keyword = body.getOrDefault("keyword", "");
+        // Try cache first, fall back to live Steam API
+        var cached = steamWorkshopCacheService.searchCached(keyword);
+        if (!cached.isEmpty()) {
+            return R.ok(Map.of("keyword", keyword, "results", cached, "source", "cache"));
+        }
         var results = steamApiService.searchMods(keyword, 1, 20);
-        return R.ok(Map.of("keyword", keyword, "results", results));
+        return R.ok(Map.of("keyword", keyword, "results", results, "source", "live"));
     }
 
     @GetMapping("/{clusterId}/mods")

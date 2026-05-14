@@ -24,6 +24,7 @@ const ServersPage = lazy(() => import('./pages/ServersPage'))
 const ServerDetailPage = lazy(() => import('./pages/ServerDetailPage'))
 const DeployWizardPage = lazy(() => import('./pages/DeployWizardPage'))
 const MarketplacePage = lazy(() => import('./pages/MarketplacePage'))
+const TemplatesPage = lazy(() => import('./pages/TemplatesPage'))
 const AnalyticsPage = lazy(() => import('./pages/AnalyticsPage'))
 
 function RequireNavigationState({ requiredKeys, children }: { requiredKeys: string[]; children: React.ReactNode }) {
@@ -59,6 +60,7 @@ function AppRoutes() {
         <Route path="/servers" element={<Suspense fallback={<SuspenseFallback />}><ServersPage /></Suspense>} />
         <Route path="/analytics" element={<Suspense fallback={<SuspenseFallback />}><AnalyticsPage /></Suspense>} />
         <Route path="/marketplace" element={<Suspense fallback={<SuspenseFallback />}><MarketplacePage /></Suspense>} />
+        <Route path="/templates" element={<Suspense fallback={<SuspenseFallback />}><TemplatesPage /></Suspense>} />
         <Route path="/servers/deploy" element={<Suspense fallback={<SuspenseFallback />}><DeployWizardPage /></Suspense>} />
         <Route path="/servers/:id" element={<Suspense fallback={<SuspenseFallback />}><ServerDetailPage /></Suspense>} />
         <Route index element={<Navigate to="/dashboard" replace />} />
