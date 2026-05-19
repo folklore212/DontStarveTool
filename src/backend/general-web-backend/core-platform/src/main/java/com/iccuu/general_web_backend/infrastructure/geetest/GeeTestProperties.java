@@ -1,7 +1,9 @@
 package com.iccuu.general_web_backend.infrastructure.geetest;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
+@Component
 @ConfigurationProperties(prefix = "geetest")
 public class GeeTestProperties {
 

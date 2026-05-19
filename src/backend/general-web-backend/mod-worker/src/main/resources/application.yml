@@ -5,16 +5,16 @@ spring:
   application:
     name: mod-worker
   datasource:
-    url: jdbc:mysql://localhost:3306/dst_templates?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-    username: root
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/dst_templates?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: ${DB_USERNAME:root}
     password: ${MYSQL_ROOT_PASSWORD:A4s7kQ2xP9mF3vR8}
     hikari:
       maximum-pool-size: 5
       minimum-idle: 2
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
       password: ${REDIS_PASSWORD:Z8bT3rL5wN1qJ6yD}
   flyway:
     enabled: false

@@ -27,6 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Primary;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
@@ -35,14 +36,15 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Slf4j
+@Primary
 @Service
 @RequiredArgsConstructor
 public class UserMfaServiceImpl implements UserMfaService {
 
-    @Value("${crypto.aes-keys.1}")
+    @Value("${crypto.aes-keys.1:change_me_aes_v1}")
     private String mfaKeyCurrent;
 
-    @Value("${crypto.aes-keys.0}")
+    @Value("${crypto.aes-keys.0:change_me_aes_v0}")
     private String mfaKeyFallback;
 
     private static final String TOTP_ISSUER = "GeneralWeb";

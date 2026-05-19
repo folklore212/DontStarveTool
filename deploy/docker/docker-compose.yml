@@ -94,6 +94,10 @@ services:
     build:
       context: ./backend/core-platform
       dockerfile: Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
     image: dst-core-platform:v1
     container_name: core-platform-container
     restart: unless-stopped
@@ -132,7 +136,7 @@ services:
       # JAVA_TOOL_OPTIONS: "-Dhttp.proxyHost=proxyhk.zte.com.cn -Dhttp.proxyPort=80 -Dhttps.proxyHost=proxyhk.zte.com.cn -Dhttps.proxyPort=80 -Dhttp.nonProxyHosts=localhost|127.0.0.1|mysql|redis|*.zte.com.cn|*.zte.intra|10.0.0.0/8"
       JAVA_TOOL_OPTIONS: "${JAVA_TOOL_OPTIONS-}"
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health/liveness"]
+      test: ["CMD-SHELL", "curl -sf http://localhost:8081/actuator/health/liveness"]
       interval: 15s
       timeout: 5s
       retries: 10
@@ -149,6 +153,10 @@ services:
     build:
       context: ./backend/template-service
       dockerfile: Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
     image: dst-template-service:v1
     container_name: template-service-container
     restart: unless-stopped
@@ -166,6 +174,12 @@ services:
       REDIS_PORT: ${REDIS_PORT:-6379}
       REDIS_PASSWORD: ${REDIS_PASSWORD}
       STEAM_API_KEY: ${STEAM_API_KEY:-}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8082/actuator/health/liveness"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
     deploy:
       resources:
         limits:
@@ -178,6 +192,10 @@ services:
     build:
       context: ./backend/server-service
       dockerfile: Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
     image: dst-server-service:v1
     container_name: server-service-container
     restart: unless-stopped
@@ -191,6 +209,12 @@ services:
       DB_HOST: mysql-server
       DB_PORT: 3306
       DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8083/actuator/health/liveness"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
     deploy:
       resources:
         limits:
@@ -203,6 +227,10 @@ services:
     build:
       context: ./backend/mod-worker
       dockerfile: Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
     image: dst-mod-worker:v1
     container_name: mod-worker-container
     restart: unless-stopped
@@ -218,6 +246,12 @@ services:
       REDIS_PORT: ${REDIS_PORT:-6379}
       REDIS_PASSWORD: ${REDIS_PASSWORD}
       STEAM_API_KEY: ${STEAM_API_KEY:-}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8084/actuator/health/liveness"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
     deploy:
       replicas: 1
       resources:

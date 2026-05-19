@@ -3,6 +3,7 @@ package com.iccuu.general_web_backend.server.client;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
@@ -13,6 +14,7 @@ import java.util.Map;
  * REST client for template-service Workshop search.
  */
 @Slf4j
+@Component
 public class RemoteModSearchProvider {
 
     private final RestTemplate restTemplate = new RestTemplate();

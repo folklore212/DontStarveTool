@@ -4,13 +4,13 @@ spring:
   application:
     name: template-service
   datasource:
-    url: jdbc:mysql://localhost:3306/dst_templates
-    username: root
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/dst_templates
+    username: ${DB_USERNAME:root}
     password: ${MYSQL_ROOT_PASSWORD:A4s7kQ2xP9mF3vR8}
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
       password: ${REDIS_PASSWORD:Z8bT3rL5wN1qJ6yD}
 steam:
   api:

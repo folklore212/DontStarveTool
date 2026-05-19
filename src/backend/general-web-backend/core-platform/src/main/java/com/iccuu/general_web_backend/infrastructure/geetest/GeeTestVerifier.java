@@ -9,6 +9,7 @@ import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -28,36 +29,45 @@ public class GeeTestVerifier {
     private static final Logger log = LoggerFactory.getLogger(GeeTestVerifier.class);
     private static final String VALIDATE_URL = "https://gcaptcha4.geetest.com/validate";
 
-    private final GeeTestProperties properties;
+    private final boolean skipVerification;
+    private final String loginCaptchaId;
+    private final String loginCaptchaKey;
+    private final String registerCaptchaId;
+    private final String registerCaptchaKey;
     private final RestTemplate restTemplate;
     private final MetricsService metricsService;
 
-    public GeeTestVerifier(GeeTestProperties properties,
-                           RestTemplate restTemplate,
-                           MetricsService metricsService) {
-        this.properties = properties;
+    public GeeTestVerifier(
+            @Value("${geetest.skip-verification:false}") boolean skipVerification,
+            @Value("${geetest.login.captcha-id:dummy}") String loginCaptchaId,
+            @Value("${geetest.login.captcha-key:dummy}") String loginCaptchaKey,
+            @Value("${geetest.register.captcha-id:dummy}") String registerCaptchaId,
+            @Value("${geetest.register.captcha-key:dummy}") String registerCaptchaKey,
+            RestTemplate restTemplate,
+            MetricsService metricsService) {
+        this.skipVerification = skipVerification;
+        this.loginCaptchaId = loginCaptchaId;
+        this.loginCaptchaKey = loginCaptchaKey;
+        this.registerCaptchaId = registerCaptchaId;
+        this.registerCaptchaKey = registerCaptchaKey;
         this.restTemplate = restTemplate;
         this.metricsService = metricsService;
     }
 
     @CircuitBreaker(name = "geetest", fallbackMethod = "verifyFallback")
     public boolean verify(String captchaOutput, String lotNumber, String passToken, String genTime, boolean isLogin) {
-        if (properties.isSkipVerification()) {
+        if (skipVerification) {
             log.info("GeeTest verification skipped (skip-verification=true)");
             metricsService.recordGeeTestResult("skipped");
             return true;
         }
 
-        GeeTestProperties.Login loginProps = properties.getLogin();
-        GeeTestProperties.Register registerProps = properties.getRegister();
-        String captchaId = isLogin ? loginProps.getCaptchaId() : registerProps.getCaptchaId();
-        String captchaKey = isLogin ? loginProps.getCaptchaKey() : registerProps.getCaptchaKey();
-
+        String captchaId = isLogin ? loginCaptchaId : registerCaptchaId;
+        String captchaKey = isLogin ? loginCaptchaKey : registerCaptchaKey;
         String signToken = generateSignToken(captchaKey, lotNumber);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("lot_number", lotNumber);
         body.add("captcha_output", captchaOutput);

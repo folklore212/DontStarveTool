@@ -23,10 +23,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TotpMfaVerifier implements MfaVerifier {
 
-    @Value("${crypto.aes-keys.1}")
+    @Value("${crypto.aes-keys.1:change_me_aes_v1}")
     private String mfaKeyCurrent;
 
-    @Value("${crypto.aes-keys.0}")
+    @Value("${crypto.aes-keys.0:change_me_aes_v0}")
     private String mfaKeyFallback;
 
     private static final int TOTP_PERIOD = 30;

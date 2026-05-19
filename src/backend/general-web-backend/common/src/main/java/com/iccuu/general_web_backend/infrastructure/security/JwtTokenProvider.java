@@ -37,8 +37,8 @@ public class JwtTokenProvider {
     private final long accessTokenTtl;
     private final long refreshTokenTtl;
 
-    public JwtTokenProvider(@Value("${jwt.private-key}") String privateKeyPath,
-                            @Value("${jwt.public-key}") String publicKeyPath,
+    public JwtTokenProvider(@Value("${jwt.private-key:classpath:jwt-private.pem}") String privateKeyPath,
+                            @Value("${jwt.public-key:classpath:jwt-public.pem}") String publicKeyPath,
                             @Value("${jwt.access-token-ttl:900}") long accessTokenTtl,
                             @Value("${jwt.refresh-token-ttl:604800}") long refreshTokenTtl) {
         this.accessTokenTtl = accessTokenTtl;

@@ -1,16 +1,28 @@
 server:
   port: 8081
+
 spring:
   application:
     name: core-platform
   datasource:
-    url: jdbc:mysql://localhost:3306/auth_system
-    username: root
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/auth_system
+    username: ${DB_USERNAME:root}
     password: ${MYSQL_ROOT_PASSWORD:A4s7kQ2xP9mF3vR8}
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
       password: ${REDIS_PASSWORD:Z8bT3rL5wN1qJ6yD}
   flyway:
     enabled: true
+    baseline-on-migrate: true
+
+jwt:
+  private-key: classpath:jwt-private.pem
+  public-key: classpath:jwt-public.pem
+  access-token-ttl: 900
+  refresh-token-ttl: 604800
+
+snowflake:
+  datacenter-id: ${SNOWFLAKE_DC_ID:1}
+  worker-id: ${SNOWFLAKE_WORKER_ID:1}

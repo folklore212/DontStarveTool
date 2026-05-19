@@ -4,6 +4,6 @@ spring:
   application:
     name: server-service
   datasource:
-    url: jdbc:mysql://localhost:3306/dst_servers
-    username: root
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/dst_servers
+    username: ${DB_USERNAME:root}
     password: ${MYSQL_ROOT_PASSWORD:A4s7kQ2xP9mF3vR8}

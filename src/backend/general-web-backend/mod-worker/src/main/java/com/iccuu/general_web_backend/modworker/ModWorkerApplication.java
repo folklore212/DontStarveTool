@@ -1,10 +1,12 @@
 package com.iccuu.general_web_backend.modworker;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication(scanBasePackages = "com.iccuu.general_web_backend")
+@MapperScan("com.iccuu.general_web_backend")
 @EnableScheduling
 public class ModWorkerApplication {
     public static void main(String[] args) {

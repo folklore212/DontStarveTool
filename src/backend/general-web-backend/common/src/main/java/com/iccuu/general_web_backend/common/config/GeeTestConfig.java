@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 
 @Configuration
-@ConfigurationProperties(prefix = "geetest")
 public class GeeTestConfig {
 
     private Login login = new Login();

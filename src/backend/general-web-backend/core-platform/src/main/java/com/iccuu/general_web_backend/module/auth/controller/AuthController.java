@@ -3,13 +3,13 @@ package com.iccuu.general_web_backend.module.auth.controller;
 import com.iccuu.general_web_backend.common.annotation.RateLimit;
 import com.iccuu.general_web_backend.common.result.R;
 import com.iccuu.general_web_backend.common.util.SecurityUtil;
-import com.iccuu.general_web_backend.infrastructure.geetest.GeeTestProperties;
 import com.iccuu.general_web_backend.module.auth.dto.*;
 import com.iccuu.general_web_backend.module.auth.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -21,7 +21,12 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthService authService;
-    private final GeeTestProperties geeTestProperties;
+
+    @Value("${geetest.login.captcha-id:dummy}")
+    private String loginCaptchaId;
+
+    @Value("${geetest.register.captcha-id:dummy}")
+    private String registerCaptchaId;
 
     @Operation(summary = "用户注册")
     @PostMapping("/register")
@@ -86,8 +91,8 @@ public class AuthController {
     @GetMapping("/captcha-config")
     public R<Map<String, String>> captchaConfig() {
         return R.ok(Map.of(
-            "loginCaptchaId", geeTestProperties.getLogin().getCaptchaId(),
-            "registerCaptchaId", geeTestProperties.getRegister().getCaptchaId()
+            "loginCaptchaId", loginCaptchaId,
+            "registerCaptchaId", registerCaptchaId
         ));
     }
 
