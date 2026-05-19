@@ -13,8 +13,8 @@ CLEAN="${CLEAN:-false}"
 if [ "$CLEAN" = "true" ]; then
     echo "=== 0/3 清理构建缓存 ==="
     cd "$PROJECT_ROOT/src/backend/general-web-backend" && ./mvnw clean -q 2>/dev/null || true
-    cd "$PROJECT_ROOT/src/admin" && rm -rf dist node_modules/.vite 2>/dev/null || true
-    cd "$PROJECT_ROOT/src/customer" && rm -rf dist node_modules/.vite 2>/dev/null || true
+    cd "$PROJECT_ROOT/src/frontend/admin" && rm -rf dist node_modules/.vite 2>/dev/null || true
+    cd "$PROJECT_ROOT/src/frontend/customer" && rm -rf dist node_modules/.vite 2>/dev/null || true
     echo "  构建缓存已清除"
 fi
 
@@ -33,7 +33,7 @@ echo "  -> server-service: $(ls -lh $DOCKER_DIR/backend/server-service/app.jar 2
 echo "  -> mod-worker: $(ls -lh $DOCKER_DIR/backend/mod-worker/app.jar 2>/dev/null | awk '{print $5}')"
 
 echo "=== 2/3 构建 Admin 前端 ==="
-cd "$PROJECT_ROOT/src/admin"
+cd "$PROJECT_ROOT/src/frontend/admin"
 npm install --registry=https://registry.npmmirror.com --silent
 npm run build
 rm -rf "$DOCKER_DIR/admin/dist"
@@ -41,7 +41,7 @@ cp -r dist "$DOCKER_DIR/admin/dist"
 echo "  -> $DOCKER_DIR/admin/dist/"
 
 echo "=== 3/3 构建 Customer 前端 ==="
-cd "$PROJECT_ROOT/src/customer"
+cd "$PROJECT_ROOT/src/frontend/customer"
 npm install --registry=https://registry.npmmirror.com --silent
 npm run build
 rm -rf "$DOCKER_DIR/customer/dist"
