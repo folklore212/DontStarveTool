@@ -1,0 +1,9 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: server-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/dst_servers
+    username: root
+    password: ${MYSQL_ROOT_PASSWORD:A4s7kQ2xP9mF3vR8}

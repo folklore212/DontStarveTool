@@ -8,12 +8,29 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 DOCKER_DIR="$SCRIPT_DIR/docker"
+CLEAN="${CLEAN:-false}"
 
-echo "=== 1/3 构建 Backend JAR ==="
+if [ "$CLEAN" = "true" ]; then
+    echo "=== 0/3 清理构建缓存 ==="
+    cd "$PROJECT_ROOT/src/backend/general-web-backend" && ./mvnw clean -q 2>/dev/null || true
+    cd "$PROJECT_ROOT/src/admin" && rm -rf dist node_modules/.vite 2>/dev/null || true
+    cd "$PROJECT_ROOT/src/customer" && rm -rf dist node_modules/.vite 2>/dev/null || true
+    echo "  构建缓存已清除"
+fi
+
+echo "=== 1/3 构建 Backend JARs (5 modules) ==="
 cd "$PROJECT_ROOT/src/backend/general-web-backend"
 ./mvnw package -DskipTests -q
-cp target/*.jar "$DOCKER_DIR/backend/app.jar"
-echo "  -> $DOCKER_DIR/backend/app.jar"
+
+cp core-platform/target/*.jar "$DOCKER_DIR/backend/core-platform/app.jar" 2>/dev/null
+cp template-service/target/*.jar "$DOCKER_DIR/backend/template-service/app.jar" 2>/dev/null
+cp server-service/target/*.jar "$DOCKER_DIR/backend/server-service/app.jar" 2>/dev/null
+cp mod-worker/target/*.jar "$DOCKER_DIR/backend/mod-worker/app.jar" 2>/dev/null
+
+echo "  -> core-platform: $(ls -lh $DOCKER_DIR/backend/core-platform/app.jar 2>/dev/null | awk '{print $5}')"
+echo "  -> template-service: $(ls -lh $DOCKER_DIR/backend/template-service/app.jar 2>/dev/null | awk '{print $5}')"
+echo "  -> server-service: $(ls -lh $DOCKER_DIR/backend/server-service/app.jar 2>/dev/null | awk '{print $5}')"
+echo "  -> mod-worker: $(ls -lh $DOCKER_DIR/backend/mod-worker/app.jar 2>/dev/null | awk '{print $5}')"
 
 echo "=== 2/3 构建 Admin 前端 ==="
 cd "$PROJECT_ROOT/src/admin"

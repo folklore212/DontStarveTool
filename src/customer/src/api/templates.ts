@@ -6,7 +6,7 @@ export interface TemplateInfo {
   authorId: number
   name: string
   description: string
-  templateType: 'server_template' | 'world_gen'
+  templateType: 'server_template' | 'world_gen' | 'modpack'
   category: string
   gameMode: string
   maxPlayers: number
@@ -48,7 +48,7 @@ export interface WorldGenMetadata {
   [key: string]: {
     label: string
     icon: string
-    options: { value: string; label: string; icon: string }[]
+    options: { value: string; label: string; icon?: string }[]
   }
 }
 
@@ -92,6 +92,14 @@ export function deleteTemplate(id: number): Promise<R<void>> {
 
 export function forkTemplate(id: number): Promise<R<TemplateInfo>> {
   return client.post(`/templates/${id}/fork`).then((r) => r.data)
+}
+
+export function publishTemplate(id: number): Promise<R<TemplateInfo>> {
+  return client.post(`/templates/${id}/publish`).then((r) => r.data)
+}
+
+export function unpublishTemplate(id: number): Promise<R<TemplateInfo>> {
+  return client.post(`/templates/${id}/unpublish`).then((r) => r.data)
 }
 
 export function getTemplateWorldGen(id: number): Promise<R<WorldGenPresetInfo[]>> {

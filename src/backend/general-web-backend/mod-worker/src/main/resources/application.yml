@@ -1,0 +1,14 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: mod-worker
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ${REDIS_PASSWORD:Z8bT3rL5wN1qJ6yD}
+dst:
+  scheduled:
+    workshop-cache:
+      enabled: true

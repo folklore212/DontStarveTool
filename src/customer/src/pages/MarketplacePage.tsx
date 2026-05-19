@@ -1,76 +1,101 @@
 import { useEffect, useState, useCallback } from 'react'
-import { Card, Row, Col, Tag, Space, Rate, Input, Select, message, Skeleton, Empty } from 'antd'
-import { SearchOutlined, ForkOutlined, RocketOutlined } from '@ant-design/icons'
-import { browseMarketplace, forkConfig, deployConfig, type MarketConfigInfo } from '../api/marketplace'
-import { listServers } from '../api/servers'
+import { Space, message, Modal, Descriptions, Rate, Divider, Row, Col, Card, Tag } from 'antd'
+import { CloudServerOutlined } from '@ant-design/icons'
+import { browseTemplates, forkTemplate, getTemplateDetail, type TemplateInfo, type TemplateFullDetail } from '../api/templates'
+import { useTranslation } from '../i18n'
+import SearchFilterBar, { CATEGORY_OPTIONS } from '../components/SearchFilterBar'
+import AsyncContentView, { CardGrid } from '../components/AsyncContentView'
+import ResourceCard from '../components/ResourceCard'
+import { CARD_GRADIENT } from '../constants/dst'
 
 export default function MarketplacePage() {
-  const [configs, setConfigs] = useState<MarketConfigInfo[]>([])
+  const [templates, setTemplates] = useState<TemplateInfo[]>([])
   const [loading, setLoading] = useState(true)
   const [keyword, setKeyword] = useState('')
   const [category, setCategory] = useState<string | undefined>()
   const [sort, setSort] = useState('downloads')
-  const [servers, setServers] = useState<{ id: number; name: string }[]>([])
+  const [detailOpen, setDetailOpen] = useState(false)
+  const [detail, setDetail] = useState<TemplateFullDetail | null>(null)
+  const { t } = useTranslation()
 
   const fetch = useCallback(async () => {
     setLoading(true)
     try {
       const params: Record<string, unknown> = { sort }
       if (category) params.category = category
-      const res = await browseMarketplace(params)
-      if (res.code === 0) setConfigs(res.data?.records ?? [])
+      const res = await browseTemplates(params)
+      if (res.code === 0) setTemplates(res.data?.records ?? [])
     } catch { message.error('Failed to load marketplace') }
     finally { setLoading(false) }
   }, [category, sort])
 
-  useEffect(() => { fetch(); listServers().then((r) => { if (r.code === 0) setServers((r.data?.records ?? []) as { id: number; name: string }[]) }).catch(() => {}) }, [fetch])
+  useEffect(() => { fetch() }, [fetch])
 
   const handleFork = async (id: number) => {
-    const res = await forkConfig(id)
-    if (res.code === 0) { message.success('Forked!'); fetch() }
+    try {
+      const res = await forkTemplate(id)
+      if (res.code === 0) { message.success(t('common.templates_fork_success')); fetch() }
+    } catch { message.error(t('common.templates_fork_failed')) }
   }
 
-  const handleDeploy = async (configId: number) => {
-    if (servers.length === 0) { message.warning('Add a server first'); return }
-    // Deploy to first available server
-    const res = await deployConfig(configId, servers[0].id)
-    if (res.code === 0) message.success('Deployed! Check your servers')
+  const handleViewDetail = async (id: number) => {
+    try {
+      const res = await getTemplateDetail(id)
+      if (res.code === 0 && res.data) { setDetail(res.data); setDetailOpen(true) }
+    } catch { message.error('Failed to load detail') }
   }
 
-  const filtered = configs.filter((c) => !keyword || c.title.toLowerCase().includes(keyword.toLowerCase()) || (c.tags && c.tags.includes(keyword)))
+  const filtered = templates.filter((c) =>
+    !keyword || c.name.toLowerCase().includes(keyword.toLowerCase()) ||
+    (c.tags && c.tags.toLowerCase().includes(keyword.toLowerCase())) ||
+    (c.description && c.description.toLowerCase().includes(keyword.toLowerCase()))
+  )
 
   return (
     <div>
-      <h2 style={{ marginBottom: 24 }}>Config Marketplace</h2>
-      <Space style={{ marginBottom: 24, width: '100%' }} wrap>
-        <Input prefix={<SearchOutlined />} placeholder="Search configs..." value={keyword} onChange={(e) => setKeyword(e.target.value)} style={{ width: 240 }} allowClear />
-        <Select value={category} onChange={setCategory} allowClear placeholder="Category" style={{ width: 140 }}
-          options={[{ value: 'survival', label: 'Survival' }, { value: 'pvp', label: 'PvP' }, { value: 'caves', label: 'Caves' }, { value: 'modpack', label: 'Modpack' }]} />
-        <Select value={sort} onChange={setSort} style={{ width: 140 }}
-          options={[{ value: 'downloads', label: 'Most Downloaded' }, { value: 'rating', label: 'Top Rated' }, { value: 'newest', label: 'Newest' }]} />
-      </Space>
-
-      {loading ? <Skeleton active paragraph={{ rows: 6 }} /> : filtered.length === 0 ? <Empty description="No configs found" /> : (
-        <Row gutter={[16, 16]}>
+      <h2 style={{ marginBottom: 24, fontSize: 24, fontWeight: 700, letterSpacing: '-.5px' }}>Config Marketplace</h2>
+      <SearchFilterBar keyword={keyword} onKeywordChange={setKeyword} category={category} onCategoryChange={setCategory} sort={sort} onSortChange={setSort}
+        categories={CATEGORY_OPTIONS.map((o) => ({ value: o.value, label: t(`common.templates_catval_${o.value}`) || o.label }))} />
+      <AsyncContentView loading={loading} isEmpty={filtered.length === 0} emptyDescription="No configs found">
+        <CardGrid>
           {filtered.map((c) => (
-            <Col xs={24} sm={12} lg={8} key={c.id}>
-              <Card hoverable title={c.title} extra={<Tag color={c.verified ? 'gold' : 'default'}>{c.verified ? 'Verified' : c.category}</Tag>}
-                actions={[
-                  <Space key="fork"><ForkOutlined /><span onClick={() => handleFork(c.id)}>Fork ({c.downloadCount || 0})</span></Space>,
-                  <Space key="deploy"><RocketOutlined /><span onClick={() => handleDeploy(c.id)}>Deploy</span></Space>,
-                ]}
-              >
-                <p style={{ color: '#888', height: 40, overflow: 'hidden' }}>{c.description || 'No description'}</p>
-                <Space style={{ marginTop: 8 }}>
-                  <Rate disabled value={Math.round(c.ratingAvg || 0)} style={{ fontSize: 14 }} />
-                  <span style={{ color: '#888' }}>({c.ratingCount || 0})</span>
-                </Space>
-                <Tag style={{ marginTop: 8 }}>{c.gameMode || 'unknown'}</Tag>
-              </Card>
-            </Col>
+            <ResourceCard key={c.id}
+              title={c.name}
+              actions={[]}
+              description={c.description || t('common.templates_desc_default')}
+              coverImage={c.coverImage}
+              coverGradient={CARD_GRADIENT.server}
+              coverIcon={<CloudServerOutlined style={{ fontSize: 40, color: 'rgba(255,255,255,0.6)' }} />}
+              tags={[
+                { label: c.templateType === 'server_template' ? t('common.templates_server') : t('common.templates_world_gen'), color: 'blue' },
+                { label: c.category || t('common.templates_category_general') },
+                { label: c.gameMode || 'survival' },
+              ]}
+              rating={c.ratingAvg ? { avg: c.ratingAvg, count: c.ratingCount || 0 } : undefined}
+              verified={!!c.verified}
+              verifiedLabel={t('common.templates_verified')}
+              onViewDetail={() => handleViewDetail(c.id)}
+              onFork={() => handleFork(c.id)}
+              forkCount={c.downloadCount || 0}
+              onDeploy={() => window.location.href = `/servers/deploy?templateId=${c.id}`}
+            />
           ))}
-        </Row>
-      )}
+        </CardGrid>
+      </AsyncContentView>
+      <Modal title={detail?.template.name} open={detailOpen} onCancel={() => setDetailOpen(false)} footer={null} width={640}>
+        {detail && <>
+          <Descriptions column={2} size="small" bordered style={{ marginBottom: 16 }}>
+            <Descriptions.Item label={t('common.templates_category')}>{detail.template.category||'-'}</Descriptions.Item>
+            <Descriptions.Item label={t('common.templates_game_mode')}>{detail.template.gameMode||'-'}</Descriptions.Item>
+            <Descriptions.Item label={t('common.templates_max_players')}>{detail.template.maxPlayers||6}</Descriptions.Item>
+            <Descriptions.Item label={t('common.templates_version')}>v{detail.template.version||1}</Descriptions.Item>
+            <Descriptions.Item label={t('common.templates_downloads')}>{detail.template.downloadCount||0}</Descriptions.Item>
+            <Descriptions.Item label="Rating"><Rate disabled value={Math.round(detail.template.ratingAvg||0)} style={{ fontSize: 12 }}/><span style={{ marginLeft: 4 }}>({detail.template.ratingCount||0})</span></Descriptions.Item>
+          </Descriptions>
+          {detail.template.description && <p style={{ color: '#8c8c8c', marginBottom: 16 }}>{detail.template.description}</p>}
+          {detail.worldGenPresets && detail.worldGenPresets.length > 0 && <><Divider>{t('common.templates_bound_presets')}</Divider><Row gutter={[8,8]}>{detail.worldGenPresets.map((wp) => <Col span={12} key={wp.id}><Card size="small" title={wp.name}><Space wrap size={[4,4]}><Tag>{wp.worldSize}</Tag><Tag>{wp.dayMode}</Tag></Space></Card></Col>)}</Row></>}
+        </>}
+      </Modal>
     </div>
   )
 }

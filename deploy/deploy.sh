@@ -14,6 +14,8 @@ SERVER_HOST="${SERVER_HOST:?请设置 SERVER_HOST 环境变量}"
 SERVER_USER="${SERVER_USER:-root}"
 DEPLOY_PATH="${DEPLOY_PATH:-/opt/auth-system}"
 SSH_KEY="${SSH_KEY:-}"
+CLEAN="${CLEAN:-false}"        # CLEAN=true 清除旧镜像和容器缓存
+CLEAN_VOLUMES="${CLEAN_VOLUMES:-false}"  # 同时清除数据卷（危险！）
 
 if [ -n "$SSH_KEY" ]; then
     SSH_OPTS="-i $SSH_KEY -o StrictHostKeyChecking=no"
@@ -50,7 +52,19 @@ else
     echo "--- .env already exists on server, skipping ---"
 fi
 
-# 4. 构建镜像并启动
+# 4. Clean old images/containers (if enabled)
+if [ "$CLEAN" = "true" ]; then
+    echo "--- Cleaning old images and containers ---"
+    ssh $SSH_OPTS "$SERVER_USER@$SERVER_HOST" "cd $DEPLOY_PATH/docker && docker compose down --remove-orphans"
+    ssh $SSH_OPTS "$SERVER_USER@$SERVER_HOST" "docker image prune -f"
+    ssh $SSH_OPTS "$SERVER_USER@$SERVER_HOST" "docker builder prune -f"
+    if [ "$CLEAN_VOLUMES" = "true" ]; then
+        echo "--- WARNING: Removing volumes ---"
+        ssh $SSH_OPTS "$SERVER_USER@$SERVER_HOST" "cd $DEPLOY_PATH/docker && docker compose down -v"
+    fi
+fi
+
+# 5. 构建镜像并启动
 echo "--- Building images on server ---"
 ssh $SSH_OPTS "$SERVER_USER@$SERVER_HOST" "cd $DEPLOY_PATH/docker && docker compose build"
 

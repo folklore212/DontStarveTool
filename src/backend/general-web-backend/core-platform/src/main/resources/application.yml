@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: core-platform
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_system
+    username: root
+    password: ${MYSQL_ROOT_PASSWORD:A4s7kQ2xP9mF3vR8}
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ${REDIS_PASSWORD:Z8bT3rL5wN1qJ6yD}
+  flyway:
+    enabled: true

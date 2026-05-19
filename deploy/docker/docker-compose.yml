@@ -7,20 +7,12 @@ services:
     container_name: auth-mysql-container
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${MYSQL_PORT:-3306}:3306"
+      - "127.0.0.1:3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-    security_opt:
-      - seccomp:unconfined
-    deploy:
-      resources:
-        limits:
-          memory: 512m
-          cpus: '1.0'
+      MYSQL_DATABASE: auth_system
     volumes:
       - mysql-data:/var/lib/mysql
-      - mysql-log:/var/log/mysql
     healthcheck:
       test:
         - CMD-SHELL
@@ -60,15 +52,53 @@ services:
     networks:
       - auth-net
 
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: dst-backend:v1
-    container_name: auth-backend-container
+  mysql-template:
+    image: mysql:8.0
+    container_name: template-mysql-container
     restart: unless-stopped
     ports:
-      - "${BACKEND_PORT:-8080}:8080"
+      - "127.0.0.1:3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: dst_templates
+    volumes:
+      - mysql-template-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}", "--silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - auth-net
+
+  mysql-server:
+    image: mysql:8.0
+    container_name: server-mysql-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: dst_servers
+    volumes:
+      - mysql-server-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}", "--silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - auth-net
+
+  core-platform:
+    build:
+      context: ./backend/core-platform
+      dockerfile: Dockerfile
+    image: dst-core-platform:v1
+    container_name: core-platform-container
+    restart: unless-stopped
+    ports:
+      - "${CORE_PORT:-8081}:8081"
     depends_on:
       mysql:
         condition: service_healthy
@@ -115,6 +145,88 @@ services:
     networks:
       - auth-net
 
+  template-service:
+    build:
+      context: ./backend/template-service
+      dockerfile: Dockerfile
+    image: dst-template-service:v1
+    container_name: template-service-container
+    restart: unless-stopped
+    ports:
+      - "${TEMPLATE_PORT:-8082}:8082"
+    depends_on:
+      mysql-template:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--XX:+UseG1GC -XX:MaxRAMPercentage=60 -XX:InitialRAMPercentage=40}
+      DB_HOST: mysql-template
+      DB_PORT: 3306
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      STEAM_API_KEY: ${STEAM_API_KEY:-}
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+          cpus: '1.0'
+    networks:
+      - auth-net
+
+  server-service:
+    build:
+      context: ./backend/server-service
+      dockerfile: Dockerfile
+    image: dst-server-service:v1
+    container_name: server-service-container
+    restart: unless-stopped
+    ports:
+      - "${SERVER_PORT:-8083}:8083"
+    depends_on:
+      mysql-server:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--XX:+UseG1GC -XX:MaxRAMPercentage=60 -XX:InitialRAMPercentage=40}
+      DB_HOST: mysql-server
+      DB_PORT: 3306
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+          cpus: '1.0'
+    networks:
+      - auth-net
+
+  mod-worker:
+    build:
+      context: ./backend/mod-worker
+      dockerfile: Dockerfile
+    image: dst-mod-worker:v1
+    container_name: mod-worker-container
+    restart: unless-stopped
+    depends_on:
+      mysql-template:
+        condition: service_healthy
+    environment:
+      DST_SCHEDULED_WORKSHOP_CACHE_ENABLED: "true"
+      DB_HOST: mysql-template
+      DB_PORT: 3306
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      STEAM_API_KEY: ${STEAM_API_KEY:-}
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 384m
+          cpus: '0.5'
+    networks:
+      - auth-net
+
   admin:
     build:
       context: ./admin
@@ -123,7 +235,7 @@ services:
     container_name: auth-admin-container
     restart: unless-stopped
     depends_on:
-      - backend
+      - core-platform
     ports:
       - "${ADMIN_PORT:-3000}:80"
     networks:
@@ -137,9 +249,27 @@ services:
     container_name: auth-customer-container
     restart: unless-stopped
     depends_on:
-      - backend
+      - core-platform
     ports:
       - "${CUSTOMER_PORT:-80}:80"
+    networks:
+      - auth-net
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    image: dst-nginx:v1
+    container_name: api-gateway
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - core-platform
+      - template-service
+      - server-service
+    volumes:
+      - ./customer/dist:/usr/share/nginx/html:ro
     networks:
       - auth-net
 
@@ -171,6 +301,8 @@ services:
       - auth-net
 
 volumes:
+  mysql-template-data:
+  mysql-server-data:
   mysql-data:
   mysql-log:
   redis-data:
