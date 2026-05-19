@@ -1,5 +1,6 @@
 # 私有仓库，提交env便于调试
 # .env
 backend/app.jar
+backend/*/app.jar
 admin/dist/
 customer/dist/

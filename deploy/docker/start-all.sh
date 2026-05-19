@@ -30,10 +30,10 @@ check_redis() {
 }
 
 check_backend() {
-    until curl -sf http://localhost:8080/actuator/health/liveness 2>/dev/null; do
+    until curl -sf http://localhost:${CORE_PORT:-8081}/actuator/health/liveness 2>/dev/null; do
         sleep 2
     done
-    echo "  Backend ready."
+    echo "  Core Platform ready."
 }
 
 check_mysql &
