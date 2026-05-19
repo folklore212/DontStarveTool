@@ -1,6 +1,5 @@
 package com.iccuu.general_web_backend.server.client;
 
-import com.iccuu.general_web_backend.module.server.service.ModSearchProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -10,17 +9,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * REST implementation of ModSearchProvider.
- * Calls template-service for workshop mod search.
+ * REST client for template-service Workshop search.
  */
-public class RemoteModSearchProvider implements ModSearchProvider {
+public class RemoteModSearchProvider {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
     @Value("${platform.template.url:http://template-service:8082}")
     private String templateUrl;
 
-    @Override
     @SuppressWarnings("unchecked")
     public List<Map<String, Object>> searchCached(String keyword) {
         try {
@@ -35,7 +32,6 @@ public class RemoteModSearchProvider implements ModSearchProvider {
         return Collections.emptyList();
     }
 
-    @Override
     @SuppressWarnings("unchecked")
     public List<Map<String, Object>> fetchFromSteam(String keyword, int page, int size) {
         try {

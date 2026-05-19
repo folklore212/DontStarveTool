@@ -9,6 +9,7 @@ import com.iccuu.general_web_backend.module.server.entity.Server;
 import com.iccuu.general_web_backend.module.server.mapper.DstClusterMapper;
 import com.iccuu.general_web_backend.module.server.mapper.ServerMapper;
 import com.iccuu.general_web_backend.common.util.SecurityUtil;
+import com.iccuu.general_web_backend.server.client.RemoteModSearchProvider;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class ClusterService {
     private final ServerMapper serverMapper;
     private final SshService sshService;
     private final DstDeployService deployService;
-    private final ModSearchProvider modSearch;
+    private final RemoteModSearchProvider modSearch;
 
     private Server requireOwnedServer(Long serverId) {
         Server s = serverMapper.selectById(serverId);
