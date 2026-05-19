@@ -1,5 +1,6 @@
 package com.iccuu.general_web_backend.server.client;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -11,6 +12,7 @@ import java.util.Map;
 /**
  * REST client for template-service Workshop search.
  */
+@Slf4j
 public class RemoteModSearchProvider {
 
     private final RestTemplate restTemplate = new RestTemplate();
@@ -27,7 +29,7 @@ public class RemoteModSearchProvider {
                 return (List<Map<String, Object>>) response.getBody().get("data");
             }
         } catch (Exception e) {
-            // Fallback: empty results
+            log.warn("Workshop search failed for keyword '{}': {}", keyword, e.getMessage());
         }
         return Collections.emptyList();
     }
@@ -41,7 +43,7 @@ public class RemoteModSearchProvider {
                 return (List<Map<String, Object>>) response.getBody().get("data");
             }
         } catch (Exception e) {
-            // Fallback
+            log.warn("Workshop fetch failed for keyword '{}': {}", keyword, e.getMessage());
         }
         return Collections.emptyList();
     }

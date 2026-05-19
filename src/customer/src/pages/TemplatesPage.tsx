@@ -1,9 +1,8 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Card, Tag, Space, Tabs, message, Image, Button, Modal, Descriptions, Rate, Tooltip, Divider, Popconfirm, Collapse, Row, Col, Empty, Skeleton } from 'antd'
+import { Card, Tag, Space, Tabs, message, Image, Button, Modal, Descriptions, Rate, Tooltip, Divider, Collapse, Row, Col, Empty, Skeleton } from 'antd'
 import {
-  ForkOutlined, RocketOutlined,
-  StarOutlined, EyeOutlined, ExperimentOutlined,
+  RocketOutlined, StarOutlined, ExperimentOutlined,
   GlobalOutlined, BranchesOutlined,
   FieldTimeOutlined, SunOutlined, PartitionOutlined, SettingOutlined,
   EditOutlined, DeleteOutlined, PlusOutlined,
@@ -24,8 +23,8 @@ import WorldGenPresetFormModal from '../components/WorldGenPresetFormModal'
 import ModpackTemplateFormModal from '../components/ModpackTemplateFormModal'
 import SearchFilterBar from '../components/SearchFilterBar'
 import AsyncContentView, { CardGrid } from '../components/AsyncContentView'
+import ResourceCard from '../components/ResourceCard'
 
-const SVG_PLACEHOLDER_TEMPLATE = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjYmZiZmJmIiBmb250LXNpemU9IjI0Ij5UZW1wbGF0ZTwvdGV4dD48L3N2Zz4='
 const SVG_PLACEHOLDER_WORLDGEN = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYTJlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjZmZmIiBmb250LXNpemU9IjI4Ij7wn4yN88K/PC90ZXh0Pjwvc3ZnPg=='
 
 const PRESET_COLORS = ['#1677ff','#52c41a','#fa8c16','#13c2c2','#722ed1','#2f54eb','#f5222d','#faad14','#434343','#eb2f96','#a0d911','#fa541c']
@@ -82,38 +81,6 @@ export default function TemplatesPage() {
 
   const filtered = (list: any[], fields: string[]) => list.filter((item) => !keyword || fields.some((f) => (item[f] || '').toLowerCase().includes(keyword.toLowerCase())))
 
-  // ============ Card component ============
-  const TemplateCard = ({ t2 }: { t2: TemplateInfo }) => {
-    const isOwn = currentUserId && currentUserId === t2.authorId
-    const gradient = t2.templateType === 'modpack' ? GRADIENT_MODPACK : GRADIENT_SERVER
-    return (
-      <Col xs={24} sm={12} lg={8} xl={6} key={t2.id}>
-        <Card hoverable style={CARD_STYLE}
-          cover={t2.coverImage ? <div style={{ ...COVER_STYLE, background: '#f5f5f5', overflow: 'hidden' }}><Image src={t2.coverImage} alt={t2.name} style={{ objectFit: 'cover', width: '100%', height: '100%' }} fallback={SVG_PLACEHOLDER_TEMPLATE}/></div>
-            : <div style={{ ...COVER_STYLE, background: gradient }}><SettingOutlined style={{ fontSize: 42, color: 'rgba(255,255,255,.5)' }}/></div>}
-          actions={[
-            <Tooltip title={t('common.templates_view_detail')} key="v"><EyeOutlined onClick={() => handleViewDetail(t2.id)}/></Tooltip>,
-            <Tooltip title={`${t('common.templates_fork')} (${t2.downloadCount||0})`} key="fk"><Space><ForkOutlined onClick={() => handleFork(t2.id)}/><span>{t2.downloadCount||0}</span></Space></Tooltip>,
-            <Tooltip title={t('common.templates_deploy')} key="dp"><RocketOutlined onClick={() => handleDeploy(t2.id)}/></Tooltip>,
-            ...(isOwn ? [
-              <Tooltip title={t('common.edit')} key="ed"><EditOutlined onClick={() => handleEditTemplate(t2)}/></Tooltip>,
-              t2.status === 'published' ? <Tooltip title={t('common.templates_unpublish')} key="up"><StarOutlined onClick={() => handleUnpublish(t2.id)} style={{ color: '#faad14' }}/></Tooltip>
-                : <Tooltip title={t('common.templates_publish')} key="pb"><RocketOutlined onClick={() => handlePublish(t2.id)}/></Tooltip>,
-              <Popconfirm key="dl" title={t('common.templates_delete_confirm')} onConfirm={() => handleDelete(t2.id)}><DeleteOutlined/></Popconfirm>,
-            ] : []),
-          ]}
-        >
-          <Card.Meta title={<Space size={4}>{t2.name}{t2.verified ? <Tag color="gold" style={{ fontSize: 10, lineHeight:'16px' }}>{t('common.templates_verified')}</Tag>:null}</Space>}
-            description={<>
-              <div style={{ color: '#8c8c8c', fontSize: 12, marginBottom: 8, lineHeight: '18px', height: 36, overflow: 'hidden' }}>{t2.description || t('common.templates_desc_default')}</div>
-              <Space wrap size={[0,4]}><Tag color="blue">{t2.category || t('common.templates_category_general')}</Tag><Tag>{t2.gameMode||'survival'}</Tag><Tag>{t2.maxPlayers||6}p</Tag></Space>
-              <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', gap: 4 }}><Rate disabled value={Math.round(t2.ratingAvg||0)} style={{ fontSize: 12 }}/><span style={{ color: '#8c8c8c', fontSize: 12 }}>({t2.ratingCount||0})</span></div>
-            </>}/>
-        </Card>
-      </Col>
-    )
-  }
-
   const PresetCard = ({ p }: { p: WorldGenPresetInfo }) => (
     <Col xs={24} sm={12} lg={8} xl={6} key={p.id}>
       <Card hoverable style={CARD_STYLE} onClick={() => { setSelectedPreset(p); setPresetOpen(true) }}
@@ -140,7 +107,36 @@ export default function TemplatesPage() {
       <SearchFilterBar keyword={keyword} onKeywordChange={setKeyword} category={category} onCategoryChange={setCategory} sort={sort} onSortChange={setSort}
         extra={<Button type="primary" icon={<PlusOutlined/>} onClick={handleCreateTemplate}>{t('common.templates_create_template')}</Button>} />
       <AsyncContentView loading={loading} isEmpty={filteredList.length === 0} emptyDescription={t('common.templates_no_results')}>
-        <CardGrid>{filteredList.map((t2) => <TemplateCard key={t2.id} t2={t2}/>)}</CardGrid>
+        <CardGrid>{filteredList.map((t2) => {
+          const isOwn = currentUserId && currentUserId === t2.authorId
+          const gradient = t2.templateType === 'modpack' ? GRADIENT_MODPACK : GRADIENT_SERVER
+          return <ResourceCard key={t2.id}
+            title={t2.name}
+            description={t2.description || t('common.templates_desc_default')}
+            coverImage={t2.coverImage}
+            coverGradient={gradient}
+            coverIcon={<SettingOutlined style={{ fontSize: 42, color: 'rgba(255,255,255,.5)' }}/>}
+            tags={[
+              { label: t2.category || t('common.templates_category_general'), color: 'blue' },
+              { label: t2.gameMode || 'survival' },
+              { label: `${t2.maxPlayers || 6}p` },
+            ]}
+            rating={{ avg: t2.ratingAvg || 0, count: t2.ratingCount || 0 }}
+            verified={t2.verified}
+            verifiedLabel={t('common.templates_verified')}
+            onViewDetail={() => handleViewDetail(t2.id)}
+            onFork={() => handleFork(t2.id)}
+            forkCount={t2.downloadCount || 0}
+            onDeploy={() => handleDeploy(t2.id)}
+            actions={isOwn ? [
+              { key: 'edit', icon: <EditOutlined />, label: t('common.edit'), onClick: () => handleEditTemplate(t2) },
+              t2.status === 'published'
+                ? { key: 'unpublish', icon: <StarOutlined />, label: t('common.templates_unpublish'), onClick: () => handleUnpublish(t2.id), highlighted: true }
+                : { key: 'publish', icon: <RocketOutlined />, label: t('common.templates_publish'), onClick: () => handlePublish(t2.id) },
+              { key: 'delete', icon: <DeleteOutlined />, label: t('common.templates_delete_confirm'), onClick: () => handleDelete(t2.id), danger: true },
+            ] : []}
+          />
+        })}</CardGrid>
       </AsyncContentView>
     </>
   }

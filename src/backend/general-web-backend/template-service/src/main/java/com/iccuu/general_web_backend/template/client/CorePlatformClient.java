@@ -1,5 +1,6 @@
 package com.iccuu.general_web_backend.template.client;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ import java.util.Map;
  * In monolith mode: not used (direct DB access).
  * In service-split mode: calls core-platform for user profile info.
  */
+@Slf4j
 @Component
 public class CorePlatformClient {
 
@@ -35,7 +37,7 @@ public class CorePlatformClient {
                 return (Map<String, Object>) response.getBody().get("data");
             }
         } catch (Exception e) {
-            // Fallback: return minimal info
+            log.warn("Failed to get user profile for userId={}: {}", userId, e.getMessage());
         }
         return Map.of("userId", userId, "username", "User " + userId);
     }
@@ -55,7 +57,7 @@ public class CorePlatformClient {
                 return (Map<Long, Map<String, Object>>) response.getBody().get("data");
             }
         } catch (Exception e) {
-            // Fallback
+            log.warn("Failed to get user profiles batch ({} ids): {}", userIds.size(), e.getMessage());
         }
         return Collections.emptyMap();
     }

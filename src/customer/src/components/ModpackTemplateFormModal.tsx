@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Modal, Form, Input, Select, Button, message, Row, Col, Tag, Progress, Switch, Tooltip } from 'antd'
+import { Modal, Form, Input, Select, Button, Row, Col, Tag, Progress, Switch, Tooltip } from 'antd'
 import { DeleteOutlined, ReloadOutlined, DownloadOutlined, SettingOutlined } from '@ant-design/icons'
 import { createTemplate, updateTemplate, searchWorkshopMods, type TemplateInfo, type WorkshopModInfo } from '../api/templates'
 import client from '../api/client'
 import { useTranslation } from '../i18n'
+import useResourceForm from '../hooks/useResourceForm'
 
 interface ModEntry {
   workshopId: string
@@ -30,11 +31,21 @@ interface Props {
 
 export default function ModpackTemplateFormModal({ open, initialValues, onClose, onSaved }: Props) {
   const [form] = Form.useForm()
-  const [loading, setLoading] = useState(false)
   const [searchResults, setSearchResults] = useState<WorkshopModInfo[]>([])
   const [mods, setMods] = useState<ModEntry[]>([])
   const { t } = useTranslation()
-  const editing = !!initialValues
+
+  const { loading, editing, handleSubmit } = useResourceForm({
+    form, initialValues, onSaved, onClose,
+    async onSubmit(values, isEdit): Promise<{ code: number; message?: string }> {
+      const configObj: Record<string, unknown> = {}
+      mods.forEach((m) => { configObj[`workshop-${m.workshopId}`] = { enabled: true, version: m.version, configuration_options: m.configValues || {} } })
+      const templateData = { ...values, templateType: 'modpack', modList: JSON.stringify(mods.map((m) => m.workshopId)), configJson: JSON.stringify(configObj) }
+      return isEdit ? updateTemplate(initialValues!.id, templateData) : createTemplate(templateData)
+    },
+    successMsg: { created: t('common.templates_created'), saved: t('common.saved') },
+    errorMsg: { createFailed: t('common.templates_create_failed'), updateFailed: t('common.templates_update_failed') },
+  })
 
   useEffect(() => {
     if (open) {
@@ -94,33 +105,6 @@ export default function ModpackTemplateFormModal({ open, initialValues, onClose,
     } catch {
       setMods((prev) => prev.map((m) => m.workshopId === workshopId ? { ...m, configStatus: 'error' } : m))
     }
-  }
-
-  const handleSubmit = async () => {
-    setLoading(true)
-    try {
-      const values = await form.validateFields()
-      // Build configJson from mods
-      const configObj: Record<string, unknown> = {}
-      mods.forEach((m) => {
-        configObj[`workshop-${m.workshopId}`] = {
-          enabled: true,
-          version: m.version,
-          configuration_options: m.configValues || {},
-        }
-      })
-      const templateData = {
-        ...values, templateType: 'modpack',
-        modList: JSON.stringify(mods.map((m) => m.workshopId)),
-        configJson: JSON.stringify(configObj),
-      }
-      const res = editing
-        ? await updateTemplate(initialValues!.id, templateData)
-        : await createTemplate(templateData)
-      if (res.code === 0) { message.success(editing ? t('common.saved') : t('common.templates_created')); onSaved(); onClose() }
-      else message.error(res.message)
-    } catch { message.error(editing ? t('common.templates_update_failed') : t('common.templates_create_failed')) }
-    finally { setLoading(false) }
   }
 
   return (

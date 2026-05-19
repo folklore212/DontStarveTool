@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Modal, Form, Input, Select, message, Row, Col, Collapse, Image } from 'antd'
+import { Modal, Form, Input, Select, Row, Col, Collapse, Image } from 'antd'
 import { PictureOutlined } from '@ant-design/icons'
 import {
   createWorldGenPreset, updateWorldGenPreset,
@@ -7,6 +7,7 @@ import {
 } from '../api/templates'
 import { useTranslation } from '../i18n'
 import { WORLD_GEN_METADATA } from './worldGenMetadata'
+import useResourceForm from '../hooks/useResourceForm'
 
 const FIXED_COLUMNS = [
   'worldSize', 'branching', 'loop', 'season_start', 'day',
@@ -46,12 +47,44 @@ interface Props {
 
 export default function WorldGenPresetFormModal({ open, initialValues, onClose, onSaved }: Props) {
   const [form] = Form.useForm()
-  const [loading, setLoading] = useState(false)
   const metadata = WORLD_GEN_METADATA as WorldGenMetadata
   const [previewUrl, setPreviewUrl] = useState('')
   const [presetType, setPresetType] = useState('surface')
   const { t } = useTranslation()
-  const editing = !!initialValues
+
+  const { loading, editing, handleSubmit } = useResourceForm({
+    form, initialValues, onSaved, onClose,
+    async onSubmit(values, _isEdit): Promise<{ code: number; message?: string }> {
+      const allValues = { ...values, previewImage: previewUrl } as Record<string, unknown>
+      const fixed: Record<string, unknown> = {}
+      const extra: Record<string, unknown> = {}
+      for (const [k, v] of Object.entries(allValues)) {
+        if (v === 'default' || v === undefined) continue
+        if (FIXED_COLUMNS.includes(k) || k === 'name' || k === 'description' || k === 'previewImage') { fixed[k] = v }
+        else { extra[k] = v }
+      }
+      const payload: Record<string, unknown> = {
+        name: (fixed as any).name || (allValues as any).name,
+        description: (fixed as any).description || (allValues as any).description || '',
+        previewImage: previewUrl,
+        presetType,
+        worldSize: fixed.world_size || 'default',
+        branching: fixed.branching || 'default',
+        loopMode: fixed.loop || 'default',
+        seasonStart: fixed.season_start || 'default',
+        dayMode: fixed.day || 'default',
+        autumnLength: fixed.autumn || 'default',
+        winterLength: fixed.winter || 'default',
+        springLength: fixed.spring || 'default',
+        summerLength: fixed.summer || 'default',
+        resourceVariety: fixed.resourceVariety || 'default',
+        extraSettings: JSON.stringify(extra),
+      }
+      return editing ? updateWorldGenPreset(initialValues!.id, payload) : createWorldGenPreset(payload)
+    },
+    successMsg: { created: t('common.templates_created'), saved: t('common.saved') },
+    errorMsg: { createFailed: t('common.templates_create_failed'), updateFailed: t('common.templates_update_failed') },
+  })
 
   useEffect(() => {
     if (open) {
@@ -91,54 +124,6 @@ export default function WorldGenPresetFormModal({ open, initialValues, onClose, 
       }
     }
   }, [open, initialValues, form])
-
-  const handleSubmit = async () => {
-    setLoading(true)
-    try {
-      const allValues = await form.validateFields()
-      allValues.previewImage = previewUrl
-
-      // Build fixed-column values + extra_settings JSON
-      const fixed: Record<string, unknown> = {}
-      const extra: Record<string, unknown> = {}
-      for (const [k, v] of Object.entries(allValues)) {
-        if (v === 'default' || v === undefined) continue // skip defaults
-        if (FIXED_COLUMNS.includes(k) || k === 'name' || k === 'description' || k === 'previewImage') {
-          fixed[k] = v
-        } else {
-          extra[k] = v
-        }
-      }
-
-      // Map fixed keys to DB column names
-      const payload: Record<string, unknown> = {
-        name: fixed.name || allValues.name,
-        description: fixed.description || allValues.description || '',
-        previewImage: previewUrl,
-        presetType: presetType,
-        worldSize: fixed.world_size || 'default',
-        branching: fixed.branching || 'default',
-        loopMode: fixed.loop || 'default',
-        seasonStart: fixed.season_start || 'default',
-        dayMode: fixed.day || 'default',
-        autumnLength: fixed.autumn || 'default',
-        winterLength: fixed.winter || 'default',
-        springLength: fixed.spring || 'default',
-        summerLength: fixed.summer || 'default',
-        resourceVariety: fixed.resourceVariety || 'default',
-        extraSettings: JSON.stringify(extra),
-      }
-
-      const res = editing
-        ? await updateWorldGenPreset(initialValues!.id, payload)
-        : await createWorldGenPreset(payload)
-      if (res.code === 0) {
-        message.success(editing ? t('common.saved') : t('common.templates_created'))
-        onSaved(); onClose()
-      } else { message.error(res.message) }
-    } catch { message.error(editing ? t('common.templates_update_failed') : t('common.templates_create_failed')) }
-    finally { setLoading(false) }
-  }
 
   const tVal = (v: string) => {
     const key = `templates_val_${v.replace(/-/g, '').replace(/_/g, '')}`

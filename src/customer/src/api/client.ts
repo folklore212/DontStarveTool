@@ -2,6 +2,8 @@ import axios from 'axios'
 import { tokenManager } from '../utils/tokenManager'
 import { logger } from '../utils/logger'
 
+// NOTE: Also available at @shared/api/client — keep changes in sync.
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api/v1'
 const API_TIMEOUT = 10_000
 

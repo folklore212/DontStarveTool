@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Modal, Form, Input, InputNumber, Select, Space, Button, message, Row, Col, Tag } from 'antd'
+import { Modal, Form, Input, InputNumber, Select, Space, Button, Row, Col, Tag } from 'antd'
 import { PlusOutlined, DeleteOutlined } from '@ant-design/icons'
 import {
   createTemplate, updateTemplate, bindTemplateWorldGen,
@@ -8,6 +8,7 @@ import {
   type TemplateInfo, type WorldGenPresetInfo,
 } from '../api/templates'
 import { useTranslation } from '../i18n'
+import useResourceForm from '../hooks/useResourceForm'
 
 interface Props {
   open: boolean
@@ -24,13 +25,31 @@ interface BindingEntry {
 
 export default function ServerTemplateFormModal({ open, initialValues, onClose, onSaved }: Props) {
   const [form] = Form.useForm()
-  const [loading, setLoading] = useState(false)
   const [allPresets, setAllPresets] = useState<WorldGenPresetInfo[]>([])
   const [bindings, setBindings] = useState<BindingEntry[]>([])
   const [modTemplates, setModTemplates] = useState<TemplateInfo[]>([])
   const [boundModIds, setBoundModIds] = useState<number[]>([])
   const { t } = useTranslation()
-  const editing = !!initialValues
+
+  const { loading, editing, handleSubmit } = useResourceForm({
+    form, initialValues, onSaved, onClose,
+    async onSubmit(values, isEdit): Promise<{ code: number; message?: string }> {
+      const templateData = { ...values, templateType: 'server_template', modList: JSON.stringify(boundModIds) }
+      const res = isEdit
+        ? await updateTemplate(initialValues!.id, templateData)
+        : await createTemplate(templateData)
+      if (res.code === 0) {
+        const templateId = res.data?.id ?? initialValues!.id
+        const validBindings = bindings.filter((b) => b.presetId)
+        if (validBindings.length > 0) {
+          await bindTemplateWorldGen(templateId, validBindings.map((b) => ({ presetId: b.presetId!, shardType: b.shardType })))
+        }
+      }
+      return res
+    },
+    successMsg: { created: t('common.templates_created'), saved: t('common.saved') },
+    errorMsg: { createFailed: t('common.templates_create_failed'), updateFailed: t('common.templates_update_failed') },
+  })
 
   useEffect(() => {
     if (open) {
@@ -67,34 +86,6 @@ export default function ServerTemplateFormModal({ open, initialValues, onClose, 
 
   const updateBinding = (key: number, field: 'presetId' | 'shardType', value: string | number) => {
     setBindings((prev) => prev.map((b) => (b.key === key ? { ...b, [field]: value } : b)))
-  }
-
-  const handleSubmit = async () => {
-    setLoading(true)
-    try {
-      const values = await form.validateFields()
-      const templateData = {
-        ...values, templateType: 'server_template',
-        modList: JSON.stringify(boundModIds),
-      }
-      const res = editing
-        ? await updateTemplate(initialValues!.id, templateData)
-        : await createTemplate(templateData)
-
-      if (res.code === 0) {
-        const templateId = res.data?.id ?? initialValues!.id
-        const validBindings = bindings.filter((b) => b.presetId)
-        if (validBindings.length > 0) {
-          await bindTemplateWorldGen(templateId, validBindings.map((b) => ({
-            presetId: b.presetId!, shardType: b.shardType,
-          })))
-        }
-        message.success(editing ? t('common.saved') : t('common.templates_created'))
-        onSaved(); onClose()
-      } else { message.error(res.message) }
-    } catch {
-      message.error(editing ? t('common.templates_update_failed') : t('common.templates_create_failed'))
-    } finally { setLoading(false) }
   }
 
   const unusedPresets = allPresets.filter((p) => !bindings.find((b) => b.presetId === p.id))

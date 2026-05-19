@@ -69,12 +69,12 @@ public class DstDeployService {
      * Generate cluster configuration files on the remote server.
      */
     public SshService.SshResult generateConfig(Server server, String clusterName, Map<String, String> config) {
-        String clusterDir = "~/.klei/DoNotStarveTogether/" + clusterName;
-        String token = config.getOrDefault("token", "");
+        String clusterDir = "~/.klei/DoNotStarveTogether/" + ShellEscaper.escape(clusterName);
+        String token = ShellEscaper.forHeredoc(config.getOrDefault("token", ""));
         String maxPlayers = config.getOrDefault("maxPlayers", "6");
-        String password = config.getOrDefault("password", "");
+        String password = ShellEscaper.forHeredoc(config.getOrDefault("password", ""));
         String gameMode = config.getOrDefault("gameMode", "survival");
-        String desc = config.getOrDefault("description", clusterName);
+        String desc = ShellEscaper.forHeredoc(config.getOrDefault("description", clusterName));
 
         String cmd = "mkdir -p '" + clusterDir + "/Master' '" + clusterDir + "/Caves' && " +
             "cat > '" + clusterDir + "/cluster.ini' << 'CLUSTEREOF'\n" +
@@ -103,9 +103,10 @@ public class DstDeployService {
      * Start DST server (Master + Caves) in screen sessions.
      */
     public SshService.SshResult startServer(Server server, String clusterName) {
+        String c = ShellEscaper.escape(clusterName);
         String cmd = "cd " + DST_DIR + "/bin && " +
-            "screen -dmS dst_master_" + clusterName + " ./dontstarve_dedicated_server_nullrenderer -cluster " + clusterName + " -shard Master && " +
-            "sleep 2 && screen -dmS dst_caves_" + clusterName + " ./dontstarve_dedicated_server_nullrenderer -cluster " + clusterName + " -shard Caves && " +
+            "screen -dmS dst_master_" + c + " ./dontstarve_dedicated_server_nullrenderer -cluster " + c + " -shard Master && " +
+            "sleep 2 && screen -dmS dst_caves_" + c + " ./dontstarve_dedicated_server_nullrenderer -cluster " + c + " -shard Caves && " +
             "echo STARTED && sleep 2 && screen -ls | grep dst_";
         return sshService.executeCommand(server, cmd, 60_000);
     }
@@ -114,9 +115,10 @@ public class DstDeployService {
      * Stop DST server.
      */
     public SshService.SshResult stopServer(Server server, String clusterName) {
-        String cmd = "screen -S dst_master_" + clusterName + " -X quit 2>/dev/null; " +
-            "screen -S dst_caves_" + clusterName + " -X quit 2>/dev/null; " +
-            "pkill -f 'dontstarve_dedicated_server_nullrenderer.*" + clusterName + "' 2>/dev/null; " +
+        String c = ShellEscaper.escape(clusterName);
+        String cmd = "screen -S dst_master_" + c + " -X quit 2>/dev/null; " +
+            "screen -S dst_caves_" + c + " -X quit 2>/dev/null; " +
+            "pkill -f 'dontstarve_dedicated_server_nullrenderer.*" + c + "' 2>/dev/null; " +
             "echo STOPPED";
         return sshService.executeCommand(server, cmd, 30_000);
     }
@@ -125,8 +127,9 @@ public class DstDeployService {
      * Check server status.
      */
     public SshService.SshResult checkStatus(Server server, String clusterName) {
-        String cmd = "if pgrep -f 'dontstarve_dedicated_server.*" + clusterName + "' > /dev/null; then " +
-            "echo RUNNING; pgrep -f 'dontstarve_dedicated.*" + clusterName + "' | wc -l; " +
+        String c = ShellEscaper.escape(clusterName);
+        String cmd = "if pgrep -f 'dontstarve_dedicated_server.*" + c + "' > /dev/null; then " +
+            "echo RUNNING; pgrep -f 'dontstarve_dedicated.*" + c + "' | wc -l; " +
             "screen -ls 2>/dev/null | grep dst_ | wc -l; " +
             "else echo STOPPED; fi";
         return sshService.executeCommand(server, cmd, 15_000);
@@ -136,7 +139,7 @@ public class DstDeployService {
      * Send console command.
      */
     public SshService.SshResult sendConsoleCommand(Server server, String clusterName, String command) {
-        String cmd = "screen -S dst_master_" + clusterName + " -p 0 -X stuff '" + command + "\r'";
+        String cmd = "screen -S dst_master_" + ShellEscaper.escape(clusterName) + " -p 0 -X stuff '" + ShellEscaper.escape(command) + "\r'";
         return sshService.executeCommand(server, cmd, 10_000);
     }
 
@@ -144,9 +147,11 @@ public class DstDeployService {
      * Create backup of DST world.
      */
     public SshService.SshResult createBackup(Server server, String clusterName, String backupName) {
-        String src = "~/.klei/DoNotStarveTogether/" + clusterName;
-        String dst = "~/dst_backups/" + clusterName + "_" + backupName;
-        String cmd = "mkdir -p ~/dst_backups && tar czf '" + dst + ".tar.gz' -C ~/.klei/DoNotStarveTogether '" + clusterName + "' && echo BACKUP_CREATED && ls -lh '" + dst + ".tar.gz' | awk '{print $5}'";
+        String c = ShellEscaper.escape(clusterName);
+        String bk = ShellEscaper.escape(backupName);
+        String src = "~/.klei/DoNotStarveTogether/" + c;
+        String dst = "~/dst_backups/" + c + "_" + bk;
+        String cmd = "mkdir -p ~/dst_backups && tar czf '" + dst + ".tar.gz' -C ~/.klei/DoNotStarveTogether '" + c + "' && echo BACKUP_CREATED && ls -lh '" + dst + ".tar.gz' | awk '{print $5}'";
         return sshService.executeCommand(server, cmd, 120_000);
     }
 }
