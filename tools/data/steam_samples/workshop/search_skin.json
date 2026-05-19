@@ -1,0 +1,1583 @@
+{
+  "response": {
+    "total": 779,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "3353852416",
+        "creator": "76561199042155506",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1551330",
+        "preview_file_size": "530122",
+        "preview_url": "https://images.steamusercontent.com/ugc/2491146025820045901/71B1F591B82C94875EC991867C20177F83411572/",
+        "url": "",
+        "hcontent_file": "2024064511990854258",
+        "hcontent_preview": "2491146025820045901",
+        "title": "Fast Travel(skined home sign)",
+        "file_description": "[img]https://i.ibb.co/4SP7fDb/Steam-2024-5-27-21-33-33.png[/img]\r\n\r\n[hr]\r\n\r\nEnglish is available. The mod will choose your default language.\r\n\r\n2025/1/2 update:\r\n\r\n1. The sign's name could show above the sign. you could turn it on/off at setting menu.\r\n2. Delay teleport function added. You could turn it on or off at setting menu. \r\n3. reworked some skin animation. \r\n\r\n1. Transactions rework.\r\n2. Now you can choose turn/ off the light at mod setting menu .\r\n3. Add revive function. Haunting the wood sign as a ghost revives players.You can choose to turn it on/off at setting menu.\r\n4. Hunger cost and San cost are able to adjust at mod setting menu.\r\n5. Able to be use with other teleportation mod together. \r\n\r\nThank you all for like it. Sorry abt the late update. Hopefully you guys will enjoy this update! Have fun and happy international Women's Day ! \r\n\r\n[hr]\r\n\r\n\r\n💗what does the mod do：\r\n\r\nA teleportation sign to help player fast travel. the sign has 10 skins. The DST home sign also can do fast travel, you can turn it on at setting menu.\r\n\r\n1. Now you can choose turn/ off the light at mod setting menu .\r\n2. Add revive function. Haunting the wood sign as a ghost revives players.You can choose to turn it on/off at setting menu.\r\n3. Hunger cost and San cost are able to adjust at mod setting menu.\r\n4. Able to be use with other teleportation mod together. \r\n\r\n💗how to make：\r\n\r\ntravel cost hungry, the sign made of a wood board. you can find the sign from light, decorate, mod tab\r\n\r\n💗reference：\r\n\r\nIsosurface\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=458587300&searchtext=fast+travel\r\n\r\n\r\n💗Recommend my other mods：\r\n\r\n[h3]【lag remover】[/h3]\r\nRemover game lag and improve your pin. make the game more smooth. it can do auto stack, animal and more items can be stack, stack size increase, auto clean, code clean, fast trading, remove twiggy, stop tree regrowth, no root after logging. Each function can be turn on/off separatly in setting menu. as well as language setting. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3050607025\r\n\r\n[h3]【more item stack】[/h3]\r\nstack size can be choose from 20 to 5000. can help game stack animals, and other stuff. including some mod items like pack back and so on. each item can be turn on/off in setting menu. compatible with 【lag remover】. if you dont need stack mod items, you can just use 【lag remover】\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3007715893\r\n\r\n[h3]【No Regrowth】[/h3]\r\nthe trees like evergreen will stop regrowth at their stage 4. each type of trees can turn on separatly in setting menu. compatible with 【lag remover】.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3210773634\r\n\r\n[h3]【Better abigail】[/h3]\r\na new follower. everyone can make one. like abigail, but better and stronger.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3306010901\r\n\r\n[h3]【sweet light collection】[/h3]\r\na collection of light, each light has its own skins and functions. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3282173327\r\n\r\n[h3]【AUTO EAT AFK】[/h3]\r\nClient mod. For AFK in public server. Press F6(can change defult key at mod setting menu) and start to auto eat when you need. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3455473954\r\n\r\n\r\n\r\n\r\n🌎thanks for play\r\n\r\n\r\n",
+        "time_created": 1729751592,
+        "time_updated": 1743295023,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 161,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 193482,
+        "favorited": 6068,
+        "followers": 0,
+        "lifetime_subscriptions": 214141,
+        "lifetime_favorited": 6489,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 299840,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "version:1.5.5",
+            "display_name": "version:1.5.5"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9701492786407471,
+          "votes_up": 2030,
+          "votes_down": 14
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "36",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1653324376",
+        "creator": "76561198137380697",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "92413",
+        "preview_file_size": "285702",
+        "preview_url": "https://images.steamusercontent.com/ugc/945097009995591078/9AE4B3EA71EB1D62B42E90087E404357F79687F1/",
+        "url": "",
+        "hcontent_file": "4877449756957239704",
+        "hcontent_preview": "945097009995591078",
+        "title": "Skins extender",
+        "file_description": "Automatically opens your skins without science machine with a neat popup. \r\n\r\n[url=https://github.com/CunningFox146/Skins-extender] GitHub Page[/url]",
+        "time_created": 1549965870,
+        "time_updated": 1739232643,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 216,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 248185,
+        "favorited": 8188,
+        "followers": 0,
+        "lifetime_subscriptions": 288074,
+        "lifetime_favorited": 9218,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 325447,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:2.0.0",
+            "display_name": "version:2.0.0"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9589144587516785,
+          "votes_up": 2494,
+          "votes_down": 59
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "8",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2812783478",
+        "creator": "76561198423350461",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "5137499",
+        "preview_file_size": "59207",
+        "preview_url": "https://images.steamusercontent.com/ugc/1849303175004231192/53AE45F2DC5BEFD3306BBBE324E51837631FB5C6/",
+        "url": "",
+        "hcontent_file": "7237236860242877167",
+        "hcontent_preview": "1849303175004231192",
+        "title": "[API] Modded Skins",
+        "file_description": "A new revamped version of the Modded Skins API comes to you. Bringing the ability for other mods to add their own skins for their custom characters and custom items! Even bringing along its own custom skin unlockable system for these modded skins.\r\n\r\n[u]For your average user:[/u] \r\nThis mod essentially does nothing on its own and will need the use of another mod that adds skins for full effect.\r\nThis mod does come with it's own unique glasses clothing slot with 3 pre-packaged glasses, but that is the only piece of content you will be getting from enabling this alone. This is an API, an Application Programming Interface, a piece of software that is meant to be used by other softwares/applications for full function, and has little to no function on it's own.\r\n\r\n[u]For modders:[/u] \r\nIf you're interested in seeing how to add your own skin, see the tutorial I've provided on the Klei forums here!\r\nhttps://forums.kleientertainment.com/forums/topic/140482-modded-skins-api-tutorial-creating-custom-skins-for-mods/\r\n\r\n[b]Developers/Contributors:[/b]\r\n-Fidooop: For creating the main foundation and base of the mod\r\n-Cunning Fox: For creating the mechanics responsible for skinning modded items\r\n-Hornet: For creating the custom skin unlockable system for modded skins and bringing the mod to release\r\n-Erik: For providing nearly all of the art assets used for the mod.\r\n-Willow: For providing the pre-packaged glasses skin assets.\r\n-Crushcircuit: For providing two swap icon arts, thank you!\r\n\r\n-Bombobbit: Spanish Translation\r\n-wingsummer: Chinese Translation",
+        "time_created": 1653538382,
+        "time_updated": 1749224493,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 194,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 191852,
+        "favorited": 4582,
+        "followers": 0,
+        "lifetime_subscriptions": 227369,
+        "lifetime_favorited": 5122,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 158472,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "version:2.6",
+            "display_name": "version:2.6"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9317585229873657,
+          "votes_up": 1015,
+          "votes_down": 28
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "57",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3658175649",
+        "creator": "76561198342048466",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "107850296",
+        "preview_file_size": "13004",
+        "preview_url": "https://images.steamusercontent.com/ugc/12933393161804259883/227D1D825F45EDDECFE237CC41AA734613370C4D/",
+        "url": "",
+        "hcontent_file": "512549561355704662",
+        "hcontent_preview": "12933393161804259883",
+        "title": "伍迪变身皮肤Woodie Transformation Skins",
+        "file_description": "⚠️🫎Regarding the Swashbuckler skin's weremoose — the fact that its blowhole is on top of the head is not a bug, because this skin is designed as an orcawere rather than a regular moose.⚠️🫎\r\n\r\n✨ 已支持的官方皮肤系列 | Supported Official Skin Series\r\n· Guest of Honor （贵宾）\r\n· The Survivor （幸存者）\r\n· The Triumphant （凯旋）\r\n· Treeguard Costume （树精护卫服饰）\r\n· The Gladiator （角斗士）\r\n· The Roseate （玫瑰）\r\n· The Snowfallen （下雪）\r\n· The Merrymaker   (欢乐)\r\n· The Verdant   (绿色系) \r\n· The Victorian （维多利亚）\r\n· The Swashbuckler （江洋大盗）\r\n· The Masquerader  （假面舞会）\r\n· The Tree Hugger  (嬉皮士)\r\n· The Magmatic  （岩浆）\r\n· The Team Player  （团队精神）\r\n· The Moonbound  （前往月亮）\r\n· The Archaic  （古代）\r\n\r\n🛠 配置选项 | Configuration Options\r\n\r\n·主开关 | Master Switch: 一键全局启用/禁用所有美化效果。\r\n\r\n📌 注意事项 | Notes\r\n· 本模组仅修改视觉模型，不改变任何角色属性、数值或游戏平衡。\r\nThis mod only changes visual models, and does not alter any character stats, values, or game balance.\r\n· 美化效果基于官方皮肤ID。请确保所使用的头部皮肤已正确解锁。\r\nVisual effects are based on official skin IDs. Please ensure the head skins you use are properly unlocked.\r\n\r\n🪄预览方法 | Preview method\r\n · 在游戏中建造衣柜，使用然后点击右边序列中的箱子符号显示“仅显示已拥有：关闭”然后选择未解锁的头部皮肤试穿，接着点击左上角的切换视角即可预览皮肤效果\r\nPreview method: In the game, build a wardrobe, use it, then click the chest icon in the right-hand list to show 'owned filter: off'. Then select a locked head skin to try on, and click the 'cycle view' button in the top-left corner to preview the skin effect.\r\n\r\n\r\n🔨更新| Update \r\n· 修改现有部分皮肤外观，使其更具特色 。 \r\nModify existing skin appearances to make them more distinctive.\r\n· 修改部分皮肤贴图外观，修改之前与现在更新系列皮肤的鹅人奔跑羽毛效果的贴图，增加欢乐 绿色系 皮肤\r\nUpdate: Modified the appearance of some skin textures. Adjusted the walking feather texture of the weregoose skin in both the previous and current updates of the skin series to make it more compatible. Added the merrymaker verdant skin.\r\n· 增加维多利亚，江洋大盗，假面舞会，嬉皮士，岩浆，团队成员，前往月亮和古代皮肤\r\nAdded the victorian,swashbuckler,masquerader,tree hugger,magmatic,team player, Moonbound and Archaic skin.",
+        "time_created": 1769965121,
+        "time_updated": 1778860040,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 59,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 8743,
+        "favorited": 445,
+        "followers": 0,
+        "lifetime_subscriptions": 9762,
+        "lifetime_favorited": 472,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 27934,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:20260515",
+            "display_name": "version:20260515"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8674699068069458,
+          "votes_up": 310,
+          "votes_down": 5
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "18",
+        "revision": 1,
+        "ban_text_check_result": 30
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2816192843",
+        "creator": "76561198175505863",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "110826",
+        "preview_file_size": "130276",
+        "preview_url": "https://images.steamusercontent.com/ugc/1856059209714022353/8EB1F9107968397719E54EF500A1233188421FCD/",
+        "url": "",
+        "hcontent_file": "7442317992942990410",
+        "hcontent_preview": "1856059209714022353",
+        "title": "See Spools & Skins",
+        "file_description": "[h1]Purchase Unit Switcher[/h1]\r\nLet you switch purchased items' unit from currency to unravelled spools, spools for unit price, unravelled spools for unit price.\r\n[h1]Purchase Item Sorter[/h1]\r\nLet you sort items by release, price, spools and spools for unit price.\r\n[h1]Show Hidden Skins[/h1]\r\nHelpful for collectors.\r\nShow hidden skins of all rarities in curios and show hidden skins of bundles.\r\n[h1]Pretend Own All Skins[/h1]\r\nAs is.\r\n[h1]Skin Queue[/h1]\r\nYou can choose to enable my modified version of Skin Queue that allows you to unravel non-marketable skins and unravel all instead of leaving one.\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1557935632&searchtext=queue]\r\n[img]https://steamuserimages-a.akamaihd.net/ugc/961976603560776795/034B537A542BEC0B00664CC0013517CD4B92E868/?imw=200&imh=200&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url]",
+        "time_created": 1654234720,
+        "time_updated": 1750921229,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 96,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 41449,
+        "favorited": 1825,
+        "followers": 0,
+        "lifetime_subscriptions": 51432,
+        "lifetime_favorited": 2113,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 79296,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "version:20250626.1",
+            "display_name": "version:20250626.1"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8723849654197693,
+          "votes_up": 367,
+          "votes_down": 11
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "25",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3692753195",
+        "creator": "76561197960637845",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "56479",
+        "preview_file_size": "652314",
+        "preview_url": "https://images.steamusercontent.com/ugc/15378284097226132709/7B0BD23E29B437CF778367F7193D2867B7C08498/",
+        "url": "",
+        "hcontent_file": "205173000081720385",
+        "hcontent_preview": "15378284097226132709",
+        "title": "Extended Skin Preview",
+        "file_description": "Quick mod I threw together to make skin previews a bit better.\r\n\r\nWardrobe:\r\n - New cycle screens (Side, Back)\r\n - Pause Animation toggle\r\n\r\nBelongings:\r\n - Comparison with original skin\r\n - Preview on character (Front, Side, Back)\r\n - Character switcher for easier preview of your main\r\n - Toggle character head skin on or off\r\n\r\nKnown issues:\r\n - Low resolution of the original skin (Not sure how to fix, default skins use Anim which isn't supported due to C++ engine loading it on demand in-game, not menu)\r\n - Not all skins are previewable. Not sure why at this point, some of them are just inconsistent. Post feedback if needed\r\n\r\nPossible todo's in the future:\r\n- Fix blurry images somehow, maybe needs Klei's help to open up the anims\r\n- Fix newer items (brightshade?) not properly previewing.",
+        "time_created": 1774549210,
+        "time_updated": 1774719215,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 19,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2775,
+        "favorited": 143,
+        "followers": 0,
+        "lifetime_subscriptions": 3236,
+        "lifetime_favorited": 151,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 12265,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.2.0",
+            "display_name": "version:1.2.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7464115023612976,
+          "votes_up": 106,
+          "votes_down": 3
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "13",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3566227956",
+        "creator": "76561198255527408",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "2080947",
+        "preview_file_size": "474743",
+        "preview_url": "https://images.steamusercontent.com/ugc/10354253853760255659/8304909C2A63551D748902DDF3168AA901D69F57/",
+        "url": "",
+        "hcontent_file": "3890351201005399452",
+        "hcontent_preview": "10354253853760255659",
+        "title": "Meat & Egg Skins Pack",
+        "file_description": "[h2]Updated some drop meats, monster meat, and leaf meat appearances when converted to eggs.[/h2]\r\n\r\n[h1]Note:[/h1]\r\nThe purpose of this mod is to address compatibility issues and provide a lightweight experience for players who cannot properly enjoy the special appearance items of the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1908933602&searchtext=feast+and+famie]Feast\r\n and Famine[/url] mod, while also finding the duplicated Gorge content less appealing. Based on the original mod, this mod updates/refines the appearances and animation scales of several meat types to look more natural.\r\n\r\nAs a passionate fan of the original mod, I recreated its appearance-related functions because the original has not been maintained for a long time and has run into various issues.\r\nThis mod makes use of some of its art assets—please support the original mod. Removal upon request.\r\n\r\nAll meat and egg items are still the same as their vanilla counterparts, only with updated appearances. Their properties remain identical and they can be stacked together, but by default they will not auto-stack when picked up. You can use a broom to switch appearances.\r\n\r\n[h1]Special Thanks:[/h1]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1908933602&searchtext=feast+and+famie]Feast\r\n and Famine (gameplay ideas and some art assets)[/url]\r\n\r\n[url=https://steamcommunity.com/profiles/76561198109564392]ashe[/url\r\n]",
+        "time_created": 1757599116,
+        "time_updated": 1757599116,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 8,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 5817,
+        "favorited": 238,
+        "followers": 0,
+        "lifetime_subscriptions": 6975,
+        "lifetime_favorited": 255,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 20218,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.767123281955719,
+          "votes_up": 118,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "1",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1552089668",
+        "creator": "76561197998012463",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "741393",
+        "preview_file_size": "45123",
+        "preview_url": "https://cdn.steamusercontent.com/ugc/790859860875591852/6D6787B757A7F0DAC32F1729671951C9B2190D47/",
+        "url": "",
+        "hcontent_file": "4829613136201804033",
+        "hcontent_preview": "790859860875591852",
+        "title": "Idle Skins Plus",
+        "file_description": "This mod have god mod and creative tools. also automatic open gifts.\r\nMod for skins drop in afk farm.",
+        "time_created": 1540918456,
+        "time_updated": 1628864319,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 68,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 63871,
+        "favorited": 2122,
+        "followers": 0,
+        "lifetime_subscriptions": 93845,
+        "lifetime_favorited": 2620,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 141173,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "version:1.5",
+            "display_name": "version:1.5"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9117437601089478,
+          "votes_up": 1231,
+          "votes_down": 74
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "1",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2955912123",
+        "creator": "76561198362367074",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "5747203",
+        "preview_file_size": "277852",
+        "preview_url": "https://images.steamusercontent.com/ugc/2041870107059297309/B278F4BE6496A7FDD2D66CEF38A7EAF6F7538CB2/",
+        "url": "",
+        "hcontent_file": "424872357119558628",
+        "hcontent_preview": "2041870107059297309",
+        "title": "Steamed Collection - Skins",
+        "file_description": "Added 15 new Victorian and Steampunk themed skins in the Constant.\r\n[h1] Brand New Vignette! [/h1]\r\n\r\n[img]https://imgur.com/PsfjvWH.png[/img]\r\n\r\n[h1] Sacrificial Bucket's Effigy [/h1]\r\n[img]https://imgur.com/b9z0cMd.png[/img]\r\nNow with this shameful anonymous headgear you can't complain about not being represented correctly.\r\n\r\n[h1] Guardsman's Wooden Armor [/h1]\r\n[img]https://imgur.com/PFyQQkd.png[/img]\r\nThe armor is improvised with red cloth to compensate for authoritarian complexes.\r\n\r\n[h1] Baked Guardsman's Bat [/h1]\r\n[img]https://imgur.com/s1oIavG.png[/img]\r\nPerfectly baked steamed ham to impress other survivors.\r\nWarly has noticed the fact they are obviously grilled.\r\n\r\n[h1] Spiky Kettle Helm [/h1]\r\n[img]https://imgur.com/TYSF6I1.png[/img]\r\nDespite the threatening appearance, untying the cloth would be enough to make it fall apart.\r\n\r\n[h1] Depth Worm's Allure [/h1]\r\n[img]https://imgur.com/MGnnesd.png[/img]\r\nWormwood has taken a liking to pretending he is a glowberry by digging himself into the ground with this hat.\r\n\r\n[h1] All Seeing Nightmare Amulet [/h1]\r\n[img]https://imgur.com/oLDtzZM.png[/img]\r\nNot recommended for folks that are afraid of being watched.\r\n\r\n[h1] Breezy Fur Lined Coat [/h1]\r\n[img]https://imgur.com/ecftOQW.png[/img]\r\nSurvive and thrive through the winter with this 'aporkalypse-red' colored coat.\r\nPockets are not functional.\r\n\r\n[h1] Puffy Fur Trimmed Coat [/h1]\r\n[img]https://imgur.com/4BJ5SmF.png[/img]\r\nSurvive and thrive through the winter with this 'hurricane-blue' colored coat.\r\nPockets are not functional.\r\n\r\n[h1] Rugged Backpack [/h1]\r\n[img]https://imgur.com/PRKOFtD.png[/img]\r\nA reinforced camping pack made with fine silk and trimmed leather.\r\n\r\n[h1] Steam Engine [/h1]\r\n[img]https://imgur.com/rS0JVmj.png[/img]\r\nA reinvented iteration of the most iconic heat engine that performs mechanical work using steam as its working fluid.\r\n\r\n[h1] Gloomy Pot [/h1]\r\n[img]https://imgur.com/VyZ2y2J.png[/img]\r\nAn elegant smoking pot with a new brand industrial look.\r\n\r\n[h1] Moose Goose's Dilemma [/h1]\r\n[img]https://imgur.com/erdWZ3L.png[/img]\r\nNature could not make up her mind and therefore she made it into an inanimate object.\r\n\r\n[h1]Peekious Scopious[/h1]\r\n[img]https://imgur.com/SpdkmBz.png[/img]\r\nWaterproof not guaranteed.\r\n\r\n[h1] Sailor's Hat [/h1]\r\n[img]https://imgur.com/UtBhdmf.png[/img]\r\nA novel cap designed for the sea.\r\n\r\n[h1] Sailor's Suit [/h1]\r\n[img]https://imgur.com/6z0R482.png[/img]\r\nNot to be confused with a school girl's uniform hailed from eastern lands.\r\n\r\n[b] This Mod Require [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2812783478] [API] Modded Skins [/url][/b]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2812783478] [img]https://imgur.com/AXjkQjX.png[/img] [/url]\r\n[It automatically downloads during the installation of the mod]\r\n\r\n[h1]Mod Compatibility[/h1]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2415978456] [API] Mods In Menu [/url]:\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2415978456] [img]https://imgur.com/I8bWSV8.png[/img] [/url]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2039181790] Uncompromising Mode [/url]: Pockets are now functional for Breezy Fur Lined Coat  and Puffy Fur Trimmed Coat.\r\n\r\n[h1] Credits [/h1]\r\n\r\n[b] Art[/b]:[i] Gearless [/i]\r\n[b]Code[/b]:[i] Hornet [/i]\r\n\r\nIf you want to contact me here's my discord tag! [i]Gearless#7102[/i]\r\n\r\nOriginally this project wasn't even meant to be a project but as a pastime where I tried to create skin concepts for Don't Starve Together. Last year (June 9, 2022) I made a post in Forum with those concepts and people liked them!\r\nAnd it's thanks to this forum post that Hornet contacted me offering me the chance to make those concepts a reality.\r\nSpecial thanks to Hornet for making this mod actually possible and all the patience they had with helping me :)\r\n",
+        "time_created": 1680356303,
+        "time_updated": 1770642520,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 129,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 14907,
+        "favorited": 893,
+        "followers": 0,
+        "lifetime_subscriptions": 22975,
+        "lifetime_favorited": 1032,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 60204,
+        "num_children": 1,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "version:1.3",
+            "display_name": "version:1.3"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8977072238922119,
+          "votes_up": 459,
+          "votes_down": 8
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "18",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3583633595",
+        "creator": "76561198025554288",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "116573333",
+        "preview_file_size": "1046657",
+        "preview_url": "https://images.steamusercontent.com/ugc/15399535585747293602/50E085722B6BED3425A0092CCBE8E1D8B2170EE3/",
+        "url": "",
+        "hcontent_file": "6239991185745699294",
+        "hcontent_preview": "15399535585747293602",
+        "title": "The Fun Gang (DELTARUNE)",
+        "file_description": "Kris, Susie, and Ralsei are starting a new adventure in Don’t Starve Together! They enter the Constant with a custom stat meter (Tension Points), 3 weapons (each with 4 unique radial abilities), 6 items, 1 mob, 1 Lancer, 2.5 custom voices, and 15k+ lines of dialogue!\r\n\r\n\r\n[url=https://docs.google.com/document/d/1XmiDVm5BakmDu0gKzsx0TnW_HVp6P_oS_EH6in-b-Ak][img]https://i.postimg.cc/Zqmrj0pQ/WIKI.png[/img][/url]\r\n[hr]\r\n[img]https://i.postimg.cc/CK4b2Y4y/4.gif[/img]\r\n[h1]Kris, The Human[/h1]\r\nHealth: 150 | Hunger: 150 | Sanity: 125\r\n\r\n[list][*][b]Is a Quiet Person:[/b] May stop narrating in certain instances, and has certain undescribed perks.\r\n[*][b]Studied the Occult:[/b] Loses 50% less sanity to shadow and lunar rift creatures.\r\n[*][b]Sleeps like a Corpse:[/b] More susceptible to grogginess effects, and walks slowly when first waking up.\r\n[*][b]Can Do Many Things, but Not Magic:[/b] Has a custom meter, Tension Points (TP), and 4 special abilities that require TP to activate.[/list]\r\n[img]https://i.postimg.cc/dQRDmnn4/A6EgnQh.png[/img]\r\n\r\n[hr]\r\n[img]https://i.postimg.cc/xdQKgqMt/7.gif[/img]\r\n[h1]Susie, The Monster[/h1]\r\nHealth: 200 | Hunger: 150 | Sanity: 150\r\n+35% Hunger Drain\r\n\r\n[list][*][b]Will Eat Almost Anything:[/b] Can eat stale and spoiled food with  reduced penalties, and can eat certain inedible food items.\r\n[*][b]Doesn’t Care About Your Choices:[/b] Will not allow you to unequip armor unless she already has a piece of armor in a different slot.\r\n[*][b]A Member of the Bad Guys:[/b] Enters the Constant with Lancer’s Playing Card.\r\n[*][b]Can Cast Magic:[/b] Has a custom meter, Tension Points (TP), and 4 special abilities that require TP to activate.[/list]\r\n\r\n[img]https://i.postimg.cc/ZYP0FjVh/cQwMSce.png[/img]\r\n\r\n[hr]\r\n[img]https://i.postimg.cc/rsM3kqBd/1.gif[/img]\r\n[h1]Ralsei, The Prince from the Dark[/h1]\r\nHealth: 125 | Hunger: 150 | Sanity: 200\r\n-15% Damage Multiplier\r\n\r\n[list][*][b]Well Acquainted With the Dark:[/b] Is unaffected by nighttime sanity drain, and has innate Shadow Affinity.\r\n[*][b]Wants to Make Lightners Happy:[/b] Can craft his Cooking Cauldron that can bake various cakes.\r\n[*][b]Dislikes Fighting:[/b] Deals 15% less damage than default.\r\n[*][b]Can Cast Magic:[/b] Has a custom meter, Tension Points (TP), and 4 special abilities that require TP to activate.[/list]\r\n\r\n[img]https://i.postimg.cc/Wpmt6SX1/Z265CkO.png[/img]\r\n\r\n[h1]All character, item, and mob stats and perks are configurable, \r\nso please customize this mod to your liking![/h1]\r\n[hr]\r\n[h1]Want More Info?[/h1]\r\nThis writeup only contains a small fraction of everything the mod contains. For more detailed information on character perks, items, and special abilities, please visit this mod’s  [url=https://docs.google.com/document/d/1XmiDVm5BakmDu0gKzsx0TnW_HVp6P_oS_EH6in-b-Ak]wiki[/url] page!\r\n\r\n[h1]Modded Skins & Extras[/h1]\r\nThis mod has [b]18+ unique character skins[/b] and [b]1 custom loading screen vignette[/b]! To use them, you must subscribe to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2812783478][API] Modded Skins.[/url]\r\nThis mod also has [b]1 custom menu screen[/b]! To use, you must subscribe to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2415978456][API] Mods In Menu.[/url]\r\n\r\nThis mod will still function if the above two mods are not enabled, but custom skins, vignettes, and menus will be inaccessible.\r\n\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2812783478][img]https://i.postimg.cc/jj6BkW9t/l1TuTiX.png[/img][/url][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2415978456][img]https://i.postimg.cc/8CdxnF3R/NJjhjR1.png[/img][/url]\r\n\r\n[hr]\r\n[h1]To Do[/h1]\r\n[b]Bugfixes![/b]\r\nI’ve been working on this mod for 5 months, and it has gotten [i]pretty[/i] big as a result. While I had a small group of people provide bugtesting assistance, we almost certainly missed a few things.\r\nIf you experience any bugs, please follow the instructions in the BUG REPORTS/KNOWN BUGS discussion so I can fix it ASAP.\r\n\r\n[b]Balancing Adjustments![/b] \r\nI am, admittedly, not the best at balancing things. I just like making fun mechanics and not thinking too hard about if they’re weak or overpowered lol. To offset this, the vast majority of abilities ingame are fully customizable, so you can easily buff, debuff, or disable things as necessary.\r\nIf there is a general concensus on how something should be balanced, I will update the mod to reflect that. You can provide input in the SUGGESTIONS discussion.\r\n\t\r\n[b]Speech Files![/b] \r\nEveryone’s speech files are 90% done. Seasonal stuff + recently added items were left out so I could get the mod out slightly earlier. I’ll be adding these in a later update!\r\nIf you notice any misspellings or odd phrasings in the character’s dialogue, please let me know. I use speech-to-text but it doesn’t always interpret what I’m saying correctly…\t\r\n\r\n[h1]\"Where is [insert Chapter 3/4 mechanic/item/etc here]?\"[/h1]\r\nThis mod began development 2 months before the new chapters released, so most of the content was created with only chapters 1, 2, and the announcement trailer/status updates in mind. (If I included the new chapters, I would’ve been working on it for another 3 months...)\r\n\r\nWith that said, I’m not opposed to adding more in future updates. You can provide input in the SUGGESTIONS discussion.\r\n\r\n[h1]\"Are you going to make Noelle/Berdly/[insert character here]?\"[/h1]\r\nEvery time someone asks this question, I delay that character's release by 1 month.\r\n\t\t\r\n[hr]\r\n[h1]Commissions & Tips[/h1]\r\n[b]Want your own character mod?[/b] Visit my [url=https://mizartz-dst.carrd.co/]commission website[/url] for more info!\r\n\r\n[b]Want to support me?[/b] Check out my [url=https://ko-fi.com/mizartz]ko-fi![/url] Doing so makes it easier for me to develop and maintain mods like this one.\r\n\r\n[hr]\r\n[h1]Credit[/h1]\r\nThe Fun Gang, most sfx, and DELTARUNE belong to Toby Fox.\r\nArt, code, animation, and voice sfx by me ([url=https://steamcommunity.com/id/mizartz/]mizartz[/url]).\r\nVignette art by [url=https://steamcommunity.com/profiles/76561198362367074]Gearless[/url].\r\nNon-Lancer mob programming by [url=https://steamcommunity.com/profiles/76561198083251896]Lucas[/url].\r\nChinese localization by [url=https://steamcommunity.com/profiles/76561198986049938]CountryMouse[/url], based on translations by [url=https://space.bilibili.com/3546893244172492]好人汉化组[/url].\r\n\r\nSpecial thanks to [url=https://steamcommunity.com/id/Kabrido]Kabrido[/url] for making this mod possible!\r\n\r\n\r\n\r\n[b]Editing and re-uploading this mod is not permitted.[/b]",
+        "time_created": 1760021569,
+        "time_updated": 1775917749,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 321,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 30828,
+        "favorited": 2900,
+        "followers": 0,
+        "lifetime_subscriptions": 33844,
+        "lifetime_favorited": 2984,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 104696,
+        "num_children": 2,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:1.1.9",
+            "display_name": "version:1.1.9"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9477663040161133,
+          "votes_up": 1329,
+          "votes_down": 26
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "33",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1467214795",
+        "creator": "76561198051415780",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "209983277",
+        "preview_file_size": "3234329",
+        "preview_url": "https://images.steamusercontent.com/ugc/772858702967291545/03D51B350F6E625E0EED00E07F3D2B291A34C5F6/",
+        "url": "",
+        "hcontent_file": "253496458004776321",
+        "hcontent_preview": "772858702967291545",
+        "title": "Island Adventures - Shipwrecked",
+        "file_description": "[img]https://i.imgur.com/hk5ba6H.png[/img]\r\nEmbark on a tropical journey across the seas, Together! Explore a vast new world with new biomes, seasons, and creatures.\r\nIsland Adventures brings the seas of [url=https://store.steampowered.com/app/393010/Dont_Starve_Shipwrecked/]Don't Starve: Shipwrecked[/url] to Don't Starve Together.\r\n\r\n[img]https://i.imgur.com/Hyj1Qfv.png[/img]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3435352667][img]https://i.imgur.com/Fcl01qx.png[/img][/url]\r\nWe list the change notes for each update here on Steam. View them [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/1467214795]here![/url]\r\nEnable the [url=https://steamcommunity.com/workshop/filedetails/?id=2812783478]Modded Skins API[/url] to access various skins for SW items!\r\n[url=https://steamcommunity.com/workshop/filedetails/?id=2812783478][img]https://i.imgur.com/SawkY7t.png[/img][/url]\r\n\r\n[h1]Join our community![/h1]\r\n[url=https://discord.gg/8HJMq4h][img]https://i.imgur.com/KCYNnUh.png[/img][/url][url=https://gitlab.com/IslandAdventures/IslandAdventures][img]https://i.imgur.com/4eYQuc1.png[/img][/url]\r\n\r\nSpecial thanks to all our contributors for helping on the mod!\r\n\r\n[hr]\r\n[i]This mod contains assets from the game extension \"Shipwrecked\" for \"Don't Starve\". Shipwrecked has been created by Klei Entertainment and Capybara Games. No copyright infringement intended. [b]Please note that Klei explicitly permits the development and distribution of Island Adventures.[/b] If you are developing your own mod using Klei assets, consider following our example and ask a Klei staff member whether or not the mod is tolerated, and only develop with their consent. (They don't bite, feel free to ask them!)\r\n\r\n[b]Do not[/b] upload this mod to platforms other than Steam. Any version of Island Adventures not uploaded by one of the people listed to the right (\"Contributors\") is unofficial, which means we cannot guarantee it is safe to use.[/i]",
+        "time_created": 1533504708,
+        "time_updated": 1778102835,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 3551,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 588093,
+        "favorited": 27902,
+        "followers": 0,
+        "lifetime_subscriptions": 772343,
+        "lifetime_favorited": 31851,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 928989,
+        "num_children": 1,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "language",
+            "display_name": "language"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "scenario",
+            "display_name": "scenario"
+          },
+          {
+            "tag": "version:1.0.51",
+            "display_name": "version:1.0.51"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9663551449775696,
+          "votes_up": 6671,
+          "votes_down": 184
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "238",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3007715893",
+        "creator": "76561198998029716",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "57940",
+        "preview_file_size": "50670",
+        "preview_url": "https://images.steamusercontent.com/ugc/2002463855340648410/C49A4B056822C2B62F933B1C8F1DB6B431153076/",
+        "url": "",
+        "hcontent_file": "662151792220295060",
+        "hcontent_preview": "2002463855340648410",
+        "title": "更多物品堆叠/More Items Stack",
+        "file_description": "[img]https://i.ibb.co/4SP7fDb/Steam-2024-5-27-21-33-33.png[/img]\r\n[h2] 【Introduction】 [/h2]\r\n\r\n[hr][/hr]\r\n[h2] Compatible With 6.27.2024 UPDATED  Version [/h2]\r\nnew tree seeds stackable now, also blueprints and sketchs now !!!\r\n[hr][/hr]\r\n\r\n[hr][/hr]\r\n[b] All Stackable items can be stacked up to 100,000. Also, most items will be able to stacked. [/b] \r\n[list]\r\n[*]Max stacksize is  configurable in mod, configuration  (40; 99; 100; 999; 10,000;) 。\r\n\r\n[*]Most items are now stackable like bird eggs, fish, horn, Moon Rock Idol and so on. Some of the mod items has been added as well. \r\n\r\n[*]Tools and weapon are not stackable. \r\n[/list]\r\n\r\n[i] [b]VERY IMPORTANT NOTICE!!!\r\nTurn off the tall birds egg ( lavae egg )section before you hatch any egg. otherwise you will only get one baby bird (lavae egg) from the whole stack. [/b][/i] \r\n[hr][/hr]\r\n\r\n💗Recommend my other mods：\r\n\r\n[h3]【lag remover】[/h3]\r\nRemover game lag and improve your pin. make the game more smooth. it can do auto stack, animal and more items can be stack, stack size increase, auto clean, code clean, fast trading, remove twiggy, stop tree regrowth, no root after logging. Each function can be turn on/off separatly in setting menu. as well as language setting. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3050607025\r\n\r\n[h3]【No Regrowth】[/h3]\r\nthe trees like evergreen will stop regrowth at their stage 4. each type of trees can turn on separatly in setting menu. compatible with 【lag remover】.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3210773634\r\n\r\n[h3]【Fast Travel Skined】[/h3]\r\nA home sign can help you fast travel, tavel cost hunger. You can find the sign at light/deco/mod tab. The sign has 8 skins. the oringnal DST home sign can also fast travel. You can turn it on at setting menu. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3353852416\r\n\r\n🌎thanks for play\r\n\r\n",
+        "time_created": 1689955426,
+        "time_updated": 1744568013,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 328,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 404867,
+        "favorited": 12460,
+        "followers": 0,
+        "lifetime_subscriptions": 455670,
+        "lifetime_favorited": 13573,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 468688,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:2.3.0",
+            "display_name": "version:2.3.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9620358943939209,
+          "votes_up": 2256,
+          "votes_down": 41
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "46",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1595631294",
+        "creator": "76561198076228231",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "34494",
+        "preview_file_size": "2511936",
+        "preview_url": "https://images.steamusercontent.com/ugc/964232331547672446/F08D2292D9E9C57090643E20AB50FA4E0D2ED40E/",
+        "url": "",
+        "hcontent_file": "5910272143631521111",
+        "hcontent_preview": "964232331547672446",
+        "title": "Smart Minisign",
+        "file_description": "[spoiler]救救孩子的英语吧 go die！[/spoiler]\r\n\r\n[strike] You have to learn to draw by yourself！[/strike]\r\n\r\n1.1.4  Support Skin \r\n[img]https://steamuserimages-a.akamaihd.net/ugc/1306556956675010095/04303CA1C24509DBDEB13B35971F3D9131BDCEEB/[/img]\r\n(Can be disabled in the settings)\r\n\r\n1.1.1  Update\r\nNow can draw  spiced foods.\r\n\r\n1.1.0Update\r\n\r\n[img]https://steamuserimages-a.akamaihd.net/ugc/788618505779471419/07746C9B66624AFF4898DED76CEA16C82D24C422/[/img]\r\n\r\n1.0.8 Update\r\n\r\nNow it can draw all  the  mods  items!\r\n\r\nAdded  an  API  for other modder. If you want to make smartminisign for your own chester. Please  write like this in your chester:\r\n\r\nif TUNING.SMART_SIGN_DRAW_ENABLE then\r\n  SMART_SIGN_DRAW(inst)\r\nend \r\n\r\n\r\n1.05 Update\r\nThe minisign can be dug by shovel !\r\n[img]https://i.loli.net/2019/01/24/5c4992966c3af.png[/img]\r\n\r\n1.04 Update\r\nNow it can show the item in the bundle!\r\n[img]https://i.loli.net/2018/12/26/5c232a323233f.png[/img]\r\n\r\n\r\nCreate a minisign when building the treasurechest.\r\n（can't be removed unless the treasurechest is burning or has been removed)\r\n\r\nWhen closed, draw the first item it saw .(excluding mod)\r\n\r\n[img]https://i.loli.net/2018/12/20/5c1af8859425e.gif[/img]\r\n\r\n\r\n1.03 Update\r\nFixed the bug which  the signs appeared  behind the chest.\r\n\r\n1.01 Update  \r\nYou can also add minisign  for Icebox and dragonfly_chest from here!\r\n[img]https://i.loli.net/2018/12/20/5c1b3737af7ba.png[/img]\r\n\r\n谢谢逆行人生大佬的帮忙测试！\r\n",
+        "time_created": 1545271055,
+        "time_updated": 1769536494,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 346,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1510577,
+        "favorited": 58223,
+        "followers": 0,
+        "lifetime_subscriptions": 1733687,
+        "lifetime_favorited": 64363,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1579488,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:1.1.6",
+            "display_name": "version:1.1.6"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9723329544067383,
+          "votes_up": 7998,
+          "votes_down": 179
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "8",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3320235585",
+        "creator": "76561199071772317",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "29351792",
+        "preview_file_size": "678201",
+        "preview_url": "https://images.steamusercontent.com/ugc/2452864431202947438/7CDAD3D3E257658F9410B237AECB5897575B9591/",
+        "url": "",
+        "hcontent_file": "6109367106307831528",
+        "hcontent_preview": "2452864431202947438",
+        "title": "[Honkai: Star Rail]Firefly",
+        "file_description": "Character characteristics:\r\nHealth 200, satiety 150, spirit 150\r\ncharacteristic:\r\n1. Entropy loss syndrome: losing 1 health point every 15 seconds\r\n2. Interstellar Firefly: Self luminous Land with a Radius of 4 Grids\r\n3. Glamor Iron Cavalry:\r\nIgnore the monster san halo\r\nUnable to sleep, immune hypnosis\r\nGet close to Grom and drop San\r\n50% increase in insect damage\r\n4. Star Core Hunter: 10% speed boost, increased work efficiency\r\n5. Unable to transform into a monkey\r\n\r\nFirefly Type IV: Materials: Firefly 20, Thulium Mine 10, Gear 10, Rotten Wire 10, Moon Rock 10, Despair Stone 10, Dragonfly Skin 3\r\nTechnology: Celestial Technology (Moon Island Technology): Armor Barrier Equipment (85% Defense). Can transform into Sam, with a duration of 180 seconds, giving fireflies time to restore their transformation.\r\nSam's state: Has an additional 40% damage reduction and the ability to resist negative effects, as well as 2 active skills, z and x.\r\nSword Form: Range Attack, Minor Bloodsucking, Can inflict Sword Form damage on Firefly Growth (Each Firefly Increases 0.5 Damage and 0.5 Surface Damage)\r\nTechnology: Second tier Technology\r\nMaterials: Firefly 10, Moon Rock 10, Moon Fragments 10\r\n\r\nArun bag:\r\n1. 3x8 large backpack\r\n2. Give 1 freshwater fish to increase freshness (when given 25, the backpack will remain fresh forever; when given 50, the backpack will slowly return to freshness, increasing the rate of return for each additional fish)\r\n3. Add 1 point of surface defense (unlimited) to 1 spider in the backpack\r\n4. Add 20 more insulation to 1 Bluebird (unlimited)\r\n5. Add 20 extra warmth to 1 red bird (unlimited)\r\nAs the external temperature changes, the properties will automatically switch (for temperatures above 45 ° C, switch to insulation; for temperatures below 20 ° C, switch to insulation)\r\n6. Give 1 crow a 10% increase in rain protection (up to 100% rain protection), and obtain lightning protection when fully protected from rain\r\n7. Give 1 bee/killer bee an increase of 2 counterattacks (similar to thorn armor, up to 100)\r\n8. Give 1 rabbit a 1% increase in movement speed (up to 10% limit)\r\n9. Give 1 man eating flower seed character who will not be hated by plant units (will not be actively attacked by man eating flowers, bright cuts, nor will they collect cactus, sharp toothed shrubs, rose spike blood)\r\n10. Give 1 butterfly an increase of 0.02 san in recovery per second (up to 50 butterflies equals 1 san per second)\r\n11. Give 1 sunfish immunity to ignite\r\n12. Give one ice carved fish and hang a layer of ice on the enemy after being hit, which can be stacked.\r\n13. Give 1 yellowfin tuna the ability to automatically engage in conversations with crops with a radius of 2 squares\r\n14. Give 1 deciduous flounder to automatically fertilize and water crops\r\n15. Give 1 mole for quick collection\r\n16. Give 1 mosquito, increase blood sucking by 0.1%, up to a maximum of 10\r\n17. Give 10 lobsters to gain fast fishing ability\r\n18. Give me one month's worth of E, I won't be attacked by the Moon Spirit\r\n19. Give 10 hearts of whistleblowing, any object that causes trouble can be resurrected\r\n20. Give 1 Pure Glory, increase damage to Moon faction by 1% (maximum 25%)\r\n21. Give 1 pure fear and increase damage to the Shadow faction by 1% (maximum 25%)\r\nAttention: After giving the backpack pure fear or pure glory, it is necessary to wear the backpack again for it to take effect\r\nFood:\r\n1. Oak cake roll: can be made in a regular pot\r\nEffect: 25 Life, -20 Spirit, 50 Hunger\r\nFirefly consumption 3D: 30 blood, 20 spirit, 65 hunger\r\nProduction: 1 branch, 2 carrots, 1 berry\r\n2. UFO Fortress: Ordinary pots can be made\r\nEffect: Restore full satiety and handle heavy objects without slowing down\r\nPreparation: 1 meat, 1 onion, 1 tomato, 1 potato\r\n3. Popcorn: can be made in a regular pot\r\nEffect: -10 Life, 20 Spirit, 55 Hunger\r\nEach attack within 4 minutes inflicts an additional 80 face damage\r\nProduction: 3 corn, 1 honey\r\n4. Saint Germain fries: can be made in a regular pot\r\nEffect: 10 Lives, 10 Spirits, 40 Hunger\r\nMake 2 potatoes, 1 dairy product, and 1 royal jelly\r\nGet soothing tea and rainbow sugar bean effects\r\n5、Sweet Dream Crispy Tube\r\nIngredients: 1 dairy product, 1 honey, 1 ice, 1 egg\r\nReply: 15 health points, 35 san, 25 satiety\r\nEffect: Damage increases by 60%, but there is a 15% chance that the next damage will be 0, lasting for 4 minutes\r\n\r\nThe legacy system, light cone system, life seat system, destruction attribute, and complete combustion state are still being produced. Please be patient and wait\r\n(Currently, 4 sets of leftovers, 2 inner circle leftovers, and 2 light cones have been broken)\r\n\r\n10.15 Update:\r\n1. Firefly Type IV is divided into: Gramr (sword form), Firefly Type IV (shapeshifter), and two types of firefly that come with it initially\r\n2. Firefly Type IV (Transformer): Armor bar equipment with 85% damage reduction\r\n3. Gramr (Sword Form) Firefly Limit (80): Materials: Firefly 10, Moon Rock 10, Moon Fragments 10\r\n4. Sam has two skills, z and v. Sam's boxing deals (60 damage+50 face damage) (reduced damage) and removes range damage. z: Sprint forward deals 250 damage, cd10s. Press the x key, jump up and fall towards the target area of the mouse, dealing 350 damage+150 surface damage, cd50 seconds. Simultaneously generate an inflammatory zone, within which Sam strengthens (secondary burn) and deals an additional 50 damage and 50 area damage with each attack, while also dealing 1% of the enemy's maximum health damage. The duration of the inflammatory zone is 25 seconds.\r\n5. Arun Bag: Resurrection from 10 Nightmare Fuels to 10 Whistleblowing Hearts\r\n6. Fix some previous issues.\r\n\r\n10.15.1 Update:\r\n1. Gramr (Sword Form) Firefly has a maximum limit of 80 by default, which can be adjusted from 0-200 or unlimited on the mod page\r\n2. Modify the bug that enables delayed compensation for Sam's sword attack\r\n3. After the expansion of the inflammatory domain, enemies that can be attacked will temporarily remove their own defense\r\n4. The 85% damage reduction of Firefly Type IV does not belong to armor damage reduction, but can reduce positional damage\r\n5. Fix the issue of the disappearance of Gramr's cross world enhancement effect\r\n\r\nAlso, could you recommend my other mod：Kiana、Mei：https://steamcommunity.com/sharedfiles/filedetails/?id=3433379139\r\nIt is forbidden to change it by any means \r\n It is forbidden to carry out transportation and redistribution without the permission of the author\r\n\r\n",
+        "time_created": 1724952151,
+        "time_updated": 1779117666,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 579,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 128502,
+        "favorited": 5575,
+        "followers": 0,
+        "lifetime_subscriptions": 148026,
+        "lifetime_favorited": 5955,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 258945,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "version:0.25.i",
+            "display_name": "version:0.25.i"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9476162195205688,
+          "votes_up": 1560,
+          "votes_down": 39
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "146",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3603994937",
+        "creator": "76561198075492585",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "9220735",
+        "preview_file_size": "624878",
+        "preview_url": "https://images.steamusercontent.com/ugc/13546888628751624713/9B81AC9811393852CD097806D8D7CBF462A4C824/",
+        "url": "",
+        "hcontent_file": "8199023194409463154",
+        "hcontent_preview": "13546888628751624713",
+        "title": "Chest Skin Collection",
+        "file_description": "[h1]Chest Skin Collection v1.0.3 by formingrain/Goodsales, Letitbe & EldVarg[/h1]\r\n\r\nThis mod adds 21 new skins for both the Chest and the Tall Chest.\r\nThese are just suggestions on what you can store in these chest.\r\nThey are exactly like normal chests and can store anything the originals can.\r\n\r\n[h2]Chests[/h2]\r\n[table noborder=1]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/ADrJ0mK.png[/img][/td]\r\n\t\t[td][b]Bone:[/b] For storing Bone Shards, Hound's Tooth and other bone items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/OuVqi1m.png[/img][/td]\r\n\t\t[td][b]Brightshade:[/b] For storing Brightshade Husks and Pure Brilliance and brightshade items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/SwlPQfX.png[/img][/td]\r\n\t\t[td][b]Charcoal:[/b] For storing Charcoal, ash and similar items. [b]New![/b][/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/DG9EKko.png[/img][/td]\r\n\t\t[td][b]Crate:[/b] For storing boards and logs or similar items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/gSSEvsk.png[/img][/td]\r\n\t\t[td][b]Dreadstone:[/b] For storing Dreadstone and such items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/Pia2vf9.png[/img][/td]\r\n\t\t[td][b]Flint:[/b] For storing flint and flint tools.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/neyUOxn.png[/img][/td]\r\n\t\t[td][b]Gift:[/b] For storing miscellaneous items. [b]New![/b][/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/cvpMMZI.png[/img][/td]\r\n\t\t[td][b]Gingerbread:[/b] For xmas items. [b]New![/b][/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/fHTNIXz.png[/img][/td]\r\n\t\t[td][b]Glass:[/b] For storing Moon Shards and such items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/I9j2z2m.png[/img][/td]\r\n\t\t[td][b]Gold:[/b] For storing gold and such items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/4eM3xWr.png[/img][/td]\r\n\t\t[td][b]Grass:[/b] For storing grass and grass made items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/Gf7b8XN.png[/img][/td]\r\n\t\t[td][b]Jewel:[/b] For storing gems and similar items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/XYjvNrt.png[/img][/td]\r\n\t\t[td][b]Marble:[/b] For storing marble and such items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/onvdrzy.png[/img][/td]\r\n\t\t[td][b]Pumpkin:[/b] For storing halloween items. [b]New![/b][/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/k1fz14C.png[/img][/td]\r\n\t\t[td][b]Rations:[/b] For Mandrake & Tallbird Egg and other non-pericble food. [b]New![/b][/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/rTqBuN6.png[/img][/td]\r\n\t\t[td][b]Rocks:[/b] For storing rocks, cut stone and similar items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/UOh4TJW.png[/img][/td]\r\n\t\t[td][b]Shadow:[/b] For storing Nightmare Fuel, Pure Horror and similar items. [b]New![/b][/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/XpqyZ01.png[/img][/td]\r\n\t\t[td][b]Spice:[/b] For storing Warlys spices and similar items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/ihSS6nP.png[/img][/td]\r\n\t\t[td][b]Steam:[/b] For storing gears, junk and similar items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/Ur8yFaK.png[/img][/td]\r\n\t\t[td][b]Twiggy:[/b] For storing twigs and other twig made items.[/td]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[td][img]https://i.imgur.com/mHt7i2I.png[/img][/td]\r\n\t\t[td][b]Wild Rose:[/b] For storing miscellaneous items. [b]New![/b][/td]\r\n\t[/tr]\r\n[/table]\r\n\r\n[b]Mod config settings:[/b]\r\n[list]\r\n\t[*]Alphabetical sort order.\r\n\t[*]Advancement level + event sort order.\r\n[/list]\r\n\r\n[b]Known Issues:[/b]\r\n[list]\r\n\t[*]Removing mod can either convert all chest to default chest or hide them until mod added back.\r\n\t[*]Some locks are the same.\r\n[/list]\r\nMore [url=https://steamcommunity.com/workshop/filedetails/discussion/3603994937/690867902968097046/]Known Issues[/url]\r\n\r\n[b]Latest Change Notes:[/b]\r\nv1.0.3 - 2025-11-25\r\n[list]\r\n\t[*]Config settings:\r\n\t\t- Can sort by alphabetical or advancement level.\r\n[/list]\r\nAll [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3603994937]Change Notes[/url].\r\n\r\n[url=https://steamcommunity.com/workshop/filedetails/discussion/3509450543/599657079684222043/]Credits[/url]\r\n[url=https://steamcommunity.com/workshop/filedetails/discussion/3603994937/690867902968097096/]Tools used[/url]\r\n[url=https://steamcommunity.com/workshop/filedetails/discussion/3603994937/687490526750966040/]To Do list[/url]\r\n[url=https://steamcommunity.com/profiles/76561198030736733/myworkshopfiles/?appid=322330]EldVarg's other Mods[/url]\r\n[url=https://steamcommunity.com/profiles/76561198075492585/myworkshopfiles/?appid=322330]formingrain's other Mods[/url]\r\n[url=https://discord.gg/FkFmhYwBcz]Our Discord[/url]\r\n\r\nMore types of chests will be added in the future. Please suggest more chest skins.\r\nAs a bonus, two more of formingrain's chest can be found in the Winterlands mod.",
+        "time_created": 1762887315,
+        "time_updated": 1764113282,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 20,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1311,
+        "favorited": 91,
+        "followers": 0,
+        "lifetime_subscriptions": 1540,
+        "lifetime_favorited": 104,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 4286,
+        "num_children": 1,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "version:1.0.3",
+            "display_name": "version:1.0.3"
+          }
+        ],
+        "vote_data": {
+          "score": 0.6338028311729431,
+          "votes_up": 40,
+          "votes_down": 2
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "10",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3383047161",
+        "creator": "76561198132027485",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "139547010",
+        "preview_file_size": "965365",
+        "preview_url": "https://images.steamusercontent.com/ugc/13044947471225904/CB6A0042D21727C8E59E20730C3C57335372C030/",
+        "url": "",
+        "hcontent_file": "7418463465032430699",
+        "hcontent_preview": "13044947471225904",
+        "title": "The Winterlands",
+        "file_description": "[h1]Set sails to a perilous frozen island[/h1]\r\n\r\n[url=https://winterlands.wiki.gg/wiki/Winterlands_Wiki][img]https://i.imgur.com/e5x2fdR.png[/img][/url]\r\n\r\n[b]Best experienced with Winter's Feast OR challenge yourself on the custom World Preset ![/b]\r\n\r\nDiscover this uncharted territory on your new + old worlds. Where winter reigns eternal, and deadlier than ever... amid the snow lies a world brimming with untamed beauty to undig. \r\n\r\n[url=https://i.imgur.com/gZV33ub.png][img]https://i.imgur.com/bF25UwS.png[/img][/url]\r\n\r\n[h1]Enjoying the mod or newcomer ? Join our Discord[/h1]\r\n[list]\r\n[*] Ask your questions, suggestions and share your stuff\r\n[*] Get notified for big updates and see early spoilers / sketches\r\n[*] Build community translations and report evil bugs\r\n[*] Or just to chat with us\r\n[/list]\r\n\r\n> https://discord.gg/eeGTw4uYVj\r\n\r\n\r\n[h1]Mod Version : 1.4.2 - Sunny Side Up-date ![/h1]\r\n> [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3383047161]Full update changelogs[/url]\r\n\r\n[b]Dev Team & Credits - Follow and help us on Ko-fi to support our creative work ♥️[/b][list]\r\n[*][url=https://steamcommunity.com/id/admantoine]ADM[/url] - code, audio - https://ko-fi.com/cherryteam\r\n[*][url=https://steamcommunity.com/id/feything/]FeyThing[/url] - art, animation - https://ko-fi.com/feything\r\n[*][url=https://steamcommunity.com/profiles/76561198362367074]Gearless[/url] - art, music\r\n[*][url=https://steamcommunity.com/profiles/76561198127014737]LukaS[/url] - code, animation\r\n[*][url=https://steamcommunity.com/profiles/76561198112484063/]Notka[/url] - art\r\n[*][url=https://steamcommunity.com/profiles/76561198309425603/]oLuka[/url] - art[/list]\r\n\r\n[b]Special Thanks & Contributors[/b][list]\r\n[*]AlastorYT - for the Spanish translation\r\n[*]formingrain - for the fancy Standard and Scaled Chest icy skins\r\n[*][url=https://steamcommunity.com/profiles/76561198393702810]heavenmoon0107[/url] - for both Chinese translations\r\n[*][url=https://steamcommunity.com/id/Meatyboi]MEATGOOD[/url] - for the adorable Frost Tail vignette\r\n[*][url=https://steamcommunity.com/profiles/76561198094276763/]Steamerclaw[/url] - for helping with the French translation\r\n[*]taeseong1120 - for the Korean translation[/list]\r\n\r\n\r\n[h1]Found bugs ? Read the pinned topic ![/h1]",
+        "time_created": 1734012418,
+        "time_updated": 1779147447,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 418,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 29383,
+        "favorited": 2082,
+        "followers": 0,
+        "lifetime_subscriptions": 35723,
+        "lifetime_favorited": 2235,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 119050,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "version:1.4.2",
+            "display_name": "version:1.4.2"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9297052025794983,
+          "votes_up": 770,
+          "votes_down": 12
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "162",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3638290455",
+        "creator": "76561198232157692",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "32920344",
+        "preview_file_size": "997332",
+        "preview_url": "https://images.steamusercontent.com/ugc/17337924515893931389/7D970058914AB727527059A4560957B526AC7727/",
+        "url": "",
+        "hcontent_file": "6282738179220043336",
+        "hcontent_preview": "17337924515893931389",
+        "title": "Too Many Items Rearranged",
+        "file_description": "[img]https://images.steamusercontent.com/ugc/15449758100811645097/C837117D3BA54C2352C76C5B2BF3ED407B0F29DB/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false[/img]\r\n\r\n[h1][b]Having issues? Just follow these steps:[/b][/h1]\r\n[olist]\r\n[*] Unsubscribe → Resubscribe\r\n[*] Test with only this mod enabled\r\n[*] Enable other mods one by one to find conflicts\r\n[*] Send me the error log\r\n[*] Rush me to fix it ASAP\r\n[*] If you like this mod, please give it a thumbs up!\r\n[/olist]\r\n\r\n[h1][b]What's new compared to the original TMI?[/b][/h1]\r\n[list]\r\n[*][h3][b]Feature Optimization:[/b][/h3]\r\n[list]\r\n[*] Rearranged item categorization structure\r\n[*] Added missing items\r\n[*] Added missing waypoint teleport points\r\n[*] Improved icon assets and Chinese translations\r\n[*] Refactored the interaction logic and UI\r\n[list] \r\n[*] Graphical interface for adding, deleting, editing and checking teleport points\r\n[*] One-click search for nearby entities\r\n[*] Optimized search and graphical history display\r\n[*] Graphical menu for item special functions, more special actions for items\r\n[*] Graphical player switching\r\n[*] Graphical sorting for circular buttons in the bottom-left corner\r\n[*] Graphical manage unlimited custom teleport with rename\r\n[*] Better settings panel; compatible with all kinds of custom fonts\r\n[/list]\r\n[*] Underlying code refactoring (does not affect usage)\r\n[/list]\r\n[*][h3][b]New version features & Debug functions:[/b][/h3]\r\n[list]\r\n[*] Spawn DPS training dummy with planar resistance (in Boss tab)\r\n[*] No cooldown mode for inventory items\r\n[*] Clear Naughtiness\r\n[*] Remove monkey curse / toggle monkey form\r\n[*] Adjust luck value\r\n[*] Clear Frozen / Drowsy / Burning / Ewecus snot states\r\n[*] Unlock Insights / reset skill tree\r\n[*] Unlock tech / re-lock tech\r\n[*] Water walking mode\r\n[*] Adjust WX-78's Charge, Woby's Hunger, Abigail's Health and affinity status, Wolfgang's overpower\r\n[*] Toggle Lunar Hail, adjust world wetness, switch endless day/night, trigger earthquake\r\n[*] Customize and display character movement speed\r\n[*] Salvage, Ignite(Smolder), Haunt, Force Pick Up nearby targets\r\n[*] Instant Kill, Hypnotize, Electrocute, Taunt, Chaos, Panic, Pacify, Rooted nearby targets\r\n[*] Create tamed Beefalo with custom attributes\r\n[*] Hire Reworked Clockworks\r\n[*] Force trigger one hound or worm attack\r\n[*] Force skip Hermit Crab tasks and post-celestial tasks \r\n[*] Displays Hermit Crab Decoration Scores\r\n[*] Remove or restore original world roads\r\n[*] Reclaim land & paint turfs freely\r\n[*] Create and link wormholes\r\n[*] Find and locate map origin point (0,0,0)\r\n[*] Teleport to any position on the minimap\r\n[*] Support dragging and relocating any entities on the map\r\n[*] Support browsing search history with mouse wheel or buttons\r\n[/list]\r\n[*][h3][b]Original Known Issues Fixed:[/b][/h3]\r\n[list]\r\n[*] Inability to weave or unravel skins\r\n[*] Search bar misalignment, persistent tooltips, and abnormal button descriptions\r\n[*] Incorrect or missing descriptions for some bottom-left circle buttons\r\n[*] Abnormal closing behavior in Settings and Help windows\r\n[*] Abnormal \"clear beard\" function\r\n[*] God Mode issues (wetness cannot reset to zero, abnormal effects while dead, unable to walk on water)\r\n[*] Abnormal player selection indicator updates under certain conditions\r\n[*] Ripen function not supporting new version crops\r\n[*] Crash issue when deleting Klei's reworked Bishop\r\n[*] Crash issue when clearing inventory with monkey curse\r\n[/list]\r\n[/list]\r\n\r\n[h1][b]Instructions[/b][/h1]\r\n[list]\r\n[url=https://steamcommunity.com/workshop/filedetails/discussion/3638290455/804594822448087506//] Look here! [/url]\r\n[/list]\r\n\r\n[h1][b]Notes[/b][/h1]\r\n[list]\r\n[*] This is a [b]Client-only[/b] mod. Non-admins cannot see the TMI menu.\r\n[*] The above functions can be used on other players (within the same world).\r\n[*] This mod can store world data (can be disabled in options).\r\n[*] Teleport data is saved independently for different worlds.\r\n[*] Controller/Gamepad is not supported.\r\n[/list]\r\n\r\n[h1][b]Warning[/b][/h1]\r\n[list]\r\n[*] In-game console commands can already achieve all these operations; this mod only provides a GUI.\r\n[*] This may reduce game fun; please use it rationally.\r\n[*] Some items in the \"Other\" tab may cause client or server crashes. Use with caution!\r\n[/list]\r\n\r\n[h1][b]How to become an Admin?[/b][/h1]\r\n[list]\r\n[*][h3][b]Using adminlist.txt:[/b][/h3]\r\n[olist]\r\n[*] Ensure your friend has joined the game. Go to: `Documents/Klei/Don't Starve Together/client_save` (local host) or the `cluster.ini` directory (dedicated server). Create `adminlist.txt` if it doesn't exist.\r\n[*] Have your friend send a chat message (Press Y or U).\r\n[*] Open `Documents/Klei/Don't Starve Together/client_chat_log.txt` and find your friend's ID (e.g., KU_********).\r\n[*] Copy the ID into `adminlist.txt` (one ID per line) and save.\r\n[*] Restart the server and have them rejoin.\r\n[*] Press [b]Tab[/b]; a star icon should appear under their character portrait.\r\n[/olist]\r\n\r\n[*] [h3][b]Using Steam Group Admin:[/b][/h3]\r\n[olist]\r\n[*] [url=https://forums.kleientertainment.com/forums/topic/55994-server-admin-associate-your-server-with-a-steam-group/] Associate your server with a Steam Group[/url]\r\n[*] Set steam_group_admins = true\r\n[*] If you promote someone to admin in the Steam Group (click the star twice to make it gold), they will gain server admin rights.\r\n[*] Players with gold stars will be admins after a server restart.\r\n[/olist]\r\n[/list]\r\n\r\n[h1][b]Others[/b][/h1]\r\n[list]\r\n[*] Translations are very welcome! Feel free to contact me regarding translation issues.\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=257781035] DS TMI [/url]\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=579513934] DS TMI+ [/url]\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=551338671] DST TMI [/url]\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1365141672] DST TMI Plus [/url]\r\n[*] [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2896126381] DST TMI Revisited [/url] (Developed based on this mod) [/b]\r\n[*] [b][url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3638290455] Change Logs [/url][/b]\r\n[/list]\r\n\r\n[h1][b]Credits[/b][/h1]\r\n[list]\r\n[*]Code: C.J.B.\r\n[*]Items & Bug Fixes: GaRAnTuLA\r\n[*]DST Version: Skull\r\n[*]Bug Fixes: TheMightyPikachu, Electroely\r\n[*]UI & Code Optimization: Tendy\r\n[*]Art Design & Updates: 乐十画 (Le Shi Hua)\r\n[*]Teleports, Code Improvements & Fixes: Alyssa\r\n[*]Code Optimization & Chinese Translation: 呼吸 (Hu Xi)\r\n[*]All contributors not named in modinfo.lua\r\n[/list]",
+        "time_created": 1767452784,
+        "time_updated": 1778999571,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 339,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 70564,
+        "favorited": 2210,
+        "followers": 0,
+        "lifetime_subscriptions": 75631,
+        "lifetime_favorited": 2350,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 155064,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.5.5",
+            "display_name": "version:1.5.5"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          }
+        ],
+        "vote_data": {
+          "score": 0.945472240447998,
+          "votes_up": 921,
+          "votes_down": 6
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "219",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3470314870",
+        "creator": "76561198046696114",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "90227854",
+        "preview_file_size": "918686",
+        "preview_url": "https://images.steamusercontent.com/ugc/14863567549438531019/FCE8FAA188C86D14DF7355641EBB8C65A4EA22DE/",
+        "url": "",
+        "hcontent_file": "789833134081712835",
+        "hcontent_preview": "14863567549438531019",
+        "title": "Wiku Hatsune (Character Mod)",
+        "file_description": "Hey Wiku it's not in your heaad! Adds the very popular vocaloid Hatsune Wiku and Teto Kasane with some new cool features! Mod commissioned by S_olace, thank you!\r\n\r\nThis mod is compatible with [API] Modded Skins, currently with 1 skin for Wiku\r\n\r\n[b] Wiku and Teto have new unique voice now! The skins change VFX and voices dynamically[/b]\r\n\r\n[h1] Stats [/h1] \r\n\r\n(Configurable)\r\n\r\nHealth - 120\r\n\r\nSanity - 250\r\n\r\nHunger - 150\r\n\r\n[h1] Abilities [/h1] \r\n\r\n(Configureable)\r\n\r\n[b] Miku Miku Beam [/b]\r\n- Wiku has a music bar fight your foes to fill it up and use her mic to cause damage!\r\n- Wiku can craft a microphone that allows her to cause mass destruction upon her foes, if it's enemy that has followers it will also cause damage!\r\n- Deals 100 Damage\r\n- Works in PvP\r\n\r\n[b] Misc [/b] \r\n- Wiku has high sanity regeneration. \r\n- She also has a sanity aura of her own!\r\n- She starts to fade away when she is low on health as if she wasnt... real after all.\r\n\r\n[h1] Unique Crafts [/h1] \r\n\r\n𝙇𝙚𝙚𝙠\r\n[img]https://i.imgur.com/xLfoLkX.png[/img] [img]https://i.imgur.com/unZrqVH.png[/img]\r\n- Is a leek.\r\n- Deals 42 damage.\r\n\r\n\r\n𝙒𝙞𝙠𝙪'𝙨 𝙈𝙞𝙘𝙧𝙤𝙥𝙝𝙤𝙣𝙚\r\n[img]https://i.imgur.com/PxOpZ1m.png[/img]\r\n- A powerful microphone of mass destruction.\r\n- Deals 0 physical damage.\r\n\r\n\r\n𝙋𝙞𝙥𝙚𝙗𝙤𝙢𝙗\r\n[img]https://i.imgur.com/didoRUE.png[/img]\r\n- Haha pipebomb goes boom!\r\n- Deal 300 damage to the foes but make sure to not be one of the unlucky souls to step in the radius\r\n- Blame Ellis for it to enter the Constant\r\n\r\n\r\n𝙒𝙞𝙠𝙪𝙜𝙧𝙖𝙥𝙝\r\n[img]https://i.imgur.com/r1zpqge.png[/img] [img]https://i.imgur.com/U0LYRM0.png[/img] \r\n- Play some Miku music!\r\n- It can only play Wiku's records they can be found in their own tab.\r\n- The phonograph changes appearance based on who's song it is playing.\r\n- This feature can be disabled by enabling Streamer Mode\r\n\r\n\r\n𝙍𝙚𝙘𝙤𝙧𝙙𝙨\r\n[img]https://i.imgur.com/RP0Pkx0.png[/img] [img]https://i.imgur.com/IFtzDf8.png[/img] \r\n- I bet the developer only has 5 songs in there.\r\n- 10 Teto songs, 13 Miku songs (1 is a remaster of Ievan Polkka)\r\n\r\n\r\n𝙑𝙚𝙜𝙚𝙩𝙖𝙗𝙡𝙚 𝙅𝙪𝙞𝙘𝙚\r\n[img]https://i.imgur.com/Wf40PPL.png[/img]\r\n- Yummy Vegetable juice\r\n- You will need 2 veggies, 1 ice and 1 fruit\r\n- 30 Health, 10 Sanity, 40 Hunger but be quick because it perishes in 3 days (Yes i can count to 3 unlike VALVe)\r\n- It will cool you down slowly and Wiku has a bonus for drinking it!\r\n\r\n𝘾𝙝𝙚𝙚𝙨𝙚𝙗𝙪𝙧𝙜𝙚𝙧\r\n[img]https://i.imgur.com/MQxp0Ef.png[/img]\r\n- Yummy Cheeseburgah\r\n- You will need 2 meats, 1 milk and 1 veggie\r\n- 5 Health, 50 Sanity, 120 Hunger but be quick because it perishes in 10 days\r\n\r\n\r\n\r\n[h1] Credits [/h1]\r\n\r\n[url=https://ko-fi.com/scotchmints] Mentos [/url] - Art, Voice\r\n\r\n[url=https://ko-fi.com/clifffordw] Cliffford W. [/url] - Main Coder, New Voices, Audio\r\n\r\nCrypton Future Media - For creating Hatsune Miku\r\n\r\nThanks to everyone who participated in the beta.",
+        "time_created": 1745602154,
+        "time_updated": 1769978186,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 160,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 41338,
+        "favorited": 2654,
+        "followers": 0,
+        "lifetime_subscriptions": 46597,
+        "lifetime_favorited": 2774,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 121269,
+        "num_children": 1,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:2.0.6",
+            "display_name": "version:2.0.6"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9274843335151672,
+          "votes_up": 986,
+          "votes_down": 31
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "18",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3050607025",
+        "creator": "76561198998029716",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "154535",
+        "preview_file_size": "96295",
+        "preview_url": "https://images.steamusercontent.com/ugc/2514770899100252094/646971D68C78E59DA57256BE5DEB3D96060FF33B/",
+        "url": "",
+        "hcontent_file": "5286256979883474380",
+        "hcontent_preview": "2514770899100252094",
+        "title": "Lag Remover",
+        "file_description": "[img]https://i.ibb.co/4SP7fDb/Steam-2024-5-27-21-33-33.png[/img]\r\n[hr][/hr]\r\n[h2] Update: you can clear the world any time during the game by use code. (only for manager) [/h2]\r\n\r\n\r\n[i] [b]❤️This mod has multiple functions to help your game lower pine and fix lag. All functions can be turn on individualy in setting menu. Thanks for choosing and have fun. ❤️ [/b][/i]\r\n\r\n[olist]\r\n[*]automatically stacking (items on the ground will merge with other spawn automatically)；\r\n\r\n[*]increased stacking size. Stacking size can be set from 20 to 400；\r\n\r\n[*]more item able to be stacked. E.G. birds, horns, eggs, spiders. ；\r\n\r\n[*]fast trading with Pigking, Mermking, Birds , Antlion；\r\n\r\n[*]Auto clean（the item need to be clean, and the number should be clean can be set）\r\n\r\n[*]press U, and enter code #clean, will clean the world immediately. \r\npress U, and enter code #keep_item@item code: amount you wish to keep in your world, will clean the world and keep whatever u wish. \r\neg: #keep_item@evergreen:20;twiggy_short:20\r\n      #keep_item@flower:20\r\n\r\n[*]Evergreen tree and mushroom tree will stop regrowth on their stage 3 （don't compatible with Heap of Foods）\r\n\r\n[*]No more Twiggy \r\n\r\n[*]Chop down trees without leaving stumps\r\n\r\n[*]THERE WILL BE MORE ~~~\r\n\r\n[/olist]\r\n[hr][/hr]\r\n\r\n\r\n[i] \r\nReference\r\n大大果汁（防卡两招Antistun）:  https://steamcommunity.com/sharedfiles/filedetails/?id=1216718131\r\n凉时白开（掉落堆叠(Drop & Stack)） :  https://steamcommunity.com/sharedfiles/filedetails/?id=1998081438\r\n小瑾（防卡两招_改Antistun_changed）：https://steamcommunity.com/sharedfiles/filedetails/?id=2505341606\r\n[/i] \r\n[hr][/hr]\r\n[img]https://steamuserimages-a.akamaihd.net/ugc/2175862346695927507/B99C51E5E0CCCA8D0723D3FB59B24367EC62315B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false[/img]\r\n\r\n[img]https://steamuserimages-a.akamaihd.net/ugc/2175862346695929290/7662DA8671D0D0B1A4421577B9789D32A03861A1/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false [/img]\r\n\r\n💗Recommend my other mods：\r\n\r\n[h3]【more item stack】[/h3]\r\nstack size can be choose from 20 to 5000. can help game stack animals, and other stuff. including some mod items like pack back and so on. each item can be turn on/off in setting menu. compatible with 【lag remover】. if you dont need stack mod items, you can just use 【lag remover】\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3007715893\r\n\r\n[h3]【No Regrowth】[/h3]\r\nthe trees like evergreen will stop regrowth at their stage 4. each type of trees can turn on separatly in setting menu. compatible with 【lag remover】.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3210773634\r\n\r\n[h3]【Fast Travel Skined】[/h3]\r\nA home sign can help you fast travel, tavel cost hunger. You can find the sign at light/deco/mod tab. The sign has 8 skins. the oringnal DST home sign can also fast travel. You can turn it on at setting menu. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3353852416\r\n\r\n\r\n[img]https://i.ibb.co/ymRzY96n/A9738-EB2-AB71895502-BF33200-D4-CE3-F8.gif[/img]thanks for play\r\n",
+        "time_created": 1697274635,
+        "time_updated": 1763947772,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 420,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 193084,
+        "favorited": 6411,
+        "followers": 0,
+        "lifetime_subscriptions": 214565,
+        "lifetime_favorited": 6888,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 197855,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:2.8.4",
+            "display_name": "version:2.8.4"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9494630694389343,
+          "votes_up": 1453,
+          "votes_down": 30
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "62",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3670669065",
+        "creator": "76561198367117485",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "77631224",
+        "preview_file_size": "1031040",
+        "preview_url": "https://images.steamusercontent.com/ugc/11440703359421483707/8D0EF72FC2537F1145C315A9F57D03B80D83A97C/",
+        "url": "",
+        "hcontent_file": "8293625760351858501",
+        "hcontent_preview": "11440703359421483707",
+        "title": "Move!!Dragonfly",
+        "file_description": "[img]https://images.steamusercontent.com/ugc/11571499380397150253/86DB0CB56E0AC66F3F72292A05DB948A211B90D6/[/img]\r\n[img]https://images.steamusercontent.com/ugc/18038957476875644309/8D0EF72FC2537F1145C315A9F57D03B80D83A97C/[/img]\r\n[h2]Core Gameplay[/h2]\r\n\r\nIn the world of Don't Starve Together, challenge and defeat the powerful boss—Dragonfly—to obtain the precious Dragonfly Egg. \r\n\r\nOnce you have the egg, you can begin the hatching process. Patiently wait for your little Dragonfly to break through its shell. \r\n\r\nAfter it hatches, you will need to feed it to help it grow. Once it reaches its full adult form, you can ride it to soar across the Constant, unlocking a brand-new movement experience! \r\n\r\n[h1]Acquisition & Hatching[/h1]\r\nDefeat the Dragonfly to obtain the Dragonfly Egg. It’s huge! You will need to carry it to a heat source to hatch it. \r\n[img]https://images.steamusercontent.com/ugc/16893613063058071077/3809289E4F5209D3E688FBDFB9D0EA7547F6FFB8/[/img]\r\n\r\n[h1]Growth & Cultivation[/h1]\r\nThe Dragonfly has three growth stages. Feed them meat-based dishes and ensure they don't go hungry so they can grow strong! They also eat charcoal and ashes. \r\n[img]https://images.steamusercontent.com/ugc/16759011595149584692/E69DD1D428249938E8A084FDF38E3C6DBCEC6531/[/img]\r\n\r\n[h1]Travel with Dragonfly[/h1]\r\nOnce your Dragonfly reaches its adult stage, you can ride it to travel the world, crossing both land and sea! \r\n[img]https://images.steamusercontent.com/ugc/11729949801099890259/AA8A9FEC4CCB67849FF0145A7AC8C6CACE3E5A97/[/img]\r\n\r\n[h1]Combat![/h1]\r\nWith powerful stats, the Dragonfly is the true Lord of Fire. If one slap isn't enough, just slap them again! Release a triple-hit AOE skill to devastate your foes! Just be careful not to burn your house down! \r\n[img]https://images.steamusercontent.com/ugc/18223452106306707505/430DCC7330F5BC830374F7FD9CBA5D2041E81160/[/img]\r\n\r\n[h1]Emotes[/h1]\r\nThe Dragonfly can mimic all player emotes, including dancing! \r\n[img]https://images.steamusercontent.com/ugc/12398452867172167897/292BC58466BBA523AFD21CA117B7DCD19A82E541/[/img]\r\n\r\n[h1]Rainbow Dragon Bell[/h1]\r\nThis big fella can get in the way sometimes. Use the Rainbow Dragon Bell to summon or recall your Dragonfly companion. Be warned: this magical bell comes with a heavy crafting price. \r\n[img]https://images.steamusercontent.com/ugc/10008906225686647255/55A5F788A3C6FBB3C3F9F6384287F3472DECCBFC/[/img]\r\n\r\n[h1]Dragonfly Skins[/h1]\r\nDragonflies can now change their appearance! Use the Broom to swap skins, including the Winter's Feast skins! \r\nWe have collaborated with the creators of the famous [b]Uncompromising Mode[/b] and [b]Reign of Runts[/b] mods. You can now change your Dragonfly's skin to the Moonbound Dragonfly from Uncompromising Mode and the Antlion Dragonfly from Reign of Runts! \r\n[img]https://images.steamusercontent.com/ugc/10729807662466184819/D3EB1825C28F12848A6D4F92ACBBCEAE69A38A3E/[/img]\r\n[img]https://images.steamusercontent.com/ugc/15170268861680356614/C96719A2BEF0634C24286CB3B5B56464921EB21E/[/img]\r\n\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2039181790][img]https://images.steamusercontent.com/ugc/11481784039675964611/491B2E973718DDAD40ACCB9EF8C3C099B7039E29/[/img][/url]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2010472942][img]https://images.steamusercontent.com/ugc/13209785964451552094/2236B003150A75E76C415D9556093DC203DCF3E8/[/img][/url]\r\n[h1]Compatibility[/h1]\r\nThis mod currently uses Glassic API for Dragonfly skins and is incompatible with skin mods that use Modded API.\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2521851770][img]https://images.steamusercontent.com/ugc/12670204985823895496/6615AD813778ABB4AE981B7DD7A071643DF4B8E0/[/img][/url]←Click to go\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2812783478&searchtext=modded][img]https://images.steamusercontent.com/ugc/18363266782641168376/6496123EFD6DD04D751B49804B52353214BEFBD2/[/img][/url]←Click to go\r\nTranslate with Gemini 3\r\n[img]https://images.steamusercontent.com/ugc/9631898694729566879/FED87316434410DABB446C64EC1FEB27E61DE704/[/img]",
+        "time_created": 1771689546,
+        "time_updated": 1777181299,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 227,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 43677,
+        "favorited": 1374,
+        "followers": 0,
+        "lifetime_subscriptions": 46306,
+        "lifetime_favorited": 1445,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 83151,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "version:26.04.26",
+            "display_name": "version:26.04.26"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9355509281158447,
+          "votes_up": 850,
+          "votes_down": 12
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "29",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}

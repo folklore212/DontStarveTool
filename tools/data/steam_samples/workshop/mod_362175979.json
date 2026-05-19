@@ -1,0 +1,84 @@
+{
+  "response": {
+    "total": 2,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "3571706033",
+        "creator": "76561198090326836",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "154262",
+        "preview_file_size": "22273",
+        "preview_url": "https://images.steamusercontent.com/ugc/11935677387895218929/D31ED04344B9B1DD2ACE7766AF56D9A9DEF43E84/",
+        "url": "",
+        "hcontent_file": "1752022863722297263",
+        "hcontent_preview": "11935677387895218929",
+        "title": "Wormhole Marks [DST Continued]",
+        "file_description": "-= ENGLISH =-\r\n\r\nChanges wormholes icons on mini map to colored icons.\r\n\r\nEvery pair of wormholes get its color icons after you use one of the wormhole. Can support up to 22 pairs of wormholes.\r\n\r\nIf colors of the icons are not visible enough you can enable Draw over FoW in mod configuration option.\r\nThis will draw icons over fog of war on minimap, but will also make them visible for everyone on the server, even for people that didn't explore that area of the map.\r\n\r\nOriginal Mod by: Black Mirror\r\n\r\n-= 中文（翻译）=-\r\n\r\n将小地图上的虫洞图标替换为彩色图标。\r\n\r\n\r\n当您使用其中一个虫洞后，每对虫洞都会获得专属颜色图标。最多支持22对虫洞。\r\n\r\n\r\n若图标颜色不够醒目，可在模组配置中启用“覆盖战争迷雾显示”选项。\r\n\r\n此功能将在小地图迷雾区域绘制图标，但会使所有服务器玩家（包括未探索该区域的玩家）都能看见这些图标。\r\n\r\n\r\n原模制作者：Black Mirror\r\n\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=362175979",
+        "time_created": 1758394942,
+        "time_updated": 1758395530,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 11,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 43161,
+        "favorited": 1111,
+        "followers": 0,
+        "lifetime_subscriptions": 47671,
+        "lifetime_favorited": 1204,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 47188,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:1.0.0a",
+            "display_name": "version:1.0.0a"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8390092849731445,
+          "votes_up": 221,
+          "votes_down": 2
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "5",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}

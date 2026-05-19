@@ -1,0 +1,1547 @@
+{
+  "response": {
+    "total": 23619,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "661253977",
+        "creator": "76561198247062468",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "11626",
+        "preview_file_size": "42867",
+        "file_url": "https://cdn.steamusercontent.com/ugc/1466437966115152320/8A3E11F0B32FCBFBF308DEB0B5C98A702215374B/",
+        "preview_url": "https://images.steamusercontent.com/ugc/275092284528778749/EE51C164D8E13386F597B72A7B232536DD83025B/",
+        "url": "",
+        "hcontent_file": "1466437966115152320",
+        "hcontent_preview": "275092284528778749",
+        "title": "Don't Drop Everything",
+        "file_description": "If You like this, give a thumbs up!\r\n[img=http://images.akamai.steamusercontent.com/ugc/309991266634219774/CC3EAA33CE2659B1824BD02E852DBE8C820C73DC/][/img]\r\n\r\nHint: When a player dies, The player must have amulets, A will drop.\r\n\r\nPlayers into a state of the soul after death, not drop all the items.\r\n\r\n[url=http://steamcommunity.com/sharedfiles/filedetails/?id=664113547][img=http://images.akamai.steamusercontent.com/ugc/275092284528761829/DABCF28D34CA7F9C92AC28E573594037B8492878/][/img][/url]\r\n\r\n",
+        "time_created": 1460089905,
+        "time_updated": 1597029317,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 567,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2586756,
+        "favorited": 90188,
+        "followers": 0,
+        "lifetime_subscriptions": 3005841,
+        "lifetime_favorited": 99892,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 3005961,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "Other",
+            "display_name": "Other"
+          },
+          {
+            "tag": "version:11:15 2020-08-10",
+            "display_name": "version:11:15 2020-08-10"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9943639636039734,
+          "votes_up": 86577,
+          "votes_down": 441
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "3",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "376333686",
+        "creator": "76561198025931302",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1127254",
+        "preview_file_size": "118758",
+        "preview_url": "https://images.steamusercontent.com/ugc/539643766794230713/9486F35BE935DC54F2A7D1216F725E0444A46C33/",
+        "url": "",
+        "hcontent_file": "5571813795820422041",
+        "hcontent_preview": "539643766794230713",
+        "title": "Combined Status",
+        "file_description": "[h1]Supports all versions of Don't Starve ([url=http://steamcommunity.com/sharedfiles/filedetails/?id=574636989]Vanilla, Reign of Giants, Shipwrecked, Hamlet[/url], Don't Starve Together).[/h1]\r\n\r\n[h2]You can also download from [url=https://github.com/rezecib/Combined-Status/releases]GitHub[/url], although that won't auto-update for you. (code contributions also welcome via GitHub)[/h2]\r\n\r\nThis mod enhances the HUD to better show the player's stats and various information about the world, such as temperature, season, and moon phase.\r\n\r\nThis is a client-only mod, so whoever has enabled it will see the changes, and whoever doesn't won't, regardless of what server you're on and whether the server has the mod or not.\r\n\r\nNote that unlike Kiopho's Always On Status, I use the game's temperature units directly here, so player temperature can safely vary from 0-70, with freezing/overheating warnings occurring at 5 and 65. (you can change it to C, which works like Kiopho's version, or F if you want)\r\n\r\nCredits to Kiopho ([url=http://steamcommunity.com/sharedfiles/filedetails/?id=180843799]Always On Status[/url]), Soilworker ([url=http://steamcommunity.com/sharedfiles/filedetails/?id=298407615]Season Clock[/url]), and hotmatrixx ([url=http://steamcommunity.com/sharedfiles/filedetails/?id=292558919]Better Moon[/url]) for making the original mods. I completely rewrote all of the code to be more compatible, aesthetic, and easily maintained going forward.\r\n\r\n[h1]Configuration Options[/h1]\r\n\r\n[table]\r\n[tr][td][h1]Option[/h1][/td][td][h1]Description[/h1][/td][/tr]\r\n[tr][td][h1]Temperature[/h1][/td][td]Whether to show the temperature of the player. Defaults to [i]Show[/i].[/td][/tr]\r\n[tr][td][h1]Show World Temp[/h1][/td][td]Whether to show the temperature of the world. Defaults to [i]Hide[/i].[/td][/tr]\r\n[tr][td][h1]Show Temp Badges[/h1][/td][td]Whether to show small images to indicate which temperature is which. Badges only get shown if this is set to [i]Show[/i] and both player and world temperatures are enabled. Defaults to [i]Show[/i].[/td][/tr]\r\n[tr][td][h1]Temperature Unit[/h1][/td][td]Whether to use the game's internal units (default), or approximations of Fahrenheit or Celsius.\r\n[list][*] In [i]Game Units[/i], the player freezes at 0 and overheats at 70, with warning occurring 5 away.\r\n[*] In [i]Celsius[/i], the player freezes at 0 and overheats at 35, with warning occurring 2.5 degrees away.\r\n[*] In [i]Fahrenheit[/i], the player freezes at 32 and overheats at 95, with warning occurring 4.5 degrees away.\r\n[/list][/td][/tr]\r\n[tr][td][h1]Show Waning[/h1][/td][td]Whether to show if the moon is waxing or waning by adding new icons. Defaults to [i]Show[/i]. (The game normally only shows icons for one direction). In Don't Starve Together, this is now a feature of the main game, so the option doesn't do anything.[/td][/tr]\r\n[tr][td][h1]Show Moon[/h1][/td][td]Whether to show the moon only at [i]Night[/i] (the game's default), during night and dusk ([i]Dusk[/i], the mod's default), or [i]Always[/i].[/td][/tr]\r\n[tr][td][h1]Predict Full Moon[/h1][/td][td]Whether to predict the day of the next full moon, shown when hovering over the moon icon. Defaults to [i]Yes[/i].[/td][/tr]\r\n[tr][td][h1]Flip Moon[/h1][/td][td]Whether to flip the moon phase icon to show it like it is in the Southern Hemisphere, instead of the default Northern Hemisphere. Defaults to [i]No[/i].[/td][/tr]\r\n[tr][td][h1]Season Clock[/h1][/td][td][i]Clock[/i], the default, shows a full clock of the seasons. [i]Compact[/i] shows a smaller badge with the season and day count, while [i]Micro[/i] shows an even smaller badge. [i]No[/i] disables the season clock entirely.[/td][/tr]\r\n[tr][td][h1]Naughtiness[/h1][/td][td]Whether to show the naughtiness of the player. Doesn't work in Don't Starve Together (unless [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2189004162]Insight[/url] is installed), as  naughtiness is not available to clients. Defaults to [i]Show[/i].[/td][/tr]\r\n[tr][td][h1]Log Meter[/h1][/td][td]Whether to show the log meter for Woodie when he is human. Only relevant to singleplayer, as Don't Starve Together always shows the log meter already. Defaults to [i]Always[/i].[/td][/tr]\r\n[tr][td][h1]Cave Clock[/h1][/td][td]Whether to always show the clock in the caves. Only relevant to singleplayer Reign of Giants, as the data is not available in vanilla and the clock shows in Don't Starve Together. Defaults to [i]Show[/i].[/td][/tr]\r\n[tr][td][h1]Stat Numbers[/h1][/td][td]Whether to show the sanity, hunger, and health numbers without having to mouse over the badges. Defaults to [i]Always[/i].[/td][/tr]\r\n[tr][td][h1]Show Max Text[/h1][/td][td]Whether to show the \"Max:\" text when hovering over the sanity, hunger, and health badges to see their maximum values. Defaults to [i]Show[/i].[/td][/tr]\r\n[tr][td][h1]Show Clock Text[/h1][/td][td]Whether to show text on the Clock and Season Clock. Defaults to [i]Show[/i]. If set to [i]Hide[/i], text will only be shown when mousing over or opening the Controller Inventory.[/td][/tr]\r\n[tr][td][h1]HUD Scale[/h1][/td][td]Lets you adjust the size of the badges and clocks independently of the game's HUD scale. Defaults to [i]1[/i].[/td][/tr]\r\n[/table]",
+        "time_created": 1421476256,
+        "time_updated": 1776535139,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 4415,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 9671597,
+        "favorited": 292533,
+        "followers": 0,
+        "lifetime_subscriptions": 10604651,
+        "lifetime_favorited": 315252,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 9184990,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.9.3",
+            "display_name": "version:1.9.3"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9906315207481384,
+          "votes_up": 84754,
+          "votes_down": 752
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "20",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3342856488",
+        "creator": "76561199032104502",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1424807",
+        "preview_file_size": "601230",
+        "preview_url": "https://images.steamusercontent.com/ugc/2504654921732414033/D76852BE84662ADD13F702CE39986ED664F1C787/",
+        "url": "",
+        "hcontent_file": "6697253078229242594",
+        "hcontent_preview": "2504654921732414033",
+        "title": "姐姐救救我(Sister, save me",
+        "file_description": "此mod是我花钱去定制的，我本身不会制作mod，想着或许有人也需要放出来给大家玩。\r\n如果对你有所帮助，给我点个赞和收藏吧，我看着开心w\r\n\r\n此mod可以让你在玩其他人物的时候，使用阿比盖尔之花，虽然主要是为了让其他角色也能使用阿比，但关闭①，②选项后，也可以单纯作为玩温蒂时，使用阿比盖尔的加强使用。\r\n同时可和原版的药剂与姐妹骨灰坛搭配。\r\n\r\n①让阿比盖尔之花给其他角色绑定使用(可关闭)\r\n②其他角色开局初始物品增加阿比盖尔之花(可关闭)\r\n③血量提升︰100>300，300>600，600>1000，另有阿比无法被攻击的选项(默认关闭)。\r\n④阿比盖尔每秒回血(1~30)\r\n⑤攻击力提升，可调整范围为25%~500%\r\n⑥攻击范围提升增强(可调整)。\r\n⑦阿比盖尔可以攻击理智怪兽。\r\n⑧夏天制冷帮忙降温(建议20~40)。\r\n\r\n⭐此外对于温蒂和阿比盖尔之间也有一些修改\r\n①\"温蒂\"召唤阿比盖尔免去扣除理智\r\n②阿比盖尔存在时，温蒂能够持续回复理智(可调1~50)。\r\n(姐妹两的羁绊就是最棒的！)\r\n\r\n适用情况:\r\n萌新入坑，许多怪物都很可怕，理智狂掉被影怪揍？\r\n饥荒有很多有趣的mod，有些还有些特殊的人物包含在里面，不玩可惜，但是打怪技术又不好？\r\n又或者你的朋友，卡的要死要死毫无游戏体验？\r\n这种情况就可以下载本mod，让阿比盖尔姐姐来保护你，让我们一起来做姐姐的小fw！\r\n\r\n\r\n我讨厌夏天，太阳对我进行烧烤的画面和声音，因此我让姐姐也可以在夏天制冷陪伴我，毕竟姐姐是幽灵，凉凉的很合理吧？(所以冬天没有制暖是正常的)\r\n可与饥荒原版阿比盖尔灵药搭配使用。\r\n\r\n\r\n⚠以下翻译來自討論區\"Diako\"友情提供:\r\n\r\n💐 Abigail's Flower Multi-Character Enhancement MOD\r\nThis mod was a custom commission that I paid for—I'm not a mod maker myself, but I thought maybe others would find it useful too, so I'm sharing it for everyone to enjoy!\r\nIf it helps you out, please give it a like and add it to your favorites—it makes me happy to see that! 😄\r\n\r\nWith this mod, you can use Abigail’s Flower while playing other characters. While it was mainly made so non-Wendy characters can also use Abigail, if you turn off options ① and ②, it can simply serve as a powerful upgrade when playing as Wendy.\r\nThis mod also works with the original potions and the Sister’s Urn.\r\n\r\nMain Features:\r\n\r\n① Abigail’s Flower usable by other characters (Can be toggled off)\r\n② Other characters start with Abigail’s Flower as a starting item (Can be toggled off)\r\n③ Health buff: 100 → 300, 300 → 600, 600 → 1000, with an option to make Abigail invincible (off by default)\r\n④ Abigail regenerates health per second (Adjustable: 1~30)\r\n⑤ Attack power boost (Adjustable: 25%500%)\r\n⑥ Increased attack range (Adjustable)\r\n⑦ Abigail can attack shadow creatures\r\n⑧ Cooling effect in summer (Recommended range: 2040)\r\n\r\nWendy & Abigail Bonding Buffs:\r\n\r\n① Wendy no longer loses sanity when summoning Abigail\r\n② Wendy gains passive sanity regen while Abigail is present (Adjustable: 1~50)\r\n(Because their sisterly bond is the best!)\r\n\r\nWho is this mod for?\r\n\r\nNew players struggling with tough monsters and sanity loss?\r\n\r\nWant to try fun custom characters from other mods, but combat feels too hard?\r\n\r\nYour friend keeps dying and has no fun playing?\r\n\r\nLet big sis Abigail protect you! With her by your side, you too can become her adorable little sidekick~ 💜\r\n\r\nAuthor's note:\r\nI hate summer. The burning sun and the sizzling sounds feel like I’m being barbecued.\r\nSo I gave Abigail a summer cooling feature—makes sense, right? She’s a ghost, after all, and ghosts are cool and chilly! ❄\r\n(So no heating in winter—that’s perfectly normal!)\r\n\r\nCompatible with the original Abigail elixir and urn from the base game.",
+        "time_created": 1728055062,
+        "time_updated": 1731984832,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 292,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 123585,
+        "favorited": 4819,
+        "followers": 0,
+        "lifetime_subscriptions": 139890,
+        "lifetime_favorited": 5224,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 311315,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.21",
+            "display_name": "version:1.21"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9825593829154968,
+          "votes_up": 4626,
+          "votes_down": 33
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "9",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "351325790",
+        "creator": "76561198025931302",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "335868",
+        "preview_file_size": "1066286",
+        "preview_url": "https://images.steamusercontent.com/ugc/278474310944200808/778A7FDB67AA982E249A87E6C7169087A5756A10/",
+        "url": "",
+        "hcontent_file": "3702553663293584560",
+        "hcontent_preview": "278474310944200808",
+        "title": "Geometric Placement",
+        "file_description": "[h1]Compatible with all versions of the game (Vanilla, Reign of Giants, Shipwrecked, Don't Starve Together-- separately listed on the [url=http://steamcommunity.com/sharedfiles/filedetails/?id=356043883]Single-player workshop[/url]). You can also find it on the [url=http://forums.kleientertainment.com/files/file/1108-geometric-placement/]Klei Forums[/url][/h1]\r\nSnaps objects to a grid when placing and displays a build grid around it (unless you hold ctrl).\r\n\r\nCredits to zkm2erjfdb and Levorto for writing the original single-player versions (Architectural Geometry and Assisted Geometry). This mod is a replacement for those mods; if you have one of them enabled as well, unpredictable things will happen.\r\n\r\n[h1]Configuration Options[/h1]\r\nOn the mods screen, with this mod selected, you can change a lot of the settings with the \"Configure\" button.\r\n[table]\r\n[tr][td][h1]CTRL Turns Grid:[/h1][/td][td][list][*][b][u]On[/u][/b]; the grid is normally off, but holding CTRL shows it[*][b][u]Off[/u][/b]; (default) the grid is normally on, but holding CTRL hides it[/list][/td][/tr]\r\n[tr][td][h1]Options Button[/h1][/td][td]A key to open an in-game menu for the mod's options. The default button is B on the keyboard. On controllers, using left stick click while on the scoreboard will open it (you can rebind Menu Misc 3 to change it).[/td][/tr]\r\n[tr][td][h1]Toggle Button[/h1][/td][td]A key to toggle between the most recently used geometries (it will guess if it doesn't know, which should only happen if you just transferred between the caves and the surface or joined the game). The default button is V on the keyboard. There is no binding for controllers.[/td][/tr]\r\n[tr][td][h1]Snap Grid Button[/h1][/td][td]A key to make the grid move to have a point at the object under the cursor, or at key points of a tile (center, edge, corner; technically a 5x5 grid of points within a tile). The default button is unbound on the keyboard, no binding for controllers.[/td][/tr]\r\n[tr][td][h1]In-Game Menu[/h1][/td][td][list][*][b][u]On[/u][/b] (default) the options button will bring up the menu.[*][b][u]Off[/u][/b] it will just toggle the mod on and off (like it did before the menu).[/list][/td][/tr]\r\n[tr][td][h1]Show Build Grid[/h1][/td][td][list][*][b][u]On[/u][/b] (default) allows the build grid to be shown[*][b][u]Off[/u][/b] never show the build grid[/list][/td][/tr]\r\n[tr][td][h1]Grid Geometry[/h1][/td][td][list][*][b][u]Square[/u][/b] (default) is the normal grid, aligned with the game's X-Z coordinate system. Hexagonal geometries allow you to do the tightest possible plots.[/list][/td][/tr]\r\n[tr][td][h1]Refresh Rate[/h1][/td][td][list][*]How much of the available time to use for refreshing the grid. Higher settings will make the grid update faster, but may cause lag.[/list][/td][/tr]\r\n[tr][td][h1]Hide Cursor Item[/h1][/td][td][list][*][b][u]Hide All[/u][/b] when placing things, hide the object so it doesn't cover up the grid[*][b][u]Show Number[/u][/b] hide the object, but keep showing how many you have.[*][b][u]Show All[/u][/b] (default) show the object like usual.[/list][/td][/tr]\r\n[tr][td][h1]Smart Spacing[/h1][/td][td][list][*][b][u]On[/u][/b] when placing things, the grid spacing adapts to the item being placed; the closest free grid point should always be the closest possible distance.[*][b][u]Off[/u][/b] (default) keep the same spacing for everything.[/list][/td][/tr]\r\n[tr][td][h1]Fine Grid Size[/h1][/td][td]How many points in each direction the grid should go when placing things that can be tightly packed. Defaults to 10.[/td][/tr]\r\n[tr][td][h1]Walls Grid Size[/h1][/td][td]How many points in each direction the grid should go when placing walls. Defaults to 6.[/td][/tr]\r\n[tr][td][h1]Sandbag Grid Size[/h1][/td][td]How many points in each direction the grid should go when placing sandbags. Defaults to 5.[/td][/tr]\r\n[tr][td][h1]Turf Grid Size[/h1][/td][td]How many tiles in each direction the grid should go when placing turf. Defaults to 2.[/td][/tr]\r\n[tr][td][h1]Grid Colors[/h1][/td][td][list][*][b][u]Red/Green[/u][/b] red for \"can't place\", green for \"can place\"[*][b][u]Red/Blue[/u][/b] same as red/green, but with blue for \"can place\"[*][b][u]Black/White[/u][/b] black for \"can't place\", white for \"can place\". A bit easier to see at night[*][b][u]Outlined[/u][/b] (default) similar to black/white, but uses black-with-white-outline and white-with-black-outline for the best visibility.[/list][/td][/tr]\r\n[tr][td][h1]Tighter Chests[/h1][/td][td][list][*][b][u]Yes[/u][/b] allows you to place chests a little bit closer together, like you can with the Architectural or Assisted Geometry mods. Technically the game doesn't normally let you place them quite that close together, but the difference is small. This doesn't work reliably in DST.[*][b][u]No[/u][/b] uses the true spacing for chests.[/list][/td][/tr]\r\n[tr][td][h1]Controller Offset[/h1][/td][td][list][*][b][u]On[/u][/b] uses the normal offset, which rotates with the player.[*][b][u]Off[/u][/b] (default) keeps the object at the player's feet, making it easier to place it right where you want to.[/list][/td][/tr][/table]",
+        "time_created": 1417764121,
+        "time_updated": 1690954582,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 1843,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 7030226,
+        "favorited": 225572,
+        "followers": 0,
+        "lifetime_subscriptions": 7717907,
+        "lifetime_favorited": 243537,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 6744740,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9866306781768799,
+          "votes_up": 47476,
+          "votes_down": 594
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "22",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "378160973",
+        "creator": "76561198025931302",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "610208",
+        "preview_file_size": "112042",
+        "preview_url": "https://images.steamusercontent.com/ugc/535134943326895647/0FF32BFCBDF3CDAFD88373F2D76C9DDE50D8C090/",
+        "url": "",
+        "hcontent_file": "4506020981624356616",
+        "hcontent_preview": "535134943326895647",
+        "title": "Global Positions",
+        "file_description": "[h1]Map sharing works again! You don't even need to be in the  [b]A New Reign beta[/b] anymore![/h1]\r\n\r\nCode contributions are welcome: https://github.com/rezecib/Global-Positions\r\n\r\n[h1]Features[/h1]\r\n[list]\r\n[*] Show other players on the map (and hover over them to see who they are).\r\n[*] Show player indicators (the bubble things on the side of the screen) when they're far away.\r\n[*] Light signal fires that show up as indicators and on the map.\r\n[*] Ping the map by alt+clicking, creating markers that show other players points of interest. Note that muting a player hides their pings. Controller users can ping by clicking in the right stick.\r\n[*] Opt-out of sharing your location with a button on the scoreboard.\r\n[*] Share your map discovery with other players automatically\r\n[/list]\r\n\r\n[h1]Wilderness Mode[/h1]\r\nBy default, if you play in Wilderness Mode, it will ignore most of the config options. If you want to override that, set the Wilderness Mode Override to Enabled. Otherwise, it will hide player positions, but always show campfires.\r\n\r\n[h1]Configuration Options[/h1]\r\nOn the mods screen, with this mod selected, you can change a lot of the settings with the \"Configure\" button.\r\n[table]\r\n[tr][td][h1]Player Indicators[/h1][/td][td][list][*][b][u]Always[/u][/b] makes it so player indicators always show. [*][b][u]Scoreboard[/u][/b] (default) only shows them when you bring up the scoreboard. [*][b][u]Disabled[/u][/b] removes both the indicators and the map icons.[/list][/td][/tr]\r\n[tr][td][h1]Player Icons[/h1][/td][td][list][*][b][u]Show[/u][/b] (default) will show player's map icons on the map. [*][b][u]Hide[/u][/b] will hide them.[/list][/td][/tr]\r\n[tr][td][h1]Show Fires[/h1][/td][td][list][*][b][u]Always[/u][/b] means they always produce smoke signals when they're lit, so show up globally regardless of fuel used. [*][b][u]Charcoal[/u][/b] (default) means you have to fuel them with charcoal to produce smoke signals. [*][b][u]Disabled[/u][/b] turns off smoke signals entirely.[/list][/td][/tr]\r\n[tr][td][h1]Fire Icons[/h1][/td][td][list][*][b][u]Show[/u][/b] (default) shows fire icons on the map when they are smoking.[*][b][u]Hide[/u][/b] doesn't show them even if they're smoking[/list][/td][/tr]\r\n[tr][td][h1]Share Map[/h1][/td][td][list][*][b][u]Enabled[/u][/b] (default) makes it so that as other players explore the world, your map will update too. Note that this will only work if players or icons are set to be shown.[/list][/td][/tr]\r\n[tr][td][h1]Wilderness Override[/h1][/td][td][list][*][b][u]Disabled[/u][/b] (default) makes it so that in Wilderness Mode, [b]Show Fires[/b] is set to [b]Always[/b], and [b]Player Icons[/b] and [b]Player Indicators[/b] are [b]Disabled[/b]. This adds some risk of discovery to making fires, so cook with caution! [*][b][u]Enabled[/u][/b] makes it use whatever settings you have set yourself, rather than that Wilderness preset.[/list][/td][/tr]\r\n[tr][td][h1]Pings[/h1][/td][td][list][*][b][u]Enabled[/u][/b] (default) allows players to alt+click the map to ping areas for others to see. [*][b][u]Disabled[/u][/b] doesn't allow pings at all.[/list][/td][/tr]\r\n[/table]\r\n\r\nMost options are only used by the host; if you're joining, the only option that gets read is whether to show the player indicators at all times or only on the scoreboard.\r\n\r\n\r\nA huge thanks to Sarcen for figuring out his very clever system for getting player icons to show on the map globally for clients!",
+        "time_created": 1421708386,
+        "time_updated": 1776624358,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 2047,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 7999726,
+        "favorited": 237983,
+        "followers": 0,
+        "lifetime_subscriptions": 8880989,
+        "lifetime_favorited": 258462,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 7480566,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.7.6",
+            "display_name": "version:1.7.6"
+          }
+        ],
+        "vote_data": {
+          "score": 0.984603226184845,
+          "votes_up": 51109,
+          "votes_down": 750
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "5",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1185229307",
+        "creator": "76561198269382494",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "851372",
+        "preview_file_size": "1047658",
+        "preview_url": "https://images.steamusercontent.com/ugc/14341338500290602838/E613A5FE64402B9567F621A96BDA11DED59BA326/",
+        "url": "",
+        "hcontent_file": "5088730949092920505",
+        "hcontent_preview": "14341338500290602838",
+        "title": "Epic Healthbar",
+        "file_description": "Spice up your combat experience with this stylized health bar!\r\n\r\n[img]https://steamuserimages-a.akamaihd.net/ugc/2188247245703084985/B6966F94139854653B29A97598AC6F8E66133D76/[/img]\r\n\r\n[b]Epic Healthbar[/b] is a new widget which provides information about the current boss:\r\n[list]\r\n[*]Displays combat phases, elemental damage and damage resistance\r\n[*]Each boss has their own color theme\r\n[*]Optional combat camera and more!\r\n[/list]\r\n\r\n[img]https://i.imgur.com/IEGz6ND.png[/img]",
+        "time_created": 1509311854,
+        "time_updated": 1753793800,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 885,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 3238005,
+        "favorited": 106081,
+        "followers": 0,
+        "lifetime_subscriptions": 3610050,
+        "lifetime_favorited": 115015,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 3321162,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "version:98",
+            "display_name": "version:98"
+          },
+          {
+            "tag": "version_compatible:57",
+            "display_name": "version_compatible:57"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9827984571456909,
+          "votes_up": 20804,
+          "votes_down": 315
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "297",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "727774324",
+        "creator": "76561197981642997",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "867022",
+        "preview_file_size": "74258",
+        "preview_url": "https://images.steamusercontent.com/ugc/272849658870936457/C7490C6B9425AA6E380D4DB46F7110FB765E548F/",
+        "url": "",
+        "hcontent_file": "357519675551540306",
+        "hcontent_preview": "272849658870936457",
+        "title": "Craft Pot [DS, ROG, SW, DST]",
+        "file_description": "Client mod that adds intuitive cook assisting interface to crock pot.\r\n\r\nDoesn't matter what server you join, modded crock pots, modded recipes, this mod serves them all on a plate and helps you cook whatever your heart desires by displaying the exact recipe.\r\n \r\n\r\n[b]What's in this mod:[/b]\r\n- 1. All cooking recipes (INCLUDING MODDED) are listed in a slider next to crock pot;\r\n- 2. Hovering over recipe shows ingredient requirements for it as well as food status of the dish;\r\n- 3. Filling crock pot with ingredients will gradually predict dishes you want to cook;\r\n- 4. Recipe turns green if you put all the required ingredients, just fill crockpot with fillers and it's done;\r\n- 5. Recipe disappears from the list, if you put a bad ingredient;\r\n- 6. Once crockpot is full, the resulting recipe will get painted teal. If you see more than one teal recipe, this means result is unpredictable, cooking will result in one of the highlighted dishes;\r\n- 7. Mod works with any pot that takes 4 ingredients (including warly's portable pot and any modded crockpot)\r\n- 8. You do not need to restart game to make the mod work.\r\n- 9. Full CONTROLLER support\r\n\r\n[b]Currently mode has following options:[/b]\r\n- 1. lock uncooked, enabled by default. This option adds a 'recipe lock' simillar to the one in crafting menu, once you cooked an item, the lock disappears and hovering over the dish in the list will show it's hunger/health/sanity values. You may disable and enable it at any time, the progress of cooking will be saved\r\n- 2. Invert controller - by default craftpot scrollbar works with left wiggle (right wiggle used to move items around), checking invert controller makes it work with right wiggle (left wiggle used to move items around).\r\n- 3. Ingredient Popup - by default it is shown, but you can hide it, so that there is only a slider with dishes, no popup with name or stats.\r\n\r\n[b]For modders:[/b]\r\nCraftpot exposes the following mod APIs:\r\n1. An API to add images and names for food ingredient tags:\r\n- global 'AddFoodTag' function and a matching FOODTAGDEFINITIONS global dict;\r\n2. An API to registed modded cookpots, for now they do not take extra arguments, but in future they might allow passing custom fields, such as slot number:\r\n- global 'AddCookingPot' function and a matching COOKINGPOTS global dictionary;\r\n\r\nIt is preferred that during modding you use the provided functions, as they already contain all the safety precautions. But if for some reason the functions are not available during your mod initialization, you can use the dictionaries straight away, but make sure you do not erase the object, that could be prefilled by another mod before you.\r\n\r\n[b]DS, ROG, SW version:[/b] http://steamcommunity.com/sharedfiles/filedetails/?id=662872357\r\n\r\nFor people off steam, here's a [url=https://github.com/IMalyugin/craftpot]secret link[/url]\r\n\r\n中文翻译简介@WendyPan: https://github.com/IMalyugin/craftpot/wiki/chinese\r\n\r\nEnjoy :)",
+        "time_created": 1468963451,
+        "time_updated": 1693158031,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 1257,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 4959942,
+        "favorited": 157269,
+        "followers": 0,
+        "lifetime_subscriptions": 5464057,
+        "lifetime_favorited": 170119,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 4861094,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:0.15.0",
+            "display_name": "version:0.15.0"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9846897125244141,
+          "votes_up": 28892,
+          "votes_down": 400
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "14",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "345692228",
+        "creator": "76561197960431333",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "39308",
+        "preview_file_size": "41782",
+        "preview_url": "https://images.steamusercontent.com/ugc/558737771725946190/BB4435E4BF119821118C76F707E6D9809A0ADB74/",
+        "url": "",
+        "hcontent_file": "2673089859304292188",
+        "hcontent_preview": "558737771725946190",
+        "title": "Minimap HUD",
+        "file_description": "Adds a minimap to the HUD\r\n[LIST]\r\n[*]The minimap is fully functional; it can be zoomed using the zoom map binds (defaulted to the mousewheel) and can be panned by clicking and dragging.\r\n[*]The minimap can be collapsed by hovering over it and clicking the \"Close Minimap\" button\r\n[*]The zoom levels of the minimap and the map screen are both saved and are independent of eachother\r\n[/LIST]\r\n\r\n[h1]FAQ[/h1]\r\n\r\n[b]Q:[/b] Is it possible to change the shape of the minimap?\r\n[b]A:[/b] As far as I know, no, it is not possible.\r\n\r\n[b]Q:[/b] Is this mod compatible with X mod?\r\n[b]A:[/b] Yes, it should be compatible.\r\n\r\n[h1]External Resources[/h1]\r\n[list]\r\n[*][url=https://github.com/squeek502/Minimap-HUD/tree/together]Source code on Github[/url]\r\n[/list]",
+        "time_created": 1416731898,
+        "time_updated": 1657667208,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 2210,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 7888410,
+        "favorited": 214297,
+        "followers": 0,
+        "lifetime_subscriptions": 8708254,
+        "lifetime_favorited": 232965,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 7842665,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "version:1.0.9",
+            "display_name": "version:1.0.9"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.986823558807373,
+          "votes_up": 53199,
+          "votes_down": 661
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1207269058",
+        "creator": "76561198098319132",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "751551",
+        "preview_file_size": "80630",
+        "preview_url": "https://images.steamusercontent.com/ugc/939467286414351379/60F7BA326A12684111B0C89F7B6F8DCB8134E429/",
+        "url": "",
+        "hcontent_file": "1414249909561468204",
+        "hcontent_preview": "939467286414351379",
+        "title": "Simple Health Bar DST",
+        "file_description": "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1608490902]Click for DS Version[/url]\r\n\r\n[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1651623054]Click for OLD Version[/url] if the new one crashed[/h1]\r\n\r\nA simple health bar! \r\n[b]It will be displayed in the combat status automatically. \r\n(It will not be displayed when the game is just loaded !!!!!!!!!!!! don't tell me the mod no longer works because of that!!!!!!!)[/b]\r\n\r\nClick the [img]https://i.loli.net/2019/02/11/5c617fb7b0f1b.png[/img] icon to open setting window!\r\nThe icon and the window is DRAGGABLE! If they overlap other UI, just hold mouse left button and drag it to somewhere else! The position of it will be saved automatically!\r\nYou can also press H to toggle the window! The hotkey can be changed!\r\nIf you disabled the icon by mistake, enter 'shb.reset()' in console to reset settings!\r\n\r\nYou can choose the healthbar style you like:\r\n[list]\r\n    [*]Standard:[img]https://i.imgur.com/Z5p6NeV.jpg[/img]\r\n    [*]Simple:[img]https://i.imgur.com/rU4NPlB.jpg[/img]\r\n    [*]Shadow:[img]https://i.imgur.com/6fpEZpQ.jpg[/img]\r\n    [*]Claw:[img]https://i.imgur.com/1cXD5vE.jpg[/img]\r\n    [*]Heart:♥♥♥♡♡\r\n    [*]circle:●●●○○\r\n    [*]square:■■■□□\r\n    [*]diamond:◆◆◆◇◇\r\n    [*]star:★★★☆☆\r\n    [*]Or it can be hidden.\r\n[/list]\r\n\r\nHealth value can be hidden too.\r\n\r\nPosition:\r\n[list]\r\n    [*]Bottom: under the bottom of character\r\n    [*]Overhead: over head of character\r\n    [*]Overhead2: health value is inside the healthbar\r\n[/list]\r\n\r\nColor:\r\n[list]\r\n    [*]Dynamic: change with health percentage.\r\n    [*]Dynamic_dark: darkened version to make it a little bit lore-friendly.\r\n    [*]Dynamic2: change with mob hostility.\r\n    [*]And other solid colors\r\n[/list]\r\n\r\n[u][url=http://steamcommunity.com/sharedfiles/filedetails/changelog/1207269058]Click for Change Log[/url][/u]\r\n\r\nCredits:\r\nThanks [url=https://steamcommunity.com/id/tinywolf]tinywolf[/url] for Korean translation.\r\n\r\nIf you like this mod, don't forget to hit the [img]https://i.imgur.com/JlHWB0B.png[/img] button. THX!\r\n\r\n\r\nThis is a server-side mod. I want to make a client version, but it seems that there is no way to make it a client-side mod for now. \r\n[b]So don't ask me to make a client version. Ask KLEI to sync health for clients first.[/b]\r\nSince it is a server-side mod, this mod does not work in the Forge or the Gorge.\r\n\r\n[b]If you see \"???\" instead of the healthbar symbols, disable small textures![/b]\r\n\r\nPost the crash log if you run into crashes! The log is usually in Documents\\Klei\\DoNotStarveTogether\\ folder. Search \"server_log.txt\" or \"client_log.txt\". Or you can just post the crash screenshot.",
+        "time_created": 1511277208,
+        "time_updated": 1663424752,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 1386,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 4766302,
+        "favorited": 151077,
+        "followers": 0,
+        "lifetime_subscriptions": 5365237,
+        "lifetime_favorited": 165037,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 4619531,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:2.16",
+            "display_name": "version:2.16"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9825253486633301,
+          "votes_up": 33067,
+          "votes_down": 539
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "9",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2189004162",
+        "creator": "76561198277438128",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "48910816",
+        "preview_file_size": "19210",
+        "preview_url": "https://images.steamusercontent.com/ugc/1479948484468384018/FD83481D00C2D0CDB02F6D53D6A957A976CE95ED/",
+        "url": "",
+        "hcontent_file": "3711423006208038742",
+        "hcontent_preview": "1479948484468384018",
+        "title": "Insight (Show Me+)",
+        "file_description": "[h1]Thank you for 1 million subscribers![/h1]\r\nI never expected this many users. Thank you for your support!\r\n\r\n[h1]Background Information[/h1]\r\nInspired by Show Me.\r\nBecause I like to know everything about everything. Show me was nice, but it was inaccurate/weird for some things and just didn't have what I was looking for.\r\nThis was coded from scratch, and I originally made it for DS. I ported it over!\r\n\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2081254154][b]Click for DS Version[/b][/url]\r\n\r\n[h1]Details[/h1]\r\nWhereas some mods provide information only on inspection, this provides a tooltip with various information on mouse over. Information is cached for items in your active area (Klei has this set to about 2 screens length) and seeks to find a balance between efficiency and convenience.\r\n\r\n[h3]Server/Client Configuration[/h3]\r\nClients and servers share most of the options, with some being exclusive to the client. By default, [u]undefined[/u] options are chosen which means the client can choose what they want. Otherwise, the server has authority. \r\n\r\nServer Configuration: [u]Main Menu -> Host Game[/u] -> Mods -> Server Mods -> Insight -> Configure Mod\r\nClient Configuration: [u]Main Menu -> Mods[/u] -> Server Mods -> Insight -> Configure Mod\r\n\r\n[i]A lot of this stuff is controlled in the mod configuration. In general, if it has to do with HOW the information is displayed, it's a client setting. If it has to do with the information itself, it's a server setting.[/i]\r\n\r\n[h3]Features[/h3]\r\n[list]\r\n[*][b][u]Controller Support[/u][/b]\r\n[*]Farm Information\r\n[*]Text coloring\r\n[*]Icon Mode\r\n[*]Attack ranges\r\n[*]Health\r\n[*]Damage\r\n[*]Fuel\r\n[*]Food Value\r\n[*]Durability\r\n[*]Chest/Item/Bundle Highlighting\r\n[*]Item/Cookbook Lookups\r\n[*]Naughtiness\r\n[*][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=376333686]Combined Status[/url] Integration[/u] (for [u]Naughtiness[/u] and corrected moon cycles)\r\n[*]Follower Info\r\n[*][i]Most things, really.[/i]\r\n[/list]\r\n\r\n[h1]FAQ[/h1]\r\n[h3]Is this a server mod? Can you make a client mod version of this?[/h3]\r\n[b][i][u]This is a server mod[/u][/i][/b].\r\nA client-side version of this mod would have almost none of the information this mod displays. The server contains almost everything. That's why this is a server mod.\r\n\r\n[h3]How do I turn <thing> off?[/h3]\r\nPretty much everything can be configured to turn on, off, or adjust the level of detail. If you can't find a configuration option from the main menu, you can double check the in-game configuration menu (Insight Menu -> Config Button).\r\n\r\n[h3]There's too much information! I'm overwhelmed![/h3]\r\nI've gotten feedback that the amount of information Insight provides can be overwhelming, or that it's too much effort to adjust all the configs. Insight now comes with some presets to adjust configurations in bulk:\r\n[list]\r\n[*][u]New Player[/u] - Recommended for new players, configured for a tiny amount of information to allow them the \"authentic vanilla\" experience.\r\n[*][u]Simple[/u] - Recommended for players who liked Show Me's limited amount of information.\r\n[*][u]Decent[/u] - More or less the default configuration layout with a few tweaks.\r\n[*][u]Advanced[/u] - Recommended for players who like having a lot of information available.\r\n[/list]\r\nYou can access these presets by going to the in-game Insight Menu -> Configure Mod -> Presets. Detected first-time users will be prompted to select a preset when first playing with Insight.\r\n\r\n[h1]Feedback[/h1]\r\nFeel free to suggest features or provide feedback, good or bad. This mod is still being developed, so it's possible for issues to occur. If you do encounter one, please check the bug reporting discussion post [url=https://steamcommunity.com/workshop/filedetails/discussion/2189004162/2793873675751084957/]here.[/url]\r\n[b]You can also enable the automatic crash reporter, which will try to report your crashes for you.[/b]\r\nAlso, check out [url=https://support.klei.com/hc/en-us/articles/360029881191-Logs-and-Useful-Information-for-Bug-Reports-for-Don-t-Starve-Together]this link from Klei[/url] for advice on finding logs & submitting bugs.\r\n\r\n[h1]Thank you's[/h1]\r\nA big thank you to [url=https://steamcommunity.com/id/Zarklord]Zarklord[/url] for helping me figure some stuff out.\r\nA big thank you to [url=https://steamcommunity.com/id/rezecib]rezecib[/url] for helping me implement naughtiness for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=376333686]Combined Status[/url] and providing feedback on Insight's support for altered moon cycles.\r\nA big thank you to [url=https://steamcommunity.com/profiles/76561198870384878]licet_insanire[/url] for beta testing.\r\nA big thank you to [url=https://steamcommunity.com/profiles/76561198319567131/]Maxwell[/url], [url=https://steamcommunity.com/id/cloudyyoung]Cloudy Young[/url], and \r\n[url=https://steamcommunity.com/id/interesting28]虚の刃#28[/url] for doing the translations to Chinese.\r\nA big thank you to [url=https://steamcommunity.com/id/senhoritabuss]Senorita Buss[/url] for doing the translations to Portuguese.\r\nA big thank you to [url=https://steamcommunity.com/id/Dislekzi4/]Diegowo[/url] for doing the translations to Spanish.\r\nA big thank you to [url=https://steamcommunity.com/id/lehasex/]Лёха Секс[/url] for doing the translations to Russian.\r\nA big thank you to [url=https://steamcommunity.com/profiles/76561199503229520]Seraf[/url] for doing the translations to Korean.\r\n\r\n[h1]Source Code[/h1]\r\nYou can find the source code [url=https://github.com/penguin0616/insight]here.[/url]\r\n\r\n[h1][u]Do not copy this mod.[/u][/h1]\r\n\r\nCopyright 2020-Current penguin0616. This item is not authorized for posting on Steam, except under the Steam account named penguin0616.",
+        "time_created": 1596707197,
+        "time_updated": 1759894942,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 3306,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1230905,
+        "favorited": 44172,
+        "followers": 0,
+        "lifetime_subscriptions": 1368236,
+        "lifetime_favorited": 47827,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1345902,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:5.2.0",
+            "display_name": "version:5.2.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.976966917514801,
+          "votes_up": 8009,
+          "votes_down": 140
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "303",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "352373173",
+        "creator": "76561198025931302",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "101545",
+        "preview_file_size": "122302",
+        "preview_url": "https://images.steamusercontent.com/ugc/536256758327327300/21986C3141AC796C649134CA3ED2DE0D7FB7EBE3/",
+        "url": "",
+        "hcontent_file": "927854434763525714",
+        "hcontent_preview": "536256758327327300",
+        "title": "Gesture Wheel",
+        "file_description": "Adds a wheel selection interface for emotes, making it easier to emote.\r\n\r\nBy default, the hotkey is set to G (but you can configure it in the mod config options). Holding G will bring up the gesture wheel, then moving your mouse in a particular direction will select a gesture. When you release G, your character will do the gesture.\r\n\r\nOn controllers, pressing in the left analog activates the wheel, and selection is done by moving the left analog while it's still pressed in (then releasing to make the selection). It's technically bound to Menu Misc 3, which I believe you can rebind in the Controls menu.\r\n\r\nI included several options that you might want to change:\r\n[table]\r\n[th][h1][u]Option[/u][/h1][/th][th][h1][u]Description[/u][/h1][/th]\r\n[tr][td][b][h1]Toggle button[/h1][/b][/td][td][h1]Defaults to G, but you can set it to any letter key. Hopefully when mods get proper controls options, this will be nicer to work with :)[/h1][/td][/tr]\r\n[tr][td][b][h1]Wheel Size[/h1][/b][/td][td][h1]Sets the size of the wheel. Defaults to 1, and can be set from 0.1 to 2.[/h1][/td][/tr]\r\n[tr][td][b][h1]Show picture or text[/h1][/b][/td][td][h1]You can have it show just the picture, just the text, or both.[/h1][/td][/tr]\r\n[tr][td][b][h1]Center wheel[/h1][/b][/td][td][h1]Determines whether the wheel comes up around your mouse or the center of the screen.[/h1][/td][/tr]\r\n[tr][td][b][h1]Restore cursor position[/h1][/b][/td][td][h1]If [i]Center Wheel[/i] is disabled, this setting doesn't do anything, unless set to [i]Absolute[/i]. Otherwise:[list][*][i]Relative[/i], the default setting, moves it back where it was before, adding the extra movement you did for the gesture.\r\n[*][i]Absolute[/i] sets it back where it was before without adding the extra movement.\r\n[*][i]Center[/i] sets the mouse to the middle of the wheel when bringing it up, but doesn't move it afterwards.\r\n[*][i]Off[/i] doesn't move the mouse ever.[/list][/h1][/td][/tr]\r\n[tr][td][b][h1]Controller Stick[/h1][/b][/td][td][h1][i]Left[/i] (the default) uses the left analog stick to select emotes, and [i]Right[/i] uses the right stick. If you want to rebind which stick needs to be clicked in, rebind menu_misc_3 in the game's controller controls menu (you'll most likely want to swap it with the scoreboard button).[/h1][/td][/tr]\r\n[tr][td][b][h1]Limit to 8[/h1][/b][/td][td][h1][i]Off[/i] (the default) uses all the emotes, but the wheel is getting pretty crowded (current at 12 emotes), so [i]On[/i] limits the wheel to 8 emotes, which are chosen with the remaining options ([i]Right Emote[/i], [i]Down-Left Emote[/i], and so on).[/h1][/td][/tr][/table]\r\n\r\nThings I'd like to add to it:\r\n* Maybe a nice wheel background to make it less floating-in-space-y\r\n* Suggestions?\r\n\r\n[b]Thanks to PrzemoLSZ for fixing controller support![/b]",
+        "time_created": 1417912324,
+        "time_updated": 1648338843,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 859,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2358757,
+        "favorited": 85367,
+        "followers": 0,
+        "lifetime_subscriptions": 2795496,
+        "lifetime_favorited": 95252,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 3006133,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9872495532035828,
+          "votes_up": 22172,
+          "votes_down": 237
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2287303119",
+        "creator": "76561199020997345",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "217383",
+        "preview_file_size": "33883",
+        "preview_url": "https://images.steamusercontent.com/ugc/1678115999307042539/CCBF1A5AE427AA31DD8CA4415D4162AF6EEAF843/",
+        "url": "",
+        "hcontent_file": "390583922112896207",
+        "hcontent_preview": "1678115999307042539",
+        "title": "Show Me(中文)",
+        "file_description": "For modules used by your own server, please move to the original author's module,For use and rewards, please go to:\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=666155465\r\n\r\n自用，请勿搬运WeGame\r\n就是Show Me(Origin)一样，将未能正确显示中文的修正，并兼容部分模组显示；\r\n\r\nshowme\r\nv0.59.9.5\r\n- 修复打开部分模组面板再检查周围物体导致本地崩溃的问题\r\n\r\nv0.59.9.1\r\n- 修复奔雷矛在物品栏不显示属性问题；\r\n- 修复包裹、调味站物品不正常显示中文的问题；\r\n- 去除棱镜物品显示(模组已做显示)；\r\n\r\nv.0.59.8a\r\n进行了优化更新\r\n- 优化生物攻击力显示，支持显示到 1 位小数\r\n- 优化棱镜子圭作物显示生长阶段，优化神木生命储存精确到 2 位小数\r\n\r\nv0.59.8\r\n1.修复sharkboi(测试服)引发的崩溃；\r\n2.修复棱镜作物计时失效问题。\r\n\r\nv0.59.7a\r\n1.对多语言文件的更新\r\n\r\nv0.59.7\r\n多人反馈无法更新，我尝试再发个版本，希望能帮到你们\r\n1.新增堆肥桶容量显示；(以前没在意这功能，最近发现不妥协加了容量，我说怎么怼不满)\r\n2.新增容器高亮叠加光覆盖，是的，你可以在无光的夜晚看到高亮容器了，亮度仅50%，因为在月圆这种去色夜晚起码还能看到容器变暗；\r\n3.新增覆盖范围显示(避雷针、高树)，该功能只放在调试功能设置，默认关；\r\n4.更新 2 处计时器的翻译。\r\n\r\nv0.59.6\r\n1.新增穿戴装备耐久天数显示，可配置显示方式：时间、天数、两者(默认)；\r\n2.新增肥料信息，可配置(默认开)；\r\n3.新增物品燃料值信息，可配置(默认开)；\r\n4.新增女武神书籍和机器人部件显示；\r\n5.新增位面伤害与位面防御显示；\r\n6.新增工具、武器位面抵抗伤害，生物添加位面抵抗显示\r\n7.兼容棱镜子圭部件的显示；\r\n\r\nv0.58.7\r\n- 修复显示生命小于0的生物崩溃问题。(想不通小于0了还活着)\r\n- 修复类Hamlet树根箱拿起物品显示颜色导致客机崩溃的问题。(例如：不妥协的骷髅箱)\r\n\r\nv0.58.6\r\n- 本年度游戏新增内容及部分模组翻译更新\r\n- 适配棱镜月藏宝匣\r\n\r\nv0.58.5\r\n- 兼容item info模组、捆绑包显示支持关闭；\r\n\r\nv0.58.3 更新：1.水中木生物群落计时器；2.盒中泰拉；3.神话、棱镜资源计时器；4.不妥协生物资源计时器；\r\n\r\nv0.58.2 更新：农作物状态设置，可以在模组设置开/关，默认开\r\n- 新增神话Mod谷仓拿起物品提示\r\n\r\nv0.58.0 更新猪窝、兔窝翻译\r\n\r\nv0.56.0 - v0.57.0\r\n- 修复蚁狮计时、中庭计时等\r\n- 新增猪人、兔人、蜘蛛等生物刷新时间\r\n- 新增树等植物作物翻译\r\n- 新增BOSS攻击技能CD时间\r\n- 新增生物巢穴数量显示\r\n\r\n0.50.5 更新：新增农作物的状态显示，例如缺肥料、水分、家族等等；\r\n【注意】请勿与有相同功能模组一起使用，可能会冲突\r\n\r\n0.50.3 新增拿起物品箱子提示：沃比、锡鱼桶、钓具箱、蘑菇灯、织菇灯、丹药葫芦(神话)、八卦炉(神话)；\r\n\r\n0.50.2 新增：沃比、Mod储藏室（地窖），SW-鹈鹕、椰叶包、藏宝袋、货船，Hamlet-罗宾、软木桶、熔炼炉 的拿起物品提示；",
+        "time_created": 1605386268,
+        "time_updated": 1741086201,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 470,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2423209,
+        "favorited": 81666,
+        "followers": 0,
+        "lifetime_subscriptions": 2653550,
+        "lifetime_favorited": 88240,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 2407829,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:0.59.9.7",
+            "display_name": "version:0.59.9.7"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9808001518249512,
+          "votes_up": 10933,
+          "votes_down": 165
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "38",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3350705530",
+        "creator": "76561198208303071",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "31297531",
+        "preview_file_size": "523400",
+        "preview_url": "https://images.steamusercontent.com/ugc/2487767691346172277/5ECB4E82D9B1979C323DB4AC1DE5B0BA8864D570/",
+        "url": "",
+        "hcontent_file": "4415450416355604522",
+        "hcontent_preview": "2487767691346172277",
+        "title": "[DST] Limbus Company Characters 边狱巴士",
+        "file_description": "[DST] Limbus Company Characters 边狱巴士\r\n作者：魔犬\r\n码师：zzzzzzzs\r\n画师：伊尹、鬼针、maotuki、finn\r\n文案：马一甲（谷）\r\n赞助鸣谢：伊尹、maotuki\r\n\r\n-------------------------------------------------------------------------------------\r\n\r\n更详细的MOD介绍请访问：https://www.bilibili.com/opus/989683691940741121\r\n\r\n本MOD基于韩国残酷罪孽共鸣RPG游戏《Limbus Company》，包含8名罪人角色。角色介绍具体如下：\r\n\r\n10.但丁：\r\n样貌神秘的管理者，可以复活罪人们的“时钟”——祂虽无法进食普通食物，入夜后，却会成为罪人们不可或缺的明灯。\r\n1.李箱：\r\n成为标本的天才，是诗人也是发明家——可靠而稳定的团队智囊，维系各方平衡的全能手（*该人物拥有两件带有特殊功能的专属套装）；\r\n2.浮士德：\r\n与恶魔签订契约，无所不知的博士——虽然更加脆弱易折，却拥有掌握黑暗力量的能力。\r\n3.唐吉诃德：\r\n满怀冒险与骑士精神，狂热的收尾人粉丝——热衷于收集收尾人勋章的她，通过模仿偶像的扮演游戏，拥有着独特的强大力量（*该人物拥有两件带有特殊功能的专属套装）\r\n5.默尔索：\r\n静默，细致。冷漠，温柔。局外人——擅长使用所有厨具烹饪任何食物的大厨，同时拥有更高的攻击倍率。（*该人物拥有两件带有特殊功能的专属套装）\r\n6.鸿璐：\r\n异花映月明，气贵自生荣。玉眼通幽暗，轻力扰浮华——具有夜视功能的贵公子，意外擅于战斗，却不善耕织。（*该人物拥有两件带有特殊功能的专属套装）\r\n7.希斯克里夫：\r\n怀揣复仇之心，来自荒原的狂野之人——拥有特殊的复仇机制：在更低的血量与san值下，攻击将会变得更加迅猛强烈（*该人物拥有两件带有特殊功能的专属套装）\r\n13.格里高尔：\r\n存活至今的退役军人，无法遮盖、令人厌恶的身体变形——拥有无法拆卸、永久占有武器栏的虫肢。同时拥有特殊的san值与饥饿度特性。（*该人物拥有两件带有特殊功能的专属套装）\r\n\r\n---------------------------------------------------------------------------------\r\n\r\nThis MOD is based on the Korean RPG game \"Limbus Company,\" featuring eight sinner characters. The character introductions are as follows:\r\n\r\n10、Dante:\r\n A mysterious manager who can revive sinners with his \"clock\"—though he cannot consume ordinary food, he becomes an indispensable beacon for sinners at night.\r\n1、Yi Sang: \r\nA genius turned specimen, both a poet and an inventor—he is the reliable and stable team brain, a versatile hand that maintains balance among all parties (This character has two exclusive outfits with special functions).\r\n2、Faust: \r\nA doctor who has made a pact with a demon and knows all—though more fragile, he possesses the ability to wield dark powers.\r\n3、Don Quixote: \r\nA passionate adventurer and fanatic of the Reapers—she collects Reaper medals with fervor, gaining unique strength through her idol mimicry role-playing game (This character has two exclusive outfits with special functions).\r\n5、Meursault:\r\n Silent, meticulous; cold yet gentle—a bystander—he is a master chef capable of cooking any dish with all kitchen tools and has a higher attack multiplier (This character has two exclusive outfits with special functions).\r\n6、Honglu: \r\n\"Exotic flowers reflect the moonlight, nobility arises naturally. Jade eyes penetrate the darkness, gentle power disrupts the superficial.\"—A noble with night vision capabilities, unexpectedly skilled in combat, but poor at farming and weaving (This character has two exclusive outfits with special functions).\r\n7、Heathcliff:\r\n A wild man from the moors, driven by vengeance—he possesses a unique revenge mechanism: with lower health and sanity, his attacks become more ferocious and intense (This character has two exclusive outfits with special functions).\r\n13、Gregor:\r\n A retired soldier who has survived, with an unhideable, repulsive body transformation—he has unremovable, permanently equipped insect limbs, along with special sanity and hunger characteristics (This character has two exclusive outfits with special functions).\r\n\r\n-----------------------------------------------------------------------------------\r\n\r\n· 如在游玩过程中遇到了BUG，欢迎在评论区或QQ群内进行反馈。感谢您的支持 ——【BUG反馈QQ群：1029681877】\r\n· If you encounter any bugs, please give me feedback in the comment. Thank you for your support.",
+        "time_created": 1729259885,
+        "time_updated": 1767447473,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 349,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 74972,
+        "favorited": 5115,
+        "followers": 0,
+        "lifetime_subscriptions": 86100,
+        "lifetime_favorited": 5349,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 220691,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:20260103",
+            "display_name": "version:20260103"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9623202681541443,
+          "votes_up": 1891,
+          "votes_down": 26
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "38",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2078243581",
+        "creator": "76561198119787855",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "169153",
+        "preview_file_size": "71960",
+        "file_url": "https://cdn.steamusercontent.com/ugc/1007061823171787096/84EDFBBF351FACBD660722F7562B7108233F3674/",
+        "preview_url": "https://images.steamusercontent.com/ugc/1007061608874572908/3CC64345D71565514F92815115F11E1DC4644702/",
+        "url": "",
+        "hcontent_file": "1007061823171787096",
+        "hcontent_preview": "1007061608874572908",
+        "title": "Display Attack Range",
+        "file_description": "Shows the attack range of mobs when they are targeting a player. The display will change color when they attack. Configuration options:\n\nRed, Green, Blue: Adjust the RGB color that shown for attack.\n\nRange appearance: Select range appearing while targeting player or during attack phase.\n \nType of Range: Select range type to be attack range, hit range, or switch between both.\n\nDisplay Projectile Range: Select to display the range of projectile.",
+        "time_created": 1588174656,
+        "time_updated": 1588519691,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 420,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2088929,
+        "favorited": 66162,
+        "followers": 0,
+        "lifetime_subscriptions": 2347834,
+        "lifetime_favorited": 72734,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 2028042,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.5",
+            "display_name": "version:1.5"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "Other",
+            "display_name": "Other"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9772055149078369,
+          "votes_up": 11182,
+          "votes_down": 212
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "11",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3383078008",
+        "creator": "76561198321354108",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1034206",
+        "preview_file_size": "278827",
+        "preview_url": "https://images.steamusercontent.com/ugc/51325468176991821/38B39143D8E1778ED65ACF6D6761BDEE9AA6F753/",
+        "url": "",
+        "hcontent_file": "703678123654740981",
+        "hcontent_preview": "51325468176991821",
+        "title": "Simple Storage",
+        "file_description": "[h1]Connect your chests together and use a terminal to access them[/h1]\r\n\r\n[hr] [/hr]\r\n[h2]The terminal has filtering, sorting, and searching functions (supporting English and Chinese Pinyin).[/h2]\r\n[img]https://s2.loli.net/2024/12/12/hMxeZQgtp3EiqvY.png[/img]\r\n\r\n[hr] [/hr]\r\n[h2]1. Storage terminal[/h2]\r\nBuilding, unlocked by SCIENCE-2, belongs to prototype/storage.\r\n[h3]After placement, connect chests within a radius of 15, and you can click to open the terminal for access.[/h3]\r\n\r\nThe storage terminal will integrate all nearby crafting stations.\r\n\r\n[hr] [/hr]\r\n[h2]2. Wireless terminal (Optional Disable)[/h2]\r\nItem, unlocked by SCIENCE-2, belongs to storage.\r\n[h3]You can bind a storage terminal to allow you to access your chests at home even from outside.[/h3]\r\n\r\n[hr] [/hr]\r\n\r\n[img]https://i.loli.net/2018/08/01/5b6119111327b.gif[/img]\r\n[h2]Thank you for your likes.[/h2]",
+        "time_created": 1734016325,
+        "time_updated": 1770805135,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 488,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 255414,
+        "favorited": 6958,
+        "followers": 0,
+        "lifetime_subscriptions": 278956,
+        "lifetime_favorited": 7449,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 325392,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:26.02.11",
+            "display_name": "version:26.02.11"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9622266292572021,
+          "votes_up": 1886,
+          "votes_down": 26
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "40",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3353852416",
+        "creator": "76561199042155506",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1551330",
+        "preview_file_size": "530122",
+        "preview_url": "https://images.steamusercontent.com/ugc/2491146025820045901/71B1F591B82C94875EC991867C20177F83411572/",
+        "url": "",
+        "hcontent_file": "2024064511990854258",
+        "hcontent_preview": "2491146025820045901",
+        "title": "Fast Travel(skined home sign)",
+        "file_description": "[img]https://i.ibb.co/4SP7fDb/Steam-2024-5-27-21-33-33.png[/img]\r\n\r\n[hr]\r\n\r\nEnglish is available. The mod will choose your default language.\r\n\r\n2025/1/2 update:\r\n\r\n1. The sign's name could show above the sign. you could turn it on/off at setting menu.\r\n2. Delay teleport function added. You could turn it on or off at setting menu. \r\n3. reworked some skin animation. \r\n\r\n1. Transactions rework.\r\n2. Now you can choose turn/ off the light at mod setting menu .\r\n3. Add revive function. Haunting the wood sign as a ghost revives players.You can choose to turn it on/off at setting menu.\r\n4. Hunger cost and San cost are able to adjust at mod setting menu.\r\n5. Able to be use with other teleportation mod together. \r\n\r\nThank you all for like it. Sorry abt the late update. Hopefully you guys will enjoy this update! Have fun and happy international Women's Day ! \r\n\r\n[hr]\r\n\r\n\r\n💗what does the mod do：\r\n\r\nA teleportation sign to help player fast travel. the sign has 10 skins. The DST home sign also can do fast travel, you can turn it on at setting menu.\r\n\r\n1. Now you can choose turn/ off the light at mod setting menu .\r\n2. Add revive function. Haunting the wood sign as a ghost revives players.You can choose to turn it on/off at setting menu.\r\n3. Hunger cost and San cost are able to adjust at mod setting menu.\r\n4. Able to be use with other teleportation mod together. \r\n\r\n💗how to make：\r\n\r\ntravel cost hungry, the sign made of a wood board. you can find the sign from light, decorate, mod tab\r\n\r\n💗reference：\r\n\r\nIsosurface\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=458587300&searchtext=fast+travel\r\n\r\n\r\n💗Recommend my other mods：\r\n\r\n[h3]【lag remover】[/h3]\r\nRemover game lag and improve your pin. make the game more smooth. it can do auto stack, animal and more items can be stack, stack size increase, auto clean, code clean, fast trading, remove twiggy, stop tree regrowth, no root after logging. Each function can be turn on/off separatly in setting menu. as well as language setting. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3050607025\r\n\r\n[h3]【more item stack】[/h3]\r\nstack size can be choose from 20 to 5000. can help game stack animals, and other stuff. including some mod items like pack back and so on. each item can be turn on/off in setting menu. compatible with 【lag remover】. if you dont need stack mod items, you can just use 【lag remover】\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3007715893\r\n\r\n[h3]【No Regrowth】[/h3]\r\nthe trees like evergreen will stop regrowth at their stage 4. each type of trees can turn on separatly in setting menu. compatible with 【lag remover】.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3210773634\r\n\r\n[h3]【Better abigail】[/h3]\r\na new follower. everyone can make one. like abigail, but better and stronger.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3306010901\r\n\r\n[h3]【sweet light collection】[/h3]\r\na collection of light, each light has its own skins and functions. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3282173327\r\n\r\n[h3]【AUTO EAT AFK】[/h3]\r\nClient mod. For AFK in public server. Press F6(can change defult key at mod setting menu) and start to auto eat when you need. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3455473954\r\n\r\n\r\n\r\n\r\n🌎thanks for play\r\n\r\n\r\n",
+        "time_created": 1729751592,
+        "time_updated": 1743295023,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 161,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 193482,
+        "favorited": 6068,
+        "followers": 0,
+        "lifetime_subscriptions": 214141,
+        "lifetime_favorited": 6489,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 299840,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "version:1.5.5",
+            "display_name": "version:1.5.5"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9701492786407471,
+          "votes_up": 2030,
+          "votes_down": 14
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "36",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1271089343",
+        "creator": "76561198041015229",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "95815",
+        "preview_file_size": "466699",
+        "preview_url": "https://images.steamusercontent.com/ugc/932676487642015433/FC576DE0CD8748A14122D8219C6A288617B8CA8D/",
+        "url": "",
+        "hcontent_file": "8483946286703039675",
+        "hcontent_preview": "932676487642015433",
+        "title": "Your Skeleton Respawn",
+        "file_description": "[h1] [b] Resurrection from your skeleton! [/b] [/h1]\r\n\r\nAllows you to resurrect yourself on your skeleton.\r\n\r\n[h1] ----------UPDATED---------- [/h1]\r\n\r\n[b] + [/b]  Added the ability to configure health penalty \r\nBloody sacrifice -  | 0% | 5% | 10% | 25% | 30% | 40% | 50% | 60% | 70% | 75% | \r\n[b] + [/b]  Penalty removed from Relaxed game mode\r\n\r\n[h1] ---------------------------------- [/h1]\r\n\r\nIf you like this mod, don't forget to hit the [img=https://i.imgur.com/JlHWB0B.png] [/img]  button. Thanks\r\n\r\n[img]https://i.imgur.com/HmTBKrp.png[/img][url=https://steamcommunity.com/id/BEKKITT/myworkshopfiles/][img]https://i.imgur.com/xWWd8KE.png[/img][/url][img]https://i.imgur.com/1jf2dKM.png[/img][url=https://boosty.to/bekkit/donate][img]https://i.imgur.com/l0FNBVO.png[/img][/url]",
+        "time_created": 1516073852,
+        "time_updated": 1762033827,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 364,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1368455,
+        "favorited": 42014,
+        "followers": 0,
+        "lifetime_subscriptions": 1610044,
+        "lifetime_favorited": 46812,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1787303,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.2.6.7",
+            "display_name": "version:1.2.6.7"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9764941930770874,
+          "votes_up": 12122,
+          "votes_down": 243
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "10",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2873533916",
+        "creator": "76561198397747007",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "439416",
+        "preview_file_size": "26834",
+        "preview_url": "https://images.steamusercontent.com/ugc/1843686054133026489/2A0A6238115C6BF697F9FFF2B5C4A88A5E9B7EF8/",
+        "url": "",
+        "hcontent_file": "9104774030509563987",
+        "hcontent_preview": "1843686054133026489",
+        "title": "ActionQueue RB3",
+        "file_description": "This mod is an updated version of ActionQueue RB2\r\n[list]\r\n[*]Added actions related to \"Reap what you sow\"\r\n[*]Fixed Tall Palmcone trees compatible\r\n[*]Fixed a snazzy pitchfork compatible\r\n[*]Added Erase paper action\r\n[*]Added Ocean trawler raise action\r\n[*]Added Ocean trawler lower action\r\n[*]Compatible with New drying rack\r\n[*]And so on (Additional bug fixes and compatible patches)\r\n[/list]\r\n\r\nSupported new languages: Korean, Chinese.\r\n[list]\r\n[*]한국어를 지원합니다.\r\n[*]支持中文\r\n[/list]\r\n\r\n\r\n\r\neXiGe's ActionQueue Reborn Original mod here:\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=1608191708",
+        "time_created": 1665383052,
+        "time_updated": 1777604544,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 146,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 318014,
+        "favorited": 9479,
+        "followers": 0,
+        "lifetime_subscriptions": 353521,
+        "lifetime_favorited": 10292,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 391667,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "version:3.9",
+            "display_name": "version:3.9"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9718419909477234,
+          "votes_up": 2435,
+          "votes_down": 22
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "30",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2302837868",
+        "creator": "76561198234454040",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "72395",
+        "preview_file_size": "110898",
+        "preview_url": "https://images.steamusercontent.com/ugc/1643214356179991356/689B4DF680D75E094532FBB664ABB5BC8D6166E1/",
+        "url": "",
+        "hcontent_file": "6223937934739463730",
+        "hcontent_preview": "1643214356179991356",
+        "title": "Snapping tills",
+        "file_description": "Aligns plowing to the grid.\r\n\r\nLeftShift + RightMouseClick: Launch auto tilling on tile.\r\nKey \"L\": Toggle snap modes, off/optimized/4x4/3x3/2x2/hexagon.\r\nOptimized mode checks for an adjacent soil tile, if not found adjacent soil tile then uses 4x4 else uses 3x3.\r\nYou can bind key in configure mod.\r\n\r\nImportant:\r\n    \"Geometric Placement\" has priority, so that to use this mod,\r\n    \"Geometric Placement\" must be OFF in game (key B -> \"off\")\r\n    or disabled \"snap till\" in options (key B -> disable \"snap till\")\r\n    (look at screenshots)\r\n\r\nСontroller support.\r\nCompatible with Geometric Placement\r\nCompatible with ActionQueue Reborn (ActionQueue RB2)\r\n\r\nThanks Tranoze for code \"mode hexagon\".\r\nThanks 琪莎猫 for translate to Chinese (simplified) language.\r\nThanks KryzDST for translate to Spanish language.",
+        "time_created": 1606653238,
+        "time_updated": 1705570179,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 365,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1172445,
+        "favorited": 42897,
+        "followers": 0,
+        "lifetime_subscriptions": 1319240,
+        "lifetime_favorited": 47012,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1322848,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:1.1.9",
+            "display_name": "version:1.1.9"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9805176854133606,
+          "votes_up": 7147,
+          "votes_down": 93
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "53",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3371086303",
+        "creator": "76561198259804928",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "380733",
+        "preview_file_size": "474096",
+        "preview_url": "https://images.steamusercontent.com/ugc/19798270923020682/E915B0AD389F81E70960C5BD5523D19C9BBC76FD/",
+        "url": "",
+        "hcontent_file": "2135843069289928702",
+        "hcontent_preview": "19798270923020682",
+        "title": "Shiny Loot",
+        "file_description": "[img]https://i.imgur.com/9tKDrP4.gif[/img]\r\n\r\n[h1][b]ㅤ  ㅤㅤㅤSome things are valuable, make them stand out![/b][/h1]\r\n[img]https://i.imgur.com/nnw28uF.png[/img]\r\n\r\n[list]\r\n[*]Adds a highligh effect to valuable recently dropped loot, like boss drops, unknown blueprints and rare loot.\r\n\r\n[*]You may disable the sound effect, change the effect duration and choose which items will have the effect in the mod settings.\r\n\r\n[*]Client-side mod.\r\n[/list]\r\n\r\n\r\n[b]SETTINGS:[/b]\r\n\r\n[table]\r\n    [tr]\r\n        [th][b]NAME[/b][/th]\r\n        [th]MEANING[/th]\r\n        [th]DEFAULT[/th]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Effect Sound[/b][/td]\r\n        [td]Enable or disable the highlight sound effect.[/td]\r\n        [td]Enabledㅤㅤ[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Effect Duration[/b]ㅤㅤㅤ[/td]\r\n        [td]Choose the highlight duration. Options: 5 to 120 seconds.ㅤㅤㅤㅤ[/td]\r\n        [td]30 secondsㅤㅤ[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Item Settings[/b][/td]\r\n        [td]Enable or disable the effect for a specific item.[/td]\r\n        [td]Enabled[/td]\r\n    [/tr]\r\n[/table]\r\n\r\n[hr]\r\n🧱 Machine Simplified Chinese translation. Please reach out if you'd like to translate this mod.\r\n\r\n🌟 Mod idea by [b][url=https://steamcommunity.com/id/Kynoox/]Kyno[/url][/b].\r\n\r\n[hr]\r\n[b]Search Tags:[/b] shiny loot, highlight, boss, blueprint, effect, fx, leonidas iv.",
+        "time_created": 1732425437,
+        "time_updated": 1751246750,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 52,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 97055,
+        "favorited": 3150,
+        "followers": 0,
+        "lifetime_subscriptions": 107859,
+        "lifetime_favorited": 3394,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 184791,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.1.0",
+            "display_name": "version:1.1.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9577562212944031,
+          "votes_up": 1333,
+          "votes_down": 11
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "14",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}

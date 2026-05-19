@@ -1,0 +1,80 @@
+{
+  "response": {
+    "total": 4,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "2771698903",
+        "creator": "76561198405035271",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "87536",
+        "preview_file_size": "235766",
+        "preview_url": "https://images.steamusercontent.com/ugc/1830155267428269821/84E097B5DD4C23EE05E9A51CAA6DCEC7E20382AF/",
+        "url": "",
+        "hcontent_file": "4219445511887289892",
+        "hcontent_preview": "1830155267428269821",
+        "title": "复活重生(中文版)",
+        "file_description": "中文汉化版本\n原版：https://steamcommunity.com/sharedfiles/filedetails/?id=462434129\n仅修改替换英文为中文单词，已有问题请联系原版作者\n\n服务器 mod.\n\n介绍:\n输入指令来重新选择人物 / 复活 / 自杀。\n\n可以通过设置冷却时间防止有些玩家不停的使用指令。\n\n可以设置是否在重生时掉落全身物品。\n\n可配置选项。\n\n指令及功能:\n#重生 - (重生换角色)\n\n##重生 - (重生并掉落物品)\n\n#复活 - (复活自己)\n\n#自杀 (自杀)",
+        "time_created": 1646317697,
+        "time_updated": 1646324123,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 43,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 426310,
+        "favorited": 13165,
+        "followers": 0,
+        "lifetime_subscriptions": 509582,
+        "lifetime_favorited": 14640,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 451515,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "language",
+            "display_name": "language"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:0.1.3",
+            "display_name": "version:0.1.3"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9078947305679321,
+          "votes_up": 1054,
+          "votes_down": 62
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 0
+      }
+    ]
+  }
+}

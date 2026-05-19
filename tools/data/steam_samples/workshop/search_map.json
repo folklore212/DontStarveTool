@@ -1,0 +1,1555 @@
+{
+  "response": {
+    "total": 557,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "1157975551",
+        "creator": "76561197999920843",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "1348552",
+        "preview_file_size": "22299",
+        "file_url": "https://cdn.steamusercontent.com/ugc/871873319173800016/294B0E4C037092B2AE680E106FAB1B323A330812/",
+        "preview_url": "https://images.steamusercontent.com/ugc/872994485051892101/31722E2E4B76C7F3B846A17C270D9B9519C40A73/",
+        "url": "",
+        "hcontent_file": "871873319173800016",
+        "hcontent_preview": "872994485051892101",
+        "title": "Extended Map Icons",
+        "file_description": "Add more icons to the map. Includes all the mobs, basic tools, flowers, gold nuggets, rocks, flints, and more.\r\nIt have 123 mobs icons (includes all monsters of vanilla, RoG and Shipwrecked).\r\n\r\n[img] https://i.imgur.com/wpIJYTU.png [/img]\r\n\r\n[h1]Request for changes![/h1]\r\n\r\n[h1]Report any bug![/h1]\r\n\r\n[h1]Donate skins if want to support developer![/h1]\r\n\r\n[h1]Credits to:[/h1]\r\nLeo's base mod: \r\nhttp://steamcommunity.com/sharedfiles/filedetails/?id=703451582&searchtext=Extended+Map+Icons.\r\n...and...\r\nWhere's My Beefalo mod: \r\nhttp://steamcommunity.com/sharedfiles/filedetails/?id=222103064&searchtext=where+is+my\r\n...and...\r\nDarkXero for collaborate with bug fixing.\r\n\r\n[h1]Don't Starve + RoG + Shipwrecked version:[/h1] http://steamcommunity.com/sharedfiles/filedetails/?id=1152443900",
+        "time_created": 1507143535,
+        "time_updated": 1511754988,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 292,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 607431,
+        "favorited": 21817,
+        "followers": 0,
+        "lifetime_subscriptions": 758137,
+        "lifetime_favorited": 25307,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 882616,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "version:1.12",
+            "display_name": "version:1.12"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9620891213417053,
+          "votes_up": 4721,
+          "votes_down": 138
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1226663453",
+        "creator": "76561198004604229",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1245177",
+        "preview_file_size": "12533",
+        "preview_url": "https://images.steamusercontent.com/ugc/884259456718873008/D5CA6CA068A4C370663DD598453FEEE632C903F9/",
+        "url": "",
+        "hcontent_file": "434796317830001789",
+        "hcontent_preview": "884259456718873008",
+        "title": "Small Map",
+        "file_description": "This MOD adds a small minimap to the HUD.\r\nFull custom!!!!\r\n\r\n\r\n* If you are in trouble, use the M key to display the map!\r\nIt may be improved.\r\nAfter that, if it doesn't improve, please send us a bug report.\r\n",
+        "time_created": 1512852854,
+        "time_updated": 1664606874,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 199,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 398665,
+        "favorited": 8695,
+        "followers": 0,
+        "lifetime_subscriptions": 463461,
+        "lifetime_favorited": 9818,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 535046,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.8",
+            "display_name": "version:1.8"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9645413160324097,
+          "votes_up": 2915,
+          "votes_down": 59
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "363112314",
+        "creator": "76561198055851807",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "110882",
+        "preview_file_size": "288866",
+        "file_url": "https://cdn.steamusercontent.com/ugc/942845410500206566/6FD007B170CF2567296C646D2B4B2315422D6949/",
+        "preview_url": "https://images.steamusercontent.com/ugc/925923059836029260/9EDE9938376EC3539364CD9E42FA0D85BD374988/",
+        "url": "",
+        "hcontent_file": "942845410500206566",
+        "hcontent_preview": "925923059836029260",
+        "title": "Map Revealer for DST",
+        "file_description": "[h1][b]DESCRIPTION[/b][/h1]\r\n\r\nIt's a very simple mod revealing the entire map in the game, regardless of the level at which we find ourselves. Despite the simplicity makes it easy modding or just makes the game a lot easier.\r\n\r\n[h1][b]Mod has changed since the update 1.0. From now on, reveal map doesn't work automatically. Use the keyboard shortcuts below:[/b][/h1]\r\n\r\n[b]SHIFT + R - reveal map - works both: surface and caves (dedicated servers) worlds on all players but only host can use it.[/b]\r\n\r\n[b]SHIFT + F - fog of war disabled - works only for host on disabled caves.[/b]\r\n\r\nHave a nice use.\r\n\r\n[h1][b]FAQ[/b][/h1]\r\n\r\nQ:Mod not work, after i put shift+r combination map is still blank?\r\nA:It's normal... you must wait couple of seconds before server refresh the map. During the map refresh, you may experience animation freeze (for example portal animation)\r\n\r\n[h1][b]Special thanks:[/b][/h1]\r\n\r\n[b]Artie-Choke[/b] for his Mini Tools mod.\r\n[b]WrathOf[/b] for IsKeyBinding function.\r\n[b]Maarx and others[/b] who \"find\" reveal map function.\r\n\r\n[h1][b] Mod for DS singe version is [url=http://steamcommunity.com/sharedfiles/filedetails/?id=225675650]HERE[/url] [/b][/h1]",
+        "time_created": 1419640157,
+        "time_updated": 1550269388,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 540,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 598260,
+        "favorited": 16622,
+        "followers": 0,
+        "lifetime_subscriptions": 810334,
+        "lifetime_favorited": 20039,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 935128,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          },
+          {
+            "tag": "version:1.1",
+            "display_name": "version:1.1"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "Other",
+            "display_name": "Other"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9265767931938171,
+          "votes_up": 3799,
+          "votes_down": 255
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3528106132",
+        "creator": "76561198025554288",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "77754791",
+        "preview_file_size": "1037802",
+        "preview_url": "https://images.steamusercontent.com/ugc/11403152200531894657/93D5DF9710D3FED2D7A1920B2C974001F5471B8F/",
+        "url": "",
+        "hcontent_file": "4856519531505573101",
+        "hcontent_preview": "11403152200531894657",
+        "title": "Maple, The Fox Whisperer",
+        "file_description": "Adds Maple, The Fox Whisperer.\r\nComes with unique perks, abilities, items, 1 exclusive pet, 2 exclusive mobs, and 5 special mobs that any character can recruit!\r\n\r\nCommission for Catsuki! \r\n\t\r\n[img]https://i.imgur.com/XjtLFyX.png[/img] \r\n\r\n[h1]Stats & Perk Overview[/h1]\r\nHealth: 200-300 | Hunger: 150-200 | Sanity: 100\r\n1x-1.5x damage multiplier | 1.5x darkness fear | 1.25x speed mult\r\nSlightly resistant to cold | Slightly susceptible to heat\r\nDeals 25% to shadow creatures | Deals 50% damage to hound-like creatures\r\nLoses 25% more sanity around shadows and hound-like creatures\r\n\r\n[list][*][b]Can recruit foxes[/b]: Can craft two fox dens that spawn wild foxes, and then recruit them by giving food! Maple can recruit foxes indefinitely with a single food item, while other characters gain 60 seconds of loyalty per item.\r\n[*][b]Has a friendly plush[/b]: Spawns in with a Bernie-like follower that will help distract or attack anything that targets Maple.\r\n[*][b]Can use Ki energy[/b]: Killing mobs near Maple will spawn Ki. Maple can use Ki to teleport anywhere onscreen, or alt-click any mob to attack them with a Fox Fire projectile!\r\n[*][b]Gets stronger over time[/b]: Each day survived increases Maple's Health, Hunger, and damage multiplier by a small amount. Resets on death.\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/spkdOX9.png[/img]\r\n[h1]Ki[/h1]\r\n[list][*]Behaves like Wortox's souls, with some differences\r\n[*]Spawns whenever a mob dies within 20 tiles of Maple\r\n[*]Alt-Click empty space with Ki in inventory to teleport (costs 1 Ki per use)\r\n[*]Alt-Click target with Ki in inventory to throw Fox Fire (Deals 30 damage, costs 1 Ki per use)\r\n[*]Heals nearby players when dropped[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/OGETpAn.png[/img]\r\n[h1]Millie the Fox[/h1]\r\n[list][*]Maple's permanent companion\r\n[*]Cannot be killed or targeted by monsters\r\n[*]12 inventory slots[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/BVevxtQ.png[/img]\r\n[h1]Molly[/h1]\r\n[list][*]Starting Item\r\n[*]When dropped onto ground, activates and transforms into large form (if Maple is sane) or small form (if insane)\r\n[*]Only 1 large form, rest will be small\r\n[*]Small form distracts mobs, Large form attacks mobs (basically same as Bernie/BERNIE!)\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/D71S8Li.png[/img]\r\n[h1]Fox Dens[/h1]\r\n[list][*]Craftable by Maple\r\n[*]When placed on ground, will begin spawning different types of foxes\r\n[*]Can be destroyed with hammer, but foxes may attack you!\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/bCmFJ8Q.png[/img]\r\n[h1]Fire Fox/Arctic Fox[/h1]\r\n[list][*]Spawns from Fox Den/Cozy Stump\r\n[*]150 health\r\n[*]Deals 25 damage\r\n[*]Sets mobs on fire/freezes mob\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/VcTQmM3.png[/img]\r\n[h1]Champagne Fox[/h1]\r\n[list][*]Spawns from Fox Den\r\n[*]150 health\r\n[*]Deals 20 damage\r\n[*]Attacks at a distance with a ranged projectile\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/MFrXEMD.png[/img]\r\n[h1]Silver Fox[/h1]\r\n[list][*]Spawns from Cozy Stump\r\n[*]150 health\r\n[*]Deals 10 damage\r\n[*]Heals nearby foxes for 150 Health, Maple for 8 health (AOE)\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/M8TyBPZ.png[/img]\r\n[h1]Black Fox[/h1]\r\n[list][*]Spawns from Cozy Stump\r\n[*]150 health\r\n[*]Deals 10 damage\r\n[*]Attacks with a ranged projectile that temporarily slows down mobs\r\n[*]Yawns to put hostile mobs to sleep for 10 seconds (AOE)\r\n[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/NuMf5k0.png[/img]\r\n[h1]Fox Cookies[/h1]\r\n[list][*]Feed to foxes to change them from one type to another!\r\n[*]Feed the sheep-looking cookie to Maple to change [i]her[/i] form! This is only a visual change and doesn't affect her abilities.[/list]\r\n[h1]____________________________[/h1]\r\n[img]https://i.imgur.com/L9zjSvf.png[/img]\r\n[h1]Fox Whistle[/h1]\r\n[list][*]Blow the whistle to make foxes passive for 10 seconds, and prevent them from eating anything on the ground for 60 seconds\r\n[*]Use if you are trying to escape from a dangerous situation, or if your foxes are being destructive.[/list]\r\n[h1]____________________________[/h1]\r\n[h1]TO DO :) [/h1]\r\n[b]Bugfixes[/b], if any are reported!\r\n\r\nUpdates with new content will be made only at the commissioner's request.\r\n[h1]____________________________[/h1]\r\n[h1]Want your own character mod?[/h1]\r\nMy commission website & contact info can be found [url=https://mizartz-dst.carrd.co/]here.[/url]\r\n[h1]____________________________[/h1]\r\n[h1]Credit[/h1]\r\nArt and code by me ([url=https://steamcommunity.com/id/mizartz/]mizartz[/url]).\r\nMod design & inspection/text descriptions by [url=https://steamcommunity.com/profiles/76561198317013085/]Catsuki[/url].\r\n[b]Editing and re-uploading this mod is not permitted.[/b]",
+        "time_created": 1752773036,
+        "time_updated": 1754921728,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 88,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 8804,
+        "favorited": 683,
+        "followers": 0,
+        "lifetime_subscriptions": 10362,
+        "lifetime_favorited": 724,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 24961,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "version:1.0.5",
+            "display_name": "version:1.0.5"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8461538553237915,
+          "votes_up": 280,
+          "votes_down": 10
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "13",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2905450407",
+        "creator": "76561198028490958",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "787749",
+        "preview_file_size": "220940",
+        "preview_url": "https://images.steamusercontent.com/ugc/10537479202451825082/565EC39F21016EA22E6E363EDFAA2EA67B17F1C9/",
+        "url": "",
+        "hcontent_file": "7519844276282805313",
+        "hcontent_preview": "10537479202451825082",
+        "title": "Extended Map Icons Continued",
+        "file_description": "[h1]Extended Map Icons Continued![/h1]\r\n\r\nA continued version of Extended Map Icons, recently updated to be more efficient!\r\n\r\nCheck the discussions post if there's an icon missing/you would like added!\r\n\r\n[h3]Changelog:[/h3]\r\n\r\n[b]4.0.10 - The Devil Wears Prada[/b]\r\n[list]\r\n[*]  Added:\r\n    [*] New Clothing category with 14 items:\r\n Beefalo Hat, Beekeeper Hat, Bush Hat, Dapper Vest, Fashion Melon, Garland, Feather Hat, Rabbit Earmuffs, Straw Hat, Top Hat, Winter Hat, Breezy Vest, Puffy Vest, Sewing Kit\r\n    [*] Wandering Trader\r\n    [*] Boards\r\n    [*] Bunny Puff\r\n[*]  Removed:\r\n    [*] Tentacle Pillar\r\n[/list]\r\n\r\n[b]4.0.9 - Runtime Resilience[/b]\r\n[*] Fixed:\r\n    Resolved a sandbox crash when registering minimap atlases by using GLOBAL.pcall during runtime.\r\n[/list]\r\n\r\n[b]4.0.8 - Jade Atlas[/b]\r\n[list]\r\n[*] Added:\r\nFull Simplified Chinese translations for every configuration section header, prefab label, and option description so the entire config screen matches the client language.\r\n[/list]\r\n\r\n[b]4.0.7 - Be There Or Be Square: Part 2[/b]\r\n[list]\r\n[*] Added:\r\nAncient Guardian, Bunnyman, Crab King, Gobbler, Malbatross, Monkey, Pig Torch, Rock Lobster, Spiky Bush, Varg, Varglet\r\n[*] Improved:\r\nSplumonkey Pods now force their custom minimap icon\r\n[/list]\r\n\r\n[b]4.0.6 - Hole Lotta Icons[/b]\r\n[list]\r\n[*] Added:\r\nAnimal Track, Bat Cave, Burrow, Clockwork Bishop, Hollow Stump, Merm, Merm House, Rabbit Hole, Resting Horror, Slurtle Mound, Spilagmite, Suspicious Dirt Pile\r\n[*] Improved:\r\nDens now use custom minimap art instead of critter stand-ins\r\n[/list]\r\n\r\n[b]4.0.5 - Stumped by the Rook[/b]\r\n[list]\r\n[*] Added:\r\nRook, Damaged Clockwork Rook\r\n[*] Fixed:\r\nHollow Stump\r\n[/list]\r\n\r\n[b]4.0.4 - Staff Wars: The Icon Strikes Back[/b]\r\n[list]\r\n[*] Added:\r\nBrightshade Staff, Deconstruction Staff, Fire Staff, Ice Staff, Moon Caller's Staff, Star Caller's Staff, Telelocator Staff, Weather Pain, The Lazy Explorer, Fruit Fly, Garden Hoe, Manure, Splendid Garden Hoe, Walking Cane, Wooden Cane\r\n[/list]\r\n\r\n[b]4.0.3 - Petals, Pebbels, Pork, and Poltergeists[/b]\r\n[list]\r\n[*] Added:\r\nFlowers & Tentacles\r\n[*] Fixed:\r\nAbigail, Pig, and Boulder (they already exist) icons\r\n[/list]\r\n\r\n[b]4.0.2 - Be There Or Be Square[/b]\r\n[list]\r\n[*] Fixed a bug where skinned items would display as missing texture squares\r\n[/list]\r\n\r\n[b]4.0.1 - The Great Icon Passover[/b]\r\n[list]\r\n[*] All icons now use up to date art.\r\n[*] Icons are no longer skewed or look blurry.\r\n[*] All icons now (and going forward) use a set size of 64x64.\r\n[*] Bugfixes:\r\nFixed Rabbit & Chester icons.\r\nRemoved Limestone Wall.\r\nAdded Frog.\r\n[/list]\r\n\r\n[b]4.0 - The Great Redo[/b]\r\n[list]\r\n[*] Updated code to use a more efficient method; it's been mostly rewritten now.\r\n[*] Any icons that have an inventory icon now use the vanilla icon image.\r\n[*] All items now have a setting to hide them, and a new persistence option has been added. This makes it so icons only appear when within range, and will disappear when not in range.\r\n[/list]\r\n\r\nI'm going to add more icons from here on out, let me know on the workshop page of any that are missing.\r\n\r\nThis continues to be a Client Only mod.\r\n\r\n[h3]Source Code:[/h3]\r\nhttps://github.com/ImSoHM02/Extended-Map-Icons-Continued\r\n",
+        "time_created": 1671775709,
+        "time_updated": 1767082663,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 103,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 102775,
+        "favorited": 4033,
+        "followers": 0,
+        "lifetime_subscriptions": 123627,
+        "lifetime_favorited": 4599,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 171725,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:4.0.10",
+            "display_name": "version:4.0.10"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9322547912597656,
+          "votes_up": 872,
+          "votes_down": 17
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "42",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3151929150",
+        "creator": "76561198398453893",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "557448",
+        "preview_file_size": "348055",
+        "preview_url": "https://images.steamusercontent.com/ugc/2374028340454076880/F816B0342188B0687CD334FA24E623DD2A12171A/",
+        "url": "",
+        "hcontent_file": "8068297541299683285",
+        "hcontent_preview": "2374028340454076880",
+        "title": "Search Your Map!",
+        "file_description": "This mod allows you to set criteria for your ideal map, automatically generating maps with different seeds until one meets your requirements. Customize world attributes or find a convenient base location. Supports any world settings and (theoretically) any mods. Record and share the generated seeds!\r\n\r\n[h2]Features[/h2]\r\n[h3]1. Overworld Attributes[/h3]\r\nSet resource types (grass, twigs, berries variants). Choose desired/undesired biomes (e.g., killer bee plains, walrus camps, no pig village). Specify easter eggs (e.g., tallbird or tentacle eggs) or resource counts (e.g., clockworks, volt goat herds). Find special worlds with Moon Island directly connected to the mainland (within 2 tiles).\r\n[h3]2. Base Convenience[/h3]\r\nFind maps with an ideal base location for easy access. Assign weights to entities (e.g., Pig King) or biomes (e.g., swamp) to score maps based on importance. Set generation repeats to keep the highest-scoring map. Optionally enforce strict distance constraints to entities/regions for precise control.\r\n[h3]3. Cave Attributes[/h3]\r\nCustomize cave biomes and room compositions (e.g., statue-heavy ancient areas). Reduce monkey presence or ensure ancients are near a specific staircase (recommend 20 tiles).\r\n\r\n[h2]Configuration Guide[/h2]\r\n[h3]1. Overworld Attributes[/h3]\r\nSelect up to 5 desired and 5 undesired biomes.\r\n[h3]2. Base Convenience[/h3]\r\nSet weights for points of interest based on importance (e.g., Pig King weight double that of Glorious Gate). For strict base constraints (e.g., base on Moon Island, set distance to 0), use cautiously—large values lower map quality, small values increase search time.\r\n[h3]3. Cave Attributes[/h3]\r\nTo limit monkeys, mark monkey biomes (housing 2/3, cave jungle) as “absolutely avoid.” For custom biome rooms, set the biome as “must have.” Ancients near a staircase require 20+ tiles to avoid long searches.\r\n\r\n[h2]Usage Guide[/h2]\r\n[h3]1. Log Viewing[/h3]\r\nLogs in `data/unsafedata/worldgen_log_*.txt` (overworld: SURVIVAL_TOGETHER, caves: CAVE) show seeds, base location suggestions (use `c_teleport(XX,0,XX)`), estimated time, success rates, and best seeds. Scores reflect distance (lower is better). Logs update every ~15 generations.\r\n[h3]2. Mod Compatibility[/h3]\r\nShould be compatible with all map generation mods and settings. Verify by generating a world with this mod and others, noting the seed, then disabling this mod and using API Gem Core to regenerate with the same seed. Check if worlds match. Tested with Prism and Never Compromise (2024.9.12).\r\n[h3]3. Time Impact[/h3]\r\nOverworld biome/resource settings don’t increase time. Easter eggs may double time due to 50% insertion failure. Moon Island connection needs ~40 maps. Ancients near stairs need ~5 maps (20 tiles).\r\n[h3]4. Custom Options[/h3]\r\nCustomize entity counts, proximity, or weights via mod config or the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3289046522]Text Mod Config[/url] mod for dialog-based settings.\r\n\r\n[h2]Advanced Info[/h2]\r\n[h3]1. Map Scoring[/h3]\r\nMaps are scored by the weighted sum of distances to entities/regions, with the lowest sum as the ideal base. Only maps meeting overworld and strict constraints count toward search attempts. Distances account for wormholes (can be disabled).\r\n[h3]2. Base Constraints[/h3]\r\nDistances use tiles (1 screen ≈ 8 tiles). Euclidean distance for most, Manhattan for lobster dens/salt mines, considering wormholes.\r\n\r\n[h2]Notes[/h2]\r\n1. Game “not responding” is normal; check logs for progress.\r\n2. Cannot cancel generation; force-close required.",
+        "time_created": 1706821150,
+        "time_updated": 1778348255,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 275,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 33603,
+        "favorited": 1420,
+        "followers": 0,
+        "lifetime_subscriptions": 43297,
+        "lifetime_favorited": 1665,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 71647,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.2.13",
+            "display_name": "version:1.2.13"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8568129539489746,
+          "votes_up": 321,
+          "votes_down": 12
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "24",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "537685330",
+        "creator": "76561198055698285",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "13613",
+        "preview_file_size": "106267",
+        "file_url": "https://cdn.steamusercontent.com/ugc/396673505684662972/3C40B1AC8A2119A9E60856835114C505DF2AA59A/",
+        "preview_url": "https://images.steamusercontent.com/ugc/396673505684663096/FBF193BC9509177F56B693F068ADD4E53910323C/",
+        "url": "",
+        "hcontent_file": "396673505684662972",
+        "hcontent_preview": "396673505684663096",
+        "title": "Map Controls Removal",
+        "file_description": "Removes map control buttons in the bottom right corner.\r\n\r\nThis is a port of the DS mod [url=steamcommunity.com/sharedfiles/filedetails/?id=376907318]Map Controls Removal\t[/url] which itself is a port of the original mod made by omimare. I ported it back since he removed his mod. All credits go to him!",
+        "time_created": 1445203111,
+        "time_updated": 1445203111,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 23,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 66631,
+        "favorited": 1781,
+        "followers": 0,
+        "lifetime_subscriptions": 76416,
+        "lifetime_favorited": 2032,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 83377,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9127324819564819,
+          "votes_up": 588,
+          "votes_down": 11
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3716758929",
+        "creator": "76561198136592075",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "6706756",
+        "preview_file_size": "338728",
+        "preview_url": "https://images.steamusercontent.com/ugc/11081458964448913776/A85BD0B2883EF3DFD94919BA5F70FC8B2700E3E0/",
+        "url": "",
+        "hcontent_file": "3521746326301676338",
+        "hcontent_preview": "11081458964448913776",
+        "title": "Map Helper",
+        "file_description": "[h1]🗺️ Your Built-in DST Map Wiki[/h1]\r\n\r\n[b]Are you still running your legs off trying to find a specific resource?[/b]\r\n[b]Or feeling completely lost on an unfamiliar map after adding large-scale terrain mods?[/b]\r\n\r\nTry this ultimate exploration tool — [b]Map Exploration Assistant[/b]!\r\nWhether you're a newbie looking for resources or a veteran planning your base, it can help you find the most detailed map information ([b]including extra map data modified or added by other mods[/b]).\r\nIts current features function like a built-in DST map wiki, but more capabilities will be added in the future to make your exploration even easier.\r\n\r\n[b]💡 This mod will NOT spoil information that requires actual exploration, so don't worry about ruining your vanilla game experience.[/b] \r\n\r\n[hr][/hr]\r\n\r\n[h1]✨ Core Features[/h1]\r\n\r\nAfter enabling the mod, a dedicated button will appear in the bottom right corner (left of the minimap button). Click it to open the UI.\r\n[i]For first-time use, please click the \"Refresh\" button at the bottom to initialize data. The data will update in real-time based on the base resource variants of the current map.[/i]\r\n\r\nYou can switch tabs at the top. The default is \"World Info\", showing the basic setup of the world. There's also \"Biome Details\", which displays comprehensive biome information.\r\n\r\n[h2]📖 Ultra-Detailed \"Biome Encyclopedia\"[/h2]\r\n\r\n[b]The right panel of Biome Details contains a wealth of info:[/b]\r\n[list]\r\n[*][b]Map Previews:[/b] Dozens of manually captured preview images with feature descriptions, helping you visually identify biomes at a glance.\r\n[*][b]Turf Analysis:[/b] Displays \"Primary Turfs\" (center of the biome) and \"Background Turfs\" (edges), allowing you to further identify biomes through turfs.\r\n[*][b]Tag Tooltips:[/b] Hover over a tag to see a detailed explanation of its specific effects.\r\n[*][b]Resource Lists:[/b] From \"Abundance\" (total resource volume) and the generation amount of \"Random Resources\", to the guaranteed \"Inherent Resources\" and \"Inherent Setpieces\", giving you total control over resource distribution.\r\n[*][b]Node Composition:[/b] Biomes are composed of primary nodes, filler nodes, and entrance nodes. All are displayed with their respective quantities (entrance nodes won't show if not set). Additionally, there is a \"Representative Node\"—a conceptual node that best represents the biome, like the Mandrake House in the Mandrake Forest or the Pig King in the Pig King Deciduous Forest. For biomes without obvious features, the most abundant primary node is chosen.\r\n[/list]\r\n\r\n[b]✅ Exploration Progress Tracker[/b]\r\nThe left panel of Biome Details is the grid area:\r\n[list]\r\n[*][b]Color Coding:[/b] Red borders mean guaranteed main continent biomes; Blue means randomly selected main continent biomes; Green means island biomes.\r\n[*][b]Exploration Tags:[/b] Every biome grid has a checkbox in the top right corner. Mark found biomes to track your progress at any time (this will play a much bigger role in future updates!).\r\n[*][b]Sorting & Filtering:[/b] Use the top toolbar to sort and filter, letting you find your target biome instantly.\r\n[/list]\r\n\r\n[b]🧩 Deep Dive into Nodes[/b]\r\nWant a more precise understanding of resource distribution within a biome? Click on a node within a biome to open the Node Details page!\r\nHere you will see a structure similar to biomes, including turfs, abundance, random resources, inherent resources, and setpieces, but simplified. Biomes are built by combining these very nodes. Understanding nodes means understanding every little ecosystem.\r\n\r\n[hr][/hr]\r\n\r\n[h2]💾 Data Saving[/h2]\r\n\r\nYour initialized data and exploration marks can be saved by clicking the \"Save\" button, so you don't need to refresh every time you enter the game. You can also enable [b]Auto-Save[/b] in the mod settings, which saves automatically every time you leave the game.\r\n[b]⚠️ Note: Clicking \"Refresh\" will clear your existing exploration marks. Generally, you only need to click it once when entering a world for the first time.[/b]\r\n\r\n[hr][/hr]\r\n\r\n[h2]📅 Future Update Plans:[/h2]\r\n\r\n[list]\r\n[*]Optimized exploration route calculations (For the theory, see my Bilibili video [url=https://www.bilibili.com/video/BV11fQLBUEbG/] DST Probability: Efficient Exploration Guide [/url])\r\n[*]Multi-language support (Currently supports Simplified Chinese and English, will expand to other languages in the future)\r\n[*]Providing API and adaptation guides for other mods so their biomes can be displayed more naturally (adding biome preview images, customizing localized text for items, etc.)\r\n[/list]",
+        "time_created": 1777504012,
+        "time_updated": 1777949683,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 19,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 6509,
+        "favorited": 277,
+        "followers": 0,
+        "lifetime_subscriptions": 7367,
+        "lifetime_favorited": 288,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 18332,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:0.1.1 hotfix",
+            "display_name": "version:0.1.1 hotfix"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7946767807006836,
+          "votes_up": 159,
+          "votes_down": 4
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "8",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "668708075",
+        "creator": "76561198271488571",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "277277",
+        "preview_file_size": "110958",
+        "file_url": "https://cdn.steamusercontent.com/ugc/279596875697606502/1AFB1BE7A8D6382CA3C48F91D6D3B06E05E75587/",
+        "preview_url": "https://images.steamusercontent.com/ugc/279596875697606995/FE0ABC3D50FEEB7B315328E8841A736F111D7B6D/",
+        "url": "",
+        "hcontent_file": "279596875697606502",
+        "hcontent_preview": "279596875697606995",
+        "title": "[T] Map Plugins(DST)",
+        "file_description": "相信不少单机的人都用过我的地图插件，终于发布了联机版。\r\n\r\n功能：\r\nMore Map Icon - 更多图标显示\r\nWall Icon Display - 墙壁图标显示\r\n\r\n[h1][b]中国的兄弟请帮忙点赞！\r\nIf you like the mod give it a thumbs up.[/b][/h1]\r\nQQ 群：231241088（已满）\r\nQQ 群：790445377\r\n\r\nIcon List - 图标列表\r\n\r\nCommon_PB_List = {\r\n\t--Core\r\n\t\"beefalo\",\t\t\t\t\t--牛\r\n\t\"babybeefalo\",\t\t\t\t--小牛\r\n\t\"carrot_planted\",\t\t\t--胡萝卜\r\n\t\"flint\",\t\t\t\t\t--燧石\r\n\t\"rabbithole\",\t\t\t\t--兔子洞\r\n\t\"rocky\",\t\t\t\t\t--洞穴龙虾\t\t\t\r\n\t\"lightninggoat\",\t\t\t--电羊\r\n\t\"molehill\",\t\t\t\t\t--鼹鼠洞\r\n\t\"koalefant_winter\",\t\t\t--冬象\r\n\t\"koalefant_summer\",\t\t\t--夏象\r\n\t\"blue_mushroom\",\t\t\t--蓝蘑菇\r\n\t\"red_mushroom\",\t\t\t\t--红蘑菇\r\n\t\"green_mushroom\",\t\t\t--绿蘑菇\r\n\t\"mandrake\",\t\t\t\t\t--曼德拉草\r\n\t\"hound\",\t\t\t\t\t--普通狗\r\n\t\"firehound\",\t\t\t\t--火狗\r\n\t\"icehound\",\t\t\t\t\t--冰狗\r\n\t\"skeleton\",\t\t\t\t\t--骨架\r\n\t\"rock2\",\t\t\t\t\t--金矿\r\n\t\"fireflies\",\t\t\t\t--萤火虫\r\n\t\"dirtpile\",\t\t\t\t\t--可疑土堆\r\n\t\"animal_track\",\t\t\t\t--大象脚印\r\n\t\"tentacle\",\t\t\t\t\t--触手\r\n\r\n\t\"chester_eyebone\",\t\t\t--切斯特\r\n\t\r\n\t\"pighead\",\t\t\t\t\t--猪头\r\n\t\"krampus\",\t\t\t\t\t--坎普斯\r\n\t\"minotaur\",\t\t\t\t\t--远古守护者\r\n\t\"bat\",\t\t\t\t\t\t--洞穴蝙蝠\r\n\t\"spider_hider\",\t\t\t\t--洞穴蜘蛛\r\n\t\"bishop\",\t\t\t\t\t--发条教主\r\n\t\"bishop_nightmare\",\t\t\t--损坏的发条教主\r\n\t\"knight\",\t\t\t\t\t--发条骑士\r\n\t\"knight_nightmare\",\t\t\t--损坏的发条骑士\r\n\t\"rook\",\t\t\t\t\t\t--发条战车\r\n\t\"rook_nightmare\",\t\t\t--损坏的发条战车\r\n\t\"spider_dropper\",\t\t\t--洞穴白蜘蛛\r\n\t\"worm\",\t\t\t\t\t\t--洞穴蠕虫\r\n\t\"walrus\",\t\t\t\t\t--海象爸爸\r\n\t\"tentacle_pillar\",\t\t\t--巨型触手\r\n\t\"bunnyman\",\t\t\t\t\t--兔人\r\n\r\n\t\r\n\t--BOSS\r\n\t\"leif\",\t\t\t\t\t\t--树人\r\n\t\"leif_sparse\",\t\t\t\t--稀有树人\r\n\t\"spiderqueen\",\t\t\t\t--蜘蛛女皇\r\n\t\"moose\",\t\t\t\t\t--鸭Boss\r\n\t\"mooseegg\",\t\t\t\t\t--鸭Boss蛋\r\n\t\"dragonfly\",\t\t\t\t--火蜻蜓\r\n\t\"deerclops\",\t\t\t\t--巨鹿Boss\r\n\t\"bearger\",\t\t\t\t\t--熊Boss\r\n\t\"warg\",\t\t\t\t\t\t--狗王\r\n}",
+        "time_created": 1461050472,
+        "time_updated": 1461050472,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 391,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 307368,
+        "favorited": 11674,
+        "followers": 0,
+        "lifetime_subscriptions": 459014,
+        "lifetime_favorited": 15024,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 965898,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9725586175918579,
+          "votes_up": 9909,
+          "votes_down": 231
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "378160973",
+        "creator": "76561198025931302",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "610208",
+        "preview_file_size": "112042",
+        "preview_url": "https://images.steamusercontent.com/ugc/535134943326895647/0FF32BFCBDF3CDAFD88373F2D76C9DDE50D8C090/",
+        "url": "",
+        "hcontent_file": "4506020981624356616",
+        "hcontent_preview": "535134943326895647",
+        "title": "Global Positions",
+        "file_description": "[h1]Map sharing works again! You don't even need to be in the  [b]A New Reign beta[/b] anymore![/h1]\r\n\r\nCode contributions are welcome: https://github.com/rezecib/Global-Positions\r\n\r\n[h1]Features[/h1]\r\n[list]\r\n[*] Show other players on the map (and hover over them to see who they are).\r\n[*] Show player indicators (the bubble things on the side of the screen) when they're far away.\r\n[*] Light signal fires that show up as indicators and on the map.\r\n[*] Ping the map by alt+clicking, creating markers that show other players points of interest. Note that muting a player hides their pings. Controller users can ping by clicking in the right stick.\r\n[*] Opt-out of sharing your location with a button on the scoreboard.\r\n[*] Share your map discovery with other players automatically\r\n[/list]\r\n\r\n[h1]Wilderness Mode[/h1]\r\nBy default, if you play in Wilderness Mode, it will ignore most of the config options. If you want to override that, set the Wilderness Mode Override to Enabled. Otherwise, it will hide player positions, but always show campfires.\r\n\r\n[h1]Configuration Options[/h1]\r\nOn the mods screen, with this mod selected, you can change a lot of the settings with the \"Configure\" button.\r\n[table]\r\n[tr][td][h1]Player Indicators[/h1][/td][td][list][*][b][u]Always[/u][/b] makes it so player indicators always show. [*][b][u]Scoreboard[/u][/b] (default) only shows them when you bring up the scoreboard. [*][b][u]Disabled[/u][/b] removes both the indicators and the map icons.[/list][/td][/tr]\r\n[tr][td][h1]Player Icons[/h1][/td][td][list][*][b][u]Show[/u][/b] (default) will show player's map icons on the map. [*][b][u]Hide[/u][/b] will hide them.[/list][/td][/tr]\r\n[tr][td][h1]Show Fires[/h1][/td][td][list][*][b][u]Always[/u][/b] means they always produce smoke signals when they're lit, so show up globally regardless of fuel used. [*][b][u]Charcoal[/u][/b] (default) means you have to fuel them with charcoal to produce smoke signals. [*][b][u]Disabled[/u][/b] turns off smoke signals entirely.[/list][/td][/tr]\r\n[tr][td][h1]Fire Icons[/h1][/td][td][list][*][b][u]Show[/u][/b] (default) shows fire icons on the map when they are smoking.[*][b][u]Hide[/u][/b] doesn't show them even if they're smoking[/list][/td][/tr]\r\n[tr][td][h1]Share Map[/h1][/td][td][list][*][b][u]Enabled[/u][/b] (default) makes it so that as other players explore the world, your map will update too. Note that this will only work if players or icons are set to be shown.[/list][/td][/tr]\r\n[tr][td][h1]Wilderness Override[/h1][/td][td][list][*][b][u]Disabled[/u][/b] (default) makes it so that in Wilderness Mode, [b]Show Fires[/b] is set to [b]Always[/b], and [b]Player Icons[/b] and [b]Player Indicators[/b] are [b]Disabled[/b]. This adds some risk of discovery to making fires, so cook with caution! [*][b][u]Enabled[/u][/b] makes it use whatever settings you have set yourself, rather than that Wilderness preset.[/list][/td][/tr]\r\n[tr][td][h1]Pings[/h1][/td][td][list][*][b][u]Enabled[/u][/b] (default) allows players to alt+click the map to ping areas for others to see. [*][b][u]Disabled[/u][/b] doesn't allow pings at all.[/list][/td][/tr]\r\n[/table]\r\n\r\nMost options are only used by the host; if you're joining, the only option that gets read is whether to show the player indicators at all times or only on the scoreboard.\r\n\r\n\r\nA huge thanks to Sarcen for figuring out his very clever system for getting player icons to show on the map globally for clients!",
+        "time_created": 1421708386,
+        "time_updated": 1776624358,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 2047,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 7999726,
+        "favorited": 237983,
+        "followers": 0,
+        "lifetime_subscriptions": 8880989,
+        "lifetime_favorited": 258462,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 7480566,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.7.6",
+            "display_name": "version:1.7.6"
+          }
+        ],
+        "vote_data": {
+          "score": 0.984603226184845,
+          "votes_up": 51109,
+          "votes_down": 750
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "5",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "345692228",
+        "creator": "76561197960431333",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "39308",
+        "preview_file_size": "41782",
+        "preview_url": "https://images.steamusercontent.com/ugc/558737771725946190/BB4435E4BF119821118C76F707E6D9809A0ADB74/",
+        "url": "",
+        "hcontent_file": "2673089859304292188",
+        "hcontent_preview": "558737771725946190",
+        "title": "Minimap HUD",
+        "file_description": "Adds a minimap to the HUD\r\n[LIST]\r\n[*]The minimap is fully functional; it can be zoomed using the zoom map binds (defaulted to the mousewheel) and can be panned by clicking and dragging.\r\n[*]The minimap can be collapsed by hovering over it and clicking the \"Close Minimap\" button\r\n[*]The zoom levels of the minimap and the map screen are both saved and are independent of eachother\r\n[/LIST]\r\n\r\n[h1]FAQ[/h1]\r\n\r\n[b]Q:[/b] Is it possible to change the shape of the minimap?\r\n[b]A:[/b] As far as I know, no, it is not possible.\r\n\r\n[b]Q:[/b] Is this mod compatible with X mod?\r\n[b]A:[/b] Yes, it should be compatible.\r\n\r\n[h1]External Resources[/h1]\r\n[list]\r\n[*][url=https://github.com/squeek502/Minimap-HUD/tree/together]Source code on Github[/url]\r\n[/list]",
+        "time_created": 1416731898,
+        "time_updated": 1657667208,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 2210,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 7888410,
+        "favorited": 214297,
+        "followers": 0,
+        "lifetime_subscriptions": 8708254,
+        "lifetime_favorited": 232965,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 7842665,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "version:1.0.9",
+            "display_name": "version:1.0.9"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.986823558807373,
+          "votes_up": 53199,
+          "votes_down": 661
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "362175979",
+        "creator": "76561198027077262",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "75803",
+        "preview_file_size": "20460",
+        "file_url": "https://cdn.steamusercontent.com/ugc/609478105747897135/74C86585AAD5C69A86BEBD175A05811DB4300DB0/",
+        "preview_url": "https://images.steamusercontent.com/ugc/686026610310398805/2B5C66398208A5976415CA0A308110E3731B2CC5/",
+        "url": "",
+        "hcontent_file": "609478105747897135",
+        "hcontent_preview": "686026610310398805",
+        "title": "Wormhole Marks [DST]",
+        "file_description": "Changes wormholes icons on mini map to colored icons.\r\nEvery pair of worlmholes get its color icons after you use one of the wormhole. \r\nCan support up to 22 pairs of wormholes.\r\n\r\nIf colors of the icons are not visible enough you can enable Draw over FoW in mod configuration option. \r\nThis will draw icons over fog of war on minimap, but will also make them visible for everyone on the server, even for people that didn't explore that area of the map.\r\n\r\n[url=http://steamcommunity.com/workshop/filedetails/?id=522041414]Try other mods[/url]\r\n\r\n",
+        "time_created": 1419519179,
+        "time_updated": 1454327710,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 477,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 3340857,
+        "favorited": 109455,
+        "followers": 0,
+        "lifetime_subscriptions": 3890927,
+        "lifetime_favorited": 122672,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 3336519,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.4.5",
+            "display_name": "version:1.4.5"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9770652055740356,
+          "votes_up": 18567,
+          "votes_down": 387
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "462469447",
+        "creator": "76561197969822695",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "34793",
+        "preview_file_size": "16005",
+        "file_url": "https://cdn.steamusercontent.com/ugc/511504063354293545/CE6BA8CA4EFCDC6CAADFB6959621582B42D1403F/",
+        "preview_url": "https://images.steamusercontent.com/ugc/511504063354247300/18849D7CC40925F634C22055084DEE7D2D9E8BEA/",
+        "url": "",
+        "hcontent_file": "511504063354293545",
+        "hcontent_preview": "511504063354247300",
+        "title": "Map Discovery Sharing",
+        "file_description": "Share map discovery with everyone!\r\n\r\nUsing this mod, everyone can see the area around everyone else on the map, allowing easier co-operation and information sharing.\r\n\r\nOnly host should need to subscribe to the mod, and everyone else will end up having it downloaded for them.\r\n\r\nNote: This is intended for use with friends only, and for best effect should be combined with a mod that shows their icons on the map.\r\n\r\nKnown issues:\r\n- Map areas revealed by other players is not saved, and vanishes the next time you join\r\n- Map areas revealed by other players doesn't show objects (trees, rocks, etc.), for now consider it a balance thing",
+        "time_created": 1434464036,
+        "time_updated": 1434465046,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 132,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 217965,
+        "favorited": 5069,
+        "followers": 0,
+        "lifetime_subscriptions": 284135,
+        "lifetime_favorited": 5971,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 324157,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "reign of giants compatible",
+            "display_name": "reign of giants compatible"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8670427203178406,
+          "votes_up": 1026,
+          "votes_down": 115
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1608191708",
+        "creator": "76561198032277590",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "32666",
+        "preview_file_size": "14163",
+        "file_url": "https://cdn.steamusercontent.com/ugc/777370105316213436/2EB45501F3A4B37FD42F0D929485BA86549C9747/",
+        "preview_url": "https://images.steamusercontent.com/ugc/945093088390687535/16C10259767EC23C53A12F9CD7A89278161EA355/",
+        "url": "",
+        "hcontent_file": "777370105316213436",
+        "hcontent_preview": "945093088390687535",
+        "title": "ActionQueue Reborn",
+        "file_description": "\r\nThis version of Action Queue has been completely rewritten with a focus on fixing all the underlying issues with the previous versions, optimizing and minimizing any performance impact, along with adding several new features. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=609051112]Action Queue DST[/url] ported by [url=https://steamcommunity.com/profiles/76561198161551641]xiaoXzzz[/url] has been a great addition to my collection of mods, and it was only after using it for more than a year, that I decided I wanted to undertake fixing the few issues it had.\r\n\r\nThe original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=263658444]Action Queue[/url] for Don't Starve by [url=https://steamcommunity.com/id/nsimplex]simplex[/url], which was created in 2014, is an amazing mod that still sees much use in its various versions.\r\n\r\n[h1]Usage[/h1]\r\n[list]\r\n[*]Shift + click on entities as you normally would to add them to the action queue\r\n[*]Shift + double-click on an entity to select all entities of the same prefab in a configurable range\r\n[*]Shift + drag-click a rectangle to select entities within a selection box\r\n[*]Shift + drag-rightclick with a deployable item in your cursor to place it within the bounded area\r\n[*]Shift + drag-rightclick with a tool equipped to focus the actions performed by that tool\r\n[*]Shift + rightclick with a mini-sign in your cursor to place it directly on a chest\r\n[*]Shift + click on a crafting recipe to continuously craft that item\r\n[*]Press C to craft the last completed recipe (includes structures)\r\n[*]Shift + C to continuously craft the last crafted item (doesn't include structures)\r\n[*]Press any movement, primary, secondary, attack, or action key to cancel (or pause) the queue\r\n[*]Press F3 to display a turf grid that may help you with aligning your placements\r\n[*]Press F4 to toggle auto-collect which is triggered by certain actions\r\n[*]Press F5 to toggle endless deploy mode, ignores selection height to deploy all available items\r\n[/list]\r\n[h1]Config Options[/h1]\r\n[list]\r\n[*]ActionQueue key with an extensive keylist\r\n[*]Always clear queue\r\n(if false, use action key(spacebar) to clear selected targets)\r\n[*]Selection color with 10 colors to choose from\r\n[*]Selection opacity\r\n[*]Double click speed\r\n[*]Double click range\r\n[*]Turf grid toggle key\r\n[*]Turf grid radius\r\n[*]Turf grid color\r\n[*]Option to always deploy on the wall / turf grid\r\n[*]Auto-collect toggle key\r\n[*]Enable auto-collect by default\r\n[*]Endless deploy toggle key\r\n[*]Enable endless deploy by default\r\n[*]Craft last recipe key\r\n[*]Tooth-trap spacing\r\n[/list]\r\n[h1]New Features[/h1]\r\n[list]\r\n[*]Ability to add entities to the selection queue during a deployment action\r\n[*]Auto-collect can be toggled in game as needed\r\n[*]Configurable deploy spacing for tooth traps\r\n[*]Caches your last completed recipe to be re-called with a single key press (default C)\r\n[*]Craft last recipe repeatedly with ActionQueue key + last recipe key (shift + C)\r\n[*]Draw added to the action list\r\n[*]Deploy now goes up and down rows instead of always returning to the horizontal start position\r\n[*]Deployment of items by dropping them on the wall grid\r\n[*]Eat added to the action list\r\n[*]Feedplayer added to the action list\r\n[*]Grabs the next stack of items of the same type from your inventory for active item actions\r\n[*]Heal player added to the action list\r\n[*]Minisigns are now easily placeable on chests\r\n[*]Pick action will never target evil flowers\r\n[*]Pickup action will never target any active trap\r\n[*]Pitchfork actions, digging and placing turf\r\n[*]Repeat crafting is faster (timer based)\r\n[*]Tool filtering, which was a feature of the original mod\r\n[*]Unwrap added to the action list\r\n[*]Waits for a broken tool to re-equip without canceling the queue\r\n[/list]\r\n[h1]Fixes[/h1]\r\n[list]\r\n[*]ActionQueue should never be canceled by using chat, map, or alt-tabbing anymore\r\n[*]ActionQueue now cancels properly if you are moving when you release a mouse button during a selection\r\n[*]Fixed incompatibility with Woodie beaver mode\r\n[*]Deployment is only triggered if the selection queue is empty\r\n[*]Give action now works properly with mushroom planters\r\n[*]Selection will not begin if your first click is on a HUD entity\r\n[*]Significantly improved how actions are applied to their targets\r\n[*]Switched to using control handlers for leftclick and rightclick, which means the mod follows rebinds in the games settings menu for primary and secondary keys\r\n[/list]\r\n\r\n[h1]Don't Starve version[/h1]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1930794331]ActionQueue Reborn[/url] by [url=https://steamcommunity.com/id/myxal]myxal[/url]\r\n\r\n[h1]Translations[/h1]\r\n\r\n此版本的 Action Queue 是完全重寫，著重在修復前版本所有的潛在問題，優化並最小化對於性能的影響，並添加幾個新功能。\r\n[url=https://steamcommunity.com/profiles/76561198161551641]xiaoXzzz[/url] 移轉 DST 版的 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=609051112]Action Queue[/url] 作為我的模組收藏，而在使用超過一年後，我決定要解決他的一些問題。\r\n\r\n2014 年，DST 上原始版本的 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=263658444]Action Queue[/url] 是 [url=https://steamcommunity.com/id/nsimplex]simplex[/url] 所寫，經過非常多的改版仍歷久不衰，是一個令人驚艷的模組。\r\n\r\n[url=https://pastebin.com/eCuge3rB]完整敘述翻譯 (繁體中文)[/url] [url=https://steamcommunity.com/id/cheewind]cheewind[/url]\r\n\r\nBig thanks to co.op for his help testing and suggesting new features\r\n",
+        "time_created": 1546185214,
+        "time_updated": 1580697973,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 723,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1834796,
+        "favorited": 64018,
+        "followers": 0,
+        "lifetime_subscriptions": 2222201,
+        "lifetime_favorited": 73647,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 2330219,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "version:1.050",
+            "display_name": "version:1.050"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9786259531974792,
+          "votes_up": 12770,
+          "votes_down": 230
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "20",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3638290455",
+        "creator": "76561198232157692",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "32920344",
+        "preview_file_size": "997332",
+        "preview_url": "https://images.steamusercontent.com/ugc/17337924515893931389/7D970058914AB727527059A4560957B526AC7727/",
+        "url": "",
+        "hcontent_file": "6282738179220043336",
+        "hcontent_preview": "17337924515893931389",
+        "title": "Too Many Items Rearranged",
+        "file_description": "[img]https://images.steamusercontent.com/ugc/15449758100811645097/C837117D3BA54C2352C76C5B2BF3ED407B0F29DB/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false[/img]\r\n\r\n[h1][b]Having issues? Just follow these steps:[/b][/h1]\r\n[olist]\r\n[*] Unsubscribe → Resubscribe\r\n[*] Test with only this mod enabled\r\n[*] Enable other mods one by one to find conflicts\r\n[*] Send me the error log\r\n[*] Rush me to fix it ASAP\r\n[*] If you like this mod, please give it a thumbs up!\r\n[/olist]\r\n\r\n[h1][b]What's new compared to the original TMI?[/b][/h1]\r\n[list]\r\n[*][h3][b]Feature Optimization:[/b][/h3]\r\n[list]\r\n[*] Rearranged item categorization structure\r\n[*] Added missing items\r\n[*] Added missing waypoint teleport points\r\n[*] Improved icon assets and Chinese translations\r\n[*] Refactored the interaction logic and UI\r\n[list] \r\n[*] Graphical interface for adding, deleting, editing and checking teleport points\r\n[*] One-click search for nearby entities\r\n[*] Optimized search and graphical history display\r\n[*] Graphical menu for item special functions, more special actions for items\r\n[*] Graphical player switching\r\n[*] Graphical sorting for circular buttons in the bottom-left corner\r\n[*] Graphical manage unlimited custom teleport with rename\r\n[*] Better settings panel; compatible with all kinds of custom fonts\r\n[/list]\r\n[*] Underlying code refactoring (does not affect usage)\r\n[/list]\r\n[*][h3][b]New version features & Debug functions:[/b][/h3]\r\n[list]\r\n[*] Spawn DPS training dummy with planar resistance (in Boss tab)\r\n[*] No cooldown mode for inventory items\r\n[*] Clear Naughtiness\r\n[*] Remove monkey curse / toggle monkey form\r\n[*] Adjust luck value\r\n[*] Clear Frozen / Drowsy / Burning / Ewecus snot states\r\n[*] Unlock Insights / reset skill tree\r\n[*] Unlock tech / re-lock tech\r\n[*] Water walking mode\r\n[*] Adjust WX-78's Charge, Woby's Hunger, Abigail's Health and affinity status, Wolfgang's overpower\r\n[*] Toggle Lunar Hail, adjust world wetness, switch endless day/night, trigger earthquake\r\n[*] Customize and display character movement speed\r\n[*] Salvage, Ignite(Smolder), Haunt, Force Pick Up nearby targets\r\n[*] Instant Kill, Hypnotize, Electrocute, Taunt, Chaos, Panic, Pacify, Rooted nearby targets\r\n[*] Create tamed Beefalo with custom attributes\r\n[*] Hire Reworked Clockworks\r\n[*] Force trigger one hound or worm attack\r\n[*] Force skip Hermit Crab tasks and post-celestial tasks \r\n[*] Displays Hermit Crab Decoration Scores\r\n[*] Remove or restore original world roads\r\n[*] Reclaim land & paint turfs freely\r\n[*] Create and link wormholes\r\n[*] Find and locate map origin point (0,0,0)\r\n[*] Teleport to any position on the minimap\r\n[*] Support dragging and relocating any entities on the map\r\n[*] Support browsing search history with mouse wheel or buttons\r\n[/list]\r\n[*][h3][b]Original Known Issues Fixed:[/b][/h3]\r\n[list]\r\n[*] Inability to weave or unravel skins\r\n[*] Search bar misalignment, persistent tooltips, and abnormal button descriptions\r\n[*] Incorrect or missing descriptions for some bottom-left circle buttons\r\n[*] Abnormal closing behavior in Settings and Help windows\r\n[*] Abnormal \"clear beard\" function\r\n[*] God Mode issues (wetness cannot reset to zero, abnormal effects while dead, unable to walk on water)\r\n[*] Abnormal player selection indicator updates under certain conditions\r\n[*] Ripen function not supporting new version crops\r\n[*] Crash issue when deleting Klei's reworked Bishop\r\n[*] Crash issue when clearing inventory with monkey curse\r\n[/list]\r\n[/list]\r\n\r\n[h1][b]Instructions[/b][/h1]\r\n[list]\r\n[url=https://steamcommunity.com/workshop/filedetails/discussion/3638290455/804594822448087506//] Look here! [/url]\r\n[/list]\r\n\r\n[h1][b]Notes[/b][/h1]\r\n[list]\r\n[*] This is a [b]Client-only[/b] mod. Non-admins cannot see the TMI menu.\r\n[*] The above functions can be used on other players (within the same world).\r\n[*] This mod can store world data (can be disabled in options).\r\n[*] Teleport data is saved independently for different worlds.\r\n[*] Controller/Gamepad is not supported.\r\n[/list]\r\n\r\n[h1][b]Warning[/b][/h1]\r\n[list]\r\n[*] In-game console commands can already achieve all these operations; this mod only provides a GUI.\r\n[*] This may reduce game fun; please use it rationally.\r\n[*] Some items in the \"Other\" tab may cause client or server crashes. Use with caution!\r\n[/list]\r\n\r\n[h1][b]How to become an Admin?[/b][/h1]\r\n[list]\r\n[*][h3][b]Using adminlist.txt:[/b][/h3]\r\n[olist]\r\n[*] Ensure your friend has joined the game. Go to: `Documents/Klei/Don't Starve Together/client_save` (local host) or the `cluster.ini` directory (dedicated server). Create `adminlist.txt` if it doesn't exist.\r\n[*] Have your friend send a chat message (Press Y or U).\r\n[*] Open `Documents/Klei/Don't Starve Together/client_chat_log.txt` and find your friend's ID (e.g., KU_********).\r\n[*] Copy the ID into `adminlist.txt` (one ID per line) and save.\r\n[*] Restart the server and have them rejoin.\r\n[*] Press [b]Tab[/b]; a star icon should appear under their character portrait.\r\n[/olist]\r\n\r\n[*] [h3][b]Using Steam Group Admin:[/b][/h3]\r\n[olist]\r\n[*] [url=https://forums.kleientertainment.com/forums/topic/55994-server-admin-associate-your-server-with-a-steam-group/] Associate your server with a Steam Group[/url]\r\n[*] Set steam_group_admins = true\r\n[*] If you promote someone to admin in the Steam Group (click the star twice to make it gold), they will gain server admin rights.\r\n[*] Players with gold stars will be admins after a server restart.\r\n[/olist]\r\n[/list]\r\n\r\n[h1][b]Others[/b][/h1]\r\n[list]\r\n[*] Translations are very welcome! Feel free to contact me regarding translation issues.\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=257781035] DS TMI [/url]\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=579513934] DS TMI+ [/url]\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=551338671] DST TMI [/url]\r\n[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1365141672] DST TMI Plus [/url]\r\n[*] [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2896126381] DST TMI Revisited [/url] (Developed based on this mod) [/b]\r\n[*] [b][url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3638290455] Change Logs [/url][/b]\r\n[/list]\r\n\r\n[h1][b]Credits[/b][/h1]\r\n[list]\r\n[*]Code: C.J.B.\r\n[*]Items & Bug Fixes: GaRAnTuLA\r\n[*]DST Version: Skull\r\n[*]Bug Fixes: TheMightyPikachu, Electroely\r\n[*]UI & Code Optimization: Tendy\r\n[*]Art Design & Updates: 乐十画 (Le Shi Hua)\r\n[*]Teleports, Code Improvements & Fixes: Alyssa\r\n[*]Code Optimization & Chinese Translation: 呼吸 (Hu Xi)\r\n[*]All contributors not named in modinfo.lua\r\n[/list]",
+        "time_created": 1767452784,
+        "time_updated": 1778999571,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 339,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 70564,
+        "favorited": 2210,
+        "followers": 0,
+        "lifetime_subscriptions": 75631,
+        "lifetime_favorited": 2350,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 155064,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.5.5",
+            "display_name": "version:1.5.5"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          }
+        ],
+        "vote_data": {
+          "score": 0.945472240447998,
+          "votes_up": 921,
+          "votes_down": 6
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "219",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3138571948",
+        "creator": "76561198398453893",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "574303",
+        "preview_file_size": "131276",
+        "preview_url": "https://images.steamusercontent.com/ugc/2449476399261245756/D655573C3A94EB9CA8A1847488A96DE4AC5E36FA/",
+        "url": "",
+        "hcontent_file": "7222028878482049812",
+        "hcontent_preview": "2449476399261245756",
+        "title": "Global Positions (CompleteSync)",
+        "file_description": "[h2] Main feature [/h2]\r\nJust like the original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=378160973]Global Positioning[/url], it allows players to share exploration maps and mark signals on the map. However when using original mod, the maps between players are not completely synchronized, for example:\r\n1. The player just joined the game, and the other players on the map have explored many places, but the newly added player cannot see the places explored by other players before he joined.\r\n2. Player A is on the ground, and player B goes to the cave to explore. When player A enters the cave, he cannot see the place explored by player B before he enters the cave.\r\n3. The player read the message in the bottle of the Crabby Hermit, and other players will not update the map like player A.\r\nThis mod solves these problems and can achieve complete synchronization. See the videos for a demonstration.\r\n\r\n[h2]Bugs fixed：[/h2]\r\n1. Fix the far away point of interest bug in the original mod.\r\n[img=https://steamuserimages-a.akamaihd.net/ugc/2425844467144089786/684C53427208270FBCB431A1E0ED9042045348A4/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false][/img]\r\n2. The bug in the original mod that caused the signal marker to possibly deviate from the mouse position has been fixed. (In the original mod, if you dragged the map to its extreme position and continued dragging, the map would no longer move with the mouse. After that, the signal marker would deviate from the mouse position.)\r\n3. Fixed the longstanding issue of icon misalignment in modules related to global positioning. Sometimes, the icons on the map would misalign, resulting in \"mirages\" on the map. For example, users might find that the building icons of their base are copied to another location on the map, or they may encounter strange icons outside the map boundaries. In fact, I believe this is a bug within the game itself, and the Global Position-type mods simply make it more likely to trigger ([url=https://forums.kleientertainment.com/klei-bug-tracker/dont-starve-together/a-long-standing-bug-in-the-maprevealer-which-causes-map-icons-to-be-misaligned-r46911/]Bug report[/url]).\r\n(Update: Klei has claimed to have fixed the bug I reported. It's very likely that this issue has also been resolved in other global positioning mods.)\r\n[img=https://steamuserimages-a.akamaihd.net/ugc/2425844467144080073/2844A976983D26F443E1087CF68152156035589F/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false][/img]\r\n[img=https://steamuserimages-a.akamaihd.net/ugc/43440899924063808/7F394F1C087EB999B30E6A27C28C488B30DFB27F/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false][/img]\r\n4. Fixed the issue where the Beefalo icons would leave ghosting effects when their owner moving too quickly. In fact, this is a bug in the game itself, which I reported on the forum ([url=https://forums.kleientertainment.com/klei-bug-tracker/dont-starve-together/domesticated-beefalo-still-produce-map-icon-trails-r46296/?tab=comments#comment-66665]link[/url]). This mod will display the beefalo_bell icon instead of the beefalo. You can disable this option in the settings under \"Remove Ghost Icons\".\r\n\r\n[h2]Other functions:[/h2]\r\n1. Now Walter can deliver items to teammates without using a compass. This feature can also be disabled in the options. Thanks to @Kerr for providing the coding idea.\r\n2. Map areas revealed by the Zaptrocuter are now visible to all players, alongside a new option that allows the flying Portable Storage Unit's icon to be seen by everyone.\r\n3. Added acceleration options to help reduce server CPU usage. All of these options are disabled by default. Among them, “Quick Map share” is expected to be quite effective and can be enabled if needed. Many thanks to @暮色黯然 and hisfriends for their enthusiastic testing.\r\nThere are also options for “Disable fogrevealer” and “Remove maprevealer tag,” which might help reduce CPU consumption, though I’m not certain. These two options can cause other side effects, so it is recommended to leave them disabled. Enabling “Disable fogrevealer” will remove the circular bright area around teammates' icons, and will also prevent Wortox from jumping directly onto a teammate’s boat. Enabling “Remove maprevealer tag” will cause map icon updates around players to no longer synchronize. For example, if Player A digs up a tuft of grass, this option may cause Player B’s map to still show the grass icon. If you're interested, feel free to help test whether these two options provide a significant performance improvement—your feedback would be greatly appreciated.\r\n\r\n\r\n======================\r\n\r\nNote:\r\n1. The mod is implemented based on the mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=378160973]Global Positions[/url]. In the previous version, I also used the codes from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2902364746]Global Positions -Remapped[/url] to sync the map. Please subscribe to them as a gesture of support (of course, the normal functioning of my mod doesn't rely on other mods).\r\n2. If there are bugs or other modification suggestions, please give feedback. I sincerely apologize for the recent bugs that have caused map loss. If you still lost the explored map in the newest version, please leave a comment.\r\n3. Known issue: If you switch from the original global positioning to this mod in an old save file, and immediately change characters or save the game, it can cause the loss of map exploration progress in caves. A temporary workaround is to visit the caves once before switching characters or save the game for the first time. I'm still trying to fix this problem. For now, it's best to use this mod in a new save file. Additionally, disabling this mod mid-game may also lead to map loss. If you need to disable this mod for some purposes like resolving mod conflicts, please make sure to back up your save file or record the maps of the cave and the forest into a map scroll. Thank @󰀐超级麦旋风 and @Halo Lemon for testing.\r\n4. You may check the codes in [url=https://github.com/hellohawaii2/Global-Position-CompleteSync]Github[/url]",
+        "time_created": 1705166700,
+        "time_updated": 1777616357,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 236,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 343112,
+        "favorited": 10247,
+        "followers": 0,
+        "lifetime_subscriptions": 378052,
+        "lifetime_favorited": 10954,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 358802,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:2.4.6",
+            "display_name": "version:2.4.6"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9469255805015564,
+          "votes_up": 1413,
+          "votes_down": 32
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "41",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2849308125",
+        "creator": "76561198428738345",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "965187",
+        "preview_file_size": "62817",
+        "preview_url": "https://images.steamusercontent.com/ugc/1767119556065235285/90BB7DFF70AAB20847C756924B1AD6073DAFB407/",
+        "url": "",
+        "hcontent_file": "4350915573145431842",
+        "hcontent_preview": "1767119556065235285",
+        "title": "Auto Walking",
+        "file_description": "[h1] What does this mod do [/h1]\r\nThis mod add auto-pathing feature when you right-clicking on map.\r\n[h1] How To Use [/h1]\r\n1.Trigger Autowalk: RightClick a point on the Map/[url=https://steamcommunity.com/sharedfiles/filedetails/?id=345692228]Minimap HUD[/url]/[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1226663453]Smallmap HUD[/url] to make your character automatically move to the target location(press Y to trigger it if use controller)\r\n2.Trigger Original MapAction: [b] DoubleRightClick Or Ctrl/Alt/Shift + RightClick[/b] a point on the Map to do the original map action. eg: [b] soulhop [/b] or other mapaction when you pick a mod character\r\n\r\n[h1]Advanced Options[/h1]\r\n[list]\r\n[*][b] Bypass Obstacles [/b]: It helps to walk around the more obstacles when autowalking(eg: lureplant fossile statue pond antlion_sinkhole starfish and more).\r\n\r\n[*][b] Pathfinder [/b]: A* -- Can follow the road and More likely to succeed in long-distance pathfinding, but could drop the FPS for few seconds if path is complex.\r\nKlei's -- use in-game pathfinder, it's in C side so surely more efficient but would give up the search if exceeds limit time.\r\n\r\n[*][b] Append the Path [/b]: Append the path with the previous target when we already have a path and want to continue to travel by marking another point, the keybind is set in mod config.\r\n\r\n[*][b] Auto Speedup Game in walking [/b]: Only works in solo game. Auto boost the game speed during autowalking, it helps if you want a quick solo game. \r\n\r\nHere're the other mods i known which use their Lua-side pathfinding algorithm to achieve long distance travel:\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=810372558] Trailblazer [/url]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2678400698] WX Automation [/url]",
+        "time_created": 1660547861,
+        "time_updated": 1778077348,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 299,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 306073,
+        "favorited": 10773,
+        "followers": 0,
+        "lifetime_subscriptions": 338893,
+        "lifetime_favorited": 11666,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 322147,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:3.8.1",
+            "display_name": "version:3.8.1"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9621325135231018,
+          "votes_up": 1881,
+          "votes_down": 26
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "80",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1848571133",
+        "creator": "76561198207993621",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "150382",
+        "preview_file_size": "29561",
+        "preview_url": "https://images.steamusercontent.com/ugc/784111175450469311/3757D9CBC318169DF6684EBDBE3309AFB0F8CC67/",
+        "url": "",
+        "hcontent_file": "5093932229168990903",
+        "hcontent_preview": "784111175450469311",
+        "title": "Simple Map Editor Fix",
+        "file_description": "[h1]About fix[/h1]\r\nThis mod fix that closes the vulnerabilities that this mod uses https://steamcommunity.com/sharedfiles/filedetails/?id=1848428584 .\r\nOriginal mod: https://steamcommunity.com/sharedfiles/filedetails/?id=828994749 .\r\nAlso this fix adds new tiles.\r\n\r\n[h1]Features[/h1]\r\n\r\n[b]Turf Editor:[/b]\r\nUse the Numpad keys to place turfs. Turfs are placed under your mouse pointer.\r\n\r\nNumpad 1 = Deciduous Turf\r\nNumpad 2 = Desert Turf\r\nNumpad 3 = Marsh Turf\r\nNumpad 4 = Savanna Turf\r\nNumpad 5 = Grass Turf\r\nNumpad 6 = Forest Turf\r\nNumpad 7 = Old ocean\r\nNumpad 8 = Barren\r\nNumpad 9 = Rocky Turf\r\nNumpad 0 + Numpad 1 = Mud Turf\r\nNumpad 0 + Numpad 2 = Guano Turf\r\nNumpad 0 + Numpad 3 = Slimey Turf\r\nNumpad 0 + Numpad 4 = Cobblestones\r\nNumpad 0 + Numpad 5 = Scaled Flooring\r\nNumpad 0 + Numpad 6 = Cave Rock Turf\r\nNumpad 0 + Numpad 7 = Wooden Flooring\r\nNumpad 0 + Numpad 8 = Carpeted Flooring\r\nNumpad 0 + Numpad 9 = Checkerboard Flooring\r\nNumpad Plus + Numpad 1 = Blue Fungal Turf\r\nNumpad Plus + Numpad 2 = Red Fungal Turf\r\nNumpad Plus + Numpad 3 = Green Fungal Turf\r\nNumpad Plus + Numpad 4 = Dark Runic Bricks\r\nNumpad Plus + Numpad 5 = Dark Runic Tiles\r\nNumpad Plus + Numpad 6 = Dark Runic Trim\r\nNumpad Plus + Numpad 7 = Runic Bricks\r\nNumpad Plus + Numpad 8 = Runic Tiles\r\nNumpad Plus + Numpad 9 = Runic Trim\r\nLeft + Numpad 1 = Quagmire Peatforest\r\nLeft + Numpad 2 = Quagmire Parkfield\r\nLeft + Numpad 3 = Quagmire Parkstone\r\nLeft + Numpad 4 = Quagmire Gateway\r\nLeft + Numpad 5 = Quagmire Soil\r\nLeft + Numpad 6 = Quagmire Citystone\r\nLeft + Numpad 7 = Pebble Beach\r\nLeft + Numpad 8 = Meteor\r\n(Left + Numpad 9,Right + Numpad (1-9)) = New ocean types\r\n\r\n[b]Saving[/b]:\r\nPress F1 to save the current world. This saves the world manually, the game automatically saves every dawn and when you exit to menu.\r\n\r\n[b]Restarting:[/b]\r\nPress F2 to save and restart the server. This also restarts any server or client mod you may have, so this is useful for testing mods.\r\n\r\n[b]Rollback:[/b]\r\nPress F3 to load the last save. Be warned that this reverts any unsaved changes made on the world after the last save.\r\n\r\n[b]Change Character:[/b]\r\nPress F4 to go to the character selection screen. Be warned that this deletes all items in your inventory, resets your prototyped recipes, and unreveals the minimap.\r\n\r\n[b]Cut, Copy, and Paste:[/b]\r\nPress Ctrl + C to copy the entity under your mouse pointer. If no entity is under your mouse pointer, then it copies the turf under your mouse pointer.\r\nPress Ctrl + X to copy and delete the object under your mouse pointer. You cannot cut turfs.\r\nPress Ctrl + V to paste the entity or turf that you have most recently copied or cut. It is pasted at your mouse pointer.\r\n\r\n[b]Delete Key:[/b]\r\nPress Numpad Del to delete the entity under your mouse pointer.\r\nYou can hold it down then hover over entities if you want to delete large quantities of entities in a short amount of time.\r\n\r\n[b]Creative Mode:[/b]\r\nPress Numpad Slash (Numpad /) to toggle Creative Mode on or off. Creative Mode enables god mode and free infinite crafting.\r\n\r\n[b]Telepoofer:[/b]\r\nPress Numpad Asterisk (Numpad *) to telepoof your character to your mouse pointer.\r\nYou can hold it down then move your mouse pointer around the screen to travel long distances within a short amount of time. You travel slower the closer your pointer is to the center of the screen, and you travel faster to closer it is to the edges of the screen.\r\n\r\n[b]Reveal Minimap:[/b]\r\nPress Numpad Hyphen (Numpad -) to reveal the entire minimap, completely eliminating the fog of war.\r\n\r\n[b]Lightning Strike and Zoom Out:[/b]\r\nPress Numpad 0 + Numpad * to cause a lightning strike at your mouse pointer.\r\nPress Numpad 0 + Numpad - to zoom out your camera.\r\n\r\n[b]Alternative Hotkeys:[/b]\r\nGo to the mod's configuration settings then set \"Use Numpad?\" to \"No\". This allows you to use the mod even if you don't have a numpad on your keyboard.\r\nTurf Editor: Press J and K to choose. Press L place turf.\r\nDelete Hotkey: Delete\r\nCreative Mode Hotkey: F6\r\nTelepoof Hotkey: F7\r\nReveal Map Hotkey: F8\r\n\r\n[h2]New controls:[/h2]\r\nAdded an alternative control for tile placement, it allows you to use ALL available tiles in the game, however due to its flexibility and my laziness, the tile names will not look so fancy. You can enable it in the mod settings, it is available with and without a numpad.\r\n\r\n[b]With numpad:[/b]\r\nUse the left and right arrows to switch pages, when switching pages, their content will be displayed, each tile on the page corresponds to a number on the numpad.\r\n\r\n[b]Without numpad:[/b]\r\nNothing fundamentally changed for users. Do the names of the tiles look less fancy.\r\n",
+        "time_created": 1567095509,
+        "time_updated": 1667603903,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 273,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 51591,
+        "favorited": 2161,
+        "followers": 0,
+        "lifetime_subscriptions": 74165,
+        "lifetime_favorited": 2585,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 86237,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:1.26",
+            "display_name": "version:1.26"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8847262263298035,
+          "votes_up": 564,
+          "votes_down": 30
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "10",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3255665500",
+        "creator": "76561198391117610",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "4400856",
+        "preview_file_size": "239859",
+        "preview_url": "https://images.steamusercontent.com/ugc/2485502666703710161/C2605D3C948164A46A606F2C444EEDF470310E3B/",
+        "url": "",
+        "hcontent_file": "1650429762877791073",
+        "hcontent_preview": "2485502666703710161",
+        "title": "Better Beefalo ！",
+        "file_description": "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3367240659][img]https://i.postimg.cc/dtTRrQKp/walter.png[/img][/url]\r\n[h1]沃尔特，无畏少年[/h1]\r\n[h1]重做已发布！[/h1]\r\n[h1]Walter Rework！[/h1]\r\n\r\n\r\n\r\n[h1]Good news for all players who like to tame Beefalo !\r\nImprovements beefalo to some cattle-related matters to make them more suitable for the current environment of DST [/h1]\r\n\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3255665500][b]If you think it’s good, give the MOD a like. The more likes the MOD has, the more people will see it. In the future, the server you play on will also be able to enable this MOD ! ! ![/b][/url]\r\n\r\n[img]https://i.postimg.cc/s2GQLxGw/Steam-2024-5-27-21-33-33.png[/img]\r\n\r\n\r\n[hr][/hr]\r\n[i]\r\n[b]\r\n\r\n1.Now there is no need to get off the cow. The character can feed the cow by placing food directly in front of the cow while riding the cow.\r\n\r\n[img]https://i.postimg.cc/d1k8YnkP/weiniu.gif[/img]\r\n \r\n \r\n2.A cow with a tameness level > 60% will not really die when it receives fatal damage, but will enter a state of near-death. The cow can be brought back from the gate of hell by using a cardiac shot within 2 days.(It will only be revived with 1 HP, so it cannot be put into battle immediately after resurrection.)\r\n\r\n[img]https://i.postimg.cc/0jHRwk5J/jiuniu.gif[/img]\r\n \r\n\r\n3.The war saddle and wig saddle, two combat-specific saddles, can now prevent characters from being knocked away when riding on cattle.\r\n\r\n[img]https://i.postimg.cc/cCPkWr4T/fangjifei.gif[/img]\r\n\r\n\r\n3.25 The tamed Riding Beefalo can now [jump] over cliffs and coasts\r\n\r\n[img]https://i.postimg.cc/VLB5sNmR/feidu33.gif[/img]\r\n\r\n\r\n3.5 The tamed cow can now use its heavy body to help players plow the land! However, each plowing will consume the cow's satiety.\r\n\r\n[img]https://i.postimg.cc/y8vdypBh/gengtian.gif[/img]\r\n\r\n \r\n4.Newly added beef food: plane mud pie\r\n  After eating the cow, you will lose 240 points of life, but you can gain short-lived plane attributes within 4 minutes, namely plane damage, plane defense and plane entity resistance.\r\n\r\n[img]https://i.postimg.cc/K81LLJfK/Don-t-Starve-Together-2024-5-27-21-14-50.png[/img]\r\n \r\n\r\n4.5 When the orange staff is in the inventory or in hand, riding and dismounting a bull can be done instantly!\r\n\r\n[img]https://i.postimg.cc/wM8TjScz/shunjianshang.gif[/img]\r\n\r\n\r\n4.75 You can now interact with the huge crops on the cow’s back and the crop scale while riding the cow\r\n\r\n[img]https://i.postimg.cc/DzQ62YJX/shc.gif[/img]\r\n\r\n\r\n5.The extra damage of the war saddle is increased from 16 to 18, and the cow's attack back is automatically canceled\r\n   The God of War Saddle has been slightly redesigned. Now it will not increase any damage or movement speed for the cow, but the damage reduction ability has been increased to 60%. It is no longer an exclusive production but a public item.\r\n\r\n\r\n6.Butterfly Saddle and war Saddle recipes are now less disgusting\r\n\r\n\r\n6.5 It is now possible to jump through wormholes while riding a bull!\r\n\r\n[img]https://i.postimg.cc/8kMz0zNz/chongdong.gif[/img]\r\n\r\n\r\n6.75 You can now open containers, pack items, dry items, use a cooking pot, use a birdcage, and investigate animal tracks while riding a cow!\r\n\r\n[img]https://i.postimg.cc/Qd0Pbwtq/zuofan.gif[/img]\r\n\r\n\r\n7.The durability of the salt licker has been increased, and the durability can be directly restored using salt items.\r\n\r\n[img]https://i.postimg.cc/Y2xyyCH6/yanxiufu.gif[/img]\r\n \r\n\r\n8.New recipes in the refining column: ox hair*2, sewing kit*0, spider*0, make 3 spider webs at a time\r\n\r\n[img]https://i.postimg.cc/kX4w1NwC/Don-t-Starve-Together-2024-5-27-21-14-59.png[/img]\r\n \r\n\r\n9.When wearing a cow hat, the character can directly go to the cow regardless of the cow's docility (War Bull: You can just give me your ID card)\r\n\r\n\r\n10.Pivolo Beef Snacks now make 2 at a time\r\n\r\n\r\n11.Steamed twigs must now be cooked with exactly 4 twigs to prevent any strange thing from being able to make steamed twigs.\r\n\r\n\r\n12.An advanced protection tag has been added to the Cow. Now the cow will not be affected by AOEs such as Thorn Armor's counter-injury. Attacking the cow must be a forced attack to prevent accidental injuries.\r\n\r\n\r\n13. Wig's superb fighting skills allow her to use weapons normally even when riding (normal cow attacks when unarmed)\r\n  并且现在薇戈的攻击吸血效果也会为骑着的牛牛回血\r\n  \r\n[img]https://i.postimg.cc/qqT4T24M/wigniuwu.gif[/img]\r\n\r\n\r\n14. Beeswax can now be used to plug a cow's anus to prevent it from pooping. Cows that have been treated with beeswax will release all of their accumulated poop when they die.\r\n\r\n\r\n15. It is now possible to use torches/lighters to attack mobs and light items while riding a bull\r\n\r\n[img]https://i.postimg.cc/mkjfWqm8/dahuo.gif[/img]\r\n\r\n\r\n16. Willow can now use her lighter to absorb flames while riding a bull\r\n\r\n[img]https://i.postimg.cc/kXj3j065/xihuo.gif[/img]\r\n\r\n\r\n17.Wortox can perform soul jumps/map soul jumps with his mount while cycling (but doing so will consume 7.5 points of reason)\r\n   Souls can heal rideable creatures with a tame rate of>1%. One soul can restore 80 health points, but the more souls there are, the worse the healing effect\r\n\r\n[img]https://i.postimg.cc/Fs6WLH3q/qiniulh.gif[/img]\r\n[img]https://i.postimg.cc/sX8QJqmV/lhlhz.gif[/img]\r\nNote: The priority of Soul Jump is higher than that of Jump in Bulls. You can switch Soul Jump to Jump by holding down the Force Check button\r\n\r\n\r\n18.Allows the player to add fuel to structures such as fires and snowball launchers while riding\r\n\r\n[img]https://i.imgur.com/tzjfX6L.gif[/img]\r\n\r\n\r\n19.Allows the player to collect plant meat while riding\r\n\r\n[img]https://i.imgur.com/KRviV4E.gif[/img]\r\n\r\n\r\n20.Wendy can assist and abandon little ghosts on beef\r\n\r\n\r\n21.It is now possible to feed your pet while riding\r\n\r\n\r\n22. The character can raise, lower, and repair the ocean fishing device while riding\r\n\r\n[img]https://i.imgur.com/C8KEMnf.gif[/img]\r\n\r\n\r\n23. Warly can place and retrieve the portable cooking pot while riding\r\n\r\n[img]https://i.imgur.com/1JOqshc.gif[/img]\r\nPS: By the way, the pot's retrieval effect has been optimized. It will now go directly into Warly's inventory instead of falling on the ground\r\n\r\n\r\n[/b]\r\n[/i]\r\n\r\n\r\n[hr][/hr]\r\nWelcome to subscribe to my other character adjustment MODs，[b]Especially Wormwood's complete redo！[/b]\r\n\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3202818257][img]https://i.postimg.cc/C1vr1Gs4/wormwood2.png[/img][/url]\r\n",
+        "time_created": 1716824058,
+        "time_updated": 1777718729,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 490,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 79743,
+        "favorited": 2824,
+        "followers": 0,
+        "lifetime_subscriptions": 95297,
+        "lifetime_favorited": 3140,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 140153,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:2.83",
+            "display_name": "version:2.83"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9499715566635132,
+          "votes_up": 1621,
+          "votes_down": 38
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "38",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3496094889",
+        "creator": "76561198248378936",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1484928",
+        "preview_file_size": "37394",
+        "preview_url": "https://images.steamusercontent.com/ugc/9633301170485771056/A7292C3B9E76873E6845288A5A7534BB39B23737/",
+        "url": "",
+        "hcontent_file": "1397881997266517057",
+        "hcontent_preview": "9633301170485771056",
+        "title": "Map Icons Tweak",
+        "file_description": "[h1]Map Icons Tweak[/h1]\r\n[hr][/hr]\r\n\r\nA survivor's map is their memory. When that memory fails, so does the survivor.\r\n\r\nThis mod makes key points of interest distinct, sharp, and easy to find. It cuts through the map's clutter so you can waste less time remembering and more time... well, surviving. The icons are clearer, but still look like they belong in this grim, unforgiving world.\r\n\r\n[b]This is a SERVER-SIDE MOD.[/b]\r\nIt must be enabled on the server. All survivors will share the same, clearer vision of their world (and its many dangers).\r\n\r\n[h2]What It Does[/h2]\r\n[list]\r\n    [*] Replaces key map icons for bosses, altars, and other critical structures with higher-visibility versions.\r\n    [*] [b]Fully Configurable:[/b] You decide what’s important. Toggle each category on or off in the mod settings.\r\n    [*] Icons automatically update when an object is repaired, rebuilt, or changes its state.\r\n    [*] Ends the \"which suspicious-looking rock are you talking about?\" debate. Now, everyone's map is on the same, clear page.\r\n[/list]\r\n\r\n[hr][/hr]\r\n\r\n[h2]Supported Objects & Categories[/h2]\r\nEach category below can be toggled in your mod settings.\r\n\r\n[table]\r\n    [tr]\r\n        [th]Category[/th]\r\n        [th]Target Objects[/th]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Treasure Icons[/b][/td]\r\n        [td]Buried Treasure, Salvage Points, Junk Pile[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Gemmed Moonrocks[/b][/td]\r\n        [td]All 6 Gemmed Moonrocks (Red, Blue, Purple, etc.)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Suspicious Marble[/b][/td]\r\n        [td]Marble Heads & Bodies (Rook, Knight, Bishop)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Celestial Orb[/b][/td]\r\n        [td]Suspicious Boulder, Celestial Orb[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Lunar Altar Cycle[/b][/td]\r\n        [td]Lunar Altar (All 12 crafting stages)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Ancient Archive[/b][/td]\r\n        [td]Archive Dispensaries, Archive Cookpot[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Atrium Gate[/b][/td]\r\n        [td]Ancient Gateway (Inactive, Active, Fixed)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Atrium Key[/b][/td]\r\n        [td]Atrium Key[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Moonbase Altar[/b][/td]\r\n        [td]Moonbase Altar (Surface)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Toadstool[/b][/td]\r\n        [td]Toadstool Caps (Normal & Misery)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Terrarium[/b][/td]\r\n        [td]Terrarium, Terrarium Chest[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Living Tree[/b][/td]\r\n        [td]Living Tree, Living Tree Stump[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Glommer Statue[/b][/td]\r\n        [td]Glommer's Statue[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Shadow & Ancient[/b][/td]\r\n        [td]Shadow Crafting Table, Ancient Altar (Broken & Whole)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Touchstone[/b][/td]\r\n        [td]Touchstone (Resurrection Stone)[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Chester & Hutch[/b][/td]\r\n        [td]Chester's Eyebone, Hutch's Fishbowl[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Bosses / Camps[/b][/td]\r\n        [td]Antlion, Bee Queen Hive, Crab King, Walrus Camp[/td]\r\n    [/tr]\r\n    [tr]\r\n        [td][b]Rare Items / Points[/b][/td]\r\n        [td]Daywalker Pillar, Pearl's Pearl, Loot Stash, Rift Junk[/td]\r\n    [/tr]\r\n[/table]\r\n\r\n[hr][/hr]\r\n\r\n[h2]How to Configure[/h2]\r\n[olist]\r\n    [*] From the main menu, open [b]Host Game[/b].\r\n    [*] Select your world and go to the [b]Mods[/b] tab.\r\n    [*] Find “[b]Map Icons Tweak[/b]” and press [b]Configure Mod[/b].\r\n    [*] Toggle each category on or off depending on what you need to see at a glance.\r\n[/olist]\r\n\r\n[hr][/hr]\r\n\r\nIn the Constant, clarity is survival.\r\nIf a clearer icon helps you find loot (or spot danger) one second faster, that's one more second you're not a ghost.\r\n\r\n\r\n[h2]Special Thanks[/h2]\r\n[list]\r\n[*][url=https://steamcommunity.com/profiles/76561198115639228/]Malice in Mind[/url] - Thank you for helping with testing and providing detailed feedback.\r\n[/list]",
+        "time_created": 1749481868,
+        "time_updated": 1763589293,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 29,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 3159,
+        "favorited": 101,
+        "followers": 0,
+        "lifetime_subscriptions": 3627,
+        "lifetime_favorited": 114,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 7113,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.0.32",
+            "display_name": "version:1.0.32"
+          }
+        ],
+        "vote_data": {
+          "score": 0.6577181220054626,
+          "votes_up": 48,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "68",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}

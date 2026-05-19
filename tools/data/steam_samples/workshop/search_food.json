@@ -1,0 +1,1483 @@
+{
+  "response": {
+    "total": 314,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "3679839929",
+        "creator": "76561197982211173",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "16206",
+        "preview_file_size": "174613",
+        "preview_url": "https://images.steamusercontent.com/ugc/11658531405794233108/ACF14BC0F69095F0FA7DE49D320701D2F771382D/",
+        "url": "",
+        "hcontent_file": "3182497280997844032",
+        "hcontent_preview": "11658531405794233108",
+        "title": "Crock Pot Rebalance",
+        "file_description": "Rebalances Crock Pot food values to make recipes more consistent and fair.\n\nMain goals:\n- Strong recipes are toned down if they are disproportionately powerful\n- Weak recipes are improved to make them more worthwhile\n- Food stats better reflect the character of the dish:\n  - more meat-focused dishes give more Hunger\n  - more vegetable-focused dishes give more Health\n  - sweeter or more luxurious dishes give more Sanity\n\nThis mod changes the final stats of prepared food prefabs.\nCompatible with recipe-preview mods such as Smart Crock Pot.\n",
+        "time_created": 1772817192,
+        "time_updated": 1773508666,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 1,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 16,
+        "favorited": 2,
+        "followers": 0,
+        "lifetime_subscriptions": 21,
+        "lifetime_favorited": 2,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 269,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.4",
+            "display_name": "version:1.4"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5,
+          "votes_up": 1,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "8",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2755969872",
+        "creator": "76561198838012745",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "127106",
+        "preview_file_size": "10329",
+        "preview_url": "https://images.steamusercontent.com/ugc/1820020899643274573/4CB6C48E50CFF779E9901DEA68097FBE15FCACD5/",
+        "url": "",
+        "hcontent_file": "4208859001974197806",
+        "hcontent_preview": "1820020899643274573",
+        "title": "Crock Pot Food Template Mod",
+        "file_description": "A template for food items cooked with the crock pot. Use as you please.\n\nItems should now appear when placed on the ground, but It'll still be floating to the bottom left of the Crock Pot, I can't figure that out :/\n\nthanks for SirenSong for helping me fix some things.\n\nLink to SirenSong's Cornbread Mod, which used this template: https://steamcommunity.com/sharedfiles/filedetails/?id=2871333263",
+        "time_created": 1645080011,
+        "time_updated": 1669054500,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 12,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 98,
+        "favorited": 4,
+        "followers": 0,
+        "lifetime_subscriptions": 158,
+        "lifetime_favorited": 6,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1099,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "version:1.8",
+            "display_name": "version:1.8"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5098039507865906,
+          "votes_up": 2,
+          "votes_down": 0
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "3",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3465643540",
+        "creator": "76561198326634362",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "267367",
+        "preview_file_size": "281391",
+        "preview_url": "https://images.steamusercontent.com/ugc/4048985698511053/FCCE349602D86065E6A74B7C6DCF56E89D7ABA8A/",
+        "url": "",
+        "hcontent_file": "7221206167880484838",
+        "hcontent_preview": "4048985698511053",
+        "title": "CrockPot Reminder",
+        "file_description": "Reminds crockpot when about to be ready.\n\n1.5.0\n\n- Added seasoning pot and portable crockpot support.\n- Added extra notification.",
+        "time_created": 1744919391,
+        "time_updated": 1745016095,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 3,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 106,
+        "favorited": 14,
+        "followers": 0,
+        "lifetime_subscriptions": 149,
+        "lifetime_favorited": 15,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 719,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.5.0",
+            "display_name": "version:1.5.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5142857432365417,
+          "votes_up": 4,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "365119238",
+        "creator": "76561198025317013",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "40936",
+        "preview_file_size": "30514",
+        "file_url": "https://cdn.steamusercontent.com/ugc/424817196860437075/CA4C2884C210E0F334A8AC64BEEBDAE1FF13BA4C/",
+        "preview_url": "https://images.steamusercontent.com/ugc/3281172720287038854/0B66921D17DF063ED8117F57212DE1F4CA741FE3/",
+        "url": "",
+        "hcontent_file": "424817196860437075",
+        "hcontent_preview": "3281172720287038854",
+        "title": "Smarter Crock Pot",
+        "file_description": "WARNING: Mod has not been updated a long time. Read the comment section.\r\n\r\nDo you find yourself confused over the many recipes the crock pot offers?\r\nDo you need to check online before cooking?\r\n\r\nThis mod alters to Crock Pot to show you what you're going to cook,\r\nwithout cooking it, saving you the time and from unfortunate mistakes.\r\nSee upfront even the expected spoilage.\r\nin the game, when multiple recipes with the same priority are available, the cooking product is chosen at random- now you can see every option before gambling.\r\n\r\nCompatible with DisplayFoodValues,DetailedToolTips,AdvancedToolTips\r\nSo you can see the values of your cooking.\r\nEven add the chances of cooking your product into the tooltip.\r\nCompatible with Waiter101 and any other food mods, shows all mod recipes.\r\n\r\nWorks For EVERY ONE, the mod is Client only.\r\n\r\nFalse Prediction may arise from difference \r\nbetween the Client's cookbook and the Server's cookbook.\r\n\r\nUSING A CONTROLLER?\r\nFor a long time it wasn't supported, but now it is!\r\nJust go to the mod config and ACTIVATE IT.\r\nTo predict using Controller, all you have to do is to put 4 items in the cookpot and then nav to the fifth empy item. Nav to it again (I recommend Nav-ing Right) to predict again for the other possible products.\r\n\r\nTest with the mod only to see bug came from a different mod.\r\n\r\nFound a Bug? Want a feature?\r\nYou can conribute here:\r\nhttps://github.com/SmarterCrockPot/SmarterCrockPot",
+        "time_created": 1419881314,
+        "time_updated": 1441298739,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 641,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2084034,
+        "favorited": 61272,
+        "followers": 0,
+        "lifetime_subscriptions": 2648261,
+        "lifetime_favorited": 72662,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 2982638,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "reign of giants compatible",
+            "display_name": "reign of giants compatible"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "version:4.02",
+            "display_name": "version:4.02"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9684847593307495,
+          "votes_up": 13072,
+          "votes_down": 377
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1872057467",
+        "creator": "76561198058878990",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "40480",
+        "preview_file_size": "5876",
+        "file_url": "https://cdn.steamusercontent.com/ugc/787491413343792258/C2116560CD4EC2FE3EB21DDDCF3693E5463E4B5C/",
+        "preview_url": "https://images.steamusercontent.com/ugc/787491413343792339/BA371ECE693955ED91C087D824791B973DD98A28/",
+        "url": "",
+        "hcontent_file": "787491413343792258",
+        "hcontent_preview": "787491413343792339",
+        "title": "Smart Crock Pot [+Portable!]",
+        "file_description": "Uhh, probably don't use this mod anymore, I haven't touched anything related to don't starve for 3 years now, there's probably a better mod out there.\r\n\r\n**DISCLAIMER**\r\n\r\nThis mod is not supported and has not been tested for several versions, I do not have time to fix it. Please bug the creator of the original mod to fix theirs (they didn't support Warly which is why I created this). It seems to work fine for some people and crashes other peoples games.\r\n\r\nAn update for the popular Smarter Crock Pot by Nadav, based entirely on his mod.\r\nOriginal here: https://steamcommunity.com/sharedfiles/filedetails/?id=365119238&searchtext=smarter+crockpot\r\n\r\nSupports Warly's portable crockpot.\r\n\r\nWe don't plan to support this too much, ~~we have plans to make a different crockpot utility with some more features.~~ (Yeah that's not happening now)\r\n\r\n",
+        "time_created": 1569376179,
+        "time_updated": 1569376179,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 44,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 149731,
+        "favorited": 2909,
+        "followers": 0,
+        "lifetime_subscriptions": 185530,
+        "lifetime_favorited": 3371,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 279927,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8791208863258362,
+          "votes_up": 590,
+          "votes_down": 38
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3436831316",
+        "creator": "76561198272660788",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "137972",
+        "preview_file_size": "191435",
+        "preview_url": "https://images.steamusercontent.com/ugc/15303550430974437/E0B37F53DBAC7BC09E701054EDDCF769961C2E50/",
+        "url": "",
+        "hcontent_file": "4599970620558846960",
+        "hcontent_preview": "15303550430974437",
+        "title": "Dark/Gold Crock Pot Reskin",
+        "file_description": "I really wanted it to match with Victorian Ice Boxes.\n\nChanges default crockpot skin to have darker stone, with gold handles and trim.\n\n(this is my first mod.  yippee!)",
+        "time_created": 1740892682,
+        "time_updated": 1740892682,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 9,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 175,
+        "favorited": 17,
+        "followers": 0,
+        "lifetime_subscriptions": 227,
+        "lifetime_favorited": 22,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1133,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5446428656578064,
+          "votes_up": 11,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1967913686",
+        "creator": "76561198111527237",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "28790",
+        "preview_file_size": "19362",
+        "preview_url": "https://images.steamusercontent.com/ugc/1701787243936420451/2AACD8AB891AB5AF8CB7E4B0EBD7CC4F20132488/",
+        "url": "",
+        "hcontent_file": "8366478052107447284",
+        "hcontent_preview": "1701787243936420451",
+        "title": "More Crock Pot Fillers",
+        "file_description": "[h1]❖ Description[/h1]\r\n[list]\r\n[*] [b]Ham Bat[/b] as [b]meat[/b].\r\n[*] [b]Foliage[/b] and [b]Succulent[/b] as [b]veggies[/b].\r\n[*] [b]Fire Nettle Fronds[/b], [b]Glommer's Goop[/b] and [b]Phlegm[/b] as [b]fillers[/b].\r\n[*] [b]Hound's Tooth[/b] and [b]Stinger[/b] as [b]inedible fillers[/b].\r\n[/list]\r\n[h1]❖ Observations[/h1][list]\r\n[*] [b]Ham Bat[/b] has a value of 1.0 Meat. \r\n[*] [b]Foliage[/b] and [b]Succulent[/b] have a value of 0.5 Veggie.\r\n[*] You can [b]disable[/b] any of the [b]ingredients[/b], if you wish.\r\n[*] A [b]Inedible[/b] filler is like a twig. However it does not count as a twig.\r\n[i]For example, you can't use them to make [b]Fishsticks[/b] or [b]Kabobs[/b]. But you can use them to make [b]Dragonpie[/b] (1 Dragon Fruit + 3 Inedible). More examples below. [/i]\r\n[*] A [b]Regular[/b] filler is like an ice. With this option you can use them to make Meatballs and other recipes.\r\n[*] The idea behing this mod, comes from Warly's update. Since then we can use Bone Shards, Nightmare Fuel and Volt Goat Horn as Crock Pot inedible fillers.\r\n[/list]\r\n[h1]❖ More Examples for Uses as Inedible[/h1]\r\n[b]Already In-Game:[/b] Bone Shards, Nightmare Fuel, Twigs and Volt Goat Horn.\r\n[b]Modded:[/b] Hound's Tooth and Stinger.\r\n[list]\r\n[*] [b]Bacon and Eggs:[/b] 1.5 Meat + 1 Tallbird Egg + 1 Inedible.\r\n[*] [b]Butter Muffin:[/b] 1 Butterfly Wings + 1 Vegetable + 2 Inedibles.\r\n[*] [b]Fish Tacos:[/b] 1 Fish + 1 Corn + 2 Inedibles.\r\n[*] [b]Froggle Bunwich:[/b] 1 Frog Legs + 1 Vegetable + 2 Inedibles.\r\n[*] [b]Guacamole:[/b] 1 Moleworm + 1 Cactus Flesh + 2 Inedibles.\r\n[*] [b]Stuffed Eggplant:[/b] 1 Eggplant + 1 Vegetable + 2 Inedibles.\r\n[*] [b]Guacamole:[/b] 1 Moleworm + 1 Cactus Flesh + 2 Inedibles.\r\n[*] [b]Taffy:[/b] 3 Honey + 1 Inedible.\r\n[*] [b]Unagi:[/b] 1 Eel + 1 Lichen + 2 Inedibles.\r\n[/list]\r\n\r\n[h1]Enjoyed this mod? Consider giving it a [b]Like[/b]![/h1]\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1807213288][img]https://i.imgur.com/tQRLfoL.jpg[/img][/url]\r\nReally liked my work and would like to [b]support[/b] me? [url=https://www.paypal.com/donate/?hosted_button_id=Q3TDQLWJNMVCC][img]https://i.imgur.com/ne4ZzQN.png[/img][/url]\r\n[code]Tags: easy, beginner, food [/code]",
+        "time_created": 1578895825,
+        "time_updated": 1640760458,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 13,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 5845,
+        "favorited": 277,
+        "followers": 0,
+        "lifetime_subscriptions": 8855,
+        "lifetime_favorited": 330,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 18205,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:1.3.1",
+            "display_name": "version:1.3.1"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7134831547737122,
+          "votes_up": 77,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "75",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3497868682",
+        "creator": "76561198313267575",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "241608",
+        "preview_file_size": "45029",
+        "preview_url": "https://images.steamusercontent.com/ugc/12060378159130188402/1798CB6B6F0AC8A0DE4C7D04FD07C50874ACCBC3/",
+        "url": "",
+        "hcontent_file": "4623925830752624480",
+        "hcontent_preview": "12060378159130188402",
+        "title": "Balanced Crock Pot Dishes",
+        "file_description": "[h1] Makes Crock Pot dishes more balanced and meaningful.  [/h1] \r\n\r\n This mod was inspired by the Recipe Rebalancer mod by Terostrous. \r\n\r\n Many recipes had their food stats changed. Full list can be found in: https://docs.google.com/spreadsheets/d/1E6iK4T1DcgMUvIwdRSS10lfoXti089zn6t19KLnTY5U/edit?usp=sharing\r\n\r\n[b]NOT YET UPDATED FOR WARLY'S RECIPES[/b]\r\n\r\n[h2]Major changes[/h2]\r\n-Most raw foods now recover less hunger and health\r\n-Many Crock Pot foods also recover less health and hunger\r\n-Many Crock Pot foods now recover a bit more sanity\r\n-Recipes of Bunny Stew, Kabobs and Meatballs were tweaked\r\n-Through the configuration menu, you can reduce the meat value of Monster Meat for added challenge(recommended)\r\n\r\n[h2]Notable food-specific changes:[/h2]\r\n[h3]Bunny Stew[/h3]\r\n-Recipe now has no limit on meat, but has lower priority than meatballs\r\n-Recovers only 31.25 hunger and 8 health(reduced from 37.5 and 20 respectively)\r\n\r\n[h3]Kabobs[/h3]\r\n-Recipe now requires at least 1 meat, but recovers 43.75 hunger(increased from 37.5)\r\n-Takes less time to cook(reduced from 40 seconds to 20)\r\n\r\n[h3]Meatballs[/h3]\r\n-Recipe now requires at least 1.5 meat, and recovers 56.25 hunger(reduced from 62.5)\r\n-Takes 20 seconds to cook instead of 15\r\n\r\n[h3]Meaty Stew[/h3]\r\n-Now recovers only 100 hunger instead of 150\r\n\r\n[h3]Fishsticks[/h3]\r\n-Instead of a healing food, it is now a snack that provides cheap sanity\r\n-Recovers 15 sanity but only 8 health(8 is the minimum health for fish-based recipes) and 12.5 hunger\r\n-Takes less time to cook(reduced from 40 seconds to 10)\r\n\r\n[h3]Fist Full of Jam[/h3]\r\n-Now recovers only 18.75 hunger(reduced from 37.5) but provides 10 sanity\r\n\r\n[h3]Mushy Cake[/h3]\r\n-Now recovers 25 hunger, 15 sanity and 20 health(the culmination of all caps)\r\n\r\n[h3]Stuffed Eggplant[/h3]\r\n-Now recovers 30 health\r\n\r\n[h3]Froggle Bunwich[/h3]\r\n-Now recovers 12 health instead of 20\r\n-Takes less time to cook(reduced from 40 seconds to 20)\r\n\r\n[h3]Trail Mix[/h3]\r\n-Nerfed in terms of health, recovering only 8; but provides 10 sanity as well as 18.75 hunger\r\n-Now lasts a whopping 40 days, acting like a dried fruit\r\n-Takes 40 seconds to cook(drying ain't easy)\r\n\r\n[h3]Taffy[/h3]\r\n-Restores a bit more sanity(20 instead of 15) but less hunger(12.5 instead of 25)\r\n-Now also lasts 40 days, which makes it better for emergencies and spelunking activities\r\n\r\n[h3]General Principles[/h3]\r\n-Foods now recover hunger, sanity and health in a manner that is more correlated with the values of their ingredients, as well as the difficulty of acquiring their ingredients; cheap recipes are no longer better than expensive ones(hopefully)\r\n-Some ingredient types also have general characteristics, as outlined below\r\n-Recipes that recover 40 health are now in the minority. This is restricted for recipes that are made with relatively less common ingredients\r\n-But there are still a lot of recipes that recover 20 health and some even recover 30 health\r\n-Some raw fruits now provide a small amount of sanity, but don't provide as much health\r\n\r\n[h3]General Ingredient Characteristics[/h3]\r\n-Meat foods usually recover hunger well.\r\n-Sweet, savory or fruity foods recover sanity well.\r\n-Veggie foods recover health well.\r\n-Foods made with honey that are not candy also recover some health(but not too much)\r\n-Fish foods can provide good hunger as well as some health depending on the recipe(minimum 8 health)\r\n-Barnacle is still a very filling ingredient\r\n",
+        "time_created": 1749757941,
+        "time_updated": 1751053278,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 0,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 20,
+        "favorited": 2,
+        "followers": 0,
+        "lifetime_subscriptions": 28,
+        "lifetime_favorited": 3,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 174,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:0.7",
+            "display_name": "version:0.7"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5098039507865906,
+          "votes_up": 2,
+          "votes_down": 0
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "5",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "829519717",
+        "creator": "76561198103077369",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "40938",
+        "preview_file_size": "16886",
+        "file_url": "https://cdn.steamusercontent.com/ugc/751467055396579655/1ECDAA3EE3B572D9108FA3808823EB90CE24BB56/",
+        "preview_url": "https://images.steamusercontent.com/ugc/97224082436418323/504C3AC1A5503FCAFC01CA53AE3E9398866507D0/",
+        "url": "",
+        "hcontent_file": "751467055396579655",
+        "hcontent_preview": "97224082436418323",
+        "title": "Force Download: Smarter Crock Pot",
+        "file_description": "Force downloads Smarter Crock Pot for clients.",
+        "time_created": 1483057245,
+        "time_updated": 1573688480,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 19,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 46808,
+        "favorited": 1354,
+        "followers": 0,
+        "lifetime_subscriptions": 69958,
+        "lifetime_favorited": 1703,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 115260,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "version:4.02a",
+            "display_name": "version:4.02a"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8325892686843872,
+          "votes_up": 323,
+          "votes_down": 25
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "1",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3239840615",
+        "creator": "76561199071772317",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "31931",
+        "preview_file_size": "26262",
+        "preview_url": "https://images.steamusercontent.com/ugc/2466360373015494821/D623BCF23C298F3B8DCC6BE5B46530F270885715/",
+        "url": "",
+        "hcontent_file": "1001165472899236508",
+        "hcontent_preview": "2466360373015494821",
+        "title": "The Truly Portable Crock Pot",
+        "file_description": "You can use Portable Crock Pot in the inventory, and you can still use it like before.",
+        "time_created": 1714897372,
+        "time_updated": 1714897372,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 3,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2530,
+        "favorited": 107,
+        "followers": 0,
+        "lifetime_subscriptions": 3591,
+        "lifetime_favorited": 140,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 8067,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5923076868057251,
+          "votes_up": 27,
+          "votes_down": 3
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "1",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2905500997",
+        "creator": "76561198211458844",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "365516",
+        "preview_file_size": "225662",
+        "preview_url": "https://images.steamusercontent.com/ugc/5099795232489573982/C6DA1C3902E87E6538A302D1DF6A17A682B03CFB/",
+        "url": "",
+        "hcontent_file": "1097224234786405030",
+        "hcontent_preview": "5099795232489573982",
+        "title": "Portable Crock Pot - Destroy Item - etc",
+        "file_description": "- Add an item Craftable portable crock pot\r\n- Items in icebox will never perish\r\n- You can destroy item in Alchemy Engine\r\n(sr for my bad english)\r\nVersion: 1.0",
+        "time_created": 1671788321,
+        "time_updated": 1671795144,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 1,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1147,
+        "favorited": 57,
+        "followers": 0,
+        "lifetime_subscriptions": 1541,
+        "lifetime_favorited": 68,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 4216,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5641025900840759,
+          "votes_up": 16,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1935156140",
+        "creator": "76561198999913608",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "418021",
+        "preview_file_size": "266938",
+        "file_url": "https://cdn.steamusercontent.com/ugc/784122351412299384/0BE6981F031272D29D40B7CACA75FB76E62D4680/",
+        "preview_url": "https://images.steamusercontent.com/ugc/784120844170580338/0DBC4B7548763EEFB6B258B09601A30D936A138B/",
+        "url": "",
+        "hcontent_file": "784122351412299384",
+        "hcontent_preview": "784120844170580338",
+        "title": "Beefalo Milk (Portable Crock Pot Compatible)",
+        "file_description": "Original Mod: \nhttps://steamcommunity.com/sharedfiles/filedetails/?id=436654027&searchtext=beefalo+milk\n\n\n\nYou can now milk beefalos!\n\nMilk regeneration is slower in summer and faster in fall.\n\nYou can’t milk beefalos when they are asleep or shaved.\n\nBeefalo can kick you when you milk it! (50% chance to get kicked without wearing Beefalo Hat)\n\n\n\nFood items this mod adds:\n\n\n\nRaw Milk: (Directly from Beefalo!)\n\n-8 Health, +4 Hunger, -10 sanity\n\nSpoils in 3 days, generic food\n\n\n\nFresh milk: (Raw Milk x4 in crock pot)\n\n+3 Health, +12 Hunger, +10 sanity +10 warmth\n\nCan be used to replace Electric Milk in Ice Cream recipe, can be given to Catcoons.\n\n\n\nCurd: (Spoiled Fresh Milk)\n\n+3 HP, +12 Hunger, +18 Sanity\n\nSpoils in 6 days, generic food\n\n\n\nCheese: (Fresh Milk x4 in crock pot)\n\n+3 HP, +37 Hunger, +5 Sanity\n\nSpoils in 6 days, meat category\n\n\n\nAged Cheese: (Spoiled Cheese)\n\n+3 HP, +75 Hunger, +50 Sanity\n\nSpoils in 15 days, meat category\n\n\n\nWhite Cheese (Curd x4 in crock pot)\n\n+3 HP, +37 Hunger, +5 Sanity\n\nSpoils in 6 days, meat category\n\n\n\nAged White Cheese (Spoiled White Cheese)\n\n+60 HP, +75 Hunger, +5 Sanity\n\nSpoils in 15 days, meat category\n\n\n\nBerry Milkshake (Fresh milk x2, Ice, Berries in crock pot)\n\n8 HP, 18 Hunger, 20 Sanity\n\nSpoils in 6 days, veggie\n\nLowers temperature by 40 for 10 sec\n\n\n\nCheesecake (White Cheese + Egg + Fruit+ honey)\n\n+60 HP, +150 Hunger, +20 Sanity\n\nSpoils in 10 days, veggie\n\n\n\nPizza (Cheese + Meat + Vegetables)\n\n+40 HP, +112 Hunger, +15 Sanity\n\nSpoils in 10 days, meat category\n\n\n\nFish Yoghurt (Fresh Milk 2x + Fishes)\n\n40 HP, 25 Hunger, -15 Sanity\n\nSpoils in 6 days, meat category\n\n\n\n-----------------------------------------------------------------------------------\n\n\n\nMay not work with custom characters that have their own stategraph, if it's not working with your character let me know!\n\n\n\nIf you find any issues post screenshot with error and link to log file!",
+        "time_created": 1576192360,
+        "time_updated": 1577621530,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 21,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 4787,
+        "favorited": 266,
+        "followers": 0,
+        "lifetime_subscriptions": 7959,
+        "lifetime_favorited": 352,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 13157,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "version:0.4.9.3",
+            "display_name": "version:0.4.9.3"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7329843044281006,
+          "votes_up": 90,
+          "votes_down": 1
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "66",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2336105249",
+        "creator": "76561198259345830",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "30292",
+        "preview_file_size": "217162",
+        "preview_url": "https://images.steamusercontent.com/ugc/1669112528813118418/79F75533EFA0BDC359CE8C4C0A0E5287371A5327/",
+        "url": "",
+        "hcontent_file": "3010181097484514525",
+        "hcontent_preview": "1669112528813118418",
+        "title": "Crockpot Repeater",
+        "file_description": "Lets you repeat the last crockpot recipe you did by pressing the \"Cook\" button while the crockpot is empty.\r\n\r\nHolding CTRL when opening a crockpot lets you instantly cook the last recipe you cooked.\r\n\r\nAlso works for Warly's Portable Seasoning Station.\r\n\r\nFor controllers, you can use this mod to use this one.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=1706782853\r\nAll you need to do is press the START button while the inventory is open and the crockpot is empty.",
+        "time_created": 1609008251,
+        "time_updated": 1632065872,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 151,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 87991,
+        "favorited": 2986,
+        "followers": 0,
+        "lifetime_subscriptions": 105947,
+        "lifetime_favorited": 3420,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 150961,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.3",
+            "display_name": "version:1.3"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9467312097549438,
+          "votes_up": 1123,
+          "votes_down": 16
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "5",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "632082058",
+        "creator": "76561198019489256",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "40936",
+        "preview_file_size": "93959",
+        "file_url": "https://cdn.steamusercontent.com/ugc/305487666992715653/CA4C2884C210E0F334A8AC64BEEBDAE1FF13BA4C/",
+        "preview_url": "https://images.steamusercontent.com/ugc/305487666992715703/A24E51D3C6DEB29848B8AFCB8130C11D52641B00/",
+        "url": "",
+        "hcontent_file": "305487666992715653",
+        "hcontent_preview": "305487666992715703",
+        "title": "SmartCrockPot",
+        "file_description": "Predicts your cooking !",
+        "time_created": 1456381817,
+        "time_updated": 1456381817,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 24,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 99291,
+        "favorited": 1199,
+        "followers": 0,
+        "lifetime_subscriptions": 118897,
+        "lifetime_favorited": 1360,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 183004,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "version:4.02",
+            "display_name": "version:4.02"
+          }
+        ],
+        "vote_data": {
+          "score": 0.794037938117981,
+          "votes_up": 243,
+          "votes_down": 26
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1465158363",
+        "creator": "76561198256350821",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "2291",
+        "preview_file_size": "20965",
+        "file_url": "https://cdn.steamusercontent.com/ugc/972100947053831806/A1B9BDC86AA6EBB055CC85E3A1517059F5C8ACE8/",
+        "preview_url": "https://images.steamusercontent.com/ugc/972100947053832248/7D646578887EBF08EF1CA72B200C98BEA5B059D4/",
+        "url": "",
+        "hcontent_file": "972100947053831806",
+        "hcontent_preview": "972100947053832248",
+        "title": "No Food Perishing On Crockpot",
+        "file_description": "Disables all perishing of food on Crockpot. For displaying dishes, you know.",
+        "time_created": 1533386547,
+        "time_updated": 1533386547,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 8,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 8075,
+        "favorited": 264,
+        "followers": 0,
+        "lifetime_subscriptions": 10445,
+        "lifetime_favorited": 306,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 12498,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7487684488296509,
+          "votes_up": 102,
+          "votes_down": 1
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2336089085",
+        "creator": "76561198006838480",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "356805",
+        "preview_file_size": "422437",
+        "preview_url": "https://images.steamusercontent.com/ugc/1653349936232144441/213F542AC7AC7E9B3D2D57FAA6617316FC3B824C/",
+        "url": "",
+        "hcontent_file": "7751662718432805204",
+        "hcontent_preview": "1653349936232144441",
+        "title": "Fast Clientside Crockpot Cooking",
+        "file_description": "Copyright 2020-2023 \"CarlZalph\".  This item is not authorized for posting on Steam, except under the Steam account named CarlZalph.\r\n\r\nMakes cooking in crockpots easier when mass-producing many of the same thing with the same ingredients by repeating it.\r\nAlso supports Warly's Spicer.\r\n\r\nStores the last recipe cooked manually with the 'Cook' button in a full crockpot for later.\r\nAttempting to cook in an empty crockpot will try to look for all of the ingredients available to cook the same recipe with the same ingredients again.\r\n\r\nWhile holding CTRL and opening a crockpot with a recipe already stored, it will try to do the same function again but without having to hit the 'Cook' button.\r\n\r\nIngredients have a priority from where they'll be tried to be cooked from:\r\n1] Player inventory.\r\n2] Player backpack.\r\n3] Any other container, randomly.\r\n\r\nPlease keep this in mind if you have spoiled ingredients in your inventory and are trying to cook with fresh ones from a fridge, it will try to use the ones in the inventory first.\r\n\r\n\r\n\r\nThis mod functions both when as a pure client and when local hosting a non-caves server.\r\n\r\nController support not here, please use the mod found [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1706782853]HERE[/url] for a potential workaround.  It adds functionality.\r\n\r\n\r\n\r\n\r\nChangelog:\r\n0.1.3.2- Fix the crash from control-clicking due to Klei's changes to the container component and actions.\r\n0.1.3.1- Support for the current Beta branch's method for container params.\r\n0.1.3- Mod compatibility fix by recursively looking through functions to find the params table from containers.lua.\r\n0.1.2.1- Wrong modinfo fix.\r\n0.1.2- Checks for 'params' to exist and fix the upvalue scanning to not infinite loop if it can't find it.\r\n0.1.1- Generalized the hooking process and added support for Warly's spicer.\r\n0.1.0- Release.",
+        "time_created": 1609007658,
+        "time_updated": 1615586871,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 41,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 5753,
+        "favorited": 306,
+        "followers": 0,
+        "lifetime_subscriptions": 8316,
+        "lifetime_favorited": 376,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 21182,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "version:0.1.3.2",
+            "display_name": "version:0.1.3.2"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7311320900917053,
+          "votes_up": 105,
+          "votes_down": 7
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "6",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1496618114",
+        "creator": "76561198084200519",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "42526",
+        "preview_file_size": "2699546",
+        "file_url": "https://cdn.steamusercontent.com/ugc/961970710258975429/29CB09F09332CE13BE39712A34A4F4DDB3947494/",
+        "preview_url": "https://images.steamusercontent.com/ugc/961970710258636567/92A79318F7F67CA23749F6D2537EB5F916E4E8C3/",
+        "url": "",
+        "hcontent_file": "961970710258975429",
+        "hcontent_preview": "961970710258636567",
+        "title": "Portable Crockpot [DEPRECATED]",
+        "file_description": "Doesn't work anymore, deprecated mod.\r\n\r\nNow you have a portable Cookpot!\r\n\r\nI've fixed the ported version from DS to DST, and now it's working perfectely!\r\n-========================-\r\nCredits to: Gilyen (Original Code)\r\nLink: https://steamcommunity.com/sharedfiles/filedetails/?id=1336815198\r\n-========================-\r\n\r\nDetails:\r\n\r\n-- Cooktime is configurable:\r\nNormal: 50% longer\r\nCookpot: Same as Cookpot\r\nFaster: 50% faster\r\nSuper Fast: 2 times faster\r\n\r\n-- Recipe is configurable:\r\nEasy: 2 Eletrical Doodad, 8 Charcoal, 2 Cutstones, 1 Rope\r\nNormal: 3 Eletrical Doodad, 1 Red Gem, 10 Charcoal, 3 Cutstones\r\nNorma+: 1 Gears, 2 Red Gem, 12 Charcoal, 4 Cutstones\r\nHard: 1 Gears, 2 Red Gem, 2 Nightmare Fuel, 6 Cutstones\r\n-> Survival Tab\r\n\r\nBugs:\r\nIncompatibility with Smart crockpot and Craft pot mods (Needs a code rewrite, maybe some day)\r\nIcon in crafting tab not displaying properly",
+        "time_created": 1535506032,
+        "time_updated": 1536034998,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 48,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 13105,
+        "favorited": 488,
+        "followers": 0,
+        "lifetime_subscriptions": 21750,
+        "lifetime_favorited": 659,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 40287,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.2.1",
+            "display_name": "version:1.2.1"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7906976938247681,
+          "votes_up": 188,
+          "votes_down": 13
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3608313161",
+        "creator": "76561198086736768",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "2518100",
+        "preview_file_size": "513784",
+        "preview_url": "https://images.steamusercontent.com/ugc/10565074350524752865/94B55C8A09C13ABE15EA9ED8FB0CA4E6DC8DF602/",
+        "url": "",
+        "hcontent_file": "5829630840295091064",
+        "hcontent_preview": "10565074350524752865",
+        "title": "Crockpot Reforged",
+        "file_description": "Crockpot Reforged upgrades the vanilla crockpot with faster cooking, fresher meals, and extra servings. Fully configurable options let you balance survival your way — cook smarter, last longer, and feast better!\r\n\r\n\r\n► Why Use Crockpot Reforged?\r\n\r\n► Faster cooking for quick survival runs.\r\n\r\n► Longer-lasting meals for better resource management.\r\n\r\n► Extra servings to feed larger groups or extend solo runs.\r\n\r\n► All configurable to match your preferred difficulty and playstyle.",
+        "time_created": 1763507346,
+        "time_updated": 1763507346,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 4,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 177,
+        "favorited": 10,
+        "followers": 0,
+        "lifetime_subscriptions": 196,
+        "lifetime_favorited": 11,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 747,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.0.0",
+            "display_name": "version:1.0.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5188679099082947,
+          "votes_up": 5,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "1",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1838766428",
+        "creator": "76561198359966696",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "411163",
+        "preview_file_size": "88530",
+        "file_url": "https://cdn.steamusercontent.com/ugc/771725862724203262/364538F9C0F93A4064746523A2BB14512C4A46D6/",
+        "preview_url": "https://images.steamusercontent.com/ugc/771725369249797450/C9F5AB67A2E8B2117DECD637395D1A095DB2553E/",
+        "url": "",
+        "hcontent_file": "771725862724203262",
+        "hcontent_preview": "771725369249797450",
+        "title": "Explosive Crockpot",
+        "file_description": "This mod causes any crock pot to explode if 4 gunpowder or 3 gunpowder and one slurtle slime is cooked in it.\r\n\r\nThe explosion damage can be configured to either 200, 400, 600, or 800. The range of the explosion is approximately 1.5 turfs.\r\n\r\nThe single player version can be found [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1838016524]here[/url].",
+        "time_created": 1566151558,
+        "time_updated": 1566678158,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 6,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 337,
+        "favorited": 18,
+        "followers": 0,
+        "lifetime_subscriptions": 500,
+        "lifetime_favorited": 22,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 3329,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.1.4",
+            "display_name": "version:1.1.4"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5726495981216431,
+          "votes_up": 17,
+          "votes_down": 0
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1839297490",
+        "creator": "76561198042409790",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "70944",
+        "preview_file_size": "3812635",
+        "preview_url": "https://images.steamusercontent.com/ugc/770601643784438817/DA7D61B8D238A3D68BF4D7BBC3E00E5F1402BA61/",
+        "url": "",
+        "hcontent_file": "93591416649923410",
+        "hcontent_preview": "770601643784438817",
+        "title": "Terra's Handicaper and Crockpot Patcher.",
+        "file_description": "NOTE: Please do not copy code from this mod without asking me first, I'm usually fine or indifferent with most my mods, but for this one I would like to be notified or asked first. Thank you for understanding.\r\n\r\nA mod that serves two purposes. First of all it can be used to give challenge in worlds even with many food mods enabled, secondly it aims to fix older(and abandoned) crockpot food mods not being supported by Warly's portable crockpot.(Spice is beyond my current modding experience.)\r\n\r\nChallenge Modifiers.\r\n-----\r\nThe following can be modified via config settings.\r\n-----\r\nPicky Eater - You now only eat foods from crockpots(just like Warly!), works with all crockpot dishes as long as the mod has given the crockpot dish the \"preparedfood\" tag! (Enabled by default)\r\n\r\nEater Mode - Restrict yourself to specific food groups! Configurable! Carnivore restricts you to a meat diet(like Wigfrid!) while Vegetarian restricts you to a No Meat diet(like Wurt!). Set to Default to disable. (Defaults to Default)\r\n\r\nFood Memory - Modifies Warly's food memory timer, you can reduce it, or increase it! By default it is set to the vanilla value of 2 days. Options include half a day, 1 day, 2 days, 4 days, 6 days, 8 days, 10 days, 20 days and 40 days.\r\nFood Memory also applies to anyone using the Bland Flavors mod! Find it here.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=1819424070\r\n\r\nMercy Kit - A starter kit consisting of a Crockpot blueprint and the materials to build one. For a little less RNG dependance early on when playing Picky Eater mode. (Enabled by Default)\r\n\r\nCurse of Pacifism - Makes you take karma damage when attacking mobs or murdering animals!\r\nKarma damage taken for attacking is equal to 20% of your maximum health.\r\nKarma damage taken for murdering animals in the inventory is equal to 40% of your maximum health as well as 33% of your maximum sanity and 25% of your maximum hunger.\r\nKarma instantly kills you for cooking live animals.\r\n\r\nNo Food Healing - Self explanitory, any food item with a positive health value has that value set to 0, so basically you can't heal with food if this is enabled. Negative health values are unaffected.\r\n\r\nMetabolism - Set your hunger rate value! Defaults to 100%. Options include 25%, 33%, 50%, 66%, 75%, 88%, 100%, 120%, 125%, 133%, 150%, 166%, 175%, 200%, 225%, 250%, 275%, 300%, 400%, 500%, 600%, 700% and 800%!\r\n\r\nFavorite Food Bonus - Allows one to enable or disable the 15 bonus hunger granted from favorite foods. This is enabled by default, disabling it will disable the 15 extra hunger points gained from food.\r\n\r\nThis mod also attempts to fix other modded crockpot dishes, current fixes are below, if you wish to play this mod only for these fixes, then you can disable all options, set metabolism to 100% and keep the food memory on the vanilla setting.\r\n-----\r\nBudding Chef Additions!\r\n-----\r\nPortacrocks for all - Allows all characters to use the portable crockpot, portable seasoning station and portable grinding mill. This setting also makes the mercy kit give a Portable Crockpot to start with, rather then its usual crockpot materials. Disabled by default.\r\n\r\nFast Cook - Allows for all characters to cook fast, just like Willow, Warly and Walter. Disabled by Default.\r\n-----\r\nMod Tweaks\r\n-----\r\nBeefalo Milk and Cheese - Cheesecake, Berry Milkshake and cheeses are no longer considered meat, Pizza on the other hand is still such as it uses meat in its crockpot recipe. All recipes now also work with Warly's portable crockpot. I will add more tweaks in the future. If Feast and Famine is enabled, then this support is disabled to allow Feast and Famine's support to work instead.\r\n\r\nJapari Buns - Portable Crockpot can now cook them.\r\n\r\nBirds and Berries and Trees for Friends - Apple Pie and Pineapple Medley are now cookable in the Portable Crockpot, have a higher priority and the Pineapple Medley should now be tagged as \"preparedfood\", both dishes were also buffed because they were laughably useless in the base mod.\r\n\r\nWindy Plains - All crockpot dishes can now be made in Warly's portable crockpot.\r\n\r\nCustom Farming/Feast and Famine/Heap of Foods - Extends the Mealing Stone to be able to craft new recipes, all are configurable. These recipes include the following.\r\n-Nightmare Fuel(Moved from Refine Tab)\r\n-Spot Spice(Requires Sugarwood Forest! Moved from Refine Tab. This recipe isn't included for Heap of Foods due to that mod already having a spot spice recipe and item.)\r\n-Bone Shards(Incompatible with my Craftable Bone Shards mod)\r\n-Butter\r\n\r\nFeast and Famine + Island Adventures - Tweaks Carrot Cake to now accept coconuts in place of birchnuts.\r\n\r\nAdvanced Farming - Hybrid Bananas should now work for the banana pops recipe.\r\n-Has \"Celestial Knowledge\" support!\r\n\r\nFish Farm - Has \"Celestial Knowledge\" support!\r\n\r\nAdditional Equipment [Fixed] - Adds a Celestial Gift option for Lying Robots! Making the Ice Pack item renewable.\r\n\r\nCherry Forest - Adds an option to allow bloomy honey to be used in making honey ham, honey nuggets, powdercake and fresh fruit crepes.\r\n\r\nHeap of Foods - Adds a tweak option for a few of its recipes, this is disabled by default.\r\n---The HoF tweak does the following, it makes the Shooter Sandwich, Pot Roast, Meat Wellington and Steak Frites no longer accept a monster value of 2 or higher, this tweak also makes Poi and Lotus Chips no longer accept meat, ice or petals as filler. These recipes are otherwise the same as in the original mod. This change requires heap of foods and will do nothing without it enabled.\r\n---This change also tweaks the Monster Lasagna recipe, it now only won't accept vanilla inedibles(twigs, bone shards, nightmare fuel and volt goat horns) as filler, rather then all inedibles, this is to prevent the nerfs above from resulting in wet goop(as flour and spot spice are considered \"inedibles\").\r\n---HoF Tweaks also reduces several spoil times on superslow perish items. The list below are the spoil changes.\r\n---HoF Tweaks also adds a long pig drop to krampi and klaus, this is 20% on krampi, but klaus always drops 4.\r\n\r\nMeat Wellington spoils in 15 days(down from 40)\r\nPizza spoils in 15 days(down from 40)\r\nShepherds Pie spoils in 20 days(down from 40)\r\nCurry spoils in 15 days(down from 40)\r\nSweet Potato Souffle spoils in 10 days(down from 40)\r\nCheesecake spoils in 10 days(down from 40)\r\nCream of Mushroom Soup spoils in 8 days.(down from 40)\r\n\r\nI've also added an option to revert the Monster Tartare food item back to how it is in shipwrecked. If this option is enabled, Monster Tartare will now heal 3 health, 37.5 hunger and 10 sanity, but will require an egg and a vegetable in addition to a monster value of 2 or more and will take 40 seconds to cook. If Feast and Famine is detected, a Meat Value of 2 or more is also required to prevent 3 monstrous eggs + a veggie from being used to make it. This option is Disabled by default.\r\n\r\nAnother option adds the option to tweak a few vanilla crockpot recipes, namely some less used ones, this is to hope they'll be used more. Enable it for the following.\r\n\r\nFruit Medley now gives 37.5 hunger(up from 25) and 20 sanity(up from 5)\r\nFish Tacos now gives 75 hunger(up from 37.5) and lasts alot longer.\r\nGuacamole now gives 112.5 hunger(up from 37.5)  but penalizes 3 health and 5 sanity.\r\nSpicy Chili now gives 62.5 hunger(up from 37.5)\r\nUnagi now gives 37.5 hunger(up from 18.75) Still useless but I wanted to tweak it anyway.\r\nThis option is disabled by default.\r\n\r\nHave fun! Try not to starve!",
+        "time_created": 1566200489,
+        "time_updated": 1657749784,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 8,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 216,
+        "favorited": 31,
+        "followers": 0,
+        "lifetime_subscriptions": 432,
+        "lifetime_favorited": 40,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 5648,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "scenario",
+            "display_name": "scenario"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:1.0.2.7",
+            "display_name": "version:1.0.2.7"
+          }
+        ],
+        "vote_data": {
+          "score": 0.578125,
+          "votes_up": 24,
+          "votes_down": 4
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "46",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}

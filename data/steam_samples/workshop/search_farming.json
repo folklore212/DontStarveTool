@@ -1,0 +1,1575 @@
+{
+  "response": {
+    "total": 466,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "3161480628",
+        "creator": "76561198140241867",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "12227335",
+        "preview_file_size": "70504",
+        "preview_url": "https://images.steamusercontent.com/ugc/41196077243181841/8ED287D0980295C0415A4EDA88C918A1462EF812/",
+        "url": "",
+        "hcontent_file": "925597171619612939",
+        "hcontent_preview": "41196077243181841",
+        "title": "Seasonal Farming Theme [Revisit]",
+        "file_description": "Tired of the same ol' 15 second loop of farming music?\r\nWell, here's a few more tracks to spice it up throughout seasons!\r\nCompatible with Island Adventures, and soon, its Rewrite!\r\n\r\nRecently \"remastered\". Listen to some revamped tunes while workin' under the scalding sun/pouring rain/freezing winters/crumbling ceiling!\r\n\r\nThis is the Client-side version of the mod, if you want the Server-side version, download it here:\r\n    https://steamcommunity.com/sharedfiles/filedetails/?id=3165559754\r\n\r\nCredits -\r\nADM - Coding the entire mod, basically.",
+        "time_created": 1708035569,
+        "time_updated": 1738360350,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 87,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 14334,
+        "favorited": 706,
+        "followers": 0,
+        "lifetime_subscriptions": 17937,
+        "lifetime_favorited": 791,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 58273,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.3B",
+            "display_name": "version:1.3B"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8978224396705627,
+          "votes_up": 486,
+          "votes_down": 11
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "45",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2555936751",
+        "creator": "76561198175394114",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "4751085",
+        "preview_file_size": "54421",
+        "preview_url": "https://images.steamusercontent.com/ugc/1706286321059890858/7308C89239D5302FDB2434154C1CD776EEE2505A/",
+        "url": "",
+        "hcontent_file": "1595684630338107660",
+        "hcontent_preview": "1706286321059890858",
+        "title": "FarmCalc",
+        "file_description": "Client side.\r\nCalculating farming pair.\r\nPress K to start.\r\n\r\nDon't forget rating me!",
+        "time_created": 1627133018,
+        "time_updated": 1627588536,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 128,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 352577,
+        "favorited": 12503,
+        "followers": 0,
+        "lifetime_subscriptions": 415980,
+        "lifetime_favorited": 13877,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 370474,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tutorial",
+            "display_name": "tutorial"
+          },
+          {
+            "tag": "version:1.0.8",
+            "display_name": "version:1.0.8"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9576271176338196,
+          "votes_up": 2097,
+          "votes_down": 45
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "22",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2305130719",
+        "creator": "76561198053787151",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "674413",
+        "preview_file_size": "363355",
+        "preview_url": "https://images.steamusercontent.com/ugc/1773825158298802843/E0BA7CE044AD284BA5768F32C6C26698E7CF47E2/",
+        "url": "",
+        "hcontent_file": "6945232704033688513",
+        "hcontent_preview": "1773825158298802843",
+        "title": "Gardeneer Hat (Farming helper)",
+        "file_description": "This is a mod designed for clients to improve the farming experience of everyone, it provides you with the same features of the Premier Gardeneer Hat and some other features.\r\n\r\nOriginally it was made to grant players access to the 'Plant Registry' and the 'Nutrient Vision' of the Premier Gardeneer Hat via two buttons in your HUD only, but now it also includes other features which will become enabled with the nutrient vision to make farming easier for everyone:\r\n\r\n[h1]Available Features:[/h1]\r\n\r\n[h1]Colored Crops[/h1]\r\n\r\nCrops start changing their colour if they detect any source of stress:\r\n\r\n[img=https://i.imgur.com/brfxjw2.png]\r\n(Upper in 100% sanity, lower in 0% sanity)\r\n\r\nColor meaning from left to right:\r\n[table]\r\n\t[tr]\r\n\t\t[th]Red[/th]\r\n\t\t[th]Killjoy[/th]\r\n\t\t[th]Killjoys do bother your nearby crops and increase their stress.\r\nKilljoys include Weeds, Spoiled Plants, or Garden Detritus.\r\nTry to get rid of them if they spawn in your crops farm.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Pink[/th]\r\n\t\t[th]Harmless Killjoy[/th]\r\n\t\t[th]A killjoy which does not bother any of your nearby crops yet.\r\nKilljoys include Weeds, Spoiled Plants, or Garden Detritus.\r\nDespite the fact that they don't bother your plants yet it might be useful or not to get rid of them.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Yellow[/th]\r\n\t\t[th]Tendable[/th]\r\n\t\t[th]This crop has not been attended yet during this growth stage.\r\nCrops can be attended to by talking to them or by using an item which attends to nearby plants (e.g. One-Man Band, Beefalo Horn, Shell Bells, etc.)[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Blue[/th]\r\n\t\t[th]Thirsty[/th]\r\n\t\t[th]There's no water left in the ground.\r\nWater your farm with a Watering Can.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Green[/th]\r\n\t\t[th]Hungry[/th]\r\n\t\t[th]There are not enough nutrients available in the ground.\r\nFertilize your Farm Plot with the respective required nutrients.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Cyan[/th]\r\n\t\t[th]Alone[/th]\r\n\t\t[th]There are less than 3 plants of the same kind nearby.\r\nPlant more crops of the same kind nearby to satisfy its requirements.\r\nOnly visible during the seed stage.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]White[/th]\r\n\t\t[th]Tendable & Alone[/th]\r\n\t\t[th]Combines the effects of Tendable & Alone.\r\nTalk to this crop & plant more crops of the same kind nearby.\r\nOnly visible during the seed stage.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Black[/th]\r\n\t\t[th]Parent[/th]\r\n\t\t[th]This Plant is already fully grown but harvesting it will increase the stress of certain nearby plant(s) since this plant is one of only three other family plants which satisfies its requirements for a family.\r\nOnly visible if harvestable.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]None[/th]\r\n\t\t[th]Happy[/th]\r\n\t\t[th]No stress detected.\r\nNote that your crop can still be bothered by nearby killjoys or the lack of a family.[/th]\r\n\t[/tr]\r\n[/table]\r\n\r\n[h1]Ground Analyzer[/h1]\r\n\r\nWalking above a Farm plot creates a table which shows you the currently available nutrients in the soil & a statistic about how many nutrients will be consumed by the plants:\r\n\r\n[table]\r\n\t[tr]\r\n\t\t[th]Balance[/th]\r\n\t\t[th]Shows the amount of nutrients plants do consume or produce with each growth stage. These numbers are reduced by 50% if the current season is not one of the plant's favorite seasons since plants do grow 50% slower in that case.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Total[/th]\r\n\t\t[th]Shows the total amount of consumed or produced nutrients if every plant reaches their full size.[/th]\r\n\t[/tr]\r\n\t[tr]\r\n\t\t[th]Available[/th]\r\n\t\t[th]An estimation of the currently available nutrients in the soil (it is inaccurate because you can't get better values from the soil as a client).[/th]\r\n\t[/tr]\r\n[/table]\r\n\r\nHolding any fertilizer or plant seeds will show you how it will affect your farm if applied/planted.\r\n\r\n[h1]Crop Analyzer[/h1]\r\n\r\nExamining a farm plant via your Force Inspect button shows you some information about it, including all the available stress sources for that plant and the meaning of the current colour.\r\n\r\n[h1]Others[/h1]\r\n\r\nResearched Plants:\r\n[list]\r\n[*] All: Unlocks available plants & fertilizers in your Plant Registry (This will not affect your real data and you won't be able to research any farm plants, weeds or fertilizers while this option is active)\r\n[*] Seeds Only: Unlocks only the required research to make crop seeds display the name of the crop.\r\n[/list]\r\n\r\n\r\n\r\nUpdate 1.5:\r\n[list]\r\n[*] Colour of harmless Killjoys is now bit less obvious\r\n[*] Fixed a bug causing crops not be marked as Parent\r\n[*] Improved the required water guesser a bit (now also includes naturally drained water)\r\n[*] Added Simplyfied Chinese to the languages (Translated by 琪莎猫)\r\n[/list]\r\n\r\nThis mod is able to support different languages, I can implement any language you want into the mod if you send me a translated version of the string files.\r\n\r\n[h1]Notes[/h1]\r\n\r\nIncompatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2319370282]Remove Purple Overlay[/url] mod.",
+        "time_created": 1606821101,
+        "time_updated": 1656768567,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 79,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 37791,
+        "favorited": 1556,
+        "followers": 0,
+        "lifetime_subscriptions": 51599,
+        "lifetime_favorited": 1793,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 47223,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.5.1",
+            "display_name": "version:1.5.1"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8794466257095337,
+          "votes_up": 395,
+          "votes_down": 11
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "13",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "370373189",
+        "creator": "76561197989646930",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "351060",
+        "preview_file_size": "394058",
+        "file_url": "https://cdn.steamusercontent.com/ugc/796488803082328570/E070022BA03C69057138332EBEBC26C27BF3BEFB/",
+        "preview_url": "https://images.steamusercontent.com/ugc/32981756116514988/27513FD34DFF21766CE19B980115BF96342238FD/",
+        "url": "",
+        "hcontent_file": "796488803082328570",
+        "hcontent_preview": "32981756116514988",
+        "title": "DST Advanced Farming",
+        "file_description": "Please make Jesus Lord of your life today, I love you!\r\n\r\nThe Advanced Farm is an agricultural breakthrough!\r\n\r\nCraftable under the FOOD TAB \r\n\r\nEasy recipe = 3 Boards, 3 Silk and 1 Rope. No Machine Required.\r\n\r\nNormal recipe = 3 Boards, 3 Silk , 2 Rope and 10 poop.. Use a Science Machine..\r\n\r\nHard recipe = 5 Boards, 6 Silk , 4 Rope and 10 poop.. Use an Alchemy Engine.\r\n\r\nWith The Advanced Farm your crops will grow faster.\r\n\r\nYour crops will grow all winter long but at a slower rate.\r\n\r\nThe Advanced Farm has a cool transparent effect,like a greenhouse.\r\n\r\n---------------------------------------------------------------------\r\n\r\nThe Hybrid Banana Tree\r\n\r\nThe trees seeds are refined under the REFINE TAB \r\n\r\nRecipe = 1 Carrot Seed and 1 Dragonfruit Seed. Use an Alchemy Engine \r\n\r\nPlant these pretty much anywhere you want.\r\n\r\nHybrid Bananas are very good for you when eaten.\r\n\r\nHealing = 20\r\n\r\nHunger = 25\r\n\r\nSanity = 15\r\n\r\nCookpot ingredient value = fruit\r\n\r\n------------------------------------------------------------------------\r\n\r\nMod has 3 options so far, use config mod to set options.\r\n\r\nYou can disable the banana seeds if you don't want them.\r\n\r\nYou can set the Hybrid Banana Trees to bear fruit or not in the winter.\r\n\r\nYou can set the Advanced Farm recipe.\r\n\r\n--------------------------------------------------------------------------------------\r\n\r\nYou may also buy me a burger or soda\r\n@ https://paypal.me/afro1967?locale.x=en_US\r\n\r\nIf you like the mod, thumbs up and enjoy!\r\n \r\n\r\n先进的农场是农业的突破！\r\n在食物的标签下\r\n简单食谱=3板，3丝和1绳。不需要机器。\r\n正常食谱=3板，3丝，2绳和10便便。..使用科学机器。..\r\n硬配方=5板，6丝，4绳和10便便。..使用炼金术引擎。\r\n有了先进的农场，你们的庄稼就会长得更快。\r\n你的庄稼整个冬天都会生长，但生长速度会慢一些。\r\n先进的农场具有凉爽透明的效果，就像温室一样。\r\n杂交香蕉树\r\n这些树的种子在精制标签下精制\r\n食谱=1个胡萝卜种子和1个Dragonfru\r\n",
+        "time_created": 1420538305,
+        "time_updated": 1560294096,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 432,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 313478,
+        "favorited": 12612,
+        "followers": 0,
+        "lifetime_subscriptions": 476589,
+        "lifetime_favorited": 15580,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 515281,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "scenario",
+            "display_name": "scenario"
+          },
+          {
+            "tag": "version:3.4",
+            "display_name": "version:3.4"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "Other",
+            "display_name": "Other"
+          }
+        ],
+        "vote_data": {
+          "score": 0.948239266872406,
+          "votes_up": 2185,
+          "votes_down": 72
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2323630362",
+        "creator": "76561198305429748",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "11514",
+        "preview_file_size": "227098",
+        "file_url": "https://cdn.steamusercontent.com/ugc/1647719616239936325/79DA40EB09B3B46CB5389385E12454D0C71E40BD/",
+        "preview_url": "https://images.steamusercontent.com/ugc/1647719616239979726/4CD63F5610DABB43B26C94ED3CED48FE11E1A257/",
+        "url": "",
+        "hcontent_file": "1647719616239936325",
+        "hcontent_preview": "1647719616239979726",
+        "title": "Happy Farm",
+        "file_description": "Happy Farm\r\nIncreased setting:\r\n1.      All crops grown are largest!\r\n2.      Crops never spoil!\r\n3.      Aligns plowing to the grid, 3x3 or 4x4\r\nYou can close 3.  use  Snapping Tills mod!\r\n4.      Rapid planting\r\nPlant seed immediately without redundant action\r\nWhy don’t you subscribe this if you don’t want to spend time on farming?\r\n",
+        "time_created": 1608188294,
+        "time_updated": 1608188294,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 178,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 134137,
+        "favorited": 6341,
+        "followers": 0,
+        "lifetime_subscriptions": 176744,
+        "lifetime_favorited": 7379,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 202398,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:1.2",
+            "display_name": "version:1.2"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9337105751037598,
+          "votes_up": 1105,
+          "votes_down": 32
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "5",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3165559754",
+        "creator": "76561198140241867",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "12226622",
+        "preview_file_size": "70504",
+        "preview_url": "https://images.steamusercontent.com/ugc/41196077243182412/8ED287D0980295C0415A4EDA88C918A1462EF812/",
+        "url": "",
+        "hcontent_file": "2334635150091405584",
+        "hcontent_preview": "41196077243182412",
+        "title": "[Server-side] Seasonal Farming Theme",
+        "file_description": "Tired of the same ol' 15 second loop of farming music?\r\nWell, here's a few more tracks to spice it up throughout seasons!\r\nCompatible with Island Adventures, and soon, its Rewrite!\r\n\r\nRecently \"remastered\". Listen to some revamped tunes while workin' under the scalding sun/pouring rain/freezing winters/crumbling ceiling!\r\n...With friends!\r\n\r\nThis is the Server-side version of the mod, if you want the Client-side version, download it here:\r\n    https://steamcommunity.com/sharedfiles/filedetails/?id=3161480628\r\n\r\nCredits -\r\nADM - Coding the entire mod, basically.",
+        "time_created": 1708546051,
+        "time_updated": 1737730644,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 5,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1003,
+        "favorited": 49,
+        "followers": 0,
+        "lifetime_subscriptions": 1319,
+        "lifetime_favorited": 56,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 3117,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          },
+          {
+            "tag": "version:1.3a",
+            "display_name": "version:1.3a"
+          }
+        ],
+        "vote_data": {
+          "score": 0.6382978558540344,
+          "votes_up": 40,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "29",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3637291251",
+        "creator": "76561198075031061",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "27140",
+        "preview_file_size": "215980",
+        "preview_url": "https://images.steamusercontent.com/ugc/10632061394237705100/59300A05B01D80B48DF517493EA3C8B2E652B89C/",
+        "url": "",
+        "hcontent_file": "744521105172188307",
+        "hcontent_preview": "10632061394237705100",
+        "title": "Farming Weeds",
+        "file_description": "더 나은 잡초 기르기를 위한 모드입니다.\n\t• 청소빗자루로 잡초 종류 변경\n\t• 건망초를 더이상 시들지 않게 합니다\n\t• 잡초의 성장속도를 빠르게 합니다\n\t• 잡초가 주변으로 번식하지 않게 합니다\n\t• 잡초가 쓰레기를 만들지 않게 합니다\n\nA mod for better weed farming.\n\t• Change weed types using the Clean Sweeper\n\t• Prevent Forget-Me-Lots from withering\n\t• Accelerate weed growth speed\n\t• Prevent weeds from spreading to nearby areas\n\t• Prevent weeds from creating Garden Detritus\n\n",
+        "time_created": 1767351341,
+        "time_updated": 1767351341,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 6,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 240,
+        "favorited": 21,
+        "followers": 0,
+        "lifetime_subscriptions": 287,
+        "lifetime_favorited": 21,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1790,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:1.0",
+            "display_name": "version:1.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5446428656578064,
+          "votes_up": 11,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2189004162",
+        "creator": "76561198277438128",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "48910816",
+        "preview_file_size": "19210",
+        "preview_url": "https://images.steamusercontent.com/ugc/1479948484468384018/FD83481D00C2D0CDB02F6D53D6A957A976CE95ED/",
+        "url": "",
+        "hcontent_file": "3711423006208038742",
+        "hcontent_preview": "1479948484468384018",
+        "title": "Insight (Show Me+)",
+        "file_description": "[h1]Thank you for 1 million subscribers![/h1]\r\nI never expected this many users. Thank you for your support!\r\n\r\n[h1]Background Information[/h1]\r\nInspired by Show Me.\r\nBecause I like to know everything about everything. Show me was nice, but it was inaccurate/weird for some things and just didn't have what I was looking for.\r\nThis was coded from scratch, and I originally made it for DS. I ported it over!\r\n\r\n[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2081254154][b]Click for DS Version[/b][/url]\r\n\r\n[h1]Details[/h1]\r\nWhereas some mods provide information only on inspection, this provides a tooltip with various information on mouse over. Information is cached for items in your active area (Klei has this set to about 2 screens length) and seeks to find a balance between efficiency and convenience.\r\n\r\n[h3]Server/Client Configuration[/h3]\r\nClients and servers share most of the options, with some being exclusive to the client. By default, [u]undefined[/u] options are chosen which means the client can choose what they want. Otherwise, the server has authority. \r\n\r\nServer Configuration: [u]Main Menu -> Host Game[/u] -> Mods -> Server Mods -> Insight -> Configure Mod\r\nClient Configuration: [u]Main Menu -> Mods[/u] -> Server Mods -> Insight -> Configure Mod\r\n\r\n[i]A lot of this stuff is controlled in the mod configuration. In general, if it has to do with HOW the information is displayed, it's a client setting. If it has to do with the information itself, it's a server setting.[/i]\r\n\r\n[h3]Features[/h3]\r\n[list]\r\n[*][b][u]Controller Support[/u][/b]\r\n[*]Farm Information\r\n[*]Text coloring\r\n[*]Icon Mode\r\n[*]Attack ranges\r\n[*]Health\r\n[*]Damage\r\n[*]Fuel\r\n[*]Food Value\r\n[*]Durability\r\n[*]Chest/Item/Bundle Highlighting\r\n[*]Item/Cookbook Lookups\r\n[*]Naughtiness\r\n[*][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=376333686]Combined Status[/url] Integration[/u] (for [u]Naughtiness[/u] and corrected moon cycles)\r\n[*]Follower Info\r\n[*][i]Most things, really.[/i]\r\n[/list]\r\n\r\n[h1]FAQ[/h1]\r\n[h3]Is this a server mod? Can you make a client mod version of this?[/h3]\r\n[b][i][u]This is a server mod[/u][/i][/b].\r\nA client-side version of this mod would have almost none of the information this mod displays. The server contains almost everything. That's why this is a server mod.\r\n\r\n[h3]How do I turn <thing> off?[/h3]\r\nPretty much everything can be configured to turn on, off, or adjust the level of detail. If you can't find a configuration option from the main menu, you can double check the in-game configuration menu (Insight Menu -> Config Button).\r\n\r\n[h3]There's too much information! I'm overwhelmed![/h3]\r\nI've gotten feedback that the amount of information Insight provides can be overwhelming, or that it's too much effort to adjust all the configs. Insight now comes with some presets to adjust configurations in bulk:\r\n[list]\r\n[*][u]New Player[/u] - Recommended for new players, configured for a tiny amount of information to allow them the \"authentic vanilla\" experience.\r\n[*][u]Simple[/u] - Recommended for players who liked Show Me's limited amount of information.\r\n[*][u]Decent[/u] - More or less the default configuration layout with a few tweaks.\r\n[*][u]Advanced[/u] - Recommended for players who like having a lot of information available.\r\n[/list]\r\nYou can access these presets by going to the in-game Insight Menu -> Configure Mod -> Presets. Detected first-time users will be prompted to select a preset when first playing with Insight.\r\n\r\n[h1]Feedback[/h1]\r\nFeel free to suggest features or provide feedback, good or bad. This mod is still being developed, so it's possible for issues to occur. If you do encounter one, please check the bug reporting discussion post [url=https://steamcommunity.com/workshop/filedetails/discussion/2189004162/2793873675751084957/]here.[/url]\r\n[b]You can also enable the automatic crash reporter, which will try to report your crashes for you.[/b]\r\nAlso, check out [url=https://support.klei.com/hc/en-us/articles/360029881191-Logs-and-Useful-Information-for-Bug-Reports-for-Don-t-Starve-Together]this link from Klei[/url] for advice on finding logs & submitting bugs.\r\n\r\n[h1]Thank you's[/h1]\r\nA big thank you to [url=https://steamcommunity.com/id/Zarklord]Zarklord[/url] for helping me figure some stuff out.\r\nA big thank you to [url=https://steamcommunity.com/id/rezecib]rezecib[/url] for helping me implement naughtiness for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=376333686]Combined Status[/url] and providing feedback on Insight's support for altered moon cycles.\r\nA big thank you to [url=https://steamcommunity.com/profiles/76561198870384878]licet_insanire[/url] for beta testing.\r\nA big thank you to [url=https://steamcommunity.com/profiles/76561198319567131/]Maxwell[/url], [url=https://steamcommunity.com/id/cloudyyoung]Cloudy Young[/url], and \r\n[url=https://steamcommunity.com/id/interesting28]虚の刃#28[/url] for doing the translations to Chinese.\r\nA big thank you to [url=https://steamcommunity.com/id/senhoritabuss]Senorita Buss[/url] for doing the translations to Portuguese.\r\nA big thank you to [url=https://steamcommunity.com/id/Dislekzi4/]Diegowo[/url] for doing the translations to Spanish.\r\nA big thank you to [url=https://steamcommunity.com/id/lehasex/]Лёха Секс[/url] for doing the translations to Russian.\r\nA big thank you to [url=https://steamcommunity.com/profiles/76561199503229520]Seraf[/url] for doing the translations to Korean.\r\n\r\n[h1]Source Code[/h1]\r\nYou can find the source code [url=https://github.com/penguin0616/insight]here.[/url]\r\n\r\n[h1][u]Do not copy this mod.[/u][/h1]\r\n\r\nCopyright 2020-Current penguin0616. This item is not authorized for posting on Steam, except under the Steam account named penguin0616.",
+        "time_created": 1596707197,
+        "time_updated": 1759894942,
+        "visibility": 0,
+        "flags": 134223360,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 3306,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 1230905,
+        "favorited": 44172,
+        "followers": 0,
+        "lifetime_subscriptions": 1368236,
+        "lifetime_favorited": 47827,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1345902,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "version:5.2.0",
+            "display_name": "version:5.2.0"
+          }
+        ],
+        "vote_data": {
+          "score": 0.976966917514801,
+          "votes_up": 8009,
+          "votes_down": 140
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "303",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3350705530",
+        "creator": "76561198208303071",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "31297531",
+        "preview_file_size": "523400",
+        "preview_url": "https://images.steamusercontent.com/ugc/2487767691346172277/5ECB4E82D9B1979C323DB4AC1DE5B0BA8864D570/",
+        "url": "",
+        "hcontent_file": "4415450416355604522",
+        "hcontent_preview": "2487767691346172277",
+        "title": "[DST] Limbus Company Characters 边狱巴士",
+        "file_description": "[DST] Limbus Company Characters 边狱巴士\r\n作者：魔犬\r\n码师：zzzzzzzs\r\n画师：伊尹、鬼针、maotuki、finn\r\n文案：马一甲（谷）\r\n赞助鸣谢：伊尹、maotuki\r\n\r\n-------------------------------------------------------------------------------------\r\n\r\n更详细的MOD介绍请访问：https://www.bilibili.com/opus/989683691940741121\r\n\r\n本MOD基于韩国残酷罪孽共鸣RPG游戏《Limbus Company》，包含8名罪人角色。角色介绍具体如下：\r\n\r\n10.但丁：\r\n样貌神秘的管理者，可以复活罪人们的“时钟”——祂虽无法进食普通食物，入夜后，却会成为罪人们不可或缺的明灯。\r\n1.李箱：\r\n成为标本的天才，是诗人也是发明家——可靠而稳定的团队智囊，维系各方平衡的全能手（*该人物拥有两件带有特殊功能的专属套装）；\r\n2.浮士德：\r\n与恶魔签订契约，无所不知的博士——虽然更加脆弱易折，却拥有掌握黑暗力量的能力。\r\n3.唐吉诃德：\r\n满怀冒险与骑士精神，狂热的收尾人粉丝——热衷于收集收尾人勋章的她，通过模仿偶像的扮演游戏，拥有着独特的强大力量（*该人物拥有两件带有特殊功能的专属套装）\r\n5.默尔索：\r\n静默，细致。冷漠，温柔。局外人——擅长使用所有厨具烹饪任何食物的大厨，同时拥有更高的攻击倍率。（*该人物拥有两件带有特殊功能的专属套装）\r\n6.鸿璐：\r\n异花映月明，气贵自生荣。玉眼通幽暗，轻力扰浮华——具有夜视功能的贵公子，意外擅于战斗，却不善耕织。（*该人物拥有两件带有特殊功能的专属套装）\r\n7.希斯克里夫：\r\n怀揣复仇之心，来自荒原的狂野之人——拥有特殊的复仇机制：在更低的血量与san值下，攻击将会变得更加迅猛强烈（*该人物拥有两件带有特殊功能的专属套装）\r\n13.格里高尔：\r\n存活至今的退役军人，无法遮盖、令人厌恶的身体变形——拥有无法拆卸、永久占有武器栏的虫肢。同时拥有特殊的san值与饥饿度特性。（*该人物拥有两件带有特殊功能的专属套装）\r\n\r\n---------------------------------------------------------------------------------\r\n\r\nThis MOD is based on the Korean RPG game \"Limbus Company,\" featuring eight sinner characters. The character introductions are as follows:\r\n\r\n10、Dante:\r\n A mysterious manager who can revive sinners with his \"clock\"—though he cannot consume ordinary food, he becomes an indispensable beacon for sinners at night.\r\n1、Yi Sang: \r\nA genius turned specimen, both a poet and an inventor—he is the reliable and stable team brain, a versatile hand that maintains balance among all parties (This character has two exclusive outfits with special functions).\r\n2、Faust: \r\nA doctor who has made a pact with a demon and knows all—though more fragile, he possesses the ability to wield dark powers.\r\n3、Don Quixote: \r\nA passionate adventurer and fanatic of the Reapers—she collects Reaper medals with fervor, gaining unique strength through her idol mimicry role-playing game (This character has two exclusive outfits with special functions).\r\n5、Meursault:\r\n Silent, meticulous; cold yet gentle—a bystander—he is a master chef capable of cooking any dish with all kitchen tools and has a higher attack multiplier (This character has two exclusive outfits with special functions).\r\n6、Honglu: \r\n\"Exotic flowers reflect the moonlight, nobility arises naturally. Jade eyes penetrate the darkness, gentle power disrupts the superficial.\"—A noble with night vision capabilities, unexpectedly skilled in combat, but poor at farming and weaving (This character has two exclusive outfits with special functions).\r\n7、Heathcliff:\r\n A wild man from the moors, driven by vengeance—he possesses a unique revenge mechanism: with lower health and sanity, his attacks become more ferocious and intense (This character has two exclusive outfits with special functions).\r\n13、Gregor:\r\n A retired soldier who has survived, with an unhideable, repulsive body transformation—he has unremovable, permanently equipped insect limbs, along with special sanity and hunger characteristics (This character has two exclusive outfits with special functions).\r\n\r\n-----------------------------------------------------------------------------------\r\n\r\n· 如在游玩过程中遇到了BUG，欢迎在评论区或QQ群内进行反馈。感谢您的支持 ——【BUG反馈QQ群：1029681877】\r\n· If you encounter any bugs, please give me feedback in the comment. Thank you for your support.",
+        "time_created": 1729259885,
+        "time_updated": 1767447473,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 349,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 74972,
+        "favorited": 5115,
+        "followers": 0,
+        "lifetime_subscriptions": 86100,
+        "lifetime_favorited": 5349,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 220691,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "version:20260103",
+            "display_name": "version:20260103"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9623202681541443,
+          "votes_up": 1891,
+          "votes_down": 26
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "38",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2028608481",
+        "creator": "76561198093758872",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "13727785",
+        "preview_file_size": "436006",
+        "file_url": "https://cdn.steamusercontent.com/ugc/1012688337455688691/1B6CC49A3C38F9A932363B9EA642EA9DBEF6CEF7/",
+        "preview_url": "https://images.steamusercontent.com/ugc/780752043719273368/0887BBBD1082791AD9DFC251192D690902100D8D/",
+        "url": "",
+        "hcontent_file": "1012688337455688691",
+        "hcontent_preview": "780752043719273368",
+        "title": "Super Farming",
+        "file_description": "This mod changes the shape and properties of the crop. \r\n- Growth Time: 15 days for annual plant and 36 days for perennial plant. \r\n- Crop Yields: chance x0, x1, x2, x3 \r\n- Attribute: Yes/No Grow In Winter, Withered/Weak In Summer. \r\nAlso added some new seeds and interesting items.\r\n\r\nThis mod isn't my creation, all credits are for ti_Tout, so this is the link for the original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1392778117, PLEASE, support the original author and subscribe in his mod too!\r\n\r\nIf you like this mod, don't forget to hit the [img]https://i.imgur.com/EFERX9f.gif[/img] button. Thanks!\r\nSEE MORE MY MOD IN [url=https://steamcommunity.com/id/NananoSora/myworkshopfiles/?appid=322330] HERE [/url]\r\nPost the crash log if you run into crashes! The log is usually in Documents\\Klei\\DoNotStarveTogether\\ folder. Search \"server_log.txt\" or \"client_log.txt\". Or you can just post the crash screenshot.",
+        "time_created": 1584721425,
+        "time_updated": 1585572749,
+        "visibility": 0,
+        "flags": 134219264,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 77,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 24569,
+        "favorited": 1417,
+        "followers": 0,
+        "lifetime_subscriptions": 39772,
+        "lifetime_favorited": 1807,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 84613,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:200330",
+            "display_name": "version:200330"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8983799815177917,
+          "votes_up": 560,
+          "votes_down": 19
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "10",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2829037969",
+        "creator": "76561198150335927",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "111412",
+        "preview_file_size": "120050",
+        "preview_url": "https://images.steamusercontent.com/ugc/1840299290329474609/028784B70095F66F89C75F6BFBD7AD1A1B858B3B/",
+        "url": "",
+        "hcontent_file": "9108334606951592731",
+        "hcontent_preview": "1840299290329474609",
+        "title": "Farming QoL & Friendly Fruit Fly Tweaks",
+        "file_description": "[h1]Quality of Life Farming Tweaks [/h1]\r\n[list]\r\n[*]Giant Crops don't fly when you pick them\r\n[*]Friendly Fruit Fly working (not unloading) when you're away\r\n[*]Waterfowl Can refillable by sea\r\n[*]Hammerless Harvest\r\n[*]Up to 20 Friendly Fruit Flies\r\n[*]and more!\r\n[/list]\r\n\r\n[h1]You will never get stuck in your Giant Crops again.[/h1]\r\nas this mod prevents giant crops from randomly making walls of death as you uproot them,\r\nand you can even remove their collision size entirely!\r\n\r\n[h1]Plant, water, maybe leave some ice, go adventure, and come back to a bountiful harvest.[/h1]\r\nFriendly Fruit Flies will now tend plants even when you're away, even in the caves!\r\nYou can also set this mod to have up to 20 friendly fruit flies. If you're hoarding them, be sure to disable their collision so they don't block each other. Or, allow only 1 super fruit fly but with 5x Range and Speed!\r\n\r\n[h1]This is a server mod with only \"micro-modifications\" and no full file replacement.[/h1]\r\nAs such, this mod is quite resistant to game updates. It might conflict with very similar mods that modify the exact same features, as is usually the case, but it is compatible with most of the others.\r\n\r\nSource code: https://github.com/kurozawa6/dst-farming-qol-and-friendly-fruit-fly-tweaks\r\n\r\n[h1]Enjoy![/h1]\r\n\r\nP.S. This mod was an attempt to make my partner appreciate farming. She still prefers farming spiders...",
+        "time_created": 1656722885,
+        "time_updated": 1658728083,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 18,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 5880,
+        "favorited": 253,
+        "followers": 0,
+        "lifetime_subscriptions": 9657,
+        "lifetime_favorited": 294,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 14516,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:1.2",
+            "display_name": "version:1.2"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7197802066802979,
+          "votes_up": 81,
+          "votes_down": 1
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "8",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2218713347",
+        "creator": "76561198067490017",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "75519718",
+        "preview_file_size": "586678",
+        "file_url": "https://cdn.steamusercontent.com/ugc/1633074134860081442/22DE677686E08C28A065A81F25287A6CD367E49A/",
+        "preview_url": "https://images.steamusercontent.com/ugc/1633073317509605820/04FA239610C7F3B925D4D120E2ACC8A85661102E/",
+        "url": "",
+        "hcontent_file": "1633074134860081442",
+        "hcontent_preview": "1633073317509605820",
+        "title": "Farming Extension",
+        "file_description": "Adds more to farming! It's mostly to add more depth to the farming in DST.\r\n-----------------------------------------------------------------------------\r\n[h1]Features[/h1]\r\n\r\n[b]Seemingly Harmless Plant Patches! [/b]\r\n\r\nPumpkins, asparagus, potatoes, garlic, onion, pomegranate (and technically dragonfruit*) are now to be found in the world and can no longer be grown from the plain seeds.\r\n\r\nThese patches can be a boon but they might not be quite as nice they seem! \r\n\r\n*Dragonfruit does not have a patch, you just cannot grow them from regular seeds and have to find them on the lunar island.\r\n\r\n[i]Forest patches [/i]\r\n-- Pumpkin\r\n\r\n[i]Cave patches [/i] (See Harvest Spirit for details on non-cave servers)\r\n-- Pomegranate\r\n-- Onion\r\n-- Garlic\r\n-- Potato\r\n\r\n[i]Both [/i]\r\n-- Asparagus (fun fact, asparagus is a swamp grass so try to guess where to find it)\r\n\r\n[b]Persephone's Cruse [/b]\r\n\r\nBeware of eating any pomegranates you find in the caves before cleansing them of any evil curses! Eating the cursed fruit will trap you in the caves for 3 days and make anything near you hostile towards you (this latter part is true even just holding it)!\r\n\r\nTry a lunar water source to purify the fruit first. (Moondials at night; lunar hot springs that have been bath bombed).\r\n \r\nMagicpowder works on the fruit AND can remove it from players too.\r\n\r\nWortox's souls negate the curse both on the fruit and on any cursed players too but will cost 20 HP.\r\n\r\n[b]Revamped Farming [/b] The regular farms can be turned off (off by default)\r\n\r\nYou now can till some of the various turfs to plant seeds. Different crops grow faster on different turfs. Using a pitchfork on a plant's tile will kill it though so no moving turf after you plant something! All crops grow best on fertile soil turf.\r\n\r\nThe crops also now have quality values (poop means bad and gold star means good). Quality reduces over time, usually. The crops will sometimes spawn files or weeds near them and these will reduce the crop's quality even faster.\r\n\r\nYou can use a straw hat to tend to the crop plant once a day to reduce the chance of lies (or get rid of them if they are there) and you can fertilise them to try to increase their quality. Good quality crops have a 20% chance of giving a second crop. Wormwood doesn't need a straw hat to tend to crops and will gain sanity from tending them.\r\n\r\nPlants left unattended for too long will wilt, even if they fully grown!\r\n\r\nYou need to use ice on the new crops (quagmire ones) during Summer since I could not make the fling-o-matic protect them.\r\n\r\n[u]Good quality[/u] crops give +35% of food values (or a reduction in negative ones) and last 35% longer.\r\n[u]Bad quality[/u] crops give -30% of food values (or an increase in negative ones) and perish 30% sooner.\r\n\r\nCrop quality does not affect cooking recipes (might change that in future)\r\n\r\n[b]Mealingstone and Stone Oven [/b]\r\n\r\nThere is now a mealingstone with its own set of products like flour. Mushroom spore pack needs to be used on a stump.\r\n\r\nThere is also now a stone oven which does take some of the cookpot recipes (anything that would be baked is now to be made in the oven and not a cookpot). It also takes longer to bake things; can't rush a good roast!\r\n\r\n** Recipes are changed to use more realistic ingredients **\r\n\r\n[b]Harvest Spirit[/b]\r\n\r\nThe spirit of spring herself! She spawns every Spring on an island off the coast (sometimes of the coast of the lunar island not just the mainland). Give her offerings (she only accepts crops, preferably nice ones) and she might give you a gift every so often or she may destroy some structures near you if she is not kept happy. You can tell if she is happy based on the size of the flame above her head. If it is out, then she is not happy.\r\n\r\nHer gifts are the only way to get certain crops (technically their seeds) if you are not playing with caves.\r\n\r\nYou can also choose to fight her by offering either a curse pomegranate or wheat (rejecting her wheat gift is disrespectful to her!). If you run away or die, she will leave until next Spring. You will get a random gift pouch when she dies and many emerald feathers.\r\n\r\nThe two new crafts she offers:\r\n\r\n-- Cloud caller staff: summon a cloud pet (uses your pet slot sadly) that can be a nice inventory OR can heavy lift for you. You also float around on a cloud when equipped and increase your speed (without triggering spider webs too).\r\n\r\n-- Harvest Gem staff: shoots projectiles, gives off light and can summon a small blast spell on some enemies.\r\n\r\nBoth staffs last 5 days and can be refuelled by emerald feathers or magic powder.\r\n\r\n~ All assets belong to Klei, the harvest spirit is actually an unused asset from Hamlet.",
+        "time_created": 1599183395,
+        "time_updated": 1599867565,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 41,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 4925,
+        "favorited": 360,
+        "followers": 0,
+        "lifetime_subscriptions": 8631,
+        "lifetime_favorited": 463,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 34535,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "worldgen",
+            "display_name": "worldgen"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.7",
+            "display_name": "version:1.7"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7918089032173157,
+          "votes_up": 182,
+          "votes_down": 11
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "42",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2818292210",
+        "creator": "76561198006856978",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "405988",
+        "preview_file_size": "21733",
+        "preview_url": "https://images.steamusercontent.com/ugc/1886459038282630424/49DE9106C6CEF927D3F6F3295364B68F30C77E64/",
+        "url": "",
+        "hcontent_file": "7855430356887557311",
+        "hcontent_preview": "1886459038282630424",
+        "title": "DST Advanced Farming Reworked",
+        "file_description": "We won't stave this winter! Original work made by Afro1967: https://steamcommunity.com/sharedfiles/filedetails/?id=370373189\r\n\r\nWorks with latest update\r\n\r\nThe Advanced Farm is an agricultural breakthrough!\r\n\r\nEasy recipe = 3 Boards, 3 Silk and 1 Rope. No Machine Required.\r\n\r\nNormal recipe = 3 Boards, 3 Silk , 2 Rope and 10 poop.. Use a Science Machine..\r\n\r\nHard recipe = 5 Boards, 6 Silk , 4 Rope and 10 poop.. Use an Alchemy Engine.\r\n\r\nWith The Advanced Farm your crops will grow faster.\r\n\r\nYour crops will grow all winter long but at a slower rate.\r\n\r\nThe Advanced Farm has a cool transparent effect,like a greenhouse.\r\n\r\n---------------------------------------------------------------------\r\n\r\nThe Hybrid Banana Tree\r\n\r\nRecipe = 1 Carrot Seed and 1 Dragonfruit Seed. Use an Alchemy Engine\r\n\r\nPlant these pretty much anywhere you want.\r\n\r\nHybrid Bananas are very good for you when eaten.\r\n\r\nHealing = 20\r\n\r\nHunger = 25\r\n\r\nSanity = 15\r\n\r\nCookpot ingredient value = fruit\r\n\r\n------------------------------------------------------------------------\r\n\r\nMod has 3 options so far, use config mod to set options.\r\n\r\nYou can disable the banana seeds if you don't want them.\r\n\r\nYou can set the Hybrid Banana Trees to bear fruit or not in the winter.\r\n\r\nYou can set the Advanced Farm recipe.\r\n\r\n--------------------------------------------------------------------------------------",
+        "time_created": 1654639588,
+        "time_updated": 1654639588,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 11,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 4390,
+        "favorited": 228,
+        "followers": 0,
+        "lifetime_subscriptions": 8242,
+        "lifetime_favorited": 278,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 7338,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:3.4.1",
+            "display_name": "version:3.4.1"
+          }
+        ],
+        "vote_data": {
+          "score": 0.6204379796981812,
+          "votes_up": 35,
+          "votes_down": 2
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "1",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2325441848",
+        "creator": "76561197993843368",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "437242",
+        "preview_file_size": "14163",
+        "preview_url": "https://images.steamusercontent.com/ugc/1652223367661026152/16C10259767EC23C53A12F9CD7A89278161EA355/",
+        "url": "",
+        "hcontent_file": "6703663872313071157",
+        "hcontent_preview": "1652223367661026152",
+        "title": "ActionQueue RB2 (RWYS supported)",
+        "file_description": "This version of ActionQueue Reborn updates eXiGe's version to add basic support for the Reap What You Sow update.\r\n\r\nAdded features include: \r\n* Fix for lureplant (right click TAKEITEM)\r\n* Planting seeds on farm soil (PLANTSOIL)\r\n* Tending to plants (INTERACT_WITH)\r\n* Researching new plants with plantregistryhat (PLANTREGISTRY_RESEARCH)\r\n* Picking plants on farm soil with plantregistryhat\r\n* Extinguishing fires with wateringcan (POUR_WATER)\r\n* Watering farm soil tiles (ACTIONS.POUR_WATER_GROUNDTILE)\r\n* Tilling on farm soil and snapping to 3x3 grid per farm tile (ACTIONS.TILL)\r\n\r\neXiGe's ActionQueue Reborn mod here: \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=1608191708",
+        "time_created": 1608325640,
+        "time_updated": 1668495031,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 534,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 632876,
+        "favorited": 26815,
+        "followers": 0,
+        "lifetime_subscriptions": 780906,
+        "lifetime_favorited": 30864,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 813070,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "version:1.134",
+            "display_name": "version:1.134"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9725798964500427,
+          "votes_up": 4029,
+          "votes_down": 65
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "34",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2172351538",
+        "creator": "76561198073329271",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "32894896",
+        "preview_file_size": "152763",
+        "preview_url": "https://images.steamusercontent.com/ugc/1761443758646744267/9A51EE32C46BB7DC64C32EAB046D2DB449AA8853/",
+        "url": "",
+        "hcontent_file": "6242122669179781127",
+        "hcontent_preview": "1761443758646744267",
+        "title": "FULLMETAL ALCHEMIST EDWARD ELRIC  ver3.2h 2023: The King of Farming & Building",
+        "file_description": "[h1]Default language is Chinese, but you can change language to ENGLISH in mod configure![/h1]\r\n\r\n[h1]With Edward mod on，though other player can use Edward's craft too, but only Edward can get side products when crafting. [/h1]\r\n\r\n[h1]This mod published much earlier than new Wilson,and has better and larger number of alchemy than Wilson. A big difference is ,Edward's alchemy followed the rule of Equivalent exchange, so usually you will get by-product when using alchemy.[/h1]\r\n\r\n[b]Now Edward has definitely become the KING of this new version of DST. Be tired of farming in this version? Just subscribe Edward and enjoy your new farming life!! [/b]\r\n\r\n[h1]In VER 3.0,I also add 6 music of Fullmetal Alchemist to the game. 4 music for each time you enter the new season,and one for each time you enter the game. AND THE LAST BUT NOT THE LEAST, a perfect music for death!  [/h1]\r\n\r\n[b]THE ONLY PS: I added the recipe of refresh hambat, but *When you trying to refresh a hambat, don't use skin !!!!\r\nIt will casue crash.IF you really need skin, rebuild one or use the magic broom.[/b]\r\n\r\n[h1]The together version of Edward is the completed Edward[/h1]\r\nTo a certain extent, Edward could use his special skills to replace some ability of Wickerbottom and Woody. He is extremely capable in both fighting and building bases. For example, the special walls he could create can instantly divide the battlefield. By double-click on the stone wall, the damage it could take increases. Try utilizing this ability to kill dragonflies and build a home quickly!\r\n(Only row of walls are high walls, and the others are low walls (convenient to build a home)\r\n\r\n[h1]Preface:[/h1]\r\nFor the first time in my life, I dedicated my time to the eternal god \"Fullmetal Alchemist\". How can there be no Edward in the DST world, and how can there be no alchemy?\r\n\r\n[h1]Creator List:[/h1]\r\nDesign, drawing, sound effects, Animation,balance and adjustment: Xiche\r\nCode: Wulmaw (Ahao) (fast programming, high efficiency, neat code, rich experience. It is strongly recommended to find a partner or place an order with him during programming.)\r\nEnglish description editor : Cheshire Cat\r\n\r\n[h1]Stats:[/h1]\r\nHunger: 150\r\nSanity: 160\r\nHealth: 130\r\nHunger speed: 1.0\r\nTough will: Sanity falling speed 0.8; Sanity rising speed 1.2\r\nQuick Move: walking speed 4.5; running speed 7.2\r\nMelee Mage: Damage modifier 1.25x\r\nThe Gate of Truth: Edward, who has passed through the Gate of Truth, was imbued with a lot of knowledge. He can read and write books and he is able to craft items from science station at the beginning of the game. He can practice alchemy without the transmutation cycle.\r\nSteel body: Edward's right arm and left calf are made of steel. Since Wendy is not there, he must pay special attention to the maintenance issue. When it rains, Edward will constantly lose blood and move slower than usual if  humidity more than 10.\r\nSpecial animation:\r\nIn the game, the crafting animation was replaced by Edward clapping animation since he does not need the transmutation cycle (hereinafter referred to as Polaroid).\r\nIn addition, when the player holds a hammer to hit the building, the animation is also Polaroid.\r\n\r\n[h1]Active skills:[/h1]\r\n(You can edit the keys in the configuration interface or disable them)\r\n1.Instant Wall: (replacing the texture of the stone wall with the texture of the thulium wall, however, the material used is still rocks)\r\n\r\nRow of wall (near): (a row of stone walls can be generated at a point near in front)\r\n          consumes 18 rocks, 10 hunger, and 5 sanity. (high wall) shortcut key J\r\nRow of wall (far): (a row of stone walls can be generated at a point further away from character)\r\n          consumes 18 rocks, 10 hunger, and 5 sanity. (high wall) shortcut key U\r\nSmall square wall: (Stone walls can be generated around the character for protection)\r\n          consumes 16 rocks, 8 hunger and 5 sanity. (low wall) shortcut key K\r\nSuper square wall: (Quickly build a small base or enclose enemies/friends) \r\n          consumes 64 rocks, 15 hunger and 10 sanity. (low wall) shortcut key I\r\nSquare prison (near): (An array of wall can be generated near the monster to enclose them) \r\n          consumes 20 rocks, 10 hunger and 5 sanity. (Low wall) shortcut key L\r\nSquare prison (far): (An array of wall can be generated in a further position to enclose monsters) \r\n          consumes 20 rocks, 10 hunger and 5 sanity. (low wall) shortcut key O\r\n\r\n[h1]Tips: The walls can be stacked in the same position by clicking on them slowly. By doing so, the maximum damage they could take increase. You could also try high-speed double-clicking To see what would happen :)[/h1]\r\n\r\n2. \r\nAnalysis, decomposition but no reconstruction: consumes 6 hunger and 5 sanity, 3s CD, Shortcut key N\r\nAlchemy is divided into three steps: analysis, decomposition, and reconstruction. If you only do the decomposition step, you can decompose and destroy the buildings in a certain area in front.\r\nEdward learnt this from Scar's destruction. In addition to destruction, it can also generate 50 AOE damage. \r\nEdward is not a strong character in animation. His success was mostly due to the tough personality and the dignity of a melee mage.\r\nIn battle, skills are just assistances, you would still need to use your basic understanding of the game.  \r\n\r\n[h1]Alchemy Craft Bar[/h1]\r\n\"Humankind cannot gain anything without first giving something in return. To obtain, something of equal value must be lost. That is alchemy's first law of Equivalent Exchange. In those days, we really believed that to be the world's one, and only truth.” --Alphonse Elric\r\n\r\n[b]\"Equivalent Exchange\"[/b]\r\nSince alchemy’s basic rule is equivalently exchange, when designing the formula list, the chemical formula of each object was referred to and finally a total of 80 unique alchemy formulas in the current version were drafted.\r\n\r\nPs:! ! Most of alchemy has by-products. This is the real equivalent exchange. Only by using by-products well can you become an accomplished alchemist---! !\r\n\r\n[b]\"Forbidden Alchemy\"[/b]\r\nEvery time when the player is crafting high-value or rare items, some sanity or hp or hunger will be consumed. \r\n\r\n[b]\"Chimera Alchemy\"[/b]  (new!!!)\r\n2Months has been past since Edward was crossed over to Klei’s World. Finally he figure out how to make chimera in this world. Though it was an evil alchemy in Edward’s world.But in Klei’s World, the rule of alchemy is different:Chimera Alchemy doesn’t need human body to make it come true. \r\n3.0 NEW:1 more chimera, and now you can get all kinds of seeds if you make all kinds of chimera.The by products of each of them will have 1 or more kinds of seeds.\r\n\r\n[b]\"Human Transmutation\"[/b]\r\nThis is equivalent to a meat effigy. It consumes not only materials but also a lot of sanity and 20 health. Future versions will add complete body formations and animations.\r\n\r\n[b]\"Remote Alchemy\"[/b]\r\nNow Edward can remotely build buildings，use mostl kind of tools and put down dogteeth traps within a certain range (you know what I mean? Funny). \r\n3.0 new:remote plant ,remote farm, remote push water, remote till, remote fertilizer ,remote fill  !!Now you are the king of the new version of DST!\r\n\r\nTips for playing:\r\nThe walls made at this stage will fall to the ground after being decomposed, and you can only pick them up one by one if you want to reuse them. In the later stage, the lazy talisman can greatly improve Edward's combat effectiveness (the lazy talisman is epic-enhanced). You can also try using Auto stack and pick mod.\r\nVersion number: 3.2h\r\n\r\nCheck the Update log to see the detail of every update. \r\n\r\nFuture update:\r\nIf I am rich enough, I will try to make the whole world of Fullmetal Alchemist.",
+        "time_created": 1595253344,
+        "time_updated": 1681105485,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 229,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 15391,
+        "favorited": 1119,
+        "followers": 0,
+        "lifetime_subscriptions": 25740,
+        "lifetime_favorited": 1363,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 70276,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "character",
+            "display_name": "character"
+          },
+          {
+            "tag": "pet",
+            "display_name": "pet"
+          },
+          {
+            "tag": "creature",
+            "display_name": "creature"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "version:3.2h",
+            "display_name": "version:3.2h"
+          }
+        ],
+        "vote_data": {
+          "score": 0.8547618985176086,
+          "votes_up": 309,
+          "votes_down": 11
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "31",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "501385076",
+        "creator": "76561198204009267",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "20488",
+        "preview_file_size": "117118",
+        "file_url": "https://cdn.steamusercontent.com/ugc/1665728219799633209/E6FAC6D5EB61E134F615E7FE56B9DF58379FD982/",
+        "preview_url": "https://images.steamusercontent.com/ugc/1476405876665245402/38FFD33965BE8386D0AE82D0E0A660CD45711FCD/",
+        "url": "",
+        "hcontent_file": "1665728219799633209",
+        "hcontent_preview": "1476405876665245402",
+        "title": "Quick Pick",
+        "file_description": "[b]The mod removes the animation of harvest grass, sapling, berrybush and other things, which makes them picked like a carrot.[/b] \r\n\r\n[b]It makes almost everything pick quickly.[/b]\r\n\r\n[h1]Changelog[/h1]\r\n[list]\r\n    [*][b]Version 1.3.0[/b]\r\n      -[i]Quick cooking foods on firepit.[/i]\r\n\r\n    [*][b]Version 1.2.0[/b]\r\n      -[i]Added Wormwood Crop quickly pickable.[/i]\r\n      \r\n    [*][b]Version 1.1.1[/b]\r\n      -[i]Added Carrat and Moon Sapling quickly pickable.[/i]\r\n      \r\n    [*][b]Version 1.0.6[/b]\r\n      -[i]Added Oasis Cactus and Bull Kelp quickly pickable.[/i]\r\n\r\n    [*][b]Version 1.0.5[/b]\r\n      -[i]Quick harvest from pots, dryers and farms configurable.[/i]\r\n\r\n    [*][b]Version 1.0.4[/b]\r\n      -[i]Added the meat rack and bee box quickly pickable.[/i]\r\n\r\n    [*][b]Version 1.0.3[/b]\r\n      -[i]Added the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1463489316 ] Coffee Bush    [/url] quickly pickable.[/i]\r\n\r\n    [*][b]Version 1.0.2[/b]\r\n      -[i]Added the stone fruit bush quickly pickable.[/i]\r\n\r\n    [*][b]Version 1.0.1[/b]\r\n      -[i]Added the cave flower quickly pickable.[/i]\r\n[/list]\r\n\r\n[h1]Source code[/h1]\r\nThis project is under the [url=https://www.gnu.org/licenses/gpl-3.0.en.html] GNU GENERAL PUBLIC LICENSE [/url]\r\nSource code is available at GitHub: https://github.com/jupitersh/dst-mod-quick-pick",
+        "time_created": 1439806607,
+        "time_updated": 1602650872,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 301,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 2352972,
+        "favorited": 77113,
+        "followers": 0,
+        "lifetime_subscriptions": 2781455,
+        "lifetime_favorited": 86736,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 2636345,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "version:1.4.0",
+            "display_name": "version:1.4.0"
+          },
+          {
+            "tag": "server_only_mod",
+            "display_name": "server_only_mod"
+          },
+          {
+            "tag": "Other",
+            "display_name": "Other"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9697124361991882,
+          "votes_up": 11348,
+          "votes_down": 306
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "9",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "3387947303",
+        "creator": "76561198289803404",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "110374",
+        "preview_file_size": "35241",
+        "preview_url": "https://images.steamusercontent.com/ugc/24304572077780645/009D48EE7F04D8EBBF62F70A8E652E98517AAFEC/",
+        "url": "",
+        "hcontent_file": "199662298887114517",
+        "hcontent_preview": "24304572077780645",
+        "title": "Slightly Easier Farming",
+        "file_description": "Makes new farming a tiny bit easier.\n\nMakes the range for family check 25% more to allow for less strict placing.\n\nAllows the plant to accumulate 1 more mistake.\n\nAlso adds a configuration option to override Geometric Placement's fineness of seed planting grid.\nNote: _G.SetGMSeedPlacementGridFineness(int) is exposed for convenience and on-the-fly adjustments.",
+        "time_created": 1734711754,
+        "time_updated": 1734791960,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 1,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 371,
+        "favorited": 9,
+        "followers": 0,
+        "lifetime_subscriptions": 431,
+        "lifetime_favorited": 13,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 1801,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "tweak",
+            "display_name": "tweak"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "version:0.1.0",
+            "display_name": "version:0.1.0"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5192307829856873,
+          "votes_up": 4,
+          "votes_down": 0
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "2",
+        "revision": 1,
+        "ban_text_check_result": 5
+      },
+      {
+        "result": 1,
+        "publishedfileid": "1426103330",
+        "creator": "76561198078774526",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "4367806",
+        "preview_file_size": "69404",
+        "file_url": "https://cdn.steamusercontent.com/ugc/782985908099282777/661D7815A26B3AB6170011DD4DF2FE21857A281F/",
+        "preview_url": "https://images.steamusercontent.com/ugc/952957448636532677/3553BE03C712CBC8AA76A62E3DCA72E63D4EF419/",
+        "url": "",
+        "hcontent_file": "782985908099282777",
+        "hcontent_preview": "952957448636532677",
+        "title": "Custom Farming",
+        "file_description": "[b]Grow vegetables and fruits without a farm![/b] How to do it?\r\n[img]https://s8.hostingkartinok.com/uploads/images/2018/06/0ba08132bba90915e816b2b82177adcb.png[/img]\r\n[list]\r\n[*]Create a hoe;\r\n[*]Till the ground;\r\n[*]Fertilize the soil;\r\n[*]Plant a seed!\r\n[/list]\r\nIt is possible to grow vanilla plants too!\r\n\r\n[b]Want a garden?[/b] Craft and place a soil turf (there is an option which allows to till only this turf) \r\n\r\n[b]Cook new vegetables in a crockpot[/b]. New recipes:\r\n[img]https://s8.hostingkartinok.com/uploads/images/2018/06/b58208c4ddf9d63585f6858f228ea1e0.png[/img]\r\n[list]\r\n[*]Bread (4 wheat);\r\n[*]Fruit muffin (fruit, egg, wheat, honey)\r\n[*]Tomato soup (2 tomato, veggies, no meat);\r\n[*]Onion soup (2 onion, veggies, no meat);\r\n[*]Meat soup (2 garlic, 1 additional veggie, 1 meat);\r\n[*]Fish soup (2 potato, 2 fish);\r\n[*]Pumpkin soup (pumpkin, 1 honey, wheat, no meat)\r\n[*]Fruit pie (2 wheat, fruits, no meat)\r\n[*]Vegetable pie (2 wheat, veggies, no meat)\r\n[*]Meat pie (2 wheat, meat)\r\n[*]Fish pie (2 wheat, fish)\r\n[*]Sweet turnip (2 turnip, 2 honey, no meat)\r\n[/list]\r\n\r\n[b]How to get new seeds?[/b]\r\n[img]https://s8.hostingkartinok.com/uploads/images/2018/06/1f31e2cb8baffc5cfe0f40b9a294699f.png[/img]\r\nIt's pretty simple — new vegetables can be grown from usual seeds. Also you can get specific seeds using a birdcage.\r\n\r\nDon't like the new farming system? Disable the hoe recipe and grow new vegs on usual farms.\r\n\r\nCheck my another mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1290063173]Green World[/url]",
+        "time_created": 1530278420,
+        "time_updated": 1568060549,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 112,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 7319,
+        "favorited": 430,
+        "followers": 0,
+        "lifetime_subscriptions": 14256,
+        "lifetime_favorited": 573,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 32996,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "Other",
+            "display_name": "Other"
+          },
+          {
+            "tag": "version:1.3.42",
+            "display_name": "version:1.3.42"
+          }
+        ],
+        "vote_data": {
+          "score": 0.7764706015586853,
+          "votes_up": 148,
+          "votes_down": 7
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "650779849",
+        "creator": "76561197988620852",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "mod_publish_data_file.zip",
+        "file_size": "360078",
+        "preview_file_size": "17390",
+        "file_url": "https://cdn.steamusercontent.com/ugc/296483000615264655/FB7095DB8E4F2EAB2DAE6CDD474E24360646F83C/",
+        "preview_url": "https://images.steamusercontent.com/ugc/296483000614721398/DE1E52FA023E32AB05A1CFBBDA5234BCA2B554A9/",
+        "url": "",
+        "hcontent_file": "296483000615264655",
+        "hcontent_preview": "296483000614721398",
+        "title": "Advanced Farming [Fork]",
+        "file_description": "[h1][b]END OF DEVELOPMENT AND GOODBYE[/b][/h1]\nI have stopped the development of this and future mods. \nMore information can be found on the link below. \n[url=data.ewul.net/dlc/Game/DST/goodbye.html]Goodbye[/url].\n\n[h1][b]MAIN FEATURES:[/b][/h1]\nEnables the player to craft Advanced Farm which grows crop faster and even during winter and Hybrid Banana Tree which grows Hybrid Bananas that provide beneficial stats to the player when eaten.\nYou can configure the Advanced Farm recipe.\nYou can disable the Hybrid Banana seeds if you don't want them.\nYou can set the Hybrid Banana Trees to bear fruit or not in the winter.\n\n[b]Advanced Farm[/b]\nCraftable under Food Tab.\nEasy Recipe = 3 Boards, 3 Silk and 1 Rope. No Machine Required.\nNormal Recipe = 3 Boards, 3 Silk , 2 Rope and 10 poop. Use a Science Machine.\nHard Recipe = 5 Boards, 6 Silk , 4 Rope and 10 poop. Use an Alchemy Engine.\n\n[b]The Hybrid Banana Tree[/b]\nCraftable under Refine Tab.\nRecipe = 1 Carrot Seed and 1 Dragonfruit Seed. Use an Alchemy Engine.\n\n[h1][b]FORKED MOD[/b][/h1]\nThis mod is forked and not originally made by me.\nOriginal Mod Link: [url=steamcommunity.com/sharedfiles/filedetails/?id=370373189]DST Advanced Farming[/url] by [url=steamcommunity.com/profiles/76561197989646930]Afro1967[/url]\nThe reason why this is forked is either due to the old mod being: \n\t1) Broken. \n\t2) Incompatible with some other mod. \n\t3) The original author stopped updating his/her mod. \n\t4) The original author allowed to modify the mod to add/remove some additions to it.\nFull credit goes to the original author of the mod.\nIf requested by the original author, this mod will be taken down from workshop.\n\n[h1][b]IMPORTANT NOTES:[/b][/h1]\nSince this is forked mod, not many additions will be added to it, only focus is on bugfixes.\nThe mod is backwards compatible with the original mod, meaning it can be replaced on live server and everything continues to work correctly.\n\n[h1][b]BUG REPORTING:[/b][/h1]\nAdd all your bug reports under \"Discussions\" > \"Bug Reports\". (To avoid Comment section cluttering)\nAlso a great help is if you can upload your crash log \"log.txt\" to [url=pastebin.com/]PasteBin[/url] and link me the crash log that way in the bug section with a description what did you do before the crash occured.\n\n[h1][b]LIVE CHAT:[/b][/h1]\nIf you wish to talk to Me or other players or users of this Mod, you can join us on Live chat where we can discuss problems, ask questions or simply chat about random things.\nJoin here and proceed to \"Gaming\" room: [url=im.ewul.net/public/]EWUL Public Chat[/url]\n",
+        "time_created": 1458696875,
+        "time_updated": 1458708723,
+        "visibility": 0,
+        "flags": 1536,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 25,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 5243,
+        "favorited": 224,
+        "followers": 0,
+        "lifetime_subscriptions": 10098,
+        "lifetime_favorited": 297,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 20110,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "version:1.0.1",
+            "display_name": "version:1.0.1"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          }
+        ],
+        "vote_data": {
+          "score": 0.6666666865348816,
+          "votes_up": 70,
+          "votes_down": 10
+        },
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "0",
+        "revision": 1,
+        "ban_text_check_result": 0
+      },
+      {
+        "result": 1,
+        "publishedfileid": "2976047692",
+        "creator": "76561199143400427",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "672551",
+        "preview_file_size": "75487",
+        "preview_url": "https://images.steamusercontent.com/ugc/2067759555760249579/6DAC6DA043C8CE794E52E9E05ACD314F6CA30F7D/",
+        "url": "",
+        "hcontent_file": "5798753104339343106",
+        "hcontent_preview": "2067759555760249579",
+        "title": "농사 헬퍼(Farming helper)",
+        "file_description": "농사 헬퍼(Farming helper)\r\n\r\noriginal mod link - https://steamcommunity.com/sharedfiles/filedetails/?id=2305130719\r\n\r\n번역 : 탄산수\b(KR)\r\n\r\n돈스타브의 농사는 알아야 하는 개념이 꽤나 많죠?\r\n\r\n농사에 익숙치 않으신분들이 좀 더 가시적으로 보시구 편하게 배우셨으면 합니다\r\n\r\n\r\n\r\n● 모드를 활성화하면 보이는 오른쪽 아래의 두 버튼으로 쉬운 농사가 가능합니다.\r\n\r\n﻿● 작물을 Alt+왼쪽버튼 클릭하여 강제조사하면 작물의 상세한 정보를 볼 수 있습니다.﻿\r\n﻿\r\n﻿● ﻿토지 타일 위에 있을때, 토지의 양분을 계산하여 보여줍니다\r\n\r\n● 스트레스를 받는 잡초/정원 쓰레기 또는 식물을 다음 색상으로 강조 표시합니다.\r\n\r\n- 분위기파괴자 (잡초/쓰레기): 빨간색\r\n- 가족작물 부족: 청록색\r\n- 돌봐줘야하는 식물: 노란색\r\n- 수분 부족 : 파란색\r\n- 영양소 부족 : 초록색\r\n\r\n\r\n\r\n\r\n﻿\r\n\r\nNot for commercial use",
+        "time_created": 1684111981,
+        "time_updated": 1684111981,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 5,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 725,
+        "favorited": 31,
+        "followers": 0,
+        "lifetime_subscriptions": 871,
+        "lifetime_favorited": 38,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 2255,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "interface",
+            "display_name": "interface"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "language",
+            "display_name": "language"
+          },
+          {
+            "tag": "other",
+            "display_name": "other"
+          },
+          {
+            "tag": "client_only_mod",
+            "display_name": "client_only_mod"
+          },
+          {
+            "tag": "version:1.0.04",
+            "display_name": "version:1.0.04"
+          }
+        ],
+        "vote_data": {
+          "score": 0.5454545617103577,
+          "votes_up": 10,
+          "votes_down": 0
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "4",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}

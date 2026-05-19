@@ -1,0 +1,92 @@
+{
+  "response": {
+    "total": 7,
+    "publishedfiledetails": [
+      {
+        "result": 1,
+        "publishedfileid": "3353852416",
+        "creator": "76561199042155506",
+        "creator_appid": 245850,
+        "consumer_appid": 322330,
+        "consumer_shortcutid": 0,
+        "filename": "",
+        "file_size": "1551330",
+        "preview_file_size": "530122",
+        "preview_url": "https://images.steamusercontent.com/ugc/2491146025820045901/71B1F591B82C94875EC991867C20177F83411572/",
+        "url": "",
+        "hcontent_file": "2024064511990854258",
+        "hcontent_preview": "2491146025820045901",
+        "title": "Fast Travel(skined home sign)",
+        "file_description": "[img]https://i.ibb.co/4SP7fDb/Steam-2024-5-27-21-33-33.png[/img]\r\n\r\n[hr]\r\n\r\nEnglish is available. The mod will choose your default language.\r\n\r\n2025/1/2 update:\r\n\r\n1. The sign's name could show above the sign. you could turn it on/off at setting menu.\r\n2. Delay teleport function added. You could turn it on or off at setting menu. \r\n3. reworked some skin animation. \r\n\r\n1. Transactions rework.\r\n2. Now you can choose turn/ off the light at mod setting menu .\r\n3. Add revive function. Haunting the wood sign as a ghost revives players.You can choose to turn it on/off at setting menu.\r\n4. Hunger cost and San cost are able to adjust at mod setting menu.\r\n5. Able to be use with other teleportation mod together. \r\n\r\nThank you all for like it. Sorry abt the late update. Hopefully you guys will enjoy this update! Have fun and happy international Women's Day ! \r\n\r\n[hr]\r\n\r\n\r\n💗what does the mod do：\r\n\r\nA teleportation sign to help player fast travel. the sign has 10 skins. The DST home sign also can do fast travel, you can turn it on at setting menu.\r\n\r\n1. Now you can choose turn/ off the light at mod setting menu .\r\n2. Add revive function. Haunting the wood sign as a ghost revives players.You can choose to turn it on/off at setting menu.\r\n3. Hunger cost and San cost are able to adjust at mod setting menu.\r\n4. Able to be use with other teleportation mod together. \r\n\r\n💗how to make：\r\n\r\ntravel cost hungry, the sign made of a wood board. you can find the sign from light, decorate, mod tab\r\n\r\n💗reference：\r\n\r\nIsosurface\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=458587300&searchtext=fast+travel\r\n\r\n\r\n💗Recommend my other mods：\r\n\r\n[h3]【lag remover】[/h3]\r\nRemover game lag and improve your pin. make the game more smooth. it can do auto stack, animal and more items can be stack, stack size increase, auto clean, code clean, fast trading, remove twiggy, stop tree regrowth, no root after logging. Each function can be turn on/off separatly in setting menu. as well as language setting. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3050607025\r\n\r\n[h3]【more item stack】[/h3]\r\nstack size can be choose from 20 to 5000. can help game stack animals, and other stuff. including some mod items like pack back and so on. each item can be turn on/off in setting menu. compatible with 【lag remover】. if you dont need stack mod items, you can just use 【lag remover】\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3007715893\r\n\r\n[h3]【No Regrowth】[/h3]\r\nthe trees like evergreen will stop regrowth at their stage 4. each type of trees can turn on separatly in setting menu. compatible with 【lag remover】.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3210773634\r\n\r\n[h3]【Better abigail】[/h3]\r\na new follower. everyone can make one. like abigail, but better and stronger.\r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3306010901\r\n\r\n[h3]【sweet light collection】[/h3]\r\na collection of light, each light has its own skins and functions. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3282173327\r\n\r\n[h3]【AUTO EAT AFK】[/h3]\r\nClient mod. For AFK in public server. Press F6(can change defult key at mod setting menu) and start to auto eat when you need. \r\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=3455473954\r\n\r\n\r\n\r\n\r\n🌎thanks for play\r\n\r\n\r\n",
+        "time_created": 1729751592,
+        "time_updated": 1743295023,
+        "visibility": 0,
+        "flags": 5632,
+        "workshop_file": false,
+        "workshop_accepted": false,
+        "show_subscribe_all": false,
+        "num_comments_public": 161,
+        "banned": false,
+        "ban_reason": "",
+        "banner": "76561197960265728",
+        "can_be_deleted": true,
+        "app_name": "Don't Starve Together",
+        "file_type": 0,
+        "can_subscribe": true,
+        "subscriptions": 193482,
+        "favorited": 6068,
+        "followers": 0,
+        "lifetime_subscriptions": 214141,
+        "lifetime_favorited": 6489,
+        "lifetime_followers": 0,
+        "lifetime_playtime": "0",
+        "lifetime_playtime_sessions": "0",
+        "views": 299840,
+        "num_children": 0,
+        "num_reports": 0,
+        "tags": [
+          {
+            "tag": "item",
+            "display_name": "item"
+          },
+          {
+            "tag": "environment",
+            "display_name": "environment"
+          },
+          {
+            "tag": "utility",
+            "display_name": "utility"
+          },
+          {
+            "tag": "art",
+            "display_name": "art"
+          },
+          {
+            "tag": "all_clients_require_mod",
+            "display_name": "all_clients_require_mod"
+          },
+          {
+            "tag": "server_admin",
+            "display_name": "server_admin"
+          },
+          {
+            "tag": "version:1.5.5",
+            "display_name": "version:1.5.5"
+          }
+        ],
+        "vote_data": {
+          "score": 0.9701492786407471,
+          "votes_up": 2030,
+          "votes_down": 14
+        },
+        "metadata": "{\"ugc\":true}",
+        "language": 0,
+        "maybe_inappropriate_sex": false,
+        "maybe_inappropriate_violence": false,
+        "revision_change_number": "36",
+        "revision": 1,
+        "ban_text_check_result": 5
+      }
+    ]
+  }
+}
