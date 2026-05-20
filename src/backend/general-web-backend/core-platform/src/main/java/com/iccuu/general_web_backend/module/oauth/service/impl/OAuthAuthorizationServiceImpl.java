@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jose4j.jwt.JwtClaims;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
@@ -28,6 +29,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
+@Primary
 @Service
 @RequiredArgsConstructor
 public class OAuthAuthorizationServiceImpl implements OAuthAuthorizationService {

@@ -9,12 +9,14 @@ import com.iccuu.general_web_backend.module.role.entity.*;
 import com.iccuu.general_web_backend.module.role.mapper.*;
 import com.iccuu.general_web_backend.module.role.service.RoleService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class RoleServiceImpl implements RoleService {

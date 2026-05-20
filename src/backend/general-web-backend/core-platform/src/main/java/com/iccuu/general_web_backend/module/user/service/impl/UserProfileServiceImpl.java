@@ -6,10 +6,12 @@ import com.iccuu.general_web_backend.module.user.entity.UserProfile;
 import com.iccuu.general_web_backend.module.user.mapper.UserProfileMapper;
 import com.iccuu.general_web_backend.module.user.service.UserProfileService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class UserProfileServiceImpl implements UserProfileService {

@@ -15,11 +15,13 @@ import com.iccuu.general_web_backend.module.apikey.mapper.ApiKeyMapper;
 import com.iccuu.general_web_backend.common.converter.ApiKeyConverter;
 import com.iccuu.general_web_backend.module.apikey.service.ApiKeyService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class ApiKeyServiceImpl implements ApiKeyService {

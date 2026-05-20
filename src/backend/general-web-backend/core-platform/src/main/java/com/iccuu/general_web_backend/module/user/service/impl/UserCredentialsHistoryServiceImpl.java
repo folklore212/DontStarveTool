@@ -6,12 +6,14 @@ import com.iccuu.general_web_backend.module.user.mapper.UserCredentialsHistoryMa
 import com.iccuu.general_web_backend.module.user.service.UserCredentialsHistoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class UserCredentialsHistoryServiceImpl implements UserCredentialsHistoryService {

@@ -17,6 +17,7 @@ import com.iccuu.general_web_backend.module.audit.service.AuditLogService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Primary
 @Service
 @RequiredArgsConstructor
 public class AuditLogServiceImpl implements AuditLogService {

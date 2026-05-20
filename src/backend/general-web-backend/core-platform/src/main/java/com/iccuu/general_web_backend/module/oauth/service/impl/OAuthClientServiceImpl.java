@@ -14,10 +14,12 @@ import com.iccuu.general_web_backend.module.oauth.mapper.OAuthClientMapper;
 import com.iccuu.general_web_backend.module.oauth.service.OAuthClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class OAuthClientServiceImpl implements OAuthClientService {

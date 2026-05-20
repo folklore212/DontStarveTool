@@ -22,6 +22,7 @@ import com.iccuu.general_web_backend.module.user.service.UserCredentialsHistoryS
 import com.iccuu.general_web_backend.module.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -31,6 +32,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {

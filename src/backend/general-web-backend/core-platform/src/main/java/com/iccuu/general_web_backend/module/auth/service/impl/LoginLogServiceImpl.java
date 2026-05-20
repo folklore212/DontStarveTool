@@ -14,11 +14,13 @@ import com.iccuu.general_web_backend.module.auth.mapper.LoginLogMapper;
 import com.iccuu.general_web_backend.module.auth.service.LoginLogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Primary
 @Service
 @RequiredArgsConstructor
 public class LoginLogServiceImpl implements LoginLogService {

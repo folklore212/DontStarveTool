@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: template-service
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+      - org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration
   datasource:
     url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/dst_templates
     username: ${DB_USERNAME:root}
