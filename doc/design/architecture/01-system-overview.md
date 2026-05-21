@@ -1,73 +1,126 @@
 # 系统架构总览
 
-## 当前架构
+## 全局架构（方案 A：三层结构）
 
 ```
-┌──────────────────────────────────────────────────┐
-│                  管理平台 (Spring Boot + React)    │
-│                                                  │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────┐ │
-│  │  Admin   │ │ Customer │ │ Backend  │ │ Test │ │
-│  │  :3000   │ │   :80    │ │  :8080   │ │      │ │
-│  └──────────┘ └──────────┘ └──────────┘ └──────┘ │
-│                                                  │
-│  ┌─────────────────────────────────────────────┐ │
-│  │  Infrastructure                             │ │
-│  │  MySQL :3306  Redis :6379                   │ │
-│  └─────────────────────────────────────────────┘ │
-└──────────────────────────────────────────────────┘
+Layer 1: 外部入口
+┌──────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│  浏览器 (React SPA)               Node Agent (Go 守护进程)        │
+│  ┌──────────┐ ┌──────────┐       ┌───────┐  ┌───────┐           │
+│  │ Customer │ │  Admin   │       │ Node 1│  │ Node 2│  ...      │
+│  │  :80     │ │  :3000   │       │ (DST) │  │ (DST) │           │
+│  └────┬─────┘ └────┬─────┘       └──┬────┘  └──┬────┘           │
+│       │            │                │          │                 │
+│       │  HTTP REST │                │  wss://  │                 │
+└───────┼────────────┼────────────────┼──────────┼─────────────────┘
+        │            │                │          │
+        ▼            ▼                ▼          ▼
+Layer 2: API Gateway
+┌──────────────────────────────────────────────────────────────────┐
+│                    ┌─────────────────────┐                       │
+│                    │  nginx (:80)         │                      │
+│                    │  - 路由 / 静态文件   │                      │
+│                    │  - WebSocket 升级    │                      │
+│                    │  - JWT 验证预留      │                      │
+│                    └───┬─────┬─────┬──────┘                      │
+└────────────────────────┼─────┼─────┼─────────────────────────────┘
+                         │     │     │
+        ┌────────────────┤     │     └──────────────┐
+        ▼                ▼     ▼                    ▼
+Layer 3: 服务层
+┌──────────────────────────────────────────────────────────────────┐
+│                                                                    │
+│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐               │
+│  │ admin        │ │ customer     │ │ node-gateway │               │
+│  │ (nginx:80)   │ │ (nginx:80)   │ │ (Go :8090)   │               │
+│  │ 静态文件服务  │ │ 静态文件服务  │ │ WebSocket服务器│              │
+│  └──────┬───────┘ └──────┬───────┘ └──────┬───────┘               │
+│         │                │                │                        │
+│  ┌──────┴──────┐  ┌──────┴──────┐  ┌──────┴──────┐               │
+│  │ /api/ 代理  │  │ /api/ 代理  │  │ 路由分发    │               │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘               │
+│         │                │                │                        │
+│         └────────────────┼────────────────┘                        │
+│                          ▼                                         │
+│  ┌──────────────────────────────────────────────────────────┐    │
+│  │              核心服务层 (Spring Boot / Go)                 │    │
+│  │                                                          │    │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐   │    │
+│  │  │core-platform │  │template-svc  │  │server-service │   │    │
+│  │  │   :8081      │  │   :8082      │  │    :8083      │   │    │
+│  │  │ user/role     │  │ Template CRUD│  │ Server CRUD  │   │    │
+│  │  │ auth/mfa/oauth│  │ WorldGen预设  │  │ Cluster管理  │   │    │
+│  │  │ apikey/audit  │  │ Workshop搜索 │  │ SSH/部署编排 │   │    │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘   │    │
+│  │                                                          │    │
+│  │  ┌──────────────┐                                        │    │
+│  │  │ mod-worker   │  单实例                                 │    │
+│  │  │   :8084      │  Workshop缓存 / ModConfig下载           │    │
+│  │  └──────────────┘  Steam版本检查                          │    │
+│  │                                                          │    │
+│  └──────────────────────────────────────────────────────────┘    │
+│                          │                                         │
+│  ┌───────────────────────┴───────────────────────────────┐       │
+│  │              数据层                                     │       │
+│  │                                                        │       │
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐       │       │
+│  │  │ mysql      │  │mysql-      │  │mysql-      │       │       │
+│  │  │ :3306      │  │template    │  │server      │       │       │
+│  │  │            │  │:3307       │  │:3308       │       │       │
+│  │  │auth_system │  │dst_templates│ │dst_servers │       │       │
+│  │  └────────────┘  └────────────┘  └────────────┘       │       │
+│  │                                                        │       │
+│  │  ┌────────────┐                                        │       │
+│  │  │ redis :6379│  缓存 / 分布式锁 / JWT 黑名单           │       │
+│  │  └────────────┘                                        │       │
+│  └───────────────────────────────────────────────────────┘       │
+│                                                                    │
+└────────────────────────────────────────────────────────────────────┘
 ```
 
-## 服务拆分架构（已设计，待实施）
+## Node Agent 通信路径
 
 ```
-                    ┌──────────────────────┐
-                    │  API Gateway (Nginx)  │
-                    │  JWT 验证 + 注入       │
-                    │  X-User-Id header    │
-                    └────────┬─────────────┘
-                             │
-            ┌────────────────┼────────────────────┐
-            ▼                ▼                     ▼
-  ┌──────────────────┐ ┌──────────────┐ ┌──────────────────┐
-  │ core-platform    │ │template-svc  │ │  mod-worker      │
-  │ auth/user/role   │ │Template CRUD │ │  (单实例)         │
-  │ mfa/oauth/apikey │ │WorldGen预设   │ │  Workshop缓存    │
-  │ audit            │ │Marketplace  │ │  ModConfig下载   │
-  │ 可横向扩展        │ │可横向扩展    │ │  @Scheduled任务   │
-  └──────────────────┘ └──────────────┘ └──────────────────┘
-            │
-            ▼
-  ┌──────────────────┐
-  │ server-service   │
-  │ Server CRUD      │
-  │ Cluster管理       │
-  │ SSH/部署编排      │
-  │ 可横向扩展        │
-  └──────────────────┘
+DST 游戏服务器                    平台 (Docker)
+┌──────────────┐                ┌─────────────────────────────┐
+│              │   wss://       │                             │
+│  node-agent  │──────────────▶ │  nginx (:80)                │
+│  (Go 守护进程) │   WebSocket    │  │                          │
+│              │                │  ├─ /node → proxy to :8090  │
+│  ┌──────────┐│                │  │                          │
+│  │screen    ││                │  ▼                          │
+│  │session   ││   DST 进程     │  node-gateway (:8090)       │
+│  │Master    ││                │  ├─ token 验证               │
+│  │Caves     ││                │  ├─ JSON-RPC 路由            │
+│  └──────────┘│                │  └─ HTTP → server-service   │
+│              │                │                             │
+└──────────────┘                └─────────────────────────────┘
 ```
 
-**拆分条件控制**：
-- `dst.scheduled.workshop-cache.enabled=false` — 在多实例部署时关闭重复的 Scheduled 任务
-- `GatewayTrustFilter` — 读取 Gateway 注入的 `X-User-Id` header（仅信任内网 IP）
-- `ModSearchProvider` — server-service 通过接口调用模组搜索，未来可替换为 REST client
-
-## 模块依赖方向
+## 服务间调用关系
 
 ```
-infrastructure (SSH, Redis, Security)
+core-platform ◄──── template-service  (CorePlatformClient — 用户信息)
+core-platform ◄──── node-gateway       (token 验证 API)
+
+template-service ◄── server-service    (RemoteModSearchProvider — 模组搜索)
+template-service ◄── mod-worker        (共享 mysql-template DB)
+
+server-service ────► (SSH) ──► DST 游戏服务器 (部署/管理)
+node-gateway ──────► (HTTP) ─► server-service (命令转发)
+```
+
+## 模块依赖方向（Maven）
+
+```
+common (共享库)
     ↓
-module/template (模板, 世界生成, Workshop缓存, Mod配置)
-    ↓
-module/server (服务器, 集群管理)
-    ↓
-module/auth → module/user → module/role
+├── core-platform   (端口 8081, 可横向扩展)
+├── template-service (端口 8082, 可横向扩展)
+├── server-service   (端口 8083, 可横向扩展)
+└── mod-worker       (端口 8084, 固定单实例)
 ```
-
-**关键约束**：
-- 跨模块依赖仅通过接口（`ModSearchProvider` 解耦 server ↔ template）
-- `@Scheduled` 任务通过 `@ConditionalOnProperty` 控制，避免多实例重复
-- Server 密码字段 `@JsonIgnore` 防止 API 响应泄露
 
 ## 关键技术决策
 
@@ -75,24 +128,27 @@ module/auth → module/user → module/role
 |------|------|------|
 | 跨服务认证 | Gateway 注入 `X-User-Id` header | 效率最高，仅验一次 JWT |
 | Scheduled 去重 | `@ConditionalOnProperty` + 单实例 worker | 无需 Redis 锁，配置即控制 |
-| 模块解耦 | Provider 接口 + 本地实现 | 预留 REST client 替换点 |
 | 元数据管理 | JSON 文件 (`worldgen-metadata.json`) | Java/TS 双端由 JSON 生成，单一数据源 |
 | 错误码 | ErrorCode 枚举 (10001-50003) | i18n 自动翻译，全局统一 |
 | 权限检查 | 所有权匹配 (authorId/userId) | 每层独立校验，不信任上游 |
-| Node 语言 | Go | 单二进制、无依赖、低内存 |
-| 通信协议 | JSON-RPC 2.0 over WebSocket | 标准化、请求-响应 + 事件推送 |
-
-## 已删除模块
-
-| 模块 | 原因 | 替换 |
-|------|------|------|
-| `module/market` | MarketConfig 与 Template 90% 重复 | Marketplace 直接用 Template 系统 |
-| `infrastructure/steam/SteamApiService` | 76 行浅层直通 + 2 个 stub | 合并入 SteamWorkshopCacheService |
-| `infrastructure/monitor/HealthScoringService` | 零调用死代码 | 已删除 |
-| 4 个 `I*Service` 接口 | 仪式性噪音，零提供者 | 已删除 |
+| **Node 语言** | **Go** | 单二进制、无依赖、低内存 |
+| **通信协议** | **JSON-RPC 2.0 over WebSocket** | 标准化、请求-响应 + 事件推送 |
+| **Node 架构** | **独立 node-gateway (Go)** | 长连接管理独立扩缩容 |
+| **Node 认证** | **Bootstrap Token (方案 1)** | 规模 <100 台，简单可靠，预留 HMAC 扩展 |
+| **MVP 命令集** | **12 个方法** | 进程管理 + 玩家管理 + 系统监控 |
 
 ## 部署模式
 
-- 平台：Docker Compose（mysql + redis + backend + admin + customer）
+- 平台：Docker Compose (11 个容器：3 个 MySQL + Redis + 5 个 Java + 1 个 Go + nginx + admin + customer)
 - Node Agent：systemd 管理，与 DST 服务同机运行
-- 扩展：template-service / server-service 可横向扩容至多实例
+- 扩展：core-platform / template-service / server-service 可横向扩容至多实例；mod-worker 和 node-gateway 固定单实例
+
+## 配置文件
+
+| 配置 | 位置 |
+|------|------|
+| 服务端口 / DB 连接 | 各模块 `application.yml` |
+| Docker 部署配置 | `deploy/docker/.env` |
+| Nginx 路由 | `deploy/docker/nginx/nginx.conf` |
+| Node Agent 配置 | `/opt/dst-node/config.json` |
+| 世界生成元数据 | `worldgen-metadata.json` |
