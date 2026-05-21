@@ -1,6 +1,7 @@
 package com.iccuu.general_web_backend.core.controller;
 
 import com.iccuu.general_web_backend.common.result.R;
+import com.iccuu.general_web_backend.module.node.service.NodeTokenService;
 import com.iccuu.general_web_backend.module.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.Map;
 public class InternalController {
 
     private final UserService userService;
+    private final NodeTokenService nodeTokenService;
 
     @GetMapping("/users/{userId}/profile")
     public R<Map<String, Object>> getUserProfile(@PathVariable Long userId) {
@@ -28,5 +30,14 @@ public class InternalController {
             "nickname", user.getNickname() != null ? user.getNickname() : user.getUsername(),
             "avatar", user.getAvatar() != null ? user.getAvatar() : ""
         ));
+    }
+
+    @GetMapping("/nodes/verify")
+    public R<Map<String, Object>> verifyNodeToken(@RequestParam String token) {
+        var result = nodeTokenService.verify(token);
+        if (!Boolean.TRUE.equals(result.get("valid"))) {
+            return R.fail(401, "Invalid or disabled token");
+        }
+        return R.ok(result);
     }
 }
