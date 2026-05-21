@@ -25,7 +25,7 @@ type Agent struct {
 func NewAgent(cfg *Config) *Agent {
 	return &Agent{
 		config:         cfg,
-		executor:       NewExecutor(),
+		executor:       NewExecutor(cfg.DSTInstallPath, cfg.ClusterBasePath),
 		reconnectDelay: 1 * time.Second,
 		done:           make(chan struct{}),
 	}
