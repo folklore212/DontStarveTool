@@ -1,0 +1,9 @@
+{
+  "platform_url": "ws://platform:8090/node",
+  "token": "dsn-xxxxxxxx",
+  "dst_install_path": "/home/steam/steamapps/DST",
+  "cluster_base_path": "/home/steam/.klei/DoNotStarveTogether",
+  "log_level": "info",
+  "metrics_interval_sec": 30,
+  "heartbeat_interval_sec": 30
+}
