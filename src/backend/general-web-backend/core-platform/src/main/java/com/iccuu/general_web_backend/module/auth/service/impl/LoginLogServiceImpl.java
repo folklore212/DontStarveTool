@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.iccuu.general_web_backend.common.constant.Constants;
-import com.iccuu.general_web_backend.common.converter.LoginLogConverter;
+import com.iccuu.general_web_backend.core.converter.LoginLogConverter;
 import com.iccuu.general_web_backend.common.util.DateUtil;
 import com.iccuu.general_web_backend.module.auth.dto.LoginLogQueryRequest;
 import com.iccuu.general_web_backend.module.auth.dto.LoginLogVO;

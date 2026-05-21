@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
 import com.iccuu.general_web_backend.common.constant.RedisKeyPrefix;
-import com.iccuu.general_web_backend.infrastructure.cache.CacheInvalidationListener;
+import com.iccuu.general_web_backend.core.warmer.CacheInvalidationListener;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;

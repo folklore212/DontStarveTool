@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.infrastructure.storage;
+package com.iccuu.general_web_backend.core.storage;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;

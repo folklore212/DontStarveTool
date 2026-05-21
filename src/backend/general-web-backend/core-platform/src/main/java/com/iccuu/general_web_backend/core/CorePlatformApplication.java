@@ -1,6 +1,6 @@
 package com.iccuu.general_web_backend.core;
 
-import com.iccuu.general_web_backend.infrastructure.geetest.GeeTestProperties;
+import com.iccuu.general_web_backend.core.geetest.GeeTestProperties;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

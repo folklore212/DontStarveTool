@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.infrastructure.storage;
+package com.iccuu.general_web_backend.core.storage;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;

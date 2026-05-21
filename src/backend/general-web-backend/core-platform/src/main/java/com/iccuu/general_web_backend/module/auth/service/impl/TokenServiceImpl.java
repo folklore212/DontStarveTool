@@ -5,7 +5,7 @@ import com.iccuu.general_web_backend.common.constant.ErrorCode;
 import com.iccuu.general_web_backend.common.constant.RedisKeyPrefix;
 import com.iccuu.general_web_backend.common.exception.AuthenticationException;
 import com.iccuu.general_web_backend.common.util.RedisUtil;
-import com.iccuu.general_web_backend.infrastructure.security.JwtTokenProvider;
+import com.iccuu.general_web_backend.core.security.JwtTokenProvider;
 import com.iccuu.general_web_backend.module.auth.dto.LoginResponse;
 import com.iccuu.general_web_backend.module.auth.service.TokenService;
 import lombok.RequiredArgsConstructor;

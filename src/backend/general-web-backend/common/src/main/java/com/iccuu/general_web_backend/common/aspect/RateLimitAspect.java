@@ -6,7 +6,7 @@ import com.iccuu.general_web_backend.common.exception.RateLimitException;
 import com.iccuu.general_web_backend.common.util.IpUtil;
 import com.iccuu.general_web_backend.common.util.SecurityUtil;
 import com.iccuu.general_web_backend.infrastructure.metrics.MetricsService;
-import com.iccuu.general_web_backend.infrastructure.security.RateLimiterService;
+import com.iccuu.general_web_backend.core.security.RateLimiterService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;

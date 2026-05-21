@@ -12,7 +12,7 @@ import com.iccuu.general_web_backend.common.util.DateUtil;
 import com.iccuu.general_web_backend.module.audit.dto.*;
 import com.iccuu.general_web_backend.module.audit.entity.AuditLog;
 import com.iccuu.general_web_backend.module.audit.mapper.AuditLogMapper;
-import com.iccuu.general_web_backend.common.converter.AuditLogConverter;
+import com.iccuu.general_web_backend.core.converter.AuditLogConverter;
 import com.iccuu.general_web_backend.module.audit.service.AuditLogService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

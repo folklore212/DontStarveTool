@@ -1,7 +1,7 @@
 package com.iccuu.general_web_backend.module.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.iccuu.general_web_backend.common.converter.UserConverter;
+import com.iccuu.general_web_backend.core.converter.UserConverter;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.iccuu.general_web_backend.common.constant.ErrorCode;
 import com.iccuu.general_web_backend.common.enums.IdentityType;

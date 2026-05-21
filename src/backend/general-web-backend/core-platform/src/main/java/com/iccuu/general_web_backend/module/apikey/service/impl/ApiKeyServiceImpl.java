@@ -2,7 +2,7 @@ package com.iccuu.general_web_backend.module.apikey.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.iccuu.general_web_backend.common.cache.ApiKeyCacheManager;
+import com.iccuu.general_web_backend.core.cache.ApiKeyCacheManager;
 import com.iccuu.general_web_backend.common.constant.ErrorCode;
 import com.iccuu.general_web_backend.common.enums.ApiKeyStatus;
 import com.iccuu.general_web_backend.common.exception.ResourceNotFoundException;
@@ -12,7 +12,7 @@ import com.iccuu.general_web_backend.common.util.SecureRandomUtil;
 import com.iccuu.general_web_backend.module.apikey.dto.*;
 import com.iccuu.general_web_backend.module.apikey.entity.ApiKey;
 import com.iccuu.general_web_backend.module.apikey.mapper.ApiKeyMapper;
-import com.iccuu.general_web_backend.common.converter.ApiKeyConverter;
+import com.iccuu.general_web_backend.core.converter.ApiKeyConverter;
 import com.iccuu.general_web_backend.module.apikey.service.ApiKeyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Primary;

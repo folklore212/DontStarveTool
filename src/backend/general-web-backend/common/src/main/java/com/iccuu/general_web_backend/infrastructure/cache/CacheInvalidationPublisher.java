@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.infrastructure.cache;
+package com.iccuu.general_web_backend.core.warmer;
 
 import com.iccuu.general_web_backend.common.constant.RedisKeyPrefix;
 import lombok.RequiredArgsConstructor;

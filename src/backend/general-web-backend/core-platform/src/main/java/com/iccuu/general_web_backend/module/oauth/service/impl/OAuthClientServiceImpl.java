@@ -2,7 +2,7 @@ package com.iccuu.general_web_backend.module.oauth.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.iccuu.general_web_backend.common.converter.OAuthClientConverter;
+import com.iccuu.general_web_backend.core.converter.OAuthClientConverter;
 import com.iccuu.general_web_backend.common.constant.ErrorCode;
 import com.iccuu.general_web_backend.common.exception.DuplicateResourceException;
 import com.iccuu.general_web_backend.common.exception.ResourceNotFoundException;

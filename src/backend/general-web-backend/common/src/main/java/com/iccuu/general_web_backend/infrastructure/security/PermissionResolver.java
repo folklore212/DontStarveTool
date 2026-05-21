@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.infrastructure.security;
+package com.iccuu.general_web_backend.core.security;
 
 import java.util.Set;
 
