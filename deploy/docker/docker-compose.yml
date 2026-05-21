@@ -264,6 +264,30 @@ services:
     networks:
       - auth-net
 
+  node-gateway:
+    build:
+      context: ../../src/node
+      dockerfile: ../../deploy/docker/backend/node-gateway/Dockerfile
+    image: dst-node-gateway:v1
+    container_name: node-gateway-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8090:8090"
+    depends_on:
+      core-platform:
+        condition: service_healthy
+    environment:
+      PORT: "8090"
+      CORE_PLATFORM_URL: http://core-platform:8081
+      SERVER_SERVICE_URL: http://server-service:8083
+    deploy:
+      resources:
+        limits:
+          memory: 128m
+          cpus: '0.5'
+    networks:
+      - auth-net
+
   admin:
     build:
       context: ./admin
