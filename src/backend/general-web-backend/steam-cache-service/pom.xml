@@ -8,7 +8,7 @@
         <artifactId>dst-platform</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>mod-worker</artifactId>
+    <artifactId>steam-cache-service</artifactId>
     <name>DST Mod Worker</name>
 
     <dependencies>
@@ -34,7 +34,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.iccuu.general_web_backend.modworker.ModWorkerApplication</mainClass>
+                    <mainClass>com.iccuu.general_web_backend.steamcache.SteamCacheApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

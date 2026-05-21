@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.modworker.service;
+package com.iccuu.general_web_backend.steamcache.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.fasterxml.jackson.core.type.TypeReference;

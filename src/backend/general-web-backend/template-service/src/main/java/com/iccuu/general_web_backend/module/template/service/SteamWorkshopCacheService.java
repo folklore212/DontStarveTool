@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Workshop cache read-path: serves hot mods and search from DB/Redis.
- * Write-path (@Scheduled refresh) lives in mod-worker.
+ * Write-path (@Scheduled refresh) lives in steam-cache-service.
  * Cold-miss: triggers a live Steam API fetch for the searched keyword.
  */
 @Slf4j

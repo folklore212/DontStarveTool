@@ -25,12 +25,12 @@ cd "$PROJECT_ROOT/src/backend/general-web-backend"
 cp core-platform/target/*.jar "$DOCKER_DIR/backend/core-platform/app.jar" 2>/dev/null
 cp template-service/target/*.jar "$DOCKER_DIR/backend/template-service/app.jar" 2>/dev/null
 cp server-service/target/*.jar "$DOCKER_DIR/backend/server-service/app.jar" 2>/dev/null
-cp mod-worker/target/*.jar "$DOCKER_DIR/backend/mod-worker/app.jar" 2>/dev/null
+cp steam-cache-service/target/*.jar "$DOCKER_DIR/backend/steam-cache-service/app.jar" 2>/dev/null
 
 echo "  -> core-platform: $(ls -lh $DOCKER_DIR/backend/core-platform/app.jar 2>/dev/null | awk '{print $5}')"
 echo "  -> template-service: $(ls -lh $DOCKER_DIR/backend/template-service/app.jar 2>/dev/null | awk '{print $5}')"
 echo "  -> server-service: $(ls -lh $DOCKER_DIR/backend/server-service/app.jar 2>/dev/null | awk '{print $5}')"
-echo "  -> mod-worker: $(ls -lh $DOCKER_DIR/backend/mod-worker/app.jar 2>/dev/null | awk '{print $5}')"
+echo "  -> steam-cache-service: $(ls -lh $DOCKER_DIR/backend/steam-cache-service/app.jar 2>/dev/null | awk '{print $5}')"
 
 echo "=== 2/3 构建 Admin 前端 ==="
 cd "$PROJECT_ROOT/src/frontend/admin"

@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.modworker.service;
+package com.iccuu.general_web_backend.steamcache.service;
 
 import com.iccuu.general_web_backend.infrastructure.steam.SteamApiClient;
 import com.iccuu.general_web_backend.infrastructure.steam.WorkshopCacheWriter;

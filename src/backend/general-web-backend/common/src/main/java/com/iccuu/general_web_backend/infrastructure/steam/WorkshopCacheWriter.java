@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 /**
  * Shared writer for steam_workshop_cache table.
- * Used by both mod-worker (scheduled refresh) and template-service (cold-miss fallback).
+ * Used by both steam-cache-service (scheduled refresh) and template-service (cold-miss fallback).
  * Single implementation avoids upsert logic drift between modules.
  */
 @Slf4j

@@ -10,7 +10,7 @@ import java.util.*;
 
 /**
  * Steam Web API client for IPublishedFileService/QueryFiles.
- * Used by both template-service (cold-miss) and mod-worker (scheduled refresh).
+ * Used by both template-service (cold-miss) and steam-cache-service (scheduled refresh).
  * Falls back gracefully when STEAM_API_KEY is not configured (offline/dev mode).
  */
 @Slf4j

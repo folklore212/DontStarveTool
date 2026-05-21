@@ -20,7 +20,7 @@
         <module>core-platform</module>
         <module>template-service</module>
         <module>server-service</module>
-        <module>mod-worker</module>
+        <module>steam-cache-service</module>
     </modules>
 
     <properties>

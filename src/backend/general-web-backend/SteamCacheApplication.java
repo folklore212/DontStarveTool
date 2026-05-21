@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.modworker;
+package com.iccuu.general_web_backend.steamcache;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
