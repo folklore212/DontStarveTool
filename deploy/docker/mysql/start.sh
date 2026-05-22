@@ -13,7 +13,7 @@ docker run -d \
     --restart unless-stopped \
     -p "${MYSQL_PORT}:3306" \
     -e "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}" \
-    --security-opt seccomp:unconfined \
+     \
     dst-mysql:v1
 
 echo "MySQL starting (port ${MYSQL_PORT})..."

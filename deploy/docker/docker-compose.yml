@@ -102,7 +102,7 @@ services:
     container_name: core-platform-container
     restart: unless-stopped
     ports:
-      - "${CORE_PORT:-8081}:8081"
+      - "127.0.0.1:${CORE_PORT:-8081}:8081"
     depends_on:
       mysql:
         condition: service_healthy
@@ -161,7 +161,7 @@ services:
     container_name: template-service-container
     restart: unless-stopped
     ports:
-      - "${TEMPLATE_PORT:-8082}:8082"
+      - "127.0.0.1:${TEMPLATE_PORT:-8082}:8082"
     depends_on:
       mysql-template:
         condition: service_healthy
@@ -200,7 +200,7 @@ services:
     container_name: server-service-container
     restart: unless-stopped
     ports:
-      - "${SERVER_PORT:-8083}:8083"
+      - "127.0.0.1:${SERVER_PORT:-8083}:8083"
     depends_on:
       mysql-server:
         condition: service_healthy
