@@ -82,6 +82,14 @@ public class GlobalExceptionHandler {
                 .body(R.fail(ex.getCode(), ex.getMessage()));
     }
 
+    @ExceptionHandler(org.springframework.web.HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<R<Void>> handleMethodNotSupported(
+            org.springframework.web.HttpRequestMethodNotSupportedException ex) {
+        log.warn("Method not allowed: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED)
+                .body(R.fail(405, "Method " + ex.getMethod() + " not supported for this endpoint"));
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<R<Void>> handleException(Exception ex) {
         log.error("Unhandled exception", ex);
