@@ -1,15 +1,24 @@
 package com.iccuu.general_web_backend.module.template.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.common.result.PageResult;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.common.result.R;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.template.entity.Template;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.template.service.TemplateService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
+import jakarta.validation.Valid;
 import java.util.Map;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/templates")
@@ -37,12 +46,12 @@ public class TemplateController {
     }
 
     @PostMapping
-    public R<Template> create(@RequestBody Template template) {
+    public R<Template> create(@Valid @RequestBody Template template) {
         return R.ok(templateService.create(template));
     }
 
     @PutMapping("/{id}")
-    public R<Template> update(@PathVariable Long id, @RequestBody Template template) {
+    public R<Template> update(@PathVariable Long id, @Valid @RequestBody Template template) {
         return R.ok(templateService.update(id, template));
     }
 

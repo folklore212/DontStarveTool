@@ -1,14 +1,22 @@
 package com.iccuu.general_web_backend.module.template.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.common.result.PageResult;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.common.result.R;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.template.entity.WorldGenPreset;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.template.service.WorldGenPresetService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.Map;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/worldgen")
@@ -36,12 +44,12 @@ public class WorldGenController {
     }
 
     @PostMapping
-    public R<WorldGenPreset> create(@RequestBody WorldGenPreset preset) {
+    public R<WorldGenPreset> create(@Valid @RequestBody WorldGenPreset preset) {
         return R.ok(presetService.create(preset));
     }
 
     @PutMapping("/{id}")
-    public R<WorldGenPreset> update(@PathVariable Long id, @RequestBody WorldGenPreset preset) {
+    public R<WorldGenPreset> update(@PathVariable Long id, @Valid @RequestBody WorldGenPreset preset) {
         return R.ok(presetService.update(id, preset));
     }
 

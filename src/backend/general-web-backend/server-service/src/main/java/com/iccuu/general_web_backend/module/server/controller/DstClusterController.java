@@ -1,13 +1,20 @@
 package com.iccuu.general_web_backend.module.server.controller;
 
 import com.iccuu.general_web_backend.common.result.R;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.server.entity.DstCluster;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.server.service.ClusterService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
+import jakarta.validation.Valid;
 import java.util.Map;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/servers/{serverId}/clusters")
@@ -22,7 +29,7 @@ public class DstClusterController {
     }
 
     @PostMapping
-    public R<DstCluster> create(@PathVariable Long serverId, @RequestBody DstCluster cluster) {
+    public R<DstCluster> create(@PathVariable Long serverId, @Valid @RequestBody DstCluster cluster) {
         return R.ok(clusterService.createCluster(serverId, cluster));
     }
 

@@ -1,4 +1,5 @@
 package com.iccuu.general_web_backend.module.role.dto;
+import jakarta.validation.constraints.NotEmpty;
 
 import lombok.Data;
 

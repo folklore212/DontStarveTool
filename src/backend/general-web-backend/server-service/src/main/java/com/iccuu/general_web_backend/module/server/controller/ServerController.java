@@ -1,13 +1,20 @@
 package com.iccuu.general_web_backend.module.server.controller;
 
 import com.iccuu.general_web_backend.common.result.PageResult;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.common.result.R;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.server.entity.Server;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.server.service.ServerService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.Map;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/servers")
@@ -29,12 +36,12 @@ public class ServerController {
     }
 
     @PostMapping
-    public R<Server> create(@RequestBody Server server) {
+    public R<Server> create(@Valid @RequestBody Server server) {
         return R.ok(serverService.create(server));
     }
 
     @PutMapping("/{id}")
-    public R<Server> update(@PathVariable Long id, @RequestBody Server server) {
+    public R<Server> update(@PathVariable Long id, @Valid @RequestBody Server server) {
         return R.ok(serverService.update(id, server));
     }
 

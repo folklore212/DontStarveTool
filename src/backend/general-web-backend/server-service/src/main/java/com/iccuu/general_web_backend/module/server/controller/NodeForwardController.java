@@ -1,16 +1,26 @@
 package com.iccuu.general_web_backend.module.server.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.common.result.R;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.infrastructure.ssh.DstDeployService;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.server.entity.Server;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.module.server.mapper.ServerMapper;
+import jakarta.validation.Valid;
 import com.iccuu.general_web_backend.server.client.RemoteModSearchProvider;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.*;
+import jakarta.validation.Valid;
 
 /**
  * Internal API for node-gateway JSON-RPC forwarding.
@@ -28,7 +38,7 @@ public class NodeForwardController {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @PostMapping("/forward")
-    public R<Map<String, Object>> forward(@RequestBody ForwardRequest request) {
+    public R<Map<String, Object>> forward(@Valid @RequestBody ForwardRequest request) {
         Server server = serverMapper.selectById(request.serverId());
         if (server == null) {
             return R.fail(404, "Server not found");
