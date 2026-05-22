@@ -51,7 +51,7 @@ jobs:
           node-version: 20
       - name: Install and type-check
         working-directory: src/frontend/${{ matrix.app }}
-        run: npm ci && npx tsc --noEmit
+        run: npm install --legacy-peer-deps && npx tsc --noEmit
 
   go-build:
     name: Go Build + Test
