@@ -1,0 +1,118 @@
+# CODEOWNERS 文件
+# 定义各目录/文件的审核负责人
+# 文档：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# ============================================
+# 文档审核负责人
+# ============================================
+
+# 所有文档变更需要 Tech Lead 审核
+/doc/ @TechLead
+
+# 内部文档（模板、审核记录）
+/doc/internal/ @TechLead
+
+# 架构决策记录（ADR）需要 Tech Lead 和架构师审核
+/doc/architecture/adr/ @TechLead @Architect
+
+# 新手入门文档
+/doc/getting-started/ @TechLead @DevRelLead
+
+# 开发者指南
+/doc/dev-guide/ @TechLead @DevRelLead
+
+# 用户功能文档
+/doc/user-guide/ @ProductOwner @TechLead
+
+# 参考文档（API、数据库、配置）
+/doc/reference/ @TechLead @BackendLead
+
+# 架构文档
+/doc/architecture/ @TechLead @Architect
+
+# 模块文档
+/doc/modules/ @TechLead @BackendLead
+
+# 前端文档
+/doc/frontend/ @FrontendLead
+
+# ============================================
+# 后端代码审核
+# ============================================
+
+# API 文档和 OpenAPI 规范
+/src/backend/**/controller/ @BackendLead @TechLead
+/src/backend/**/openapi/ @BackendLead
+
+# 核心服务
+/src/backend/general-web-backend/core-platform/ @BackendLead @TechLead
+/src/backend/general-web-backend/template-service/ @BackendLead
+/src/backend/general-web-backend/server-service/ @BackendLead
+
+# 数据库迁移脚本
+/src/backend/**/db/migration/ @BackendLead @DBA
+
+# ============================================
+# 前端代码审核
+# ============================================
+
+# 所有前端代码
+/src/frontend/ @FrontendLead
+
+# Admin 前端
+/src/frontend/admin/ @FrontendLead
+
+# Customer 前端
+/src/frontend/customer/ @FrontendLead
+
+# ============================================
+# 部署配置审核
+# ============================================
+
+# Docker 配置
+/deploy/docker/ @DevOpsLead @TechLead
+
+# Docker Compose 配置
+/deploy/docker/docker-compose.yml @DevOpsLead @TechLead
+
+# Nginx 配置
+/deploy/docker/nginx/ @DevOpsLead
+
+# ============================================
+# GitHub Actions 工作流
+# ============================================
+
+.github/workflows/ @DevOpsLead @TechLead
+
+# ============================================
+# 根目录文档
+# ============================================
+
+# 贡献指南
+/CONTRIBUTING.md @TechLead @CommunityManager
+
+# 项目 README
+/README.md @TechLead @ProductOwner
+
+# 领域术语表
+/CONTEXT.md @TechLead @ProductOwner
+
+# ============================================
+# 说明
+# ============================================
+#
+# 角色说明：
+# - @TechLead: 技术负责人，审核所有重要变更
+# - @Architect: 系统架构师，审核架构相关文档
+# - @BackendLead: 后端开发负责人
+# - @FrontendLead: 前端开发负责人
+# - @DevOpsLead: 运维负责人
+# - @DevRelLead: 开发者关系负责人
+# - @ProductOwner: 产品负责人
+# - @DBA: 数据库管理员
+# - @CommunityManager: 社区经理
+#
+# 替换说明：
+# 请将上述占位符（如 @TechLead）替换为实际的 GitHub 用户名
+# 例如：@TechLead → @your-username
+#

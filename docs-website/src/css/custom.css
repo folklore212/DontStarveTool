@@ -1,0 +1,176 @@
+/**
+ * 自定义 CSS 样式
+ * 基于 Docusaurus 主题
+ */
+
+:root {
+  /* 品牌色 - 可以根据项目 Logo 调整 */
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+
+  /* 代码块样式 */
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+}
+
+/* 深色模式 */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a5;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+}
+
+/* 导航栏样式 */
+.navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 侧边栏样式 */
+.menu__link {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* 文档标题样式 */
+.markdown h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary-lightest);
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* 代码块样式优化 */
+.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 表格样式 */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+/* Admonition 样式（提示框） */
+.admonition {
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.admonition-note {
+  border-left-color: var(--ifm-color-primary);
+}
+
+.admonition-tip {
+  border-left-color: var(--ifm-color-success);
+}
+
+.admonition-warning {
+  border-left-color: var(--ifm-color-warning);
+}
+
+.admonition-danger {
+  border-left-color: var(--ifm-color-danger);
+}
+
+/* 目录导航 */
+.table-of-contents__link {
+  border-left: 2px solid transparent;
+  padding-left: 1rem;
+  transition: all 0.2s ease;
+}
+
+.table-of-contents__link--active {
+  border-left-color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* 页脚样式 */
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* 搜索框样式 */
+.DocSearch-Button {
+  border-radius: 8px !important;
+}
+
+/* 自定义工具类 */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .markdown h1 {
+    font-size: 2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar__title {
+    display: none;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .navbar,
+  .menu,
+  .footer {
+    display: none;
+  }
+
+  .markdown {
+    font-size: 12pt;
+  }
+}
