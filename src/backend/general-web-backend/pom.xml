@@ -28,7 +28,7 @@
         <mybatis-plus.version>3.5.16</mybatis-plus.version>
         <redisson.version>3.40.2</redisson.version>
         <jose4j.version>0.9.6</jose4j.version>
-        <resilience4j.version>2.2.0</resilience4j.version>
+        <resilience4j.version>2.4.0</resilience4j.version>
         <flyway.version>10.22.0</flyway.version>
         <hutool.version>5.8.44</hutool.version>
         <knife4j.version>4.5.0</knife4j.version>
