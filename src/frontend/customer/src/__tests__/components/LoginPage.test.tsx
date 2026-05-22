@@ -82,7 +82,7 @@ describe('LoginPage', () => {
   it('renders login button', () => {
     const { container } = renderLogin()
     const buttons = container.querySelectorAll('button')
-    const submitBtn = Array.from(buttons).find(b =>
+    const submitBtn = (Array.from(buttons) as Element[]).find(b =>
       b.getAttribute('type') === 'submit'
     )
     expect(submitBtn).toBeTruthy()
