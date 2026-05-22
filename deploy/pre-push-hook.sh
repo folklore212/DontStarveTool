@@ -40,6 +40,18 @@ if [ -f "$ROOT/src/node/go.mod" ]; then
         bash -c "export PATH=\$PATH:/usr/local/go/bin && cd '$ROOT/src/node' && go build ./... && go test ./..."
 fi
 
+# 5. .env vs .env.example key consistency
+run_step ".env key check" bash -c "
+    cd '$ROOT/deploy/docker'
+    env_keys=\$(grep -oP '^[A-Z_]+(?==)' .env | sort)
+    ex_keys=\$(grep -oP '^[A-Z_]+(?==)' .env.example | sort)
+    diff <(echo \"\$env_keys\") <(echo \"\$ex_keys\") > /tmp/env-diff.txt 2>&1 || {
+        echo 'KEYS IN .env BUT MISSING FROM .env.example:'
+        grep '^<' /tmp/env-diff.txt | sed 's/^< //'
+        /bin/false
+    }
+"
+
 echo ""
 echo "Result: $PASS passed, $FAIL failed"
 [ "$FAIL" -eq 0 ] && echo -e "${GREEN}PUSH ALLOWED${NC}" && exit 0

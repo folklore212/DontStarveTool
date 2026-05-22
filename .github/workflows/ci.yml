@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  backend-build:
+    name: Maven Compile + Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { java-version: '21', distribution: 'temurin', cache: maven }
+      - run: ./mvnw compile -q
+        working-directory: src/backend/general-web-backend
+
+  backend-test:
+    name: Maven Unit Tests
+    runs-on: ubuntu-latest
+    needs: backend-build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { java-version: '21', distribution: 'temurin', cache: maven }
+      - run: ./mvnw test -pl common,core-platform,server-service,template-service,steam-cache-service -Dtest='*Test,*Tests,!*IntegrationTest' -DfailIfNoTests=false
+        working-directory: src/backend/general-web-backend
+
+  frontend-check:
+    name: TypeScript Check
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [admin, customer]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: src/frontend/${{ matrix.app }}/package-lock.json }
+      - run: npm ci && npx tsc --noEmit
+        working-directory: src/frontend/${{ matrix.app }}
+
+  go-build:
+    name: Go Build + Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: '1.22' }
+      - run: make build && go test ./...
+        working-directory: src/node
