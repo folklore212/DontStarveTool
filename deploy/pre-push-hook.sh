@@ -26,7 +26,7 @@ run_step "Maven compile (all modules)" \
 
 # 2. Java unit tests (skip integration)
 run_step "Java unit tests" \
-    bash -c "cd '$ROOT/src/backend/general-web-backend' && ./mvnw test -Dtest='*Test,*Tests,!*IntegrationTest' -DfailIfNoTests=false 2>&1 > /dev/null"
+    bash -c "cd '$ROOT/src/backend/general-web-backend' && ./mvnw test -Dtest='*Test,*Tests,!*IntegrationTest' -Dsurefire.failIfNoSpecifiedTests=false 2>&1 > /dev/null"
 
 # 3. TypeScript
 run_step "Admin tsc" \

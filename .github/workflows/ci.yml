@@ -35,7 +35,7 @@ jobs:
           cache: maven
       - name: Run unit tests
         working-directory: src/backend/general-web-backend
-        run: chmod +x mvnw && ./mvnw test -pl common,core-platform,server-service,template-service,steam-cache-service -Dtest='*Test,*Tests,!*IntegrationTest,!GeneralWebBackendApplicationTests' -DfailIfNoTests=false
+        run: chmod +x mvnw && ./mvnw test -pl common,core-platform,server-service,template-service,steam-cache-service -Dtest='*Test,*Tests,!*IntegrationTest,!GeneralWebBackendApplicationTests' -Dsurefire.failIfNoSpecifiedTests=false
 
   frontend-check:
     name: TypeScript Check
