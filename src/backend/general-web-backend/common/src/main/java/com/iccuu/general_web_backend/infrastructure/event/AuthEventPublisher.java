@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.core.event;
+package com.iccuu.general_web_backend.infrastructure.event;
 
 import com.iccuu.general_web_backend.common.event.PasswordChangedEvent;
 import com.iccuu.general_web_backend.common.event.UserLoggedInEvent;

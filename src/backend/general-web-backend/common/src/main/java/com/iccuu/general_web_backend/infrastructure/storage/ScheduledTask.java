@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.core.storage;
+package com.iccuu.general_web_backend.infrastructure.storage;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

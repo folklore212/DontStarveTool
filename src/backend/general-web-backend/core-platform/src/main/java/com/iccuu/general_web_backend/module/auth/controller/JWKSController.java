@@ -1,6 +1,6 @@
 package com.iccuu.general_web_backend.module.auth.controller;
 
-import com.iccuu.general_web_backend.core.security.JwtTokenProvider;
+import com.iccuu.general_web_backend.infrastructure.security.JwtTokenProvider;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

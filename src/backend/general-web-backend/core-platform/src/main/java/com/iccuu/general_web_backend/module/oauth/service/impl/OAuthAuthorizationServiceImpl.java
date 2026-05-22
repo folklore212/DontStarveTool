@@ -9,7 +9,7 @@ import com.iccuu.general_web_backend.common.exception.AuthenticationException;
 import com.iccuu.general_web_backend.common.exception.BusinessException;
 import com.iccuu.general_web_backend.common.util.RedisUtil;
 import com.iccuu.general_web_backend.common.util.SecureRandomUtil;
-import com.iccuu.general_web_backend.core.security.JwtTokenProvider;
+import com.iccuu.general_web_backend.infrastructure.security.JwtTokenProvider;
 import com.iccuu.general_web_backend.module.oauth.dto.*;
 import com.iccuu.general_web_backend.module.oauth.entity.OAuthClient;
 import com.iccuu.general_web_backend.module.oauth.mapper.OAuthClientMapper;

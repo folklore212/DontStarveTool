@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.core.security;
+package com.iccuu.general_web_backend.infrastructure.security;
 
 import cn.hutool.crypto.PemUtil;
 import org.jose4j.jwa.AlgorithmConstraints;

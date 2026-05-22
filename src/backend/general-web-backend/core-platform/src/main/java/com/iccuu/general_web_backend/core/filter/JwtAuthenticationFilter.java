@@ -1,7 +1,7 @@
 package com.iccuu.general_web_backend.core.filter;
 
 import com.iccuu.general_web_backend.infrastructure.metrics.MetricsService;
-import com.iccuu.general_web_backend.core.security.JwtTokenProvider;
+import com.iccuu.general_web_backend.infrastructure.security.JwtTokenProvider;
 import com.iccuu.general_web_backend.module.auth.service.TokenService;
 import com.iccuu.general_web_backend.module.user.dto.UserVO;
 import com.iccuu.general_web_backend.module.user.service.UserService;

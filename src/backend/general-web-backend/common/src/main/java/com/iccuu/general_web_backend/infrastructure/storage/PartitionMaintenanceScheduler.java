@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.core.storage;
+package com.iccuu.general_web_backend.infrastructure.storage;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

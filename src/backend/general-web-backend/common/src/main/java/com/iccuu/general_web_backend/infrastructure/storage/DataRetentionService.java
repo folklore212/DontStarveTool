@@ -1,4 +1,4 @@
-package com.iccuu.general_web_backend.core.storage;
+package com.iccuu.general_web_backend.infrastructure.storage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

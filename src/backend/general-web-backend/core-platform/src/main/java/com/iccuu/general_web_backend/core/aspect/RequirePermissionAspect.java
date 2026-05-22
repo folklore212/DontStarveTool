@@ -4,7 +4,7 @@ import com.iccuu.general_web_backend.common.annotation.RequirePermission;
 import com.iccuu.general_web_backend.common.constant.ErrorCode;
 import com.iccuu.general_web_backend.common.exception.AuthorizationException;
 import com.iccuu.general_web_backend.common.util.SecurityUtil;
-import com.iccuu.general_web_backend.core.security.PermissionResolver.EffectivePermission;
+import com.iccuu.general_web_backend.infrastructure.security.PermissionResolver.EffectivePermission;
 import com.iccuu.general_web_backend.module.role.cache.PermissionCacheManager;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

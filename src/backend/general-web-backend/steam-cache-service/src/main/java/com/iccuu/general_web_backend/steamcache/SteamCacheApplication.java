@@ -8,8 +8,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication(scanBasePackages = "com.iccuu.general_web_backend")
 @MapperScan("com.iccuu.general_web_backend")
 @EnableScheduling
-public class ModWorkerApplication {
+public class SteamCacheApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ModWorkerApplication.class, args);
+        SpringApplication.run(SteamCacheApplication.class, args);
     }
 }

@@ -1,7 +1,7 @@
 package com.iccuu.general_web_backend.module.role.cache;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.iccuu.general_web_backend.core.security.PermissionResolver;
+import com.iccuu.general_web_backend.infrastructure.security.PermissionResolver;
 import com.iccuu.general_web_backend.module.role.entity.*;
 import com.iccuu.general_web_backend.module.role.mapper.*;
 import lombok.RequiredArgsConstructor;
