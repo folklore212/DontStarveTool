@@ -8,7 +8,7 @@ import org.springframework.http.*;
 import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
-class ErrorPathTest extends BaseIntegrationTest {
+class ErrorPathIntegrationTest extends BaseIntegrationTest {
     @Autowired private TestRestTemplate rest;
 
     @Test void loginEmptyBodyReturns4xx() {

@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Verifies API response shapes don't silently change.
  * If a test fails, ask: "Did you intend to change the API contract?"
  */
-class ApiSchemaTest extends BaseIntegrationTest {
+class ApiSchemaIntegrationTest extends BaseIntegrationTest {
     @Autowired private TestRestTemplate rest;
 
     @Test

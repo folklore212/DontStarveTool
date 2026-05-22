@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Fails if key endpoints suddenly get much slower (N+1 queries, missing indexes, etc.).
  * Uses generous thresholds — only catches major regressions.
  */
-class PerformanceThresholdTest extends BaseIntegrationTest {
+class PerformanceThresholdIntegrationTest extends BaseIntegrationTest {
     @Autowired private TestRestTemplate rest;
 
     @Test

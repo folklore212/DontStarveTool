@@ -8,7 +8,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Testcontainers
-class FlywayMigrationTest {
+class FlywayMigrationIntegrationTest {
     @Container
     static MySQLContainer<?> mysql = new MySQLContainer<>("mysql:8.0")
             .withDatabaseName("auth_system").withUsername("test").withPassword("test")
