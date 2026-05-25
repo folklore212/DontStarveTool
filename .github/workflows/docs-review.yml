@@ -1,0 +1,172 @@
+name: Quarterly Docs Review
+
+on:
+  release:
+    types: [published]
+  schedule:
+    # 每季度第一天 09:00 UTC
+    - cron: '0 9 1 1,4,7,10 *'
+  workflow_dispatch:
+    inputs:
+      review_scope:
+        description: 'Review scope (all, getting-started, dev-guide, user-guide, reference, architecture)'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - getting-started
+          - dev-guide
+          - user-guide
+          - reference
+          - architecture
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  create-review-issue:
+    name: Create Documentation Review Issue
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Release Information
+        id: release
+        if: github.event_name == 'release'
+        run: |
+          echo "tag_name=${{ github.event.release.tag_name }}" >> $GITHUB_OUTPUT
+          echo "release_name=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
+          echo "published_at=${{ github.event.release.published_at }}" >> $GITHUB_OUTPUT
+
+      - name: Generate Review Checklist
+        id: checklist
+        run: |
+          SCOPE="${{ github.event.inputs.review_scope || 'all' }}"
+
+          cat > /tmp/checklist.md << 'EOF'
+          ## 文档复审清单
+
+          ### 通用检查
+          - [ ] 所有文档的 Frontmatter 是否完整
+          - [ ] 所有链接是否有效（无 404）
+          - [ ] 代码示例是否仍然可运行
+          - [ ] 截图是否反映最新 UI
+          - [ ] 技术细节是否准确
+
+          EOF
+
+          if [ "$SCOPE" == "all" ] || [ "$SCOPE" == "getting-started" ]; then
+            cat >> /tmp/checklist.md << 'EOF'
+          ### 入门指南 (getting-started)
+          - [ ] 快速开始步骤是否仍然有效
+          - [ ] 环境搭建指南是否更新
+          - [ ] 架构图是否反映最新架构
+
+          EOF
+          fi
+
+          if [ "$SCOPE" == "all" ] || [ "$SCOPE" == "dev-guide" ]; then
+            cat >> /tmp/checklist.md << 'EOF'
+          ### 开发指南 (dev-guide)
+          - [ ] IDE 配置步骤是否更新
+          - [ ] 依赖版本是否最新
+          - [ ] 编码规范是否一致
+          - [ ] 测试覆盖率是否达标
+
+          EOF
+          fi
+
+          if [ "$SCOPE" == "all" ] || [ "$SCOPE" == "user-guide" ]; then
+            cat >> /tmp/checklist.md << 'EOF'
+          ### 用户指南 (user-guide)
+          - [ ] 功能说明是否准确
+          - [ ] 操作步骤是否有效
+          - [ ] 截图是否最新
+
+          EOF
+          fi
+
+          if [ "$SCOPE" == "all" ] || [ "$SCOPE" == "reference" ]; then
+            cat >> /tmp/checklist.md << 'EOF'
+          ### 参考文档 (reference)
+          - [ ] API 文档是否与代码一致
+          - [ ] 数据库 Schema 是否更新
+          - [ ] 配置项是否完整
+
+          EOF
+          fi
+
+          if [ "$SCOPE" == "all" ] || [ "$SCOPE" == "architecture" ]; then
+            cat >> /tmp/checklist.md << 'EOF'
+          ### 架构文档 (architecture)
+          - [ ] 架构图是否反映实际部署
+          - [ ] ADR 是否仍然有效
+          - [ ] 技术栈是否更新
+
+          EOF
+          fi
+
+          echo "CHECKLIST=$(cat /tmp/checklist.md)" >> $GITHUB_OUTPUT
+
+      - name: Create Review Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const scope = '${{ github.event.inputs.review_scope || 'all' }}';
+            const releaseTag = '${{ steps.release.outputs.tag_name }}';
+            const releaseName = '${{ steps.release.outputs.release_name }}';
+            const publishedAt = '${{ steps.release.outputs.published_at }}';
+            const checklist = `${{ steps.checklist.outputs.CHECKLIST }}`;
+
+            let title = '';
+            let body = '';
+
+            if (github.event_name === 'release') {
+              title = `📚 文档复审 - Release ${releaseTag}`;
+              body = `## 文档复审\n\n**Release**: [${releaseName}](${github.event.release.html_url})  \n**发布日期**: ${publishedAt}  \n**复审范围**: ${scope === 'all' ? '全部文档' : scope}\n\n---\n\n${checklist}\n\n---\n\n## 复审结果\n\n### 需要更新的文档\n\n| 文档 | 问题 | 优先级 | 负责人 |\n|------|------|--------|--------|\n| | | | |\n\n### 需要废弃的文档\n\n| 文档 | 原因 | 替代文档 |\n|------|------|----------|\n| | | |\n\n### 新增文档建议\n\n- [ ] \n- [ ] \n\n---\n\n## 时间安排\n\n- [ ] 初审完成日期：____\n- [ ] 更新完成日期：____\n- [ ] 复审完成日期：____\n\n---\n\n**复审人**:\n- [ ] @TechLead\n- [ ] @ProductOwner\n- [ ] @DevRelLead\n\n---\n\n*此 Issue 由 GitHub Actions 自动创建*`;
+            } else {
+              const quarter = new Date().getMonth() / 3 + 1;
+              const year = new Date().getFullYear();
+              title = `📚 ${year}年 Q${quarter} 文档复审`;
+              body = `## 季度文档复审\n\n**季度**: ${year}年 Q${quarter}  \n**复审范围**: ${scope === 'all' ? '全部文档' : scope}\n\n---\n\n${checklist}\n\n---\n\n## 复审结果\n\n### 需要更新的文档\n\n| 文档 | 问题 | 优先级 | 负责人 |\n|------|------|--------|--------|\n| | | | |\n\n### 需要废弃的文档\n\n| 文档 | 原因 | 替代文档 |\n|------|------|----------|\n| | | |\n\n### 新增文档建议\n\n- [ ] \n- [ ] \n\n---\n\n## 时间安排\n\n- [ ] 初审完成日期：____\n- [ ] 更新完成日期：____\n- [ ] 复审完成日期：____\n\n---\n\n**复审人**:\n- [ ] @TechLead\n- [ ] @ProductOwner\n- [ ] @DevRelLead\n\n---\n\n*此 Issue 由 GitHub Actions 自动创建*`;
+            }
+
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['documentation', 'review', 'priority:medium'],
+              assignees: ['TechLead']  // 替换为实际的 Tech Lead 用户名
+            });
+
+            console.log(`Created review issue: #${issue.data.number} - ${title}`);
+
+      - name: Add Issue to Project (Optional)
+        if: vars.DOCS_PROJECT_ID != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // 如果使用了 GitHub Projects，可以在这里添加自动将 Issue 添加到项目的逻辑
+            console.log('Add to project feature is configured in repository settings');
+
+  notify-team:
+    name: Notify Team
+    runs-on: ubuntu-latest
+    needs: create-review-issue
+    if: always()
+
+    steps:
+      - name: Notify on Slack/Discord (Optional)
+        run: |
+          echo "Documentation review issue has been created."
+          echo "Please check the Issues tab for the new review issue."
+
+          # 如果配置了 Webhook，可以取消注释并配置
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"📚 文档复审 Issue 已创建，请相关同事及时处理。"}' \
+          #   ${{ secrets.TEAM_WEBHOOK_URL }}

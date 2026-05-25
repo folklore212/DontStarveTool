@@ -1,0 +1,315 @@
+name: Docs Lint
+
+on:
+  pull_request:
+    paths:
+      - 'doc/**'
+      - 'doc/_static/docs/**'
+  push:
+    branches: [master]
+    paths:
+      - 'doc/**'
+      - 'doc/_static/docs/**'
+
+jobs:
+  check-frontmatter:
+    name: Check Frontmatter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Changed Files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: |
+            doc/**/*.md
+            doc/_static/docs/**/*.md
+
+      - name: Check Frontmatter in Changed Files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          echo "Checking frontmatter in changed files..."
+          errors=0
+
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ $file == *.md ]]; then
+              # Check if file starts with ---
+              if ! head -1 "$file" | grep -q "^---"; then
+                echo "::error file=$file::Missing frontmatter (file should start with ---)"
+                errors=$((errors + 1))
+              else
+                # Check for required fields
+                if ! grep -q "^name:" "$file"; then
+                  echo "::error file=$file::Missing 'name' field in frontmatter"
+                  errors=$((errors + 1))
+                fi
+                if ! grep -q "^description:" "$file"; then
+                  echo "::error file=$file::Missing 'description' field in frontmatter"
+                  errors=$((errors + 1))
+                fi
+                if ! grep -q "^status:" "$file"; then
+                  echo "::error file=$file::Missing 'status' field in frontmatter"
+                  errors=$((errors + 1))
+                fi
+                if ! grep -q "^owner:" "$file"; then
+                  echo "::error file=$file::Missing 'owner' field in frontmatter"
+                  errors=$((errors + 1))
+                fi
+              fi
+            fi
+          done
+
+          if [ $errors -gt 0 ]; then
+            echo "::error::Found $errors files with frontmatter issues"
+            exit 1
+          fi
+
+          echo "All files have valid frontmatter!"
+
+  check-links:
+    name: Check Markdown Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          folder-path: 'doc,doc/_static/docs'
+          check-modified-files-only: ${{ github.event_name == 'pull_request' }}
+          config-file: '.github/link-check-config.json'
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+
+      - name: Create Config File
+        run: |
+          mkdir -p .github
+          cat > .github/link-check-config.json << 'EOF'
+          {
+            "ignorePatterns": [
+              {
+                "pattern": "^http://localhost"
+              },
+              {
+                "pattern": "^http://127\\.0\\.0\\.1"
+              },
+              {
+                "pattern": "^https://github\\.com/your-org"
+              }
+            ],
+            "replacementPatterns": [
+              {
+                "pattern": "^/",
+                "replacement": "{{BASEURL}}/"
+              }
+            ],
+            "httpHeaders": [
+              {
+                "urls": ["https://"],
+                "headers": {
+                  "Accept": "text/html"
+                }
+              }
+            ],
+            "timeout": "10s",
+            "retryOn429": true,
+            "retryCount": 3,
+            "fallbackRetryDelay": "30s"
+          }
+          EOF
+
+  check-spelling:
+    name: Check Spelling
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Changed Files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: |
+            doc/**/*.md
+            doc/_static/docs/**/*.md
+
+      - name: Spell Check
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: rojopolis/spellcheck-github-actions@v0
+        with:
+          source_files: ${{ steps.changed-files.outputs.all_changed_files }}
+          config_path: .github/spellcheck-config.yml
+          task_name: Markdown Spellcheck
+
+      - name: Create Spellcheck Config
+        run: |
+          cat > .github/spellcheck-config.yml << 'EOF'
+          matrix:
+          - name: Markdown
+            aspell:
+              lang: en
+            dictionary:
+              encoding: utf-8
+              wordlists:
+              - .github/wordlist.txt
+            pipeline:
+            - pyspelling.filters.markdown:
+            - pyspelling.filters.html:
+                comments: false
+                ignores:
+                - code
+                - pre
+            sources:
+            - 'doc/**/*.md'
+            - 'doc/_static/docs/**/*.md'
+            default_encoding: utf-8
+          EOF
+
+      - name: Create Word List
+        run: |
+          cat > .github/wordlist.txt << 'EOF'
+          DST
+          DontStarve
+          Minecraft
+          Steam
+          Workshop
+          Kubernetes
+          Dockerfile
+          docker-compose
+          nginx
+          Nginx
+          MySQL
+          Redis
+          MyBatis
+          Lombok
+          JWT
+          OAuth
+          MFA
+          TOTP
+          Webhook
+          webhook
+          GitHub
+          GitLab
+          IDE
+          IntelliJ
+          VSCode
+          API
+          REST
+          JSON
+          YAML
+          XML
+          HTML
+          CSS
+          JavaScript
+          TypeScript
+          React
+          Node.js
+          npm
+          Maven
+          Gradle
+          SpringBoot
+          Flyway
+          Testcontainers
+          JaCoCo
+          ESLint
+          Prettier
+          Playwright
+          Vitest
+          Mock
+          mock
+          DTO
+          CRUD
+          SSH
+          WebSocket
+          websocket
+          WebSocket
+          JSON-RPC
+          RPC
+          HTTP
+          HTTPS
+          TCP
+          IP
+          DNS
+          CDN
+          SSL
+          TLS
+          AES
+          HMAC
+          SHA
+          MD5
+          EOF
+
+  check-format:
+    name: Check Markdown Format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Changed Files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: |
+            doc/**/*.md
+            doc/_static/docs/**/*.md
+
+      - name: Setup Node
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Prettier
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: npm install -g prettier
+
+      - name: Check Format
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ $file == *.md ]]; then
+              echo "Checking format: $file"
+              if ! prettier --check "$file"; then
+                echo "::error file=$file::File is not formatted correctly. Run 'prettier --write $file' to fix."
+                exit 1
+              fi
+            fi
+          done
+          echo "All files are properly formatted!"
+
+  summary:
+    name: Summary
+    runs-on: ubuntu-latest
+    needs: [check-frontmatter, check-links, check-spelling, check-format]
+    if: always()
+
+    steps:
+      - name: Summary
+        run: |
+          echo "## Documentation Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Frontmatter | ${{ needs.check-frontmatter.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Links | ${{ needs.check-links.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Spelling | ${{ needs.check-spelling.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Format | ${{ needs.check-format.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ needs.check-frontmatter.result }}" == "failure" ] || \
+             [ "${{ needs.check-links.result }}" == "failure" ] || \
+             [ "${{ needs.check-spelling.result }}" == "failure" ] || \
+             [ "${{ needs.check-format.result }}" == "failure" ]; then
+            echo "❌ Some checks failed. Please review the logs above." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          else
+            echo "✅ All checks passed!" >> $GITHUB_STEP_SUMMARY
+          fi

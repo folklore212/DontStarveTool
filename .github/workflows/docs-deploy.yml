@@ -4,12 +4,12 @@ on:
   push:
     branches: [master]
     paths:
-      - 'docs-website/**'
+      - 'doc/_static/**'
       - 'doc/**'
   pull_request:
     branches: [master]
     paths:
-      - 'docs-website/**'
+      - 'doc/_static/**'
       - 'doc/**'
   workflow_dispatch:
 
@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: docs-website/package-lock.json
+          cache-dependency-path: doc/_static/package-lock.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -61,7 +61,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs-website/build
+          path: ./doc/_static/build
 
   deploy:
     name: Deploy to GitHub Pages
