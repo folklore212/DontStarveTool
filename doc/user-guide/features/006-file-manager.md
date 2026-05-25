@@ -1,3 +1,15 @@
+---
+name: 文件管理器设计
+description: 文件管理器设计
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 文件管理器设计
 
 ## 概述

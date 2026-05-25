@@ -1,6 +1,6 @@
 ---
 name: 5 分钟快速体验
-description: 使用 Docker Compose 一键启动 DST 管理平台
+description: 5 分钟快速体验
 status: approved
 owner: @TechLead
 created: 2026-05-22

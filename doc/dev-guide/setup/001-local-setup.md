@@ -1,6 +1,6 @@
 ---
 name: 本地开发环境搭建
-description: 完整的本地开发环境配置指南（IDE+ 数据库 + 调试）
+description: 本地开发环境搭建
 status: approved
 owner: @TechLead
 created: 2026-05-22

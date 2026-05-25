@@ -1,3 +1,15 @@
+---
+name: 部署拓扑
+description: 部署拓扑
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 部署拓扑
 
 ## Docker Compose 容器全景
@@ -38,7 +50,7 @@ Network: docker_auth-net (bridge, internal)
 └──────────┘  └──────────┘  └──────────┘
 
      ┌──────────────────────┐
-     │ mod-worker (:8084)   │  固定单实例
+     │ steam-cache-service (:8084)   │  固定单实例
      │ - @Scheduled 刷新     │
      │ - 连接 mysql-template │
      └──────────────────────┘
@@ -69,7 +81,7 @@ Network: docker_auth-net (bridge, internal)
 | core-platform | 8081 | 8081 | 0.0.0.0 | core API |
 | template-service | 8082 | 8082 | 0.0.0.0 | 模板 API |
 | server-service | 8083 | 8083 | 0.0.0.0 | 服务器 API |
-| mod-worker | 8084 | — | 无映射 | 仅内网 |
+| steam-cache-service | 8084 | — | 无映射 | 仅内网 |
 | node-gateway | 8090 | 8090 | 127.0.0.1 | nginx 代理 |
 | mysql | 3306 | 3306 | 127.0.0.1 | 本地调试 |
 | mysql-template | 3306 | 3307 | 127.0.0.1 | 本地调试 |
@@ -94,7 +106,7 @@ Network: docker_auth-net (bridge, internal)
 | core-platform | 1.5 | 768m | ✅ |
 | template-service | 1.0 | 512m | ✅ |
 | server-service | 1.0 | 512m | ✅ |
-| mod-worker | 0.5 | 384m | ❌ 单实例 |
+| steam-cache-service | 0.5 | 384m | ❌ 单实例 |
 | node-gateway | — | ~50m | ❌ 当前单实例 |
 | redis | 0.5 | 256m | ❌ |
 

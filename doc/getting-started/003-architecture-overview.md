@@ -1,6 +1,6 @@
 ---
 name: 架构概览
-description: DST 管理平台三层架构设计详解
+description: 架构概览
 status: approved
 owner: @TechLead
 created: 2026-05-22
@@ -79,7 +79,7 @@ tags: [architecture, overview, getting-started]
 │  │  └──────────────┘  └──────────────┘  └──────────────┘   │    │
 │  │                                                          │    │
 │  │  ┌──────────────┐                                        │    │
-│  │  │ mod-worker   │  单实例                                 │    │
+│  │  │ steam-cache-service   │  单实例                                 │    │
 │  │  │   :8084      │  Workshop 缓存 / ModConfig 下载           │    │
 │  │  └──────────────┘  Steam 版本检查                          │    │
 │  │                                                          │    │
@@ -170,7 +170,7 @@ location /node {
 | **core-platform** | 8081 | 用户认证、授权、OAuth2、MFA、API Key、审计日志 | 可横向扩展 |
 | **template-service** | 8082 | DST 服务器模板、世界生成预设、Workshop 搜索 | 可横向扩展 |
 | **server-service** | 8083 | 服务器 CRUD、集群管理、SSH 部署、备份管理 | 可横向扩展 |
-| **mod-worker** | 8084 | Workshop 缓存、Mod 配置下载、Steam 版本检查 | 单实例 |
+| **steam-cache-service** | 8084 | Workshop 缓存、Mod 配置下载、Steam 版本检查 | 单实例 |
 
 #### Node Gateway（Go）
 - **端口**: 8090
@@ -227,7 +227,7 @@ core-platform ◄──── template-service  (CorePlatformClient — 用户�
 core-platform ◄──── node-gateway       (token 验证 API)
 
 template-service ◄── server-service    (RemoteModSearchProvider — 模组搜索)
-template-service ◄── mod-worker        (共享 mysql-template DB)
+template-service ◄── steam-cache-service        (共享 mysql-template DB)
 
 server-service ────► (SSH) ──► DST 游戏服务器 (部署/管理)
 node-gateway ──────► (HTTP) ─► server-service (命令转发)
@@ -252,7 +252,7 @@ common (共享库)
 ├── core-platform   (端口 8081, 可横向扩展)
 ├── template-service (端口 8082, 可横向扩展)
 ├── server-service   (端口 8083, 可横向扩展)
-└── mod-worker       (端口 8084, 固定单实例)
+└── steam-cache-service       (端口 8084, 固定单实例)
 ```
 
 **依赖方向**:
@@ -260,7 +260,7 @@ common (共享库)
 - `core-platform`: 基础服务，其他服务都依赖它
 - `template-service`: 依赖 core-platform
 - `server-service`: 依赖 core-platform 和 template-service
-- `mod-worker`: 独立服务，无依赖
+- `steam-cache-service`: 独立服务，无依赖
 
 ---
 
@@ -292,7 +292,7 @@ common (共享库)
 4. `core-platform-container` - 核心平台服务
 5. `template-service-container` - 模板服务
 6. `server-service-container` - 服务器服务
-7. `steam-cache-service-container` - Mod Worker
+7. `steam-cache-service-container` - Steam Cache Service
 8. `node-gateway-container` - Node Gateway
 9. `auth-mysql-container` - 认证数据库
 10. `template-mysql-container` - 模板数据库
@@ -322,7 +322,7 @@ common (共享库)
 
 | 服务 | 原因 |
 |------|------|
-| mod-worker | Workshop 缓存需要全局一致性 |
+| steam-cache-service | Workshop 缓存需要全局一致性 |
 | node-gateway | WebSocket 连接管理，状态复杂 |
 
 ---

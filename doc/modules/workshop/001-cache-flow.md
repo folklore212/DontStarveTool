@@ -1,6 +1,18 @@
+---
+name: Workshop 缓存数据流
+description: Workshop 缓存数据流
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # Workshop 缓存数据流
 
-## 主动刷新（mod-worker）
+## 主动刷新（steam-cache-service）
 
 ```
                     ┌─────────────────────────┐
@@ -13,7 +25,7 @@
         cron: 0 7,37 * * * *  │ 10 pages × 50/page
                                ▼
                     ┌─────────────────────────┐
-                    │   mod-worker (:8084)      │
+                    │   steam-cache-service (:8084)      │
                     │   WorkshopRefreshService │
                     │   - 30min 刷新前500      │
                     │   - 调用 SteamApiClient   │

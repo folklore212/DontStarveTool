@@ -1,6 +1,6 @@
 ---
 name: 测试指南
-description: 单元测试、集成测试和 E2E 测试最佳实践
+description: 测试指南
 status: approved
 owner: @TechLead
 created: 2026-05-22

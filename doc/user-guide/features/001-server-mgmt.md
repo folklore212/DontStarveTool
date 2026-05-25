@@ -1,3 +1,15 @@
+---
+name: 服务器详情页设计
+description: 服务器详情页设计
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 服务器详情页设计
 
 ## 页面结构

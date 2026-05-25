@@ -1,3 +1,15 @@
+---
+name: 多用户协作设计
+description: 多用户协作设计
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 多用户协作设计
 
 ## 概述

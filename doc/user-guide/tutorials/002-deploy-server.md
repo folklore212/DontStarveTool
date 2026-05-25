@@ -1,3 +1,15 @@
+---
+name: 部署向导设计
+description: 部署向导设计
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 部署向导设计
 
 ## 概述

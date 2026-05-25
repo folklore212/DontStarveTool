@@ -1,6 +1,6 @@
 ---
 name: Docker 开发环境
-description: 使用 Docker 进行容器化开发
+description: Docker 开发环境
 status: approved
 owner: @TechLead
 created: 2026-05-22

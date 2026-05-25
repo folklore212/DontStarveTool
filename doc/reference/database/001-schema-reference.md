@@ -1,3 +1,15 @@
+---
+name: 认证授权系统数据库设计文档
+description: 认证授权系统数据库设计文档
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 认证授权系统数据库设计文档
 
 ## 概述

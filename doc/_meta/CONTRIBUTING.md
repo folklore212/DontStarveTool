@@ -1,3 +1,15 @@
+---
+name: 贡献指南
+description: 贡献指南
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 贡献指南
 
 感谢您对本项目的关注！本指南将帮助您了解如何参与项目开发。

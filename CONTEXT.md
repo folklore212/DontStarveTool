@@ -45,7 +45,7 @@ Steam 创意工坊发布的 DST 模组，由 Workshop ID 唯一标识。客户�
 | core-platform | Java/Spring | 8081 | 认证/用户/角色/MFA/OAuth/APIKey/审计 |
 | template-service | Java/Spring | 8082 | Template CRUD / WorldGen Preset / Workshop 搜索 |
 | server-service | Java/Spring | 8083 | Server CRUD / Cluster 管理 / SSH 部署编排 |
-| mod-worker | Java/Spring | 8084 | Steam Workshop 定时缓存 / Mod 配置下载 |
+| steam-cache-service | Java/Spring | 8084 | Steam Workshop 定时缓存 / Mod 配置下载 |
 | node-gateway | Go | 8090 | WebSocket 服务端 / JSON-RPC 路由 |
 | node-agent | Go | — | DST Server 守护进程 / JSON-RPC 客户端 |
 

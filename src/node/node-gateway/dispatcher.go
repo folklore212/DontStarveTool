@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/folklore212/dst-platform/node/shared"
 	"bytes"
 	"encoding/json"
 	"fmt"
@@ -39,7 +40,7 @@ func handleHealth(req *rpc.Request) *rpc.Response {
 		JSONRPC: "2.0",
 		Result: rpc.HealthResult{
 			Status:    "connected",
-			UptimeSec: uptime(),
+			UptimeSec: shared.Uptime(),
 			Version:   "0.1.0",
 			GoVersion: "go1.22",
 		},

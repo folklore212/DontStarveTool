@@ -1,6 +1,6 @@
 ---
 name: 本地开发环境搭建
-description: Java 21 + Node 20 + MySQL + Redis 完整开发环境配置
+description: 本地开发环境搭建
 status: approved
 owner: @TechLead
 created: 2026-05-22

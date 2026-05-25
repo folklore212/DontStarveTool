@@ -38,7 +38,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // 编辑链接配置
-          editUrl: 'https://github.com/your-org/DontStarveTool/tree/master/docs-website/',
+          editUrl: 'https://github.com/your-org/DontStarveTool/tree/master/doc/website/',
           routeBasePath: '/',  // 文档作为首页
         },
         blog: false,  // 暂时禁用博客

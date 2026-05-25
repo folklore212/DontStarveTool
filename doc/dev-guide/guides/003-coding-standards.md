@@ -1,6 +1,6 @@
 ---
 name: 编码规范
-description: Java + TypeScript 编码规范和最佳实践
+description: 编码规范
 status: approved
 owner: @TechLead
 created: 2026-05-22

@@ -1,3 +1,15 @@
+---
+name: 系统架构总览
+description: 系统架构总览
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [architecture, system-design]
+---
+
 # 系统架构总览
 
 ## 全局架构（方案 A：三层结构）
@@ -55,7 +67,7 @@ Layer 3: 服务层
 │  │  └──────────────┘  └──────────────┘  └──────────────┘   │    │
 │  │                                                          │    │
 │  │  ┌──────────────┐                                        │    │
-│  │  │ mod-worker   │  单实例                                 │    │
+│  │  │ steam-cache-service   │  单实例                                 │    │
 │  │  │   :8084      │  Workshop缓存 / ModConfig下载           │    │
 │  │  └──────────────┘  Steam版本检查                          │    │
 │  │                                                          │    │
@@ -105,7 +117,7 @@ core-platform ◄──── template-service  (CorePlatformClient — 用户�
 core-platform ◄──── node-gateway       (token 验证 API)
 
 template-service ◄── server-service    (RemoteModSearchProvider — 模组搜索)
-template-service ◄── mod-worker        (共享 mysql-template DB)
+template-service ◄── steam-cache-service        (共享 mysql-template DB)
 
 server-service ────► (SSH) ──► DST 游戏服务器 (部署/管理)
 node-gateway ──────► (HTTP) ─► server-service (命令转发)
@@ -119,7 +131,7 @@ common (共享库)
 ├── core-platform   (端口 8081, 可横向扩展)
 ├── template-service (端口 8082, 可横向扩展)
 ├── server-service   (端口 8083, 可横向扩展)
-└── mod-worker       (端口 8084, 固定单实例)
+└── steam-cache-service       (端口 8084, 固定单实例)
 ```
 
 ## 关键技术决策
@@ -141,7 +153,7 @@ common (共享库)
 
 - 平台：Docker Compose (11 个容器：3 个 MySQL + Redis + 5 个 Java + 1 个 Go + nginx + admin + customer)
 - Node Agent：systemd 管理，与 DST 服务同机运行
-- 扩展：core-platform / template-service / server-service 可横向扩容至多实例；mod-worker 和 node-gateway 固定单实例
+- 扩展：core-platform / template-service / server-service 可横向扩容至多实例；steam-cache-service 和 node-gateway 固定单实例
 
 ## 配置文件
 

@@ -1,3 +1,15 @@
+---
+name: 仪表盘设计
+description: 仪表盘设计
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 仪表盘设计
 
 ## 概述

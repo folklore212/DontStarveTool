@@ -1,3 +1,15 @@
+---
+name: ADR-002: 删除冗余模块和仪式性代码
+description: ADR-002: 删除冗余模块和仪式性代码
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # ADR-002: 删除冗余模块和仪式性代码
 
 ## 状态

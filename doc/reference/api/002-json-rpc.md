@@ -1,3 +1,15 @@
+---
+name: JSON-RPC 2.0 通信协议
+description: JSON-RPC 2.0 通信协议
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # JSON-RPC 2.0 通信协议
 
 ## 协议基础

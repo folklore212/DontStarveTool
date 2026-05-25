@@ -1,3 +1,15 @@
+---
+name: 服务调用关系
+description: 服务调用关系
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # 服务调用关系
 
 ## REST 调用
@@ -32,7 +44,7 @@
 
 ```
 ┌──────────────┐     ┌──────────────┐
-│core-platform │     │mod-worker    │
+│core-platform │     │steam-cache-service    │
 │              │     │              │
 │ auth_system  │     │ dst_templates│──┐
 │   (独占)      │     │   (与 template共享)││
@@ -83,12 +95,12 @@
               ▲                          │
               │                          ▼
      ┌────────┴───┐              ┌──────────────┐
-     │ mod-worker  │              │  DST Server  │   ← 末梢
+     │ steam-cache-service  │              │  DST Server  │   ← 末梢
      └────────────┘              └──────────────┘
 ```
 
 **规则**：
 - 上游（core-platform）不主动调用下游服务
 - 下游通过 REST Client 调用上游
-- mod-worker 和 template-service 共享 `dst_templates` 通过 DB，非 REST
+- steam-cache-service 和 template-service 共享 `dst_templates` 通过 DB，非 REST
 - node-gateway 仅调用 core-platform 和 server-service，不访问 DB

@@ -1,3 +1,15 @@
+---
+name: ADR-001: 跨服务认证采用 Gateway 注入 X-User-Id header
+description: ADR-001: 跨服务认证采用 Gateway 注入 X-User-Id header
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # ADR-001: 跨服务认证采用 Gateway 注入 X-User-Id header
 
 ## 状态

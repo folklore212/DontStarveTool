@@ -1,3 +1,15 @@
+---
+name: Node 命令集参考
+description: Node 命令集参考
+status: approved
+owner: @TechLead
+created: 2026-05-22
+last_updated: 2026-05-22
+reviewers: []
+review_cycle: release
+tags: [documentation]
+---
+
 # Node 命令集参考
 
 ## DST 进程管理

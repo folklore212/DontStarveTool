@@ -22,7 +22,6 @@ type gateway struct {
 	tokens     *tokenCache
 	disp       *dispatcher
 	nodes      sync.Map // string(connID) → *nodeConn
-	startTime  int64
 }
 
 type nodeConn struct {

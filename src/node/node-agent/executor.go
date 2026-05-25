@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"github.com/folklore212/dst-platform/node/shared"
 	"github.com/folklore212/dst-platform/node/rpc"
 )
 
@@ -67,7 +68,7 @@ func (e *Executor) health() *rpc.HealthResult {
 	runtime.ReadMemStats(&m)
 	return &rpc.HealthResult{
 		Status:    "healthy",
-		UptimeSec: uptime(),
+		UptimeSec: shared.Uptime(),
 		Version:   "0.1.0",
 		GoVersion: runtime.Version(),
 	}

@@ -1,6 +1,6 @@
 ---
 name: 调试指南
-description: 后端和前端的调试技巧和最佳实践
+description: 调试指南
 status: approved
 owner: @TechLead
 created: 2026-05-22
