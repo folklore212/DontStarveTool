@@ -266,7 +266,7 @@ services:
 
   node-gateway:
     build:
-      context: ../../src/node
+      context: ../../src/agent
       dockerfile: ../../deploy/docker/backend/node-gateway/Dockerfile
     image: dst-node-gateway:v1
     container_name: node-gateway-container

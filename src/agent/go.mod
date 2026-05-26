@@ -1,4 +1,4 @@
-module github.com/folklore212/dst-platform/node
+module github.com/folklore212/dst-platform/agent
 
 go 1.22
 

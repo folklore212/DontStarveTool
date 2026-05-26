@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/folklore212/dst-platform/node/shared"
+	"github.com/folklore212/dst-platform/agent/shared"
 	"bytes"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"time"
 
-	"github.com/folklore212/dst-platform/node/rpc"
+	"github.com/folklore212/dst-platform/agent/rpc"
 )
 
 type dispatcher struct {

@@ -5,7 +5,7 @@
 cd src/backend/general-web-backend && ./mvnw compile -q
 ./mvnw test -Dtest='*Test,!*IntegrationTest' -Dsurefire.failIfNoSpecifiedTests=false
 cd src/frontend/customer && npm install --legacy-peer-deps && npx tsc --noEmit
-cd src/node && go build ./... && go test ./...
+cd src/agent && go build ./... && go test ./...
 ```
 
 ## Pre-push

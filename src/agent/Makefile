@@ -4,8 +4,8 @@ BUILD_DIR = build
 
 build:
 	@mkdir -p $(BUILD_DIR)
-	go build -ldflags="-s -w" -o $(BUILD_DIR)/node-agent ./node-agent/
-	go build -ldflags="-s -w" -o $(BUILD_DIR)/node-gateway ./node-gateway/
+	go build -ldflags="-s -w" -o $(BUILD_DIR)/agent-agent ./agent-agent/
+	go build -ldflags="-s -w" -o $(BUILD_DIR)/agent-gateway ./agent-gateway/
 	@echo "Built:"
 	@ls -lh $(BUILD_DIR)/
 

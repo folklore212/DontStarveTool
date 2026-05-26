@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/folklore212/dst-platform/node/shared"
+	"github.com/folklore212/dst-platform/agent/shared"
 )
 
 func main() {

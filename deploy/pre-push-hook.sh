@@ -35,11 +35,11 @@ run_step "Customer tsc" \
     bash -c "cd '$ROOT/src/frontend/customer' && npx tsc --noEmit"
 
 # 4. Go compile + test + vet
-if [ -f "$ROOT/src/node/go.mod" ]; then
+if [ -f "$ROOT/src/agent/go.mod" ]; then
     run_step "Go compile + test" \
-        bash -c "export PATH=\$PATH:/usr/local/go/bin && cd '$ROOT/src/node' && go build ./... && go test ./..."
+        bash -c "export PATH=\$PATH:/usr/local/go/bin && cd '$ROOT/src/agent' && go build ./... && go test ./..."
     run_step "Go vet (static analysis)" \
-        bash -c "export PATH=\$PATH:/usr/local/go/bin && cd '$ROOT/src/node' && go vet ./..."
+        bash -c "export PATH=\$PATH:/usr/local/go/bin && cd '$ROOT/src/agent' && go vet ./..."
 fi
 
 # 5. .env vs .env.example key consistency

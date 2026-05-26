@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"github.com/folklore212/dst-platform/node/shared"
-	"github.com/folklore212/dst-platform/node/rpc"
+	"github.com/folklore212/dst-platform/agent/shared"
+	"github.com/folklore212/dst-platform/agent/rpc"
 )
 
 var (

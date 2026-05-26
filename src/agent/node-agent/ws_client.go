@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/folklore212/dst-platform/node/rpc"
+	"github.com/folklore212/dst-platform/agent/rpc"
 	"github.com/gorilla/websocket"
 )
 
