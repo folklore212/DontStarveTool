@@ -1,0 +1,184 @@
+name: CI-CD
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+env:
+  ACR_REGISTRY: ${{ secrets.ACR_REGISTRY }}
+
+jobs:
+  # ── Phase 1: Detect what changed ──
+  detect-changes:
+    name: Detect changed services
+    runs-on: ubuntu-latest
+    outputs:
+      services: ${{ steps.filter.outputs.changes }}
+      infra: ${{ steps.filter.outputs.infra }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            core-platform:
+              - 'src/backend/general-web-backend/core-platform/**'
+              - 'src/backend/general-web-backend/common/**'
+              - 'src/backend/general-web-backend/pom.xml'
+            template-service:
+              - 'src/backend/general-web-backend/template-service/**'
+              - 'src/backend/general-web-backend/common/**'
+              - 'src/backend/general-web-backend/pom.xml'
+            server-service:
+              - 'src/backend/general-web-backend/server-service/**'
+              - 'src/backend/general-web-backend/common/**'
+              - 'src/backend/general-web-backend/pom.xml'
+            steam-cache-service:
+              - 'src/backend/general-web-backend/steam-cache-service/**'
+              - 'src/backend/general-web-backend/common/**'
+              - 'src/backend/general-web-backend/pom.xml'
+            node-gateway:
+              - 'src/agent/**'
+            admin:
+              - 'src/frontend/admin/**'
+            customer:
+              - 'src/frontend/customer/**'
+            infra:
+              - 'deploy/**'
+
+  # ── Phase 2: Quality gate ──
+  test:
+    name: Compile + Test
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          cache-dependency-path: src/agent/go.sum
+
+      - name: Maven compile
+        run: cd src/backend/general-web-backend && ./mvnw compile -q
+
+      - name: Java unit tests
+        run: cd src/backend/general-web-backend && ./mvnw test -Dtest='*Test,*Tests,!*IntegrationTest' -Dsurefire.failIfNoSpecifiedTests=false
+
+      - name: TypeScript check (admin)
+        run: cd src/frontend/admin && npm install --legacy-peer-deps && npx tsc --noEmit
+
+      - name: TypeScript check (customer)
+        run: cd src/frontend/customer && npm install --legacy-peer-deps && npx tsc --noEmit
+
+      - name: Go build + test + vet
+        run: cd src/agent && go build ./... && go test ./... && go vet ./...
+
+  # ── Phase 3: Build and push Docker images to ACR ──
+  build-and-push:
+    name: Build ${{ matrix.service }}
+    needs: [detect-changes, test]
+    if: needs.detect-changes.outputs.services != '[]' && needs.detect-changes.outputs.services != ''
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service: ${{ fromJSON(needs.detect-changes.outputs.services) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to ACR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.ACR_REGISTRY }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: Extract metadata
+        id: meta
+        run: |
+          SHA_SHORT=$(git rev-parse --short=7 HEAD)
+          echo "sha_short=${SHA_SHORT}" >> $GITHUB_OUTPUT
+          echo "image=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/${{ matrix.service }}" >> $GITHUB_OUTPUT
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: deploy/services/${{ matrix.service }}/Dockerfile
+          push: true
+          tags: |
+            ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.sha_short }}
+            ${{ steps.meta.outputs.image }}:latest
+          cache-from: type=registry,ref=${{ steps.meta.outputs.image }}:buildcache
+          cache-to: type=registry,ref=${{ steps.meta.outputs.image }}:buildcache,mode=max
+
+  # ── Phase 4: Deploy to production ──
+  deploy:
+    name: Deploy to production
+    needs: [detect-changes, build-and-push]
+    if: |
+      always() &&
+      (needs.build-and-push.result == 'success' || needs.build-and-push.result == 'skipped') &&
+      (needs.detect-changes.outputs.services != '[]' || needs.detect-changes.outputs.infra == 'true')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render .env from template
+        run: |
+          cp deploy/.env.example deploy/.env
+          sed -i "s|^MYSQL_ROOT_PASSWORD=.*|MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}|" deploy/.env
+          sed -i "s|^REDIS_PASSWORD=.*|REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}|" deploy/.env
+          sed -i "s|^AES_KEY_V0=.*|AES_KEY_V0=${{ secrets.AES_KEY_V0 }}|" deploy/.env
+          sed -i "s|^AES_KEY_V1=.*|AES_KEY_V1=${{ secrets.AES_KEY_V1 }}|" deploy/.env
+          sed -i "s|^GEETEST_LOGIN_CAPTCHA_ID=.*|GEETEST_LOGIN_CAPTCHA_ID=${{ secrets.GEETEST_LOGIN_CAPTCHA_ID }}|" deploy/.env
+          sed -i "s|^GEETEST_LOGIN_CAPTCHA_KEY=.*|GEETEST_LOGIN_CAPTCHA_KEY=${{ secrets.GEETEST_LOGIN_CAPTCHA_KEY }}|" deploy/.env
+          sed -i "s|^GEETEST_REGISTER_CAPTCHA_ID=.*|GEETEST_REGISTER_CAPTCHA_ID=${{ secrets.GEETEST_REGISTER_CAPTCHA_ID }}|" deploy/.env
+          sed -i "s|^GEETEST_REGISTER_CAPTCHA_KEY=.*|GEETEST_REGISTER_CAPTCHA_KEY=${{ secrets.GEETEST_REGISTER_CAPTCHA_KEY }}|" deploy/.env
+          sed -i "s|^MAIL_HOST=.*|MAIL_HOST=${{ secrets.MAIL_HOST }}|" deploy/.env
+          sed -i "s|^MAIL_PORT=.*|MAIL_PORT=${{ secrets.MAIL_PORT }}|" deploy/.env
+          sed -i "s|^MAIL_USERNAME=.*|MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}|" deploy/.env
+          sed -i "s|^MAIL_PASSWORD=.*|MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}|" deploy/.env
+          sed -i "s|^STEAM_API_KEY=.*|STEAM_API_KEY=${{ secrets.STEAM_API_KEY }}|" deploy/.env
+          sed -i "s|^CORS_ALLOWED_ORIGINS=.*|CORS_ALLOWED_ORIGINS=${{ secrets.CORS_ALLOWED_ORIGINS }}|" deploy/.env
+          echo ".env rendered"
+
+      - name: SCP deploy directory to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: deploy/
+          target: /opt/dst/
+          strip_components: 0
+
+      - name: Deploy services via SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/dst/deploy
+            docker compose pull
+            docker compose up -d --force-recreate
+            bash scripts/health-check.sh
