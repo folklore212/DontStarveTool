@@ -15,18 +15,30 @@ NC='\033[0m'
 PASS=0
 FAIL=0
 
+MAX_RETRIES=6
+RETRY_DELAY=10
+
 check() {
   local name="$1"
   local method="$2"
   local target="$3"
-  printf "  %-35s " "$name"
-  if $method "$target" > /dev/null 2>&1; then
-    echo -e "${GREEN}PASS${NC}"
-    PASS=$((PASS + 1))
-  else
-    echo -e "${RED}FAIL${NC}"
-    FAIL=$((FAIL + 1))
-  fi
+  local retries=0
+  local wait_msg=true
+  while [ $retries -lt $MAX_RETRIES ]; do
+    if $method "$target" > /dev/null 2>&1; then
+      printf "  %-35s %s\n" "$name" "${GREEN}PASS${NC}"
+      PASS=$((PASS + 1))
+      return 0
+    fi
+    retries=$((retries + 1))
+    if [ $wait_msg = true ]; then
+      printf "  %-35s waiting..." "$name"
+      wait_msg=false
+    fi
+    sleep $RETRY_DELAY
+  done
+  printf "  %-35s %s\n" "$name" "${RED}FAIL${NC}"
+  FAIL=$((FAIL + 1))
 }
 
 echo "=== Health Check ==="
