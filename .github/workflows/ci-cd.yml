@@ -175,19 +175,6 @@ jobs:
           target: /opt/dst/
           strip_components: 0
 
-      - name: Ensure deploy files on server
-        if: steps.scp.outcome == 'failure'
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            mkdir -p /opt/dst/deploy
-            curl -sL -H "Authorization: token ${{ github.token }}" \
-              "https://api.github.com/repos/${{ github.repository }}/tarball/${{ github.sha }}" \
-              | tar xz --strip=2 -C /opt/dst/deploy '*/deploy/'
-
       - name: Deploy services via SSH
         uses: appleboy/ssh-action@v1.2.2
         with:
