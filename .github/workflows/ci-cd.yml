@@ -14,7 +14,7 @@ jobs:
     name: Detect changed services
     runs-on: ubuntu-latest
     outputs:
-      services: ${{ steps.filter.outputs.changes || steps.manual.outputs.changes }}
+      services: ${{ steps.service-list.outputs.services || steps.manual.outputs.changes }}
       infra: ${{ steps.filter.outputs.infra || steps.manual.outputs.infra }}
     steps:
       - uses: actions/checkout@v4
@@ -55,6 +55,14 @@ jobs:
             infra:
               - 'deploy/**'
               - '.github/workflows/**'
+
+      - name: Convert filter changes to service array
+        id: service-list
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          CHANGES='${{ steps.filter.outputs.changes }}'
+          SERVICES=$(echo "$CHANGES" | jq -c '[to_entries[] | select(.key != "infra" and .value == true) | .key]')
+          echo "services=${SERVICES}" >> $GITHUB_OUTPUT
 
   # ── Phase 2: Quality gate ──
   test:
@@ -125,7 +133,7 @@ jobs:
         run: |
           SHA_SHORT=$(git rev-parse --short=7 HEAD)
           echo "sha_short=${SHA_SHORT}" >> $GITHUB_OUTPUT
-          echo "image=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/${{ matrix.service }}" >> $GITHUB_OUTPUT
+          echo "image=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/dst-${{ matrix.service }}" >> $GITHUB_OUTPUT
 
       - name: Build and push
         uses: docker/build-push-action@v6

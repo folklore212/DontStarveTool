@@ -30,7 +30,7 @@ ACR_NAMESPACE="${ACR_NAMESPACE:-}"
 
 rollback_one() {
   local svc="$1"
-  local image="${ACR_REGISTRY}/${ACR_NAMESPACE}/${svc}:${SHA}"
+  local image="${ACR_REGISTRY}/${ACR_NAMESPACE}/dst-${svc}:${SHA}"
   echo "Pulling ${svc}:${SHA} ..."
   docker pull "$image"
   echo "Restarting ${svc} ..."
