@@ -157,7 +157,7 @@ mvn -version
 
 ```bash
 # 启动 MySQL 和 Redis
-cd deploy/docker
+cd deploy
 docker compose up -d mysql redis
 
 # 验证服务
@@ -389,7 +389,7 @@ npm run dev
 # 后端服务启动时会自动执行 Flyway 迁移脚本
 
 # 方式 2: 手动初始化
-cd deploy/docker/mysql
+cd deploy/config/mysql
 mysql -u root -p < init.sql
 ```
 

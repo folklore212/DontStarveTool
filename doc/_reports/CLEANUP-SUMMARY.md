@@ -52,8 +52,8 @@ DontStarveTool/
 │   ├── backend/
 │   └── frontend/
 │
-├── deploy/                     ← 部署配置（保留）
-│   └── docker/
+├── deploy/                     ← 运维部署配置
+├── script/                     ← 开发脚本（构建/测试/hooks）
 │
 ├── tools/                      ← 工具脚本（保留）
 │   └── docs/
@@ -98,7 +98,8 @@ DontStarveTool/
 ### 保留的目录
 - ✅ `.github/` - GitHub 配置（工作流、CODEOWNERS 等）
 - ✅ `src/` - 源代码
-- ✅ `deploy/` - 部署配置
+- ✅ `deploy/` - 运维部署配置
+- ✅ `script/` - 开发脚本
 - ✅ `tools/` - 工具脚本
 
 ### 集中的目录

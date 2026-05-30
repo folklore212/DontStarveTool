@@ -41,7 +41,7 @@ tags: [setup, docker, development, container]
 ### 启动命令
 
 ```bash
-cd deploy/docker
+cd deploy
 
 # 只启动数据库和 Redis
 docker compose up -d mysql mysql-template mysql-server redis
@@ -89,7 +89,7 @@ Redis:
 
 ### 开发环境 Docker Compose
 
-创建 `deploy/docker/docker-compose.dev.yml`:
+创建 `deploy/docker-compose.dev.yml`:
 
 ```yaml
 version: '3.8'
@@ -145,7 +145,7 @@ docker compose -f docker-compose.dev.yml down
 cd src/backend/general-web-backend
 
 # 构建所有服务镜像
-docker compose -f ../../deploy/docker/docker-compose.yml build
+docker compose -f ../../deploy/docker-compose.yml build
 ```
 
 ### 本地运行后端服务（推荐）
@@ -177,7 +177,7 @@ cd ../server-service
 - 接近生产环境
 
 ```bash
-cd deploy/docker
+cd deploy
 
 # 启动所有后端服务
 docker compose up -d core-platform template-service server-service
@@ -220,7 +220,7 @@ npm run dev
 ### 容器运行前端
 
 ```bash
-cd deploy/docker
+cd deploy
 
 # 构建并启动前端容器
 docker compose up -d admin customer
@@ -237,7 +237,7 @@ docker compose logs -f admin
 
 ```bash
 # 1. 启动数据库和缓存
-cd deploy/docker
+cd deploy
 docker compose up -d mysql redis
 
 # 2. 启动后端服务（IDE 运行）

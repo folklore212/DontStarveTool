@@ -1,6 +1,6 @@
 #!/bin/bash
 # Pre-push hook — auto compile + test before pushing to GitHub.
-# Install: bash deploy/install-hooks.sh
+# Install: bash script/install-hooks.sh
 set -euo pipefail
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; NC='\033[0m'
@@ -44,7 +44,7 @@ fi
 
 # 5. .env vs .env.example key consistency
 run_step ".env key check" bash -c "
-    cd '$ROOT/deploy/docker'
+    cd '$ROOT/deploy'
     env_keys=\$(grep -oP '^[A-Z_]+(?==)' .env | sort)
     ex_keys=\$(grep -oP '^[A-Z_]+(?==)' .env.example | sort)
     diff <(echo \"\$env_keys\") <(echo \"\$ex_keys\") > /tmp/env-diff.txt 2>&1 || {

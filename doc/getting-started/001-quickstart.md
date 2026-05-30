@@ -28,7 +28,7 @@ tags: [quickstart, docker, getting-started]
 
 ```bash
 git clone https://github.com/your-org/DontStarveTool.git
-cd DontStarveTool/deploy/docker
+cd DontStarveTool/deploy
 ```
 
 ### 步骤 2: 配置环境变量

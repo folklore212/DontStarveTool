@@ -160,7 +160,7 @@ common (共享库)
 | 配置 | 位置 |
 |------|------|
 | 服务端口 / DB 连接 | 各模块 `application.yml` |
-| Docker 部署配置 | `deploy/docker/.env` |
-| Nginx 路由 | `deploy/docker/nginx/nginx.conf` |
+| Docker 部署配置 | `deploy/.env` |
+| Nginx 路由 | `deploy/config/nginx/nginx.conf` |
 | Node Agent 配置 | `/opt/dst-node/config.json` |
 | 世界生成元数据 | `worldgen-metadata.json` |

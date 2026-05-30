@@ -69,14 +69,11 @@
 # 部署配置审核
 # ============================================
 
-# Docker 配置
-/deploy/docker/ @DevOpsLead @TechLead
+# 运维部署配置
+/deploy/ @DevOpsLead @TechLead
 
-# Docker Compose 配置
-/deploy/docker/docker-compose.yml @DevOpsLead @TechLead
-
-# Nginx 配置
-/deploy/docker/nginx/ @DevOpsLead
+# 开发脚本
+/script/ @DevOpsLead @TechLead
 
 # ============================================
 # GitHub Actions 工作流

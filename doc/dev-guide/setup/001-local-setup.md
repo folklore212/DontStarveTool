@@ -141,7 +141,7 @@ SELECT * FROM flyway_schema_history;
 如果自动迁移失败，可以手动执行：
 
 ```bash
-cd deploy/docker/mysql
+cd deploy/config/mysql
 mysql -u root -p < init.sql
 ```
 

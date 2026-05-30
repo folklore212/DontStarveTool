@@ -45,7 +45,7 @@ tags: [documentation]
 ```bash
 # 克隆项目
 git clone https://github.com/your-org/DontStarveTool.git
-cd DontStarveTool/deploy/docker
+cd DontStarveTool/deploy
 
 # 配置环境变量
 cp .env.example .env
@@ -156,7 +156,7 @@ cp .env.example .env
 ### Docker 部署（推荐）
 
 ```bash
-cd deploy/docker
+cd deploy
 docker compose up -d
 ```
 

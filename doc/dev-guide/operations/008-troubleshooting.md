@@ -488,7 +488,7 @@ nmap -p 80,443,8081,8082,8083 localhost
 
 ```bash
 # 1. 快速恢复
-cd deploy/docker
+cd deploy
 ./start-all.sh
 
 # 2. 验证服务

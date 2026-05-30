@@ -10,7 +10,7 @@ cd src/agent && go build ./... && go test ./...
 
 ## Pre-push
 ```bash
-bash deploy/install-hooks.sh  # one-time
+bash script/install-hooks.sh  # one-time
 ```
 
 ## Architecture
