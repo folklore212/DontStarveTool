@@ -14,12 +14,20 @@ jobs:
     name: Detect changed services
     runs-on: ubuntu-latest
     outputs:
-      services: ${{ steps.filter.outputs.changes }}
-      infra: ${{ steps.filter.outputs.infra }}
+      services: ${{ steps.filter.outputs.changes || steps.manual.outputs.changes }}
+      infra: ${{ steps.filter.outputs.infra || steps.manual.outputs.infra }}
     steps:
       - uses: actions/checkout@v4
+      - name: Set all services for manual dispatch
+        id: manual
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "changes=[\"core-platform\",\"template-service\",\"server-service\",\"steam-cache-service\",\"node-gateway\",\"admin\",\"customer\"]" >> $GITHUB_OUTPUT
+          echo "infra=true" >> $GITHUB_OUTPUT
+
       - uses: dorny/paths-filter@v3
         id: filter
+        if: github.event_name != 'workflow_dispatch'
         with:
           filters: |
             core-platform:
@@ -46,6 +54,7 @@ jobs:
               - 'src/frontend/customer/**'
             infra:
               - 'deploy/**'
+              - '.github/workflows/**'
 
   # ── Phase 2: Quality gate ──
   test:
