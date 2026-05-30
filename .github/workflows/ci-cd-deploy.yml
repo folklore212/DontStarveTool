@@ -1,0 +1,58 @@
+name: CI-CD Deploy
+
+on:
+  workflow_run:
+    workflows: ["CI-CD Build"]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to production
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render .env from template
+        run: |
+          cp deploy/.env.example deploy/.env
+          # Substitute each secret into .env
+          sed -i "s|^MYSQL_ROOT_PASSWORD=.*|MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}|" deploy/.env
+          sed -i "s|^REDIS_PASSWORD=.*|REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}|" deploy/.env
+          sed -i "s|^AES_KEY_V0=.*|AES_KEY_V0=${{ secrets.AES_KEY_V0 }}|" deploy/.env
+          sed -i "s|^AES_KEY_V1=.*|AES_KEY_V1=${{ secrets.AES_KEY_V1 }}|" deploy/.env
+          sed -i "s|^GEETEST_LOGIN_CAPTCHA_ID=.*|GEETEST_LOGIN_CAPTCHA_ID=${{ secrets.GEETEST_LOGIN_CAPTCHA_ID }}|" deploy/.env
+          sed -i "s|^GEETEST_LOGIN_CAPTCHA_KEY=.*|GEETEST_LOGIN_CAPTCHA_KEY=${{ secrets.GEETEST_LOGIN_CAPTCHA_KEY }}|" deploy/.env
+          sed -i "s|^GEETEST_REGISTER_CAPTCHA_ID=.*|GEETEST_REGISTER_CAPTCHA_ID=${{ secrets.GEETEST_REGISTER_CAPTCHA_ID }}|" deploy/.env
+          sed -i "s|^GEETEST_REGISTER_CAPTCHA_KEY=.*|GEETEST_REGISTER_CAPTCHA_KEY=${{ secrets.GEETEST_REGISTER_CAPTCHA_KEY }}|" deploy/.env
+          sed -i "s|^MAIL_HOST=.*|MAIL_HOST=${{ secrets.MAIL_HOST }}|" deploy/.env
+          sed -i "s|^MAIL_PORT=.*|MAIL_PORT=${{ secrets.MAIL_PORT }}|" deploy/.env
+          sed -i "s|^MAIL_USERNAME=.*|MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}|" deploy/.env
+          sed -i "s|^MAIL_PASSWORD=.*|MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}|" deploy/.env
+          sed -i "s|^STEAM_API_KEY=.*|STEAM_API_KEY=${{ secrets.STEAM_API_KEY }}|" deploy/.env
+          sed -i "s|^CORS_ALLOWED_ORIGINS=.*|CORS_ALLOWED_ORIGINS=${{ secrets.CORS_ALLOWED_ORIGINS }}|" deploy/.env
+          echo ".env rendered from GitHub Secrets"
+
+      - name: SCP deploy directory to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: deploy/
+          target: /opt/dst/
+          strip_components: 0
+
+      - name: Deploy services via SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/dst/deploy
+            docker compose pull
+            docker compose up -d --force-recreate
+            bash scripts/health-check.sh

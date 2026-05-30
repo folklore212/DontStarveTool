@@ -1,0 +1,42 @@
+name: CI-CD Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: 'Target git SHA to rollback to (7-char short)'
+        required: true
+        type: string
+      service:
+        description: 'Service to rollback (default: all)'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - core-platform
+          - template-service
+          - server-service
+          - steam-cache-service
+          - node-gateway
+          - admin
+          - customer
+
+jobs:
+  rollback:
+    name: Rollback to ${{ inputs.sha }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rollback services via SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/dst/deploy
+            export ACR_REGISTRY="${{ secrets.ACR_REGISTRY }}"
+            export ACR_NAMESPACE="${{ secrets.ACR_NAMESPACE }}"
+            bash scripts/rollback.sh ${{ inputs.sha }} ${{ inputs.service }}
