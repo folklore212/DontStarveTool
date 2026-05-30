@@ -176,9 +176,26 @@ jobs:
           strip_components: 0
 
       - name: Deploy via SSH
+        timeout-minutes: 10
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: echo SSH_OK && docker info --format '{{.ServerVersion}}' && echo DOKR_OK && ls /opt/dst/deploy/ && echo LS_OK && echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }} && echo LOGIN_OK && cd /opt/dst/deploy && docker compose pull && echo PULL_OK
+          script: |
+            echo "=== SSH connected ==="
+            docker info --format 'Server: {{.ServerVersion}}'
+            echo "=== Deploy dir ==="
+            ls /opt/dst/deploy/
+            echo "=== ACR login ==="
+            echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }}
+            echo "=== Pull ACR images ==="
+            cd /opt/dst/deploy
+            for svc in core-platform template-service server-service steam-cache-service node-gateway admin customer test; do
+              echo "  Pulling $svc ..."
+              docker compose pull "$svc"
+            done
+            echo "=== Recreate changed services ==="
+            docker compose up -d
+            echo "=== Health check ==="
+            bash scripts/health-check.sh
