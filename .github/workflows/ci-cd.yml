@@ -133,9 +133,10 @@ jobs:
   # ── Phase 4: Deploy to production ──
   deploy:
     name: Deploy to production
-    needs: [detect-changes, build-and-push]
+    needs: [detect-changes, test, build-and-push]
     if: |
       always() &&
+      needs.test.result == 'success' &&
       (needs.build-and-push.result == 'success' || needs.build-and-push.result == 'skipped') &&
       (needs.detect-changes.outputs.services != '[]' || needs.detect-changes.outputs.infra == 'true')
     runs-on: ubuntu-latest
