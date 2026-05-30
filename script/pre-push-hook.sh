@@ -44,7 +44,7 @@ fi
 
 # 5. .env vs .env.example key consistency
 run_step ".env key check" bash -c "
-    cd '$ROOT/deploy'
+    cd '$ROOT/script/docker'
     env_keys=\$(grep -oP '^[A-Z_]+(?==)' .env | sort)
     ex_keys=\$(grep -oP '^[A-Z_]+(?==)' .env.example | sort)
     diff <(echo \"\$env_keys\") <(echo \"\$ex_keys\") > /tmp/env-diff.txt 2>&1 || {
