@@ -169,6 +169,7 @@ jobs:
           sed -i "s|^MAIL_PASSWORD=.*|MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}|" deploy/.env
           sed -i "s|^STEAM_API_KEY=.*|STEAM_API_KEY=${{ secrets.STEAM_API_KEY }}|" deploy/.env
           sed -i "s|^CORS_ALLOWED_ORIGINS=.*|CORS_ALLOWED_ORIGINS=${{ secrets.CORS_ALLOWED_ORIGINS }}|" deploy/.env
+          sed -i "s|^REGISTRY=.*|REGISTRY=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/|" deploy/.env
           echo ".env rendered"
 
       - name: SCP deploy directory to server
