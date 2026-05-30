@@ -1,0 +1,10 @@
+# Production overrides for docker-compose.yml
+# Usage: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+#
+# Currently a stub — add production-specific overrides here as needed:
+# - Stricter resource limits
+# - External volume definitions
+# - Logging driver configuration
+# - Restart policy adjustments
+
+services: {}

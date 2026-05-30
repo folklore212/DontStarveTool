@@ -1,0 +1,383 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: auth-mysql-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: auth_system
+    volumes:
+      - ./config/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+      - ./config/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysql -h 127.0.0.1 -u root -e "SELECT 1" --silent
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    networks:
+      - auth-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: auth-redis-container
+    restart: unless-stopped
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-6379}:6379"
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          memory: 256m
+          cpus: '0.5'
+    volumes:
+      - ./config/redis/redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - redis-data:/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - redis-cli -a $$REDIS_PASSWORD --no-auth-warning PING
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - auth-net
+
+  mysql-template:
+    image: mysql:8.0
+    container_name: template-mysql-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: dst_templates
+    volumes:
+      - mysql-template-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "sh", "-c", "MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - auth-net
+
+  mysql-server:
+    image: mysql:8.0
+    container_name: server-mysql-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: dst_servers
+    volumes:
+      - mysql-server-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "sh", "-c", "MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - auth-net
+
+  core-platform:
+    build:
+      context: ..
+      dockerfile: deploy/services/core-platform/Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
+    image: dst-core-platform:v1
+    container_name: core-platform-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${CORE_PORT:-8081}:8081"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--XX:+UseG1GC -XX:MaxRAMPercentage=60 -XX:InitialRAMPercentage=40}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
+      DB_HOST: ${DB_HOST:-mysql}
+      DB_PORT: ${MYSQL_PORT:-3306}
+      DB_USERNAME: ${DB_USERNAME:-auth_user}
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      DB_POOL_SIZE: ${DB_POOL_SIZE:-10}
+      DB_POOL_MIN: ${DB_POOL_MIN:-3}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      AES_KEY_V0: ${AES_KEY_V0}
+      AES_KEY_V1: ${AES_KEY_V1}
+      GEETEST_SKIP_VERIFICATION: ${GEETEST_SKIP_VERIFICATION:-false}
+      GEETEST_LOGIN_CAPTCHA_ID: ${GEETEST_LOGIN_CAPTCHA_ID}
+      GEETEST_LOGIN_CAPTCHA_KEY: ${GEETEST_LOGIN_CAPTCHA_KEY}
+      GEETEST_REGISTER_CAPTCHA_ID: ${GEETEST_REGISTER_CAPTCHA_ID}
+      GEETEST_REGISTER_CAPTCHA_KEY: ${GEETEST_REGISTER_CAPTCHA_KEY}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-}
+      JAVA_TOOL_OPTIONS: "${JAVA_TOOL_OPTIONS-}"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8081/actuator/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 90s
+    deploy:
+      resources:
+        limits:
+          memory: 768m
+          cpus: '1.5'
+    networks:
+      - auth-net
+
+  template-service:
+    build:
+      context: ..
+      dockerfile: deploy/services/template-service/Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
+    image: dst-template-service:v1
+    container_name: template-service-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${TEMPLATE_PORT:-8082}:8082"
+    depends_on:
+      mysql-template:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--XX:+UseG1GC -XX:MaxRAMPercentage=60 -XX:InitialRAMPercentage=40}
+      DB_HOST: mysql-template
+      DB_PORT: 3306
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      STEAM_API_KEY: ${STEAM_API_KEY:-}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8082/actuator/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+          cpus: '1.0'
+    networks:
+      - auth-net
+
+  server-service:
+    build:
+      context: ..
+      dockerfile: deploy/services/server-service/Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
+    image: dst-server-service:v1
+    container_name: server-service-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${SERVER_PORT:-8083}:8083"
+    depends_on:
+      mysql-server:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--XX:+UseG1GC -XX:MaxRAMPercentage=60 -XX:InitialRAMPercentage=40}
+      DB_HOST: mysql-server
+      DB_PORT: 3306
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8083/actuator/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+          cpus: '1.0'
+    networks:
+      - auth-net
+
+  steam-cache-service:
+    build:
+      context: ..
+      dockerfile: deploy/services/steam-cache-service/Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
+    image: dst-steam-cache-service:v1
+    container_name: steam-cache-service-container
+    restart: unless-stopped
+    depends_on:
+      mysql-template:
+        condition: service_healthy
+    environment:
+      DST_SCHEDULED_WORKSHOP_CACHE_ENABLED: "true"
+      DB_HOST: mysql-template
+      DB_PORT: 3306
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      STEAM_API_KEY: ${STEAM_API_KEY:-}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8084/actuator/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 384m
+          cpus: '0.5'
+    networks:
+      - auth-net
+
+  node-gateway:
+    build:
+      context: ..
+      dockerfile: deploy/services/node-gateway/Dockerfile
+    image: dst-node-gateway:v1
+    container_name: node-gateway-container
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8090:8090"
+    depends_on:
+      core-platform:
+        condition: service_healthy
+    environment:
+      PORT: "8090"
+      CORE_PLATFORM_URL: http://core-platform:8081
+      SERVER_SERVICE_URL: http://server-service:8083
+    deploy:
+      resources:
+        limits:
+          memory: 128m
+          cpus: '0.5'
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8090/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - auth-net
+
+  admin:
+    build:
+      context: ..
+      dockerfile: deploy/services/admin/Dockerfile
+    image: dst-admin:v1
+    container_name: auth-admin-container
+    restart: unless-stopped
+    depends_on:
+      - core-platform
+    ports:
+      - "${ADMIN_PORT:-3000}:80"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - auth-net
+
+  customer:
+    build:
+      context: ..
+      dockerfile: deploy/services/customer/Dockerfile
+    image: dst-customer:v1
+    container_name: auth-customer-container
+    restart: unless-stopped
+    depends_on:
+      - core-platform
+    ports:
+      - "${CUSTOMER_PORT:-80}:80"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - auth-net
+
+  nginx:
+    image: nginx:alpine
+    container_name: api-gateway
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - core-platform
+      - template-service
+      - server-service
+    volumes:
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - auth-net
+
+  test:
+    build:
+      context: ..
+      dockerfile: deploy/services/test/Dockerfile
+      args:
+        HTTP_PROXY: "${HTTP_PROXY-}"
+        HTTPS_PROXY: "${HTTPS_PROXY-}"
+        NO_PROXY: "${NO_PROXY-}"
+    image: dst-test:v1
+    container_name: auth-test-container
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      MYSQL_HOST: auth-mysql-container
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      REDIS_HOST: auth-redis-container
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    networks:
+      - auth-net
+
+volumes:
+  mysql-template-data:
+  mysql-server-data:
+  mysql-data:
+  mysql-log:
+  redis-data:
+
+networks:
+  auth-net:
+    driver: bridge
