@@ -175,31 +175,10 @@ jobs:
           target: /opt/dst/
           strip_components: 0
 
-      - name: Deploy services via SSH
+      - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /opt/dst/deploy
-            touch .env
-            grep -q "^MYSQL_ROOT_PASSWORD=" .env && sed -i "s|^MYSQL_ROOT_PASSWORD=.*|MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}|" .env || echo "MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}" >> .env
-            grep -q "^REDIS_PASSWORD=" .env && sed -i "s|^REDIS_PASSWORD=.*|REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}|" .env || echo "REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}" >> .env
-            grep -q "^AES_KEY_V0=" .env && sed -i "s|^AES_KEY_V0=.*|AES_KEY_V0=${{ secrets.AES_KEY_V0 }}|" .env || echo "AES_KEY_V0=${{ secrets.AES_KEY_V0 }}" >> .env
-            grep -q "^AES_KEY_V1=" .env && sed -i "s|^AES_KEY_V1=.*|AES_KEY_V1=${{ secrets.AES_KEY_V1 }}|" .env || echo "AES_KEY_V1=${{ secrets.AES_KEY_V1 }}" >> .env
-            grep -q "^GEETEST_LOGIN_CAPTCHA_ID=" .env && sed -i "s|^GEETEST_LOGIN_CAPTCHA_ID=.*|GEETEST_LOGIN_CAPTCHA_ID=${{ secrets.GEETEST_LOGIN_CAPTCHA_ID }}|" .env || echo "GEETEST_LOGIN_CAPTCHA_ID=${{ secrets.GEETEST_LOGIN_CAPTCHA_ID }}" >> .env
-            grep -q "^GEETEST_LOGIN_CAPTCHA_KEY=" .env && sed -i "s|^GEETEST_LOGIN_CAPTCHA_KEY=.*|GEETEST_LOGIN_CAPTCHA_KEY=${{ secrets.GEETEST_LOGIN_CAPTCHA_KEY }}|" .env || echo "GEETEST_LOGIN_CAPTCHA_KEY=${{ secrets.GEETEST_LOGIN_CAPTCHA_KEY }}" >> .env
-            grep -q "^GEETEST_REGISTER_CAPTCHA_ID=" .env && sed -i "s|^GEETEST_REGISTER_CAPTCHA_ID=.*|GEETEST_REGISTER_CAPTCHA_ID=${{ secrets.GEETEST_REGISTER_CAPTCHA_ID }}|" .env || echo "GEETEST_REGISTER_CAPTCHA_ID=${{ secrets.GEETEST_REGISTER_CAPTCHA_ID }}" >> .env
-            grep -q "^GEETEST_REGISTER_CAPTCHA_KEY=" .env && sed -i "s|^GEETEST_REGISTER_CAPTCHA_KEY=.*|GEETEST_REGISTER_CAPTCHA_KEY=${{ secrets.GEETEST_REGISTER_CAPTCHA_KEY }}|" .env || echo "GEETEST_REGISTER_CAPTCHA_KEY=${{ secrets.GEETEST_REGISTER_CAPTCHA_KEY }}" >> .env
-            grep -q "^MAIL_HOST=" .env && sed -i "s|^MAIL_HOST=.*|MAIL_HOST=${{ secrets.MAIL_HOST }}|" .env || echo "MAIL_HOST=${{ secrets.MAIL_HOST }}" >> .env
-            grep -q "^MAIL_PORT=" .env && sed -i "s|^MAIL_PORT=.*|MAIL_PORT=${{ secrets.MAIL_PORT }}|" .env || echo "MAIL_PORT=${{ secrets.MAIL_PORT }}" >> .env
-            grep -q "^MAIL_USERNAME=" .env && sed -i "s|^MAIL_USERNAME=.*|MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}|" .env || echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> .env
-            grep -q "^MAIL_PASSWORD=" .env && sed -i "s|^MAIL_PASSWORD=.*|MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}|" .env || echo "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" >> .env
-            grep -q "^STEAM_API_KEY=" .env && sed -i "s|^STEAM_API_KEY=.*|STEAM_API_KEY=${{ secrets.STEAM_API_KEY }}|" .env || echo "STEAM_API_KEY=${{ secrets.STEAM_API_KEY }}" >> .env
-            grep -q "^CORS_ALLOWED_ORIGINS=" .env && sed -i "s|^CORS_ALLOWED_ORIGINS=.*|CORS_ALLOWED_ORIGINS=${{ secrets.CORS_ALLOWED_ORIGINS }}|" .env || echo "CORS_ALLOWED_ORIGINS=${{ secrets.CORS_ALLOWED_ORIGINS }}" >> .env
-            grep -q "^REGISTRY=" .env && sed -i "s|^REGISTRY=.*|REGISTRY=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/|" .env || echo "REGISTRY=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/" >> .env
-            echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }}
-            docker compose pull
-            docker compose up -d --force-recreate
-            bash scripts/health-check.sh
+          script: echo SSH_OK && docker info --format '{{.ServerVersion}}' && echo DOKR_OK && ls /opt/dst/deploy/ && echo LS_OK && echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }} && echo LOGIN_OK && cd /opt/dst/deploy && docker compose pull && echo PULL_OK
