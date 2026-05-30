@@ -22,7 +22,7 @@ jobs:
         id: manual
         if: github.event_name == 'workflow_dispatch'
         run: |
-          echo "changes=[\"core-platform\",\"template-service\",\"server-service\",\"steam-cache-service\",\"node-gateway\",\"admin\",\"customer\"]" >> $GITHUB_OUTPUT
+          echo "changes=[\"core-platform\",\"template-service\",\"server-service\",\"steam-cache-service\",\"node-gateway\",\"admin\",\"customer\",\"test\"]" >> $GITHUB_OUTPUT
           echo "infra=true" >> $GITHUB_OUTPUT
 
       - uses: dorny/paths-filter@v3
@@ -55,6 +55,8 @@ jobs:
             infra:
               - 'deploy/**'
               - '.github/workflows/**'
+            test:
+              - 'deploy/services/test/**'
 
       - name: Convert filter changes to service array
         id: service-list

@@ -21,6 +21,7 @@ on:
           - node-gateway
           - admin
           - customer
+          - test
 
 jobs:
   rollback:

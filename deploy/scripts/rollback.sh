@@ -24,7 +24,7 @@ fi
 
 cd "$DEPLOY_DIR"
 
-SERVICES=(core-platform template-service server-service steam-cache-service node-gateway admin customer)
+SERVICES=(core-platform template-service server-service steam-cache-service node-gateway admin customer test)
 ACR_REGISTRY="${ACR_REGISTRY:-}"
 ACR_NAMESPACE="${ACR_NAMESPACE:-}"
 
