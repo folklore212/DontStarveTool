@@ -96,7 +96,7 @@ services:
         HTTP_PROXY: "${HTTP_PROXY-}"
         HTTPS_PROXY: "${HTTPS_PROXY-}"
         NO_PROXY: "${NO_PROXY-}"
-    image: ${REGISTRY:-}dst-core-platform:v1
+    image: ${REGISTRY:-}dst-core-platform:latest
     container_name: core-platform-container
     restart: unless-stopped
     ports:
@@ -153,7 +153,7 @@ services:
         HTTP_PROXY: "${HTTP_PROXY-}"
         HTTPS_PROXY: "${HTTPS_PROXY-}"
         NO_PROXY: "${NO_PROXY-}"
-    image: ${REGISTRY:-}dst-template-service:v1
+    image: ${REGISTRY:-}dst-template-service:latest
     container_name: template-service-container
     restart: unless-stopped
     ports:
@@ -192,7 +192,7 @@ services:
         HTTP_PROXY: "${HTTP_PROXY-}"
         HTTPS_PROXY: "${HTTPS_PROXY-}"
         NO_PROXY: "${NO_PROXY-}"
-    image: ${REGISTRY:-}dst-server-service:v1
+    image: ${REGISTRY:-}dst-server-service:latest
     container_name: server-service-container
     restart: unless-stopped
     ports:
@@ -230,7 +230,7 @@ services:
         HTTP_PROXY: "${HTTP_PROXY-}"
         HTTPS_PROXY: "${HTTPS_PROXY-}"
         NO_PROXY: "${NO_PROXY-}"
-    image: ${REGISTRY:-}dst-steam-cache-service:v1
+    image: ${REGISTRY:-}dst-steam-cache-service:latest
     container_name: steam-cache-service-container
     restart: unless-stopped
     depends_on:
@@ -264,7 +264,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/services/node-gateway/Dockerfile
-    image: ${REGISTRY:-}dst-node-gateway:v1
+    image: ${REGISTRY:-}dst-node-gateway:latest
     container_name: node-gateway-container
     restart: unless-stopped
     ports:
@@ -294,7 +294,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/services/admin/Dockerfile
-    image: ${REGISTRY:-}dst-admin:v1
+    image: ${REGISTRY:-}dst-admin:latest
     container_name: auth-admin-container
     restart: unless-stopped
     depends_on:
@@ -313,7 +313,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/services/customer/Dockerfile
-    image: ${REGISTRY:-}dst-customer:v1
+    image: ${REGISTRY:-}dst-customer:latest
     container_name: auth-customer-container
     restart: unless-stopped
     depends_on:
@@ -356,7 +356,7 @@ services:
         HTTP_PROXY: "${HTTP_PROXY-}"
         HTTPS_PROXY: "${HTTPS_PROXY-}"
         NO_PROXY: "${NO_PROXY-}"
-    image: ${REGISTRY:-}dst-test:v1
+    image: ${REGISTRY:-}dst-test:latest
     container_name: auth-test-container
     depends_on:
       mysql:
