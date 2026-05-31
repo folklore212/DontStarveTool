@@ -20,6 +20,7 @@ jobs:
       - name: Copy deploy files to server via tar/SSH pipe
         timeout-minutes: 3
         run: |
+          mkdir -p ~/.ssh
           eval $(ssh-agent -s)
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | ssh-add - >/dev/null
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
