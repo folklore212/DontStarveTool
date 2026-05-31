@@ -40,6 +40,9 @@ jobs:
             echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }}
             cd /opt/dst/deploy
 
+            # Set REGISTRY so docker compose pulls from ACR, not Docker Hub
+            export REGISTRY=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/
+
             SERVICES="${{ github.event.inputs.services }}"
             if [ "$SERVICES" = "all" ]; then
               for svc in core-platform template-service server-service steam-cache-service node-gateway admin customer test; do
