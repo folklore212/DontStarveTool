@@ -165,15 +165,18 @@ jobs:
 
       - name: Update deploy files on server via GitHub archive
         uses: appleboy/ssh-action@v1.2.2
-        timeout-minutes: 3
+        timeout-minutes: 5
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -eo pipefail
             mkdir -p /opt/dst/deploy
-            echo "=== Fetch deploy files from GitHub ==="
-            curl -sL https://github.com/folklore212/DontStarveTool/archive/refs/heads/master.tar.gz | tar xz --strip=2 -C /opt/dst/deploy DontStarveTool-master/deploy/
+            echo "=== Downloading deploy files from GitHub ==="
+            curl -sL --retry 3 --retry-delay 5 --connect-timeout 10 \
+              https://github.com/folklore212/DontStarveTool/archive/refs/heads/master.tar.gz \
+              | tar xz --strip=2 -C /opt/dst/deploy DontStarveTool-master/deploy/
             echo "=== Files updated ==="
             ls /opt/dst/deploy/
 
