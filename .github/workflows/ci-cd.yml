@@ -163,22 +163,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Update deploy files on server via GitHub archive
-        uses: appleboy/ssh-action@v1.2.2
-        timeout-minutes: 5
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            set -eo pipefail
-            mkdir -p /opt/dst/deploy
-            echo "=== Downloading deploy files from GitHub ==="
-            curl -sL --retry 3 --retry-delay 5 --connect-timeout 10 \
-              https://github.com/folklore212/DontStarveTool/archive/refs/heads/master.tar.gz \
-              | tar xz --strip=2 -C /opt/dst/deploy DontStarveTool-master/deploy/
-            echo "=== Files updated ==="
-            ls /opt/dst/deploy/
+      - name: Copy deploy files to server via tar/SSH pipe
+        timeout-minutes: 3
+        run: |
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | ssh-add - >/dev/null
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+          tar cz -C . deploy/ | ssh -o StrictHostKeyChecking=no \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "mkdir -p /opt/dst && tar xz -C /opt/dst"
 
       - name: Deploy via SSH
         timeout-minutes: 10
