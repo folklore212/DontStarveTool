@@ -166,6 +166,7 @@ jobs:
       - name: Copy deploy files to server via tar/SSH pipe
         timeout-minutes: 5
         run: |
+          mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/ssh_key
           chmod 600 /tmp/ssh_key
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
