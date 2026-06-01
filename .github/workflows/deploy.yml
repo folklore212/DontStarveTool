@@ -29,12 +29,13 @@ jobs:
             "mkdir -p /opt/dst && tar xz -C /opt/dst"
 
       - name: Deploy via SSH
-        timeout-minutes: 10
+        timeout-minutes: 15
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 15m
           script: |
             echo "=== ACR login ==="
             echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }}
