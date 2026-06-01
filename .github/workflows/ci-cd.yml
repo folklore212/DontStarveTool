@@ -194,6 +194,9 @@ jobs:
           command_timeout: 18m
           script: |
             echo "=== ACR login ==="
+            # Unset ZTE proxy — not needed on Alibaba Cloud, blocks ACR access
+            export HTTP_PROXY= HTTPS_PROXY= http_proxy= https_proxy=
+            export NO_PROXY="localhost,127.0.0.1,mysql,redis,*.zte.com.cn,*.zte.intra,10.0.0.0/8,*.aliyuncs.com"
             echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }}
             cd /opt/dst/deploy
 
