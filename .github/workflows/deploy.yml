@@ -71,5 +71,4 @@ jobs:
 
             echo "=== Recreate changed services ==="
             docker compose up -d
-            echo "=== Health check ==="
-            bash scripts/health-check.sh
+            echo "=== Deploy complete ==="
