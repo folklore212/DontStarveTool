@@ -159,7 +159,7 @@ jobs:
       (needs.build-and-push.result == 'success' || needs.build-and-push.result == 'skipped') &&
       (needs.detect-changes.outputs.services != '[]' || needs.detect-changes.outputs.infra == 'true')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -185,13 +185,13 @@ jobs:
           rm -f /tmp/ssh_key
 
       - name: Deploy via SSH
-        timeout-minutes: 15
+        timeout-minutes: 18
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          command_timeout: 15m
+          command_timeout: 18m
           script: |
             echo "=== ACR login ==="
             echo "${{ secrets.ACR_PASSWORD }}" | docker login --username ${{ secrets.ACR_USERNAME }} --password-stdin ${{ secrets.ACR_REGISTRY }}
