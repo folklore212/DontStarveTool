@@ -205,5 +205,7 @@ jobs:
               docker compose pull "$svc"
             done
             echo "=== Recreate changed services ==="
-            docker compose up -d
+            timeout 300 docker compose up -d --no-deps --force-recreate \
+              core-platform template-service server-service steam-cache-service \
+              node-gateway admin customer test || true
             echo "=== Deploy complete ==="
