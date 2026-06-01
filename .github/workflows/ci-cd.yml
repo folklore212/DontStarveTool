@@ -200,10 +200,8 @@ jobs:
             # Set REGISTRY so docker compose pulls from ACR, not Docker Hub
             export REGISTRY=${{ secrets.ACR_REGISTRY }}/${{ secrets.ACR_NAMESPACE }}/
 
-            for svc in core-platform template-service server-service steam-cache-service node-gateway admin customer test; do
-              echo "  Pulling $svc ..."
-              docker compose pull "$svc"
-            done
+            echo "=== Pulling all services (parallel) ==="
+            docker compose pull core-platform template-service server-service steam-cache-service node-gateway admin customer test
             echo "=== Recreate changed services ==="
             timeout 300 docker compose up -d --no-deps --force-recreate \
               core-platform template-service server-service steam-cache-service \

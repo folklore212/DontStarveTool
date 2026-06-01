@@ -56,17 +56,11 @@ jobs:
 
             SERVICES="${{ github.event.inputs.services }}"
             if [ "$SERVICES" = "all" ]; then
-              for svc in core-platform template-service server-service steam-cache-service node-gateway admin customer test; do
-                echo "=== Pulling $svc ==="
-                docker compose pull "$svc"
-              done
+              echo "=== Pulling all services (parallel) ==="
+              docker compose pull core-platform template-service server-service steam-cache-service node-gateway admin customer test
             else
-              echo "$SERVICES" | tr ',' '\n' | while read svc; do
-                svc=$(echo "$svc" | xargs)
-                [ -z "$svc" ] && continue
-                echo "=== Pulling $svc ==="
-                docker compose pull "$svc"
-              done
+              echo "=== Pulling: $SERVICES ==="
+              docker compose pull $(echo "$SERVICES" | tr ',' ' ')
             fi
 
             echo "=== Recreate changed services ==="
