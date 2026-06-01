@@ -20,19 +20,22 @@ jobs:
       - name: Copy deploy files to server via tar/SSH pipe
         timeout-minutes: 5
         run: |
-          mkdir -p ~/.ssh
-          eval $(ssh-agent -s)
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | ssh-add - >/dev/null
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/ssh_key
+          chmod 600 /tmp/ssh_key
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
           for i in 1 2 3; do
             echo "=== Deploy file transfer attempt $i ==="
-            tar cz -C . deploy/ | ssh -o StrictHostKeyChecking=no \
-              -o ConnectTimeout=10 \
+            tar cz -C . deploy/ | ssh -i /tmp/ssh_key \
+              -o StrictHostKeyChecking=no \
+              -o ConnectTimeout=15 \
+              -o PasswordAuthentication=no \
+              -v \
               ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-              "mkdir -p /opt/dst && tar xz -C /opt/dst" && break
+              "mkdir -p /opt/dst && tar xz -C /opt/dst" 2>&1 && break
             echo "Attempt $i failed, sleeping 5..."
             sleep 5
           done
+          rm -f /tmp/ssh_key
 
       - name: Deploy via SSH
         timeout-minutes: 15
