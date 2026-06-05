@@ -30,7 +30,7 @@
         <jose4j.version>0.9.6</jose4j.version>
         <resilience4j.version>2.4.0</resilience4j.version>
         <flyway.version>10.22.0</flyway.version>
-        <hutool.version>5.8.44</hutool.version>
+        <hutool.version>5.8.46</hutool.version>
         <knife4j.version>4.5.0</knife4j.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <zxing.version>3.5.4</zxing.version>
