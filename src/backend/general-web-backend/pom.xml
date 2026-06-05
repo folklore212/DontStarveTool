@@ -34,7 +34,7 @@
         <knife4j.version>4.5.0</knife4j.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <zxing.version>3.5.4</zxing.version>
-        <sshd.version>2.14.0</sshd.version>
+        <sshd.version>2.18.0</sshd.version>
     </properties>
 
     <dependencyManagement>
